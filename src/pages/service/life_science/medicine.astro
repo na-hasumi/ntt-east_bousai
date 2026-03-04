@@ -1,0 +1,248 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+ import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+import MvCategory from '@components/MvCategory.astro';
+import Contents from '@components/Contents.astro';
+
+const meta = {
+	title: '医薬品・医療用具',
+	description: '',
+}
+
+const contentsList = [
+    { num: 1, txt: '医薬品分野の分析', href: '#medicine' },
+    { num: 2, txt: '医療用具・医用材料分野の分析', href: '#device' },
+];
+
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析対象" subTitle="Analytic subjects" src="mv/mv-service.webp" />
+    <TitleH1 title="医薬品・医療用具" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析対象" parent2="ライフサイエンス" parent3="医薬品・医療用具"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <MvCategory 
+                    imageSrc={IMG_PATH + "/service/medicine_01.webp"}
+                    alt="医薬品・医療用具"
+                    lead="医薬品や医療用具（材料）の、成分分析（組成/構造解析、定量）、安全性試験、異物分析などの分析試験のニーズに対応しています。"
+                />
+                <Contents list={contentsList} />
+                <h2 id="medicine" class="h2-service">医薬品分野の分析項目</h2>
+                <table class="tbl-service-doc">
+                    <tbody><tr>
+                      <th class="th-service-doc-section" scope="col">分析項目</th>
+                      <th scope="col">使用機器・手法</th>
+                      <th class="th-service-doc-doc-title" scope="col">分析事例</th>
+                    </tr>
+                    <tr>
+                      <td rowspan="9"> 医薬品・医薬品中間体の主要成分の組成分析・構造解析</td>
+                      <td rowspan="9">HRMS、MS/MS、LC-MS/MS、<a href="../../documents/x9301_510.html">単結晶Ｘ線構造解析</a>、<a href="../../documents/b0901_570.html">粒度分布</a>、<a href="../../documents/i0601_570.html">比表面積・細孔径分布</a></td>
+                      <td><a href="../../documents/o030_131.html">高分解能MS、MS/MSによる構造決定（1）</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/o031_131.html">高分解能MS、MS/MSによる構造決定（2）</a></td>
+                      </tr>
+                    <tr>
+                      <td><a href="../../documents/o506_131.html">質量分析によるブロムフェナクの構造解析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/o536_131.html">LC-MS/MSによる医薬品の分析（1）</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/o277_131.html">LC-MS/MSによる微量成分の構造解析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/o530_131.html">NMRを用いた医薬品分析（純度試験、確認試験）</a></td>
+                    </tr>
+                    <tr> </tr>
+                    <tr>
+                      <td><a href="../../documents/x9301_131.html">単結晶Ｘ線構造解析</a></td>
+                      </tr>
+                    <tr>
+                      <td>液状製品中のイオン成分の分析</td>
+                      </tr>
+                    <tr>
+                      <td rowspan="3">医薬品・医薬中間体の不純物や混入物の分析</td>
+                      <td rowspan="3">NMR、<a href="../../documents/o1501_510.html">GC-MS/MS</a>、LC-MS/MS</td>
+                      <td><a href="../../documents/o462_131.html">CryoProbeによる医薬品中の微量成分の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/o275_131.html">LC-MS/MS（SRM法）による微量成分の定量</a></td>
+                    </tr>
+                    <tr>
+                      <td>注射用水中の微量有機成分分析</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">医薬品・医薬中間体の元素不純物の分析（ICH-Q3D関連）</td>
+                      <td rowspan="2"><a href="../../documents/an1303_530.html">ICP-AES</a>、<a href="../../documents/an1602_530.html">ICP-MS</a>、IC（1）、<a href="../../documents/i0801_530.html">IC（2）</a></td>
+                      <td><a href="../../documents/i218_131.html">ICP-AES、ICP-MS、ICによる微量元素（金属・非金属）分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i352_131.html">マイクロ波分解/ICP-MS法による医薬品中の白金族元素の分析</a> </td>
+                    </tr>
+                    <tr>
+                      <td>医薬品の薬物動態、代謝物の分析</td>
+                      <td>LC-MS/MS</td>
+                      <td><a href="../../documents/o275_131.html">LC/MS/MS（SRM法）による微量成分の定量</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3"> 医薬品の容器・包装材料の分析</td>
+                      <td rowspan="3"><a href="../../documents/an1303_530.html">ICP-AES</a>、<a href="../../documents/an1602_530.html">ICP-MS</a>、IC（1）、<a href="../../documents/i0801_530.html">IC（2）</a></td>
+                      <td>材料分析、添加剤分析</td>
+                    </tr>
+                    <tr>
+                      <td>錠剤への包装シート成分の移行量分析</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i218_131.html">ICP-AES、ICP-MS、ICによる微量元素（金属・非金属）分析</a></td>
+                    </tr>
+                    <tr>
+                      <td>医薬製品中の異物分析</td>
+                      <td><a href="../../documents/f1502_510.html">顕微FT-IR</a>、<a href="../../documents/s1403_530.html">EPMA</a>、<a href="../../documents/an1316_510.html">Py-GC/MS</a>、<a href="../../documents/s0701_510.html">TOF-SIMS</a></td>
+                      <td><a href="../materials/foreign_substance.html">異物分析　（試験法詳細）</a></td>
+                    </tr>
+                    <tr>
+                      <td>医薬品の安全性評価（変異原性試験/GLP対応）</td>
+                      <td>&nbsp;</td>
+                      <td><a href="safety_test.html">安全性評価　（試験法詳細） </a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">医薬品とタンパク質の相互作用解析</td>
+                      <td rowspan="2"><a href="../../documents/o1803_510.html">NMR</a></td>
+                      <td>
+                        <a href="../../documents/o562_131.html">飽和移動差NMR法（STD-NMR）</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="../../documents/o563_131.html">STD-NMR法による医薬品とタンパク質の相互作用解析</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h2 id="device" class="h2-service">医療用具・医用材料分野の分析項目</h2>
+                <table class="tbl-service-doc">
+                    <tbody><tr>
+                      <th class="th-service-doc-section" scope="col">分析項目</th>
+                      <th scope="col">使用機器・手法</th>
+                      <th class="th-service-doc-doc-title" scope="col">分析事例</th>
+                    </tr>
+                    <tr>
+                      <td rowspan="1">医療用具・医用材料の成分の主要成分の組成分析・構造解析</td>
+                      <td rowspan="1">NMR、MS、<a href="../../documents/f1501_510.html">FT-IR</a>、HPLC</td>
+                      <td>医療用具、医用材料の成分分析</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="8">医療用具・医用材料中の不純物・微量有害成分・溶出物の分析</td>
+                      <td rowspan="8"><a href="../../documents/o1502_510.html">GC/MS</a>、<a href="../../documents/o1501_510.html">GC-MS/MS</a>、<a href="../../documents/c0601_510.html">LC/MS</a>、<a href="../../documents/an1303_530.html">ICP-AES</a>、<a href="../../documents/an1602_530.html">ICP-MS</a>、IC（1）、<a href="../../documents/i0801_530.html">IC（2）</a></td>
+                      <td>医療用具材料中の添加剤の分析</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/o389_131.html">GC/MSによるポリオレフィン中の添加剤の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i218_131.html">ICP-AES、ICP-MS、ICによる微量元素（金属・非金属）分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/f052_131.html">ホルムアルデヒドの定量</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/o350_131.html">ヒドラジンの定量</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/f076_131.html">HPLCによる樹脂中の残存イソシアネートの分析</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../../documents/f082_131.html">GC、GC/MSによるウレタン中の残存イソシアネート（HDI）の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td>医用材料、カテーテルの溶出物の同定、定量分析</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="6">医療用材料の表面分析・形態観察</td>
+                      <td rowspan="6"><a href="../../documents/f1501_510.html">FT-IR</a>、<a href="../../documents/s0801_510.html">Ramann</a>、<a href="../../documents/m1602_550.html">TEM</a>、<a href="../../documents/s1403_530.html">EPMA</a>、ESCA、<a href="../../documents/s0701_510.html">TOF-SIMS</a></td>
+                      <td>多層フィルム・シートの層構造解析</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/f063_131.html">顕微IRイメージング法によるラミネートフィルムの組成分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s396_131.html">レーザラマンによるラミネートフィルムの分析</a></td>
+                    </tr>
+                    <tr>
+                      <td>透過型電子顕微鏡TEM観察</td>
+                    </tr>
+                    <tr>
+                      <td>表面処理材料の表面分析</td>
+                    </tr>
+                    <tr>
+                      <td>金属材料酸化表面の解析</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">医療用材料の物性測定</td>
+                      <td rowspan="3">機械的強度、熱的特性、比表面積測定、細孔径分布測定など</td>
+                      <td>プラスチックスの物性試験</td>
+                    </tr>
+                    <tr>
+                      <td>多孔性材料の評価</td>
+                    </tr>
+                    <tr>
+                      <td>微粒子の粒度分布測定</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">医療用具製品の不具合の検討</td>
+                      <td rowspan="3">顕微IR、<a href="../../documents/s1403_530.html">EPMA</a>、<a href="../../documents/an1316_510.html">Py-GC/MS</a></td>
+                      <td>破断原因の検討（SEMによる破断面の観察）</td>
+                    </tr>
+                    <tr>
+                      <td>変色原因の検討</td>
+                    </tr>
+                    <tr>
+                      <td>混入異物の分析</td>
+                    </tr>
+                    <tr>
+                      <td>医療用具中の異物分析</td>
+                      <td><a href="../../documents/f1502_510.html">顕微FT-IR</a>、<a href="../../documents/s1403_530.html">EPMA</a>、<a href="../../documents/an1316_510.html">Py-GC/MS</a>、<a href="../../documents/s0701_510.html">TOF-SIMS</a></td>
+                      <td><a href="../materials/foreign_substance.html">異物分析　（試験法詳細） </a></td>
+                    </tr>
+                    <tr>
+                      <td>医用材料の安全性評価（変異原性試験/GLP対応）</td>
+                      <td>&nbsp;</td>
+                      <td><a href="safety_test.html">安全性評価　（試験法詳細） </a></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+
+.tbl-service-doc {
+  tbody tr:first-child th:nth-child(1) {
+    min-width: 100px!important;
+  }
+  tbody tr:first-child th:nth-child(2) {
+    min-width: 100px!important;
+  }
+
+  tbody tr:first-child th:last-child {
+    min-width: 510px!important;
+  }
+}
+</style>
+
+<script>
+	import '@scripts/rowspanBottomLine.js';
+</script>

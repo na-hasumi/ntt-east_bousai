@@ -1,0 +1,56 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '化審法に定める有害性情報の報告について',
+	description: '化審法に定める有害性情報の報告について',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="お問合せ・ご依頼" subTitle="Inquiry" src="mv/mv-inquiry.webp" />
+    <TitleH1 title="化審法に定める有害性情報の報告について" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="お問合せ・ご依頼" parent2="ご依頼の流れ" />
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <p>化審法では化学物質の製造・輸入業者が化審法に関わる有害性の情報を入手した場合、当局へ報告する義務があります。（化審法第41条）ここでは変異原性試験に関連して内容をまとめました。 </p>
+                <h2 class="h2-std">対象となる化学物質</h2>
+                <ul class="ul-normal-disc">
+                    <li>優先評価化学物質</li>
+                    <li>監視化学物質</li>
+                    <li>第二種特定化学物質</li>
+                    <li>一般化学物質</li>
+                    <li>新規化学物質<br>
+                      （審査後公示前物質、少量新規化学物質、低生産量新規化学物質、高分子化合物<sup><strong class="strong-red">*</strong></sup>）</li>
+                    </ul>
+                    <table class="tbl-inquiry-documents">
+                      <tbody><tr>
+                    <td class="font-small bdr-none">&nbsp;&nbsp;<sup><strong class="strong-red">*</strong></sup></td>
+                    <td class="bdr-none">&nbsp;&nbsp;</td>
+                    <td class="font-small bdr-none">法第3条第1項第6号に規定する、人の健康又は生活環境動植物の生息若しくは生育に係る被害を生ずる恐れのないもの</td>
+                      </tr>
+                    </tbody></table>
+                <h2 class="h2-std">試験条件</h2>
+                <p>化学物質GLP適用の有無及び試験ガイドラインへの準拠の有無のいずれにも関わらず、報告義務があります。さらに、対象となる試験法に関しても「試験の目的が試験方法等通知に規定する試験の目的に合致している方法」として試験ガイドラインの公表されていない試験法による試験結果についても報告対象となっています。</p>
+                <h2 class="h2-std">有害性の定義</h2>
+                <p>変異原性試験においては「陽性」判定となったものです。</p>
+                <h2 class="h2-std">報告書の様式</h2>
+                <p>通常、化審法での届出に規定されている様式です。なお、報告様式の規定されていない試験については化学物質の一般情報、試験方法及び試験結果等の概要をまとめた資料を提出することになります。 </p>
+                <h2 class="h2-std">報告期限</h2>
+                <p>報告書を入手してから60日以内です。 </p>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>

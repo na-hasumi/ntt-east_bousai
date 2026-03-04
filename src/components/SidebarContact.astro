@@ -1,0 +1,31 @@
+---
+interface Props {
+  parent?: string; // 親カテゴリー
+  parent2?: string; // 子カテゴリー
+  parent3?: string; // 孫カテゴリー
+  addClass?: string; // 追加クラス
+}
+
+const { parent = '', parent2 = '', parent3 = '', addClass = '' } = Astro.props;
+---
+
+<div class="sidebar_unit">
+  <h2 class={`sidebar_title ${parent === 'お問合せ・ご依頼' ? 'is_active' : ''}`}><a href={`/inquiry.html`}>お問合せ・ご依頼</a></h2>
+  <ul class="sidebar_list">
+    <li class="sidebar_item">
+      <a class={`sidebar_item_name ${parent2 === 'ご依頼の流れ' ? 'is_active' : ''}`} href="/guidance.html">ご依頼の流れ</a>
+    </li>
+    <li class="sidebar_item">
+      <a class={`sidebar_item_name ${parent2 === 'よくあるご質問' ? 'is_active' : ''}`} href="/faq.html">よくあるご質問</a>
+    </li>
+  </ul>
+</div>
+
+<style lang="scss">
+@use "@styles/sidebar";
+
+.sidebar_list{
+  border-radius: 5px;
+}
+</style>
+

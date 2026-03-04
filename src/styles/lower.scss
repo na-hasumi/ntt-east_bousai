@@ -1,0 +1,1392 @@
+@use "sass:map";
+@use "/src/styles/global/index" as g;
+
+/********************************************************************
+* 下層ページ
+**********************************************************************/
+
+
+#content, #main-column1 {
+	flex: 1;
+
+	a {
+		color: g.color('key');
+		text-decoration: underline;
+	}
+}
+
+.font-normal {
+	font-weight:normal !important;
+}
+
+.list-none {
+	white-space: break-spaces;
+}
+
+.txt-center {
+	text-align:center !important;
+}
+
+.txt-left {
+	text-align:left!important;
+}
+
+.txt-right {
+	text-align:right!important;
+}
+
+.flt-right {
+	float:right;
+}
+
+.mgn-lt50 {
+	margin-left:50px !important;
+}
+
+.mgn-lt100 {
+	margin-left:100px !important;
+}
+
+.v-align-middle {
+	vertical-align:middle !important;
+}
+
+hr.hr-mgn-btm10 {
+	margin:0 0 10px 0;
+	border:g.color('white');
+	color:g.color('white');
+}
+
+hr.hr-mgn-btm20 {
+	margin:0 0 20px 0;
+	border:g.color('white');
+	color:g.color('white');
+}
+
+div#content p{
+	margin:0 13px 0 30px;
+}
+
+#content h2.h2-service, h2.h2-std, #main-column1 h2 {
+	margin:60px 0 22px 0 !important;
+	padding-left:3px;
+	border-bottom:g.color('key_light') 2px solid;
+	color:#000;
+	clear:both;
+	font-size:2.3rem;
+	font-weight:500;
+	padding-bottom: 10px;
+	letter-spacing: 0.1em;
+}
+
+.print-btn + h2.h2-std {
+	margin-top: 0!important;
+}
+
+h2.h2-guidance {
+	margin:20px 10px 20px 15px;
+	padding:5px 20px 5px 5px;
+	background-color:#E2F5CB;
+	color:#333;
+	font-size:110%;
+	font-weight:bold;
+}
+
+h3.h3-service-list, h3.h3-guidance {
+	margin:40px 5px 20px 0;
+	padding:2px 0 2px 5px;
+	border-left:g.color('key_light') 3px solid;
+	color: g.color('base');
+	font-weight:500;
+	line-height: 1.5;
+}
+
+h3.h3-guidance {
+	margin: 0 30px 20px 25px;
+}
+
+h3.h3-news {
+	margin:20px 0 10px 55px;
+	color: #306B5C;
+	font-size:110%;
+	font-weight:bold;
+	clear:both;
+}
+
+h3.h3-std {
+	margin:20px 0 10px 0;
+	color: #306B5C;
+	font-size:110%;
+	font-weight:bold;
+	clear:both;
+	border-left: none;
+}
+
+h4.h4-service-list {
+	margin:20px 5px 0 0;
+	color: g.color('key_light');
+	font-size:110%;
+	font-weight:bold;
+	clear:both;
+}
+
+.font-smaller {
+	font-size:70% !important;
+}
+
+strong {
+	font-weight: bolder;
+
+	&.strong-red {
+		color:#F00;
+	}
+}
+
+.ul-std {
+	margin:10px 0 10px 30px;
+
+	li {
+		margin:0 10px 5px 10px;
+		padding-left:20px;
+		background:url(/images/service/li-mark_index-intro.gif) no-repeat 5px 9px;
+
+		@media print {
+			-webkit-print-color-adjust: exact;
+			print-color-adjust: exact;
+			color-adjust: exact;
+		}
+	}
+}
+
+.ul-decimal {
+	margin: 20px 0 10px 15px;
+
+	li {
+		margin: 0 10px 20px 40px;
+		list-style-type: decimal !important;
+	}
+}
+
+.ul-table-list {
+	li {
+		text-indent: -1em;
+		padding-left: 1em;
+	}
+}
+
+.ul-normal-disc {
+	margin-top:10px;
+	margin-left:50px;
+	margin-bottom:15px;
+
+	li {
+		list-style-type:disc;
+		margin-bottom:3px;
+	}
+}
+
+.ul-news {
+	margin:20px 50px 10px 80px;
+
+	li {
+		margin-bottom:5px;
+		padding-left:20px;
+		background: url(/images/information/li-mark-inquiry-note.gif) no-repeat left 11px;
+	}
+}
+
+.li-news-sub {
+	margin-left:20px !important;
+	padding-left:10px !important;
+	background: url(/images/information/li-mark_dot_blk.gif) g.color('white') no-repeat left 13px !important;
+}
+
+ul.ul-sitemap {
+	margin:3px 20px 100px 50px !important;
+
+	li {
+		padding:5px 40px 5px 13px;
+		background: url(/images/common/li-mark_category-linkarea.gif) no-repeat left center;
+		display:inline;
+		font-weight:bold;
+		float:left;
+	}
+}
+
+
+.ol-std {
+	margin:20px 0 10px 15px;
+
+	li {
+		margin:0 10px 5px 40px;
+		list-style-type:decimal;
+	}
+}
+
+.ol-rohs-polymer {
+	margin:10px 20px;
+	padding:10px;
+	border:#096 1px solid;
+	width:50%;
+
+	li {
+		margin:0 5px 5px 30px;
+		list-style-type:decimal;
+	}
+}
+
+.ol-column1 {
+	margin:5px 35px 10px 100px;
+
+	li {
+		margin-bottom:2px;
+		list-style-type:decimal;
+	}
+}
+
+
+
+.dl-service-std {
+	margin-right:15px;
+	margin-left:30px;
+	padding: 10px 0 30px;
+
+	dt {
+		margin-bottom:5px;
+		font-weight:bold;
+	}
+
+	dd {
+		margin-bottom:20px;
+		margin-left:15px;
+	}
+}
+
+p:has(+ table.tbl-analyzer) {
+	margin-block: 40px;
+}
+
+.p-message-pdg-bottom {
+	padding-bottom:1em;
+}
+
+.recruit-info {
+	margin:30px auto;
+	padding:30px;
+	border:#999 2px solid;
+	font-size:120%;
+	font-weight:bold;
+	text-align:center;
+	max-width:500px;
+
+	@media print {
+		width: 65%;
+	}
+}
+
+table {
+	th {
+		vertical-align:top;
+	}
+
+	td.td-analyzer-indent {
+		text-indent:10px;
+	}
+
+	td.td-bg-colored {
+		background:#ccf3f1;
+		color:#00c4ba;
+		border-right: none!important;
+		border-left: none!important;
+		border-top: none!important;
+		border-bottom: none!important;
+		position: relative;
+		z-index: 1;
+		text-indent: 10px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -1px;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background: #ebebf2;
+			z-index: 2;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background: #ebebf2;
+			z-index: 2;
+		}
+	}
+
+	td.td-txt-colored {
+		color:#00c4ba;
+		border-right: none!important;
+		border-left: none!important;
+		border-top: none!important;
+		border-bottom: none!important;
+		position: relative;
+		z-index: 1;
+		text-indent: 10px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -1px;
+			left: 0;
+			right: 0;
+			height: 2px;
+			background: g.color('border');
+			z-index: 2;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			right: 0;
+			height: 2px;
+			background: g.color('border');
+			z-index: 2;
+		}
+	}
+
+	// 最初のtrにのみ適用（共通スタイル）
+	&.tbl-width-none,
+	&.tbl-width-small,
+	&.tbl-width-middle,
+	&.tbl-width-large,
+	&.tbl-documents-border {
+		tr:first-of-type {
+			// thが2個未満の場合（1個のみ）
+			&:not(:has(th:nth-of-type(2))) {
+				th {
+					min-width: 137px;
+				}
+			}
+
+			// thが2個以上の場合
+			&:has(th:nth-of-type(2)) {
+				th {
+					min-width: auto;
+					border-bottom: 1px solid g.color('white') !important;
+				}
+			}
+		}
+	}
+
+	&.tbl-width-none {
+		width:fit-content;
+		margin-right:40px !important;
+
+		th {
+			padding:1px 5px;
+			width:auto;
+			border: none;
+			border-bottom: 1px solid g.color('white');
+		}
+
+		td {
+			padding:1px 5px;
+			width:auto;
+			border: none;
+		}
+	}
+
+	&.tbl-width-small,
+	&.tbl-width-middle,
+	&.tbl-width-large,
+	&.tbl-documents-border {
+		&:has(thead) tbody,
+		tr:has(th):not(:has(td)) ~ tr {
+			th {
+				border-right: 1px solid g.color('white') !important;
+			}
+
+			// 下線左端を短くするため
+			td:first-of-type {
+				position: relative;
+				padding-left: 6px;
+
+				&::before {
+					position: absolute;
+					content: "";
+					bottom: -1px;
+					left: 0;
+					width: 6px;
+					height: 100%;
+					background-color: g.color('white');
+				}
+			}
+		}
+	}
+
+	&.tbl-width-small {
+		width: fit-content;
+		
+		th {
+			padding:5px 5px;
+		}
+
+		td {
+			padding:5px 5px;
+
+			&.td-bg-colored {
+				text-indent: 0;
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+		td:has(+ .td-bg-colored) {
+			border-right: none !important;
+			position: relative;
+			padding-right: 6px;
+			
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: -1px;
+				right: 0;
+				width: 3px;
+				height: 100%;
+				background: g.color('white');
+			}
+		}
+
+		td.td-bg-colored + td {
+			position: relative;
+			padding-left: 6px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: -1px;
+				left: 0;
+				width: 3px;
+				height: 100%;
+				background: g.color('white');
+			}
+		}
+
+		tr:has(+ tr td.td-bg-colored),
+		tr:has(+ tr td.td-txt-colored) {
+			td {
+				border-bottom: 1px solid g.color('border') !important;
+
+				&.border-none-bottom{
+					border-bottom: none !important;
+				}
+			}
+		}
+
+		tr:has(td.td-bg-colored),
+		tr:has(td.td-txt-colored) {
+			td {
+				border-bottom: 1px solid g.color('border') !important;
+			}
+		}
+	}
+
+	&.tbl-width-middle {
+		width: fit-content;
+
+		th {
+			padding:8px 5px;
+			text-align: left;
+			border-bottom: 1px solid g.color('white') !important;
+		}
+
+		td {
+			padding:8px 5px;
+		}
+
+		tbody th {
+			background-color: g.color('key_light');
+			color: g.color('white');
+		}
+	}
+
+	&.tbl-width-large {
+		width: 100%;
+		max-width: 790px;
+
+		th {
+			padding:8px 5px;
+			text-align: left;
+		}
+
+		td {
+			padding:12px 5px;
+			line-height: 1.25;
+
+			&.td-bg-colored {
+				text-indent: 0;
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+		td:has(+ .td-bg-colored) {
+			border-right: none !important;
+		}
+
+		tr:has(+ tr td.td-bg-colored),
+		tr:has(+ tr td.td-txt-colored) {
+			td {
+				border-bottom: 1px solid g.color('border') !important;
+			}
+		}
+
+		tr:has(td.td-bg-colored),
+		tr:has(td.td-txt-colored) {
+			td {
+				border-bottom: 1px solid g.color('border') !important;
+			}
+		}
+	}
+
+	&.tbl-documents-border {
+		th,td {
+			padding: 5px 8px !important;
+		}
+	}
+
+	&.tbl-analyzer {
+		margin-top: 30px;
+
+		.txt-em {
+			font-weight:bold;
+		}
+	}
+
+	&.tbl-rohs {
+		margin:10px 0 10px 22px;
+
+		th {
+			padding:4px 20px;
+			background:#E7F5F6;
+			border:g.color('white') 1px solid!important;
+			text-align:center!important;
+			vertical-align: middle;
+		}
+
+		td {
+			padding:2px 5px;
+		}
+	}
+
+	&.tbl-analyzer,&.tbl-service-doc {
+		border: none;
+		overflow: hidden;
+
+		width: 100%;
+		
+		th {
+			padding:8px 3px;
+		}
+
+		td {
+			padding:10px 3px 10px 3px;
+			vertical-align:top;
+			letter-spacing: 0;
+		}
+	}
+
+	&.tbl-gas-analysis {
+		margin:10px 0 10px 22px;
+
+		th {
+			padding:3px;
+			border:#B6E0D9 1px solid!important;
+			font-weight:bold;
+			text-align:center;
+		}
+
+		td {
+			padding:4px;
+			vertical-align:top;
+			border-right: none!important;
+			border-bottom: none!important;
+		}
+
+		.td-gas-analysis-border {
+			border:#B6E0D9 1px solid!important;
+			min-width: 150px;
+			max-width: 280px;
+		}
+
+		.td-va-middle {
+			vertical-align:middle !important;
+		}
+
+		.ul-gas-analysis {
+			li {
+				margin-bottom: 3px;
+				padding-left:20px;
+				background:url(/images/service/li-mark_index-intro.gif) no-repeat 5px center;
+			}	
+		}
+	}
+
+	&.tbl-profile {
+		margin:0 15px 10px 40px;
+		
+		@media print {
+			margin-left: 0;
+		}
+
+		th {
+			padding:3px 5px 3px 10px;
+			vertical-align:top;
+			width:100px;
+		}
+
+		td {
+			padding:3px 5px 3px 10px;
+
+			&.td-profile {
+				border:none !important;
+				font-size:90%;
+				text-align:right;
+			}
+		}
+	}
+
+	&.tbl-office {
+		margin:0 15px 40px 30px;
+		width: 95%;
+
+		th {
+			padding:5px 0 1px 8px;
+			font-weight:bold;
+			border: none!important;
+			text-align: left!important;
+		}
+
+		td {
+			padding:1px 0 2px 20px;
+		}
+	}
+
+	.td-tel,.td-tel-tokyo {
+		padding:4px 0 2px 20px !important;
+		width:200px;
+	}
+	
+	.td-map {
+		padding:8px 0 1px 10px !important;
+		vertical-align:top;
+		width:60px;
+	}
+
+	&.tbl-qa {
+		margin:0 15px 10px 30px;
+
+		th {
+			padding:5px 10px;
+			vertical-align:top;
+			white-space: nowrap;
+			width: 150px;
+		}
+
+		td {
+			padding:3px 5px;
+			vertical-align:top;
+		}
+
+		.width180 {
+			width: 250px;
+		}
+	}
+
+	&.tbl-notice {
+		margin:5px 15px 10px 80px;
+
+		th {
+			padding-right:10px;
+			background-color: transparent!important;
+			color: g.color('base')!important;
+			border: none!important;
+			font-weight: normal;
+		}
+
+		td {
+			padding:3px 0;
+			border: none!important;
+		}
+	}
+
+	&#tbl-inquiry-add {
+		margin:0 20px 20px 25px;
+
+		th {
+			padding:2px 10px;
+		}
+
+		td {
+			padding:2px 10px;
+			vertical-align:top
+		}
+
+		.inquiry-add-office {
+			width: 16%;
+		}
+	}
+
+	&.tbl-inquiry-documents {
+		margin:15px 10px 5px 20px;
+
+		th {
+			vertical-align:top;
+		}
+
+		td  {
+			vertical-align:top;
+		}
+	}
+
+	&.tbl-news {
+		margin:10px 0 10px 65px;
+
+		th {
+			padding:5px 8px;
+			vertical-align:top;
+		}
+
+		td {
+			padding:3px 5px;
+		}
+	}
+
+	&.border-1px {
+		border-collapse: separate;
+	}
+
+	.bg-lightblue td,
+	td.bg-lightblue {
+		border-right: 6px solid #f0f8ff !important;
+
+		&:last-of-type {
+			border-right: none !important;
+		}
+
+		&::before {
+			display: none;
+		}
+	}
+	
+	&.tbl-service-doc {
+		tbody tr:first-child th:nth-child(1) {
+			min-width: 112px;
+		}
+
+		tbody tr:first-child th:nth-child(2) {
+			min-width: 171px;
+		}
+
+		tbody tr:first-child th:nth-child(3) {
+			width: 136px;
+		}
+
+		tbody tr:first-child th:last-child {
+			min-width: 397px;
+		}
+
+		// JavaScriptで追加されたクラスを持つセルに下線を引く（列数に関係なく適用）
+		tbody tr td[rowspan].js-rowspan-bottomLine,
+		tbody tr th[rowspan].js-rowspan-bottomLine {
+			position: relative;
+
+			&::after {
+				position: absolute;
+				height: 1px;
+				width: 2000px;
+				content: "";
+				bottom: -1px;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 10;
+				background: rgba($color: #2e3174, $alpha: 0.5);
+				pointer-events: none;
+
+					@media print {
+						display: none;
+					}
+			}
+		}
+
+		// rowspanがない場合の行（全列にデータがある行）
+		// 総列数が4の場合
+		&:has(> tbody > tr:first-child > th:nth-child(4)) {
+			tbody tr:has(> td:first-child:not([rowspan]):nth-last-child(4)):has(> td:nth-child(2):not([rowspan]):nth-last-child(3)):has(> td:nth-child(3):not([rowspan]):nth-last-child(2)):has(> td:nth-child(4):not([rowspan]):last-child):not(:has(> td[rowspan])) {
+				// 最初の列のセルに線を引く（表の左端から右端まで）
+				> td:first-child:not([rowspan]):nth-last-child(4) {
+					position: relative;
+
+					&::after {
+						position: absolute;
+						height: 1px;
+						width: 2000px;
+						content: "";
+						bottom: -1px;
+						left: 50%;
+						transform: translateX(-50%);
+						z-index: 10;
+						background: rgba($color: #2e3174, $alpha: 0.5);
+						pointer-events: none;
+
+						@media print {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		// 総列数が3の場合
+		&:has(> tbody > tr:first-child > th:nth-child(3)):not(:has(> tbody > tr:first-child > th:nth-child(4))) {
+			tbody tr:has(> td:first-child:not([rowspan]):nth-last-child(3)):has(> td:nth-child(2):not([rowspan]):nth-last-child(2)):has(> td:nth-child(3):not([rowspan]):last-child):not(:has(> td[rowspan])) {
+				// 最初の列のセルに線を引く（表の左端から右端まで）
+				> td:first-child:not([rowspan]):nth-last-child(3) {
+					position: relative;
+
+					&::after {
+						position: absolute;
+						height: 1px;
+						width: 2000px;
+						content: "";
+						bottom: -1px;
+						left: 50%;
+						transform: translateX(-50%);
+						z-index: 10;
+						background: rgba($color: #2e3174, $alpha: 0.5);
+						pointer-events: none;
+
+						@media print {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		// 総列数が2の場合（最初の列がth、2列目がtd）
+		&:not(:has(> tbody > tr:first-child > th:nth-child(3))) {
+			// 最初の行の1列目のthにbeforeを追加（rowspanがあっても適用）
+			tbody tr:first-child > th:first-child:nth-last-child(2) {
+				position: relative;
+
+				&::before {
+					position: absolute;
+					height: 2px;
+					width: 2000px;
+					content: "";
+					top: -1px;
+					left: 50%;
+					transform: translateX(-50%);
+					z-index: 10;
+					background: rgba($color: #2e3174, $alpha: 0.5);
+					pointer-events: none;
+
+					@media print {
+						display: none;
+					}
+				}
+			}
+
+			tbody tr:has(> th:first-child:not([rowspan]):nth-last-child(2)):has(> td:nth-child(2):not([rowspan]):last-child):not(:has(> th[rowspan])):not(:has(> td[rowspan])) {
+				// 最初の列のセルに線を引く（表の左端から右端まで）
+				> th:first-child:not([rowspan]):nth-last-child(2) {
+					position: relative;
+
+					&::after {
+						position: absolute;
+						height: 1px;
+						width: 2000px;
+						content: "";
+						bottom: -1px;
+						left: 50%;
+						transform: translateX(-50%);
+						z-index: 10;
+						background: rgba($color: #2e3174, $alpha: 0.5);
+						pointer-events: none;
+
+						@media print {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+
+	[class=""] {
+		th,td {
+			border-right: none !important;
+			border-bottom: none !important;
+		}
+	} 
+	
+	thead th {
+		color: g.color('white');
+		border-right: 1px solid g.color('white');
+		text-align: center;
+		background:g.color('key_light') !important;
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+
+	tbody {
+		th {
+			border-right: 6px solid g.color('white');
+			border-bottom: 1px solid g.color('border');
+
+		}
+
+		td:not(.td-bg-colored):not(.td-txt-colored) {
+			border-right: 6px solid g.color('white');
+			border-bottom: 1px solid g.color('border');
+		}
+
+		tr:has(+ tr td.td-bg-colored),
+		tr:has(+ tr td.td-txt-colored) {
+			th, td {
+				border-bottom: none!important;
+			}
+		}
+
+		tr:has(td.td-bg-colored),
+		tr:has(td.td-txt-colored) {
+			td {
+				border-top: none!important;
+				border-bottom: none!important;
+			}
+		}
+
+		tr:has(td.td-bg-colored) + tr td,
+		tr:has(td.td-txt-colored) + tr td {
+			border-top: none!important;
+		}
+
+		tr:has(td.td-bg-colored) + tr td:first-child,
+		tr:has(td.td-txt-colored) + tr td:first-child {
+			border-left: none!important;
+		}
+
+		tr:has(th:only-of-type) {
+			th {
+				border-right: 6px solid g.color('white');
+				text-align: left;
+			}
+		}
+	}
+
+	&:not(:has(thead)) tbody th {
+		background:g.color('key_light');
+		color: g.color('white');
+		border-right: 1px solid g.color('white');
+		text-align: center;
+	}
+}
+
+table:not([class]) {
+	> tbody > tr > th,
+	> tbody > tr > td {
+		border-right: none !important;
+		border-bottom: none !important;
+	}
+}
+
+th.bg-initial {
+	color: g.color('base');
+	font-weight: normal;
+}
+
+.ul-arrow-small {
+	margin:10px 10px 10px 20px;
+
+	li {
+		margin:0 10px 5px 20px;
+		padding-left:20px;
+		background: url(/images/service/arrow-small.gif) no-repeat left 0 top 10px;
+
+		@media print {
+			-webkit-print-color-adjust: exact;
+			print-color-adjust: exact;
+			color-adjust: exact;
+		}
+	}
+}
+
+.ul-dot-blk {
+	li {
+		margin-left:5px;
+		padding-left:13px;
+		background:url(/images/service/li-mark_dot_blk.gif) no-repeat left 13px;
+	}
+}
+
+.accordion-none {
+	h2 {
+		margin:40px 5px 20px 40px!important;
+		padding:2px 0 2px 5px;
+		border-left:g.color('key_light') 3px solid;
+		border-bottom: none;
+		color: g.color('base');
+		font-size:1.6rem;
+		font-weight:500;
+		line-height: 1.5;
+	}
+
+	ul {
+		margin-left:40px;
+	}
+
+	li {
+		margin:0 10px 10px 5px;
+		padding-left:20px;
+		background:url(/images/analysis/li-mark_index-intro.gif) no-repeat 5px 9px;
+		list-style-type:none;
+	}
+}
+
+.analysis-category {
+	h2 {
+		margin-left: 30px!important;
+	}
+
+	h3 {
+		margin-left: 40px;
+	}
+
+	ul {
+		margin-left:40px;
+	}
+
+	li {
+		margin:0 10px 10px 5px;
+		padding-left:20px;
+		background:url(/images/analysis/li-mark_index-intro.gif) no-repeat 5px 9px;
+		list-style-type:none;
+	}
+}
+
+dl.dl-dot-blk {
+	dt {
+		background-color:#EEE;
+		border-bottom:#BBB 1px solid;
+	}
+
+	dd {
+		margin-left:5px;
+		padding-left:13px;
+		background:url(/images/service/li-mark_dot_blk.gif) no-repeat left 13px;
+	}
+}
+
+dl.dl-float {
+	dt {
+		width: auto;
+		height: auto;
+	}
+}
+
+.bdr-none {
+	border:none !important;
+}
+
+.mgn-lt10 {
+	margin-left:10px;
+}
+
+.mgn-btm20 {
+	margin-bottom:20px !important;
+}
+
+.mgn-btm30 {
+	margin-bottom:30px !important;
+}
+
+.mgn-btm50 {
+	margin-bottom:50px !important;
+}
+
+.mgn-tp40 {
+	margin-top:40px !important;
+}
+
+.category-top {
+	display: flex;
+	margin: 0 0 40px 20px;
+}
+
+#category-top-linkarea {
+	margin-left: 20px;
+	padding-top:20px;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 30px 20px;
+}
+
+.category-top-linkarea {
+	margin-left: 20px;
+	padding-top:20px;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 30px 20px;
+
+	&-column {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+div.category-top-links {
+	padding:5px 5px 10px 5px;
+	border:#CCC 1px solid;
+	display: flex;
+	flex-direction: row-reverse;
+	column-gap: 10px;
+	align-items: flex-start;
+
+	img {
+		flex-shrink: 0;
+		max-width: 100%;
+		height: auto;
+		width: 120px;
+	}
+}
+
+.dl-category-top-link {
+	min-width: 0;
+	flex: 1;
+
+	dt {
+		margin-bottom: 10px;
+		padding-left: 10px;
+		background: #ddd;
+		font-size: 105%;
+		font-weight: bold;
+		word-break: break-word;
+		overflow-wrap: break-word;
+
+		@media print {
+			-webkit-print-color-adjust: exact;
+			print-color-adjust: exact;
+		}
+	}
+
+	dd {
+		padding-left: 15px;
+		background: url(/images/service/li-mark_index-intro.gif) no-repeat 5px 6px;
+		word-break: break-word;
+		overflow-wrap: break-word;
+		font-size: 1.4rem;
+
+		&.dd-category-top-link-none {
+			background: #FFF !important;
+		}
+	}
+}
+
+.dl-media {
+	dt {
+		margin-bottom:10px;
+		padding-left:10px;
+		background:#ddd;
+		font-size:105%;
+		font-weight:bold;
+	}
+
+	dd {
+		padding-left:8px;
+	}
+}
+
+div#guidance-glp {
+	margin:20px 30px 20px 35px;
+	padding:10px;
+	border:#999 1px solid;
+}
+
+div#main-column1 {
+	padding:10px 0;
+	background:#FFF;
+	overflow:hidden;
+
+	h1 {
+		margin:5px 0 30px 30px;
+	}
+
+	p {
+		margin:10px 35px 10px 65px;
+	}
+
+	.font-bold {
+		font-weight: bolder;
+	}
+}
+
+.document-content {
+	width: 100%;
+}
+
+div#search-content {
+	width: 100%;
+	
+	h2 {
+		margin:30px 10px 10px 10px;
+		padding:2px 0 2px 5px;
+		background:#E0F1ED;
+		border-left:#8BB6A4 4px solid;
+		color:#333;
+		font-weight:bold;
+	}
+
+	p {
+		margin:20px 10px 10px 20px;
+
+		&.p-example {
+			margin-top:10px !important;
+			padding-left:1em;
+			font-size:90%;
+		}
+	}
+
+	ul {
+		margin:20px 20px 20px 40px;
+		font-size:90%;
+	}
+
+	li {
+		margin-bottom:5px;
+		list-style-type:disc;
+	}
+}
+
+
+// 印刷時のスタイル
+@media print {
+	// 背景画像と背景色を印刷時に表示
+	* {
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+		color-adjust: exact !important;
+	}
+
+	// テキストが右端で切れないよう
+	#content {
+		min-width: 0;
+	}
+
+	.document-content {
+		padding-bottom: 0 !important;
+		height: fit-content;
+	}
+
+	// テーブルとその中の要素
+	table {
+		max-width: 100% !important;
+		width: fit-content !important;
+		table-layout: auto;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		box-sizing: border-box !important;
+		position: relative;
+		
+		thead {
+			display: table-header-group;
+		}
+
+		th, td {
+			word-wrap: break-word;
+			overflow-wrap: break-word;
+			max-width: 100%;
+			box-sizing: border-box !important;
+			background-clip: padding-box;
+			-webkit-print-color-adjust: exact;
+			print-color-adjust: exact;
+		}
+
+		th[rowspan] {
+			background-color: transparent !important;
+			position: relative;
+			z-index: 0;
+		}
+		
+		th[rowspan]::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: g.color('key_light') !important; 
+			z-index: -1;
+		}
+
+		&.tbl-service-doc {
+			// theadがない場合
+			&:not(:has(thead)) {
+				tbody th {
+					page-break-inside: avoid;
+					break-inside: avoid;
+				}
+			}
+
+			tbody tr td, tbody tr th {
+				position: relative !important;
+				overflow: visible !important;
+			}
+		}
+
+		&.tbl-notice,
+		&.tbl-width-large {
+			width: auto!important;
+		}
+
+		&.tbl-width-none,
+		&.tbl-std,
+		&.tbl-documents-border,
+		&.tbl-no-border {
+			width: fit-content!important;
+		}
+	}
+
+	// テキスト要素が親要素の幅を超えないように（TitleH2を除く）
+	#content p, #content div, #content span, #content a, #content h1, #content h2:not(.title), #content h3, #content h4, #content h5, #content h6, #content li, #content dt, #content dd {
+		max-width: 100%;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		box-sizing: border-box !important;
+	}
+
+	// #content内の段落のマージンを調整（右端が切れないように）
+	#content p {
+		margin-right: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	// 画像は適切にスケール
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}

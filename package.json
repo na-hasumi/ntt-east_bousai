@@ -1,0 +1,38 @@
+{
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build",
+    "build:lowmem": "node scripts/build-lowmem.mjs",
+    "cleanup:public-images": "node scripts/cleanup-unused-public-images.mjs",
+    "cleanup:public-images:delete": "node scripts/cleanup-unused-public-images.mjs --delete",
+    "convert:publications:utf8": "node scripts/convert-publications-to-utf8.mjs",
+    "convert:topics:utf8": "node scripts/convert-topics-to-utf8.mjs",
+    "extract:publications:json": "node scripts/extract-publications-json.mjs",
+    "extract:topics:json": "node scripts/extract-topics-json.mjs",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/node": "^9.1.2",
+    "@astrojs/sitemap": "^3.6.0",
+    "@astrojs/vue": "^5.0.7",
+    "@studio-freight/lenis": "^1.0.42",
+    "aos": "^2.3.4",
+    "astro": "^5.4.2",
+    "gsap": "^3.13.0",
+    "iconv-lite": "^0.6.3",
+    "swiper": "^12.0.1",
+    "the-new-css-reset": "^1.11.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "sass": "^1.85.1"
+  },
+  "volta": {
+    "node": "22.21.1"
+  }
+}

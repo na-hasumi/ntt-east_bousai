@@ -1,0 +1,238 @@
+@charset "UTF-8";
+/* CSS Document */
+
+dl.dl-faq {
+	margin:0 20px 30px 40px;
+}
+dl.dl-faq dt {
+	margin-top:40px;
+	padding-bottom:1px;
+	border-bottom:#8ACBEA 2px solid;
+	color:#333;
+	font-size:110%;
+	font-weight:bold;
+}
+dl.dl-faq dt img{
+	vertical-align:middle;
+}
+dl.dl-faq dd {
+	margin-top:2px;
+	padding: 7px 10px 7px 65px;
+	background: #E6F9F5;
+}
+/*------���˗��̗���-----*/
+h2.h2-guidance {
+	margin:20px 10px 20px 15px;
+	padding:5px 20px 5px 5px;
+	background-color:#E2F5CB;
+	color:#333;
+	font-size:110%;
+	font-weight:bold;
+}
+p#p-guidance-lnkto-inquiry_btn1 {
+	padding:10px;
+}
+p.p-guidance-lnkto-inquiry_btn2 {
+	padding:10px;
+	text-align:center;
+}
+p.p-guidance-lnkto-inquiry_btn2 img {
+	margin-right:20px;
+}
+p.p-guidance-arrow {
+	padding:5px 5px 0 5px;
+	text-align:center;
+}
+h3.h3-guidance {
+	margin:0 30px 20px 25px;
+	padding:3px 0 3px 10px;
+	background:#F2F2F2;
+	border-top:#AFD8D5 1px solid;
+	border-left:#11A0A2 4px solid;
+	color:#444;
+	font-size:110%;
+	font-weight:bold;
+}
+p.p-guidance-forms  {
+	padding-left:15px;
+}
+p.p-guidance-forms img {
+	margin-right:5px;
+}
+div#guidance-glp {
+	margin:20px 30px 20px 35px;
+	padding:10px;
+	border:#999 1px solid;
+}
+div#guidance-glp p {
+	margin:0 0 10px 0 !important;
+}
+div#guidance-glp dl {
+	margin:10px;
+}
+div#guidance-glp dt {
+	color:#2E6D5A;
+	font-weight:bold;
+}
+div#guidance-glp dd {
+	margin-left:10px;
+}
+ul.ul-normal-disc {
+	margin-top:10px;
+	margin-left:50px;
+	margin-bottom:15px;
+}
+ul.ul-normal-disc li {
+	list-style-type:disc;
+	margin-bottom:3px;
+}
+table.tbl-inquiry-documents {
+	margin:15px 10px 5px 20px;
+}
+table.tbl-inquiry-documents th {
+	background:#E7F5F3;
+	vertical-align:top;
+}
+table.tbl-inquiry-documents td  {
+	vertical-align:top;
+}
+
+/*------���₢���킹��-----*/
+
+table#tbl-inquiry-add {
+	margin:0 20px 20px 25px;
+}
+table#tbl-inquiry-add th {
+	padding:2px 10px;
+	background:#E7F5F6;
+	border:#999 1px solid;
+}
+table#tbl-inquiry-add td {
+	padding:2px 10px;
+	border:#999 1px solid;
+	vertical-align:top
+}
+.inquiry-add-office {
+	width:7em;
+}
+hr#inquiry-form {
+	border-top:#FFF;
+	border-bottom:#FFF;
+	color:#FFF;
+}
+ul#ul-inquiry-note {
+	margin:20px 10px 30px 30px;
+	padding:10px 20px;
+	border-top:#9CE0BB 1px solid;
+	border-bottom:#9CE0BB 1px solid;
+}
+ul#ul-inquiry-note li {
+	margin-bottom:7px;
+	padding-left:15px;
+	background: none;
+}
+li.li-inquiry-note-sub {
+	background:#FFF !important;
+	margin-left:1em;
+}
+form#inquiry-submit {
+	margin:0 auto 30px auto;
+	text-align:center;
+	width:200px;
+}
+/*------���₢���킹�t�H�[��-----*/
+div#inquiry-logo {
+	padding:0 10px 10px 10px;
+	text-align:left;
+}
+div#inquiry-f {
+	margin:0 auto;
+	padding:15px 0 30px 0;
+	background:#FFF;
+	font-size:90%;
+	text-align:center;
+	width:800px;
+}
+div#inquiry-f p {
+	margin:20px 60px 0 50px;
+	padding-bottom:10px;
+	border-bottom:#247B79 1px solid;
+	text-align:left;
+}
+div#inquiry-f h1 {
+	margin-bottom:5px;
+}
+div#inquiry-f strong {
+	color:#066;
+}
+table#tbl-inquiry-f {
+	margin:30px auto;
+	width:580px;
+}
+table#tbl-inquiry-f th {
+	padding:3px 0;
+	color:#066;
+	font-weight:bold;
+	text-align:left;
+	vertical-align:top;
+}
+table#tbl-inquiry-f td {
+	padding:3px 0;
+	text-align:left;
+	vertical-align:top;
+}
+th.th-inquiry-f-num {
+	width:30px;
+}
+td.td-inquiry-f-item {
+	width:390px;
+}
+input.input-std {
+	width:320px;
+}
+input.input-short {
+	width:100px;
+}
+div#inquiry-f textarea {
+	width:450px;
+}
+
+ul#ul-inquiry-f-1 li {
+	margin-bottom:5px;
+}
+table#tbl-inquiry-f-inner td {
+	vertical-align:top;
+}
+td#td-inquiry-f-multiple-choice {
+	color:#066;
+}
+td.td-inquiry-f-inner-sub {
+	text-align:right !important;
+}
+div#inquiry-f-submit {
+	margin:0 60px 30px 50px;
+	padding-top:20px;
+	border-top:#247B79 1px solid;
+}
+input.input-inquiry-f-submit {
+	margin-right:40px;
+}
+.inqiry-asterisk {
+	color:#F00;
+}
+
+/*------documents----*/
+div#inquiry-documents-number {
+	margin:5px 5px 5px 0;
+	text-align:right;
+}
+h1.h1-inquiry-documents-title {
+	margin:0 5px 20px 10px;
+	padding:10px 0 10px 10px;
+	border-top:#CCCCCC 1px solid;
+	border-bottom:#11A0A2 2px solid;
+	color:#666;
+	font-size:120%;
+	font-weight:bold;
+}
+

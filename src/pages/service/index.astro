@@ -1,0 +1,157 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import sitemapTreeData from '@pages/documents/_sitemap_tree.json';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '分析対象',
+	description: '分析対象',
+	keywords: '',
+}
+---
+<Layout pageId="documents" title={meta.title} keywords={meta.keywords} description={meta.description}>
+    <MvLower title="分析対象" subTitle="Analytic subjects" src="mv/mv-service.webp"/>
+    <TitleH1 title="分析対象トップ" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析対象"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <p>DNP科学分析センターは、自動車、エレクトロニクスからライフサイエンスまで幅広い分野を対象として、受託分析を行っています。弊社の幅広い分野の豊富な分析・評価力、対応力を皆様の課題解決にお役立て下さい。</p>
+                  <div class="category-top">
+                    <div class="category-top-box">
+                      <a href="automobile.html">
+                        <figure class="category-top-image">
+                          <img src={IMG_PATH + "/service/automobile_01_lg.webp"} alt="自動車" width="390" height="243">
+                        </figure>
+                        <div class="category-top-text">
+                          <p class="category-top-title">自動車</p>
+                          <p class="category-top-lead">
+                            自動車業界においては、ハイブリッドシステムの世界的な広がりや電気自動車の実用化など、日々技術革新がなされています。<br>
+                            DNP科学分析センターでは、リチウムイオン二次電池、燃料電池、樹脂部品等に豊富な経験があります。<br>
+                            多様な分析技術と総合解析力で皆様の製品開発をお手伝いいたします。
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="category-top-box">
+                      <a href="electronics.html">
+                        <figure class="category-top-image">
+                          <img src={IMG_PATH + "/service/electronics_01_lg.webp"} alt="エレクトロニクス" width="390" height="243">
+                        </figure>
+                        <div class="category-top-text">
+                          <p class="category-top-title">エレクトロニクス</p>
+                          <p class="category-top-lead">
+                            日進月歩のエレクトロニクス技術にはスピードが重要です。<br>
+                            DNP科学分析センターの豊富な分析・評価力、対応力を皆様の課題解決に是非お役立て下さい。
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="category-top-box">
+                      <a href="life_science.html">
+                        <figure class="category-top-image">
+                          <img src={IMG_PATH + "/service/life_science_01_lg.webp"} alt="ライフサイエンス" width="390" height="243">
+                        </figure>
+                        <div class="category-top-text">
+                          <p class="category-top-title">ライフサイエンス</p>
+                          <p class="category-top-lead">
+                            医薬、食品、家庭用品など人々の生活に密接に関係のあるライフサイエンス分野において、弊社は、優れた分析技術と豊富な経験を有しています。皆様の課題解決を強力にサポートします。
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="category-top-box">
+                      <a href="materials.html">
+                        <figure class="category-top-image">
+                          <img src={IMG_PATH + "/service/materials_01_lg.webp"} alt="材料" width="390" height="243">
+                        </figure>
+                        <div class="category-top-text">
+                          <p class="category-top-title">材料</p>
+                          <p class="category-top-lead">
+                            有機材料、高分子材料、金属・無機材料、ナノ材料などあらゆる素材に、DNP科学分析センターの分析技術力が力を発揮します。発生ガス分析や異物分析などトラブルシューティングにも豊富な実績があります。
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                <!--content end--></div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+  .category-top {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 38px 40px;
+    margin-top: 35px;
+
+    &-box {
+      background-color: g.color('bg');
+      border-radius: 6px;
+
+      @media print {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-image {
+      text-align: center;
+
+      img {
+            border-radius: 6px;
+        }
+    }
+
+    &-text {
+      padding-inline: 34px;
+      padding: 26px 34px ;
+    }
+
+    &-title {
+      font-size: 2.7rem;
+      font-weight: 400;
+      border-bottom: 1px solid rgba($color: g.color('key'), $alpha: 0.1);
+      padding-bottom: 20px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 20px;
+        right: 15px;
+        margin: auto;
+        width: 1em;
+        height: 1em;
+        font-size: 10px;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-width: 2px;
+        border-color: g.color('key');
+        rotate: 135deg;
+      }
+    }
+
+    &-lead {
+      font-size: 1.6rem;
+      line-height: 1.875;
+      padding-top: 15px;
+    }
+  }
+
+</style>

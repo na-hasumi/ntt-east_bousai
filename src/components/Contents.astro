@@ -1,0 +1,194 @@
+---
+interface Props {
+	list: {
+		num: string | number;
+		txt: string;
+		href?: string;
+		subItems?: {
+			txt: string;
+			href?: string;
+		}[];
+	}[];
+}
+
+const { list } = Astro.props;
+---
+
+<div class="Contents">
+	<h2 class="Contents__tit"><span>contents</span></h2>
+	<ul class="Contents__list">
+		{
+			list.map((item) => (
+				<li class="Contents__item">
+					<a href={item.href}>
+						<div class="Contents__num">{item.num}</div>
+						<span class="Contents__txt">{item.txt}</span>
+					</a>
+					{item.subItems && item.subItems.length > 0 && (
+						<ul class="Contents__sublist">
+							{item.subItems.map((subItem) => (
+								<li class="Contents__subitem">
+									<a href={subItem.href}>
+										<span class="Contents__subtxt">{subItem.txt}</span>
+									</a>
+								</li>
+							))}
+						</ul>
+					)}
+				</li>
+			))
+		}
+	</ul>
+</div>
+
+<style lang="scss">
+	.Contents {
+		padding-bottom: 30px;
+		border-bottom: 7px solid g.color('bg');
+		margin-top: 45px;
+		width: fit-content;
+		margin-inline: auto;
+		min-width: 600px;
+
+		&__tit {
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				margin: auto;
+				width: 100%;
+				height: 7px;
+				background-color: g.color('bg');
+			}
+
+			span {
+				position: relative;
+				z-index: 2;
+				display: inline-block;
+				padding-right: 10px;
+				font-size: 2.4rem;
+				font-weight: bold;
+				letter-spacing: 0.02em;
+				color: g.color('base');
+				background-color: g.color('white');
+
+				font-size: 2.1rem;
+				/* @include g.mq('md') {
+				} */
+			}
+		}
+
+		&__list {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 10px;
+			margin-top: 10px;
+
+			gap: 15px;
+			margin-top: 15px;
+			/* @include g.mq('md') {
+			} */
+		}
+
+		&__item {
+			@media print {
+				page-break-inside: avoid;
+				break-inside: avoid;
+			}
+			a {
+				display: flex;
+				align-items: center;
+
+				&:hover {
+					.Contents__num {
+						color: #fff;
+						background-color: g.color('key_light');
+					}
+				}
+			}
+		}
+
+		&__sublist {
+			margin-top: 8px;
+			margin-left: 32px;
+			list-style-type: disc;
+			padding-left: 1.5em;
+			
+			margin-left: 45px;
+			/* @include g.mq('md') {
+			} */
+		}
+
+		&__subitem {
+			margin-bottom: 6px;
+			
+			margin-bottom: 8px;
+			/* @include g.mq('md') {
+			} */
+
+			&::marker {
+				font-size: 0.8em;
+				color: g.color('key');
+			}
+
+			a {
+				display: inline-block;
+				text-decoration: underline;
+				color: g.color('key');
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+
+		&__subtxt {
+			font-weight: normal;
+			font-size: 1.3rem;
+			line-height: 1.4;
+			
+			font-size: 1.4rem;
+			/* @include g.mq('md') {
+			} */
+		}
+
+		&__num {
+			$_size: 22px;
+			width: $_size;
+			height: $_size;
+			margin-right: 10px;
+			font-size: 1.2rem;
+			font-weight: 500;
+			flex-shrink: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: g.color('base');
+			border: 1px solid g.color('base');
+			border-radius: 2px;
+			transition: 0.2s;
+
+			
+			$_size: 30px;
+			width: $_size;
+			height: $_size;
+			margin-right: 15px;
+			font-size: 1.4rem;
+			/* @include g.mq('md') {
+			} */
+		}
+
+		&__txt {
+			font-weight: bold;
+			line-height: 1.2;
+
+			/* @include g.mq('sm') {
+				flex: 1;
+			} */
+		}
+	}
+</style>

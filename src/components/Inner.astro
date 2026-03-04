@@ -1,0 +1,44 @@
+---
+/********************************************************************
+* インナー
+* 変数参照： \src\styles\global\_config.scss
+**********************************************************************/
+interface Props {
+	addClass?: string;
+}
+
+const { addClass = '' } = Astro.props;
+---
+<div class:list={['inner', addClass]}>
+    <slot />
+</div>
+
+<style lang="scss">
+.inner {
+    width: g.$inner_min;
+	max-width: g.$inner_max;
+	margin-inline: auto;
+
+    @media print {
+        width: 820px;
+    }
+    
+    &.is_small {
+        max-width: g.$inner_max_small;
+    }
+
+    &.is_pc {
+        /* @include g.mq('sm') {
+            width: 100%;
+        } */
+    }
+
+    &.is_sp {
+        width: 100%;
+        max-width: 100%;
+        /* @include g.mq('md') {
+        } */
+    }
+}
+</style>
+

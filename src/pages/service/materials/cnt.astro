@@ -1,0 +1,150 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+ import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+import MvCategory from '@components/MvCategory.astro';
+
+const meta = {
+	title: 'ナノ材料',
+	description: '',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析対象" subTitle="Analytic subjects" src="mv/mv-service.webp" />
+    <TitleH1 title="ナノ材料" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析対象" parent2="材料" parent3="ナノ材料"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <MvCategory 
+                    imageSrc={IMG_PATH + "/service/cnt_01.webp"}
+                    alt="ナノ材料"
+                    lead="カーボンナノチューブ（CNT)は、炭素の同素体で、平面のグラファイト（グラフェンシート）を丸めて単層あるいは多層の同軸チューブ状にしたものです。CNTは特異な電気特性と熱伝導特性を持っており、エレクトロニクス分野での幅広い応用が図られております。さらに、優れた機械特性（高い機械強度や弾性力）を持ち、構造材料としての応用も進んでおります。<br>弊社は様々なタイプのCNTについて、試料の作製法から分析、解析、評価まで広く技術の蓄積を行っておりますので、CNTの研究開発に大きく貢献しております。"
+                />
+                <h2 id="cnt" class="h2-service">カーボンナノチューブ（CNT）の分析</h2>
+                <p>CNTの特性はCNTの性質（直径、長さ、不純物、欠陥）と密接な関係があります。CNTの研究開発にはこれらの性質を正しく評価しなければならず、そのためには、様々な分析法を組み合わせて総合的に解釈する必要があります。特に、CNTは、一本一本が複雑に絡み合い凝集しているため、この状態での精密な規格評価は出来ません。弊社は、CNTの分散方法を様々な角度から検討し、各種解析に適したサンプル作製を行っております。&nbsp;&nbsp;最適なサンプル作製が可能になって初めて信頼できるデータをご提供することができます。</p>
+                <h3 class="h3-service-list">分析項目</h3>
+                <table class="tbl-service-doc">
+                    <tbody><tr>
+                      <th class="th-service-doc-section" scope="col">分析項目</th>
+                      <th class="th-service-doc-analyzer" scope="col">使用機器・手法</th>
+                      <th class="th-service-doc-doc-title" scope="col">分析事例</th>
+                    </tr>
+                    <tr>
+                      <td rowspan="7">直径</td>
+                      <td rowspan="7"><a href="../../documents/m1602_550.html">TEM</a>、<a href="../../documents/s0501_520.html">SEM</a>、<a href="../../documents/s0801_510.html">Raman</a>、<a href="../../documents/x0510_530.html">XRD</a></td>
+                      <td><a href="../../documents/s340_144.html">TEMによる単層カーボンナノチューブの直径分布測定</a></td>
+                    </tr>
+                    <tr> </tr>
+                    <tr>
+                      <td><a href="../../documents/s364_144.html">単層カーボンナノチューブ（SWCNT）の高コントラスト測定</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s362_144.html">多層カーボンナノチューブの長さと直径のSEM測定</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s341_144.html">ラマン分光法による単層カーボンナノチューブの直径分布評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s355_144.html">単層カーボンナノチューブのラマンスペクトルに及ぼす励起レーザ光強度の影響</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/x144_144.html">多層カーボンナノチューブの直径と積層間隔について</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">長さ</td>
+                      <td rowspan="4"><a href="../../documents/an1368_540.html">SPM</a>、<a href="../../documents/s0501_520.html">SEM</a></td>
+                      <td><a href="../../documents/s337_144.html">AFMを用いた単層カーボンナノチューブの長さ解析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s344_144.html">界面活性剤による単層カーボンナノチューブの孤立分散</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s345_144.html">単層カーボンナノチューブの長さ分布に及ぼす界面活性剤濃度の効果</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s362_144.html">多層カーボンナノチューブの長さと直径のSEM測定</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">欠陥、不純物</td>
+                      <td rowspan="4"><a href="../../documents/s0801_510.html">Raman</a>、熱重量分析、<a href="../../documents/m1602_550.html">TEM</a></td>
+                      <td><a href="../../documents/f072_144.html">還元雰囲気下ダイナミックTGAによるカーボンナノチューブの分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s342_144.html">ラマン分光法による単層カーボンナノチューブの欠陥評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i158_144.html">カーボンナノチューブに含まれる「金属元素」の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/o338_144.html">カーボンナノチューブに含まれる「多環芳香族炭化水素」の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">表面状態</td>
+                      <td rowspan="2">XPS</td>
+                      <td><a href="../../documents/s416_144.html">XPSによる単層カーボンナノチューブの表面官能基分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s352_144.html">単層カーボンナノチューブの分析（XPS、ラマン分光法）</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">多面的評価</td>
+                      <td rowspan="2">総合分析</td>
+                      <td><a href="../../documents/s343_144.html">単層カーボンナノチューブの分散状態観察</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/x139_144.html">SEM-XRDによる多層カーボンナノチューブの直径評価</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <h3 class="h3-service-list">カーボンナノチューブ（CNT）の規格評価を可能にする前処理</h3>
+                <p>カーボンナノチューブ（CNT）は、一本一本が複雑に絡み合い癒着しているため、この状態での精密な規格評価はできません。我々は、ある種の分散剤を用いることでカーボンナノチューブ（CNT）の透明・均一な分散溶液を調製し、そこからさらに各種解析に適したサンプル作製を行っております。最適なサンプル作製が可能になって初めて信頼できるデータをご提供することができます。その他、お客様のご要望に応じてカーボンナノチューブ（CNT）に関する各種前処理をご用意しております。</p>
+
+                <h3 class="h3-service-list">分析事例（カーボンナノチューブ（CNT）アプリケーションへの挑戦）</h3>
+                <p>CNTは広い分野で様々な応用が図られており、解決すべきで数々の難問が生じています。弊社は「CNTの多角的な特性評価」、「ミクロとマクロの視点」などの分析技術と「高分子、有機、無機材料に関する技術基盤」を融合させ、最新の技術で問題解決に貢献いたします。<br>CNTの最新の分析例を次に示しました。</p>
+                <ul class="ul-arrow-small">
+                    <li><a href="../../documents/s346_144.html">カーボンナノチューブ複合材料のTEM観察</a></li>
+                    <li><a href="../../documents/s349_144.html">複合材中のカーボンナノチューブ分散状態SEM観察</a></li>
+                    <li><a href="../../documents/s350_144.html">ポリマー材料中に分散したカーボンナノチューブの電気力顕微鏡観察</a></li>
+                    <li><a href="../../documents/s351_144.html">複合材中カーボンナノチューブ分散状態の立体的観察（ステレオ観察）</a></li>
+                    <li><a href="../../documents/p234_144.html">低真空SEMによる樹脂中のカーボンナノチューブの観察</a></li>
+                </ul>
+                <h4 class="h4-service-list">参考資料</h4>
+                <ul class="ul-arrow-small">
+                    <li><a href="../../documents/s275_144.html">走査型プローブ顕微鏡　－電気力顕微鏡－</a></li>
+                    <li><a href="../../documents/s426_144.html">走査型プローブ顕微鏡（SPM）による分析の概要</a></li>
+                </ul>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+
+.tbl-service-doc {
+    tbody tr:first-child th:nth-child(1) {
+        min-width: 200px!important;
+    }
+
+    tbody tr:first-child th:nth-child(2) {
+        min-width: 130px!important;
+    }
+
+    tbody tr:first-child th:last-child {
+        min-width: 470px!important;
+    }
+}
+</style>
+
+<script>
+	import '@scripts/rowspanBottomLine.js';
+</script>

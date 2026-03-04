@@ -1,0 +1,244 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+import Contents from '@components/Contents.astro';
+
+const meta = {
+	title: 'ライフサイエンス',
+	description: 'ライフサイエンス',
+}
+
+const contentsList = [
+    { num: 1, txt: '医薬品・医療用具', href: '#medicine' },
+    { num: 2, txt: '家庭用品', href: '#life' },
+    { num: 3, txt: '食品', href: '#food' },
+    { num: 4, txt: '安全性評価', href: '#life-safety-test' },
+];
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析事例" subTitle="Analytic case" src="mv/mv-analysis.webp"/>
+    <TitleH1 title="ライフサイエンス" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析事例" parent2="ライフサイエンス"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <Contents list={contentsList} />
+                <div class="analysis-category">
+                  <h2 id="medicine" class="h2-service">医薬品・医療用具</h2>
+                  <h3 class="h3-service-list">医薬品</h3>
+                  <ul>
+                  <li><a href="../documents/o462_131.html">CryoProbeによる医薬品中の微量成分の分析</a></li>
+                  <li><a href="../documents/o030_131.html">高分解能MS、MS/MSによる構造決定（1）</a></li>
+                  <li><a href="../documents/o031_131.html">高分解能MS、MS/MSによる構造決定（2）</a></li>
+                  <li><a href="../documents/o506_131.html">質量分析によるブロムフェナクの構造解析</a></li>
+                  <li><a href="../documents/o536_131.html">LC-MS/MSによる医薬品の分析（1）</a></li>
+                  <li><a href="../documents/o277_131.html">LC-MS/MSによる微量成分の構造解析</a></li>
+                  <li><a href="../documents/o530_131.html">NMRを用いた医薬品分析（純度試験、確認試験）</a></li>
+                  <li><a href="../documents/x9301_131.html">単結晶Ｘ線構造解析</a></li>
+                  <li><a href="../documents/i218_131.html">ICP-AES、ICP-MS、ICによる微量元素（金属・非金属）分析</a></li>
+                  <li><a href="../documents/i352_131.html">マイクロ波分解/ICP-MS法による医薬品中の白金族元素の分析</a></li>
+                  <li><a href="../service/materials/foreign_substance.html">異物分析（試験法詳細）</a></li>
+                  <li><a href="../service/life_science/safety_test.html">安全性評価（試験法詳細）</a></li>
+                  </ul>
+                  <h3 class="h3-service-list">医療用具・医用材料</h3>
+                  <ul>
+                  <li><a href="../documents/o389_131.html">GC/MSによるポリオレフィン中の添加剤の分析</a></li>
+                  <li><a href="../documents/i218_131.html">ICP-AES、ICP-MS、ICによる微量元素（金属・非金属）分析</a></li>
+                  <li><a href="../documents/f052_131.html">ホルムアルデヒドの定量</a></li>
+                  <li><a href="../documents/o350_131.html">ヒドラジンの定量</a></li>
+                  <li><a href="../documents/f076_131.html">HPLCによる樹脂中の残存イソシアネートの分析</a></li>
+                  <li><a href="../documents/f082_131.html">GC、GC/MSによるウレタン中の残存イソシアネート（HDI）の分析</a></li>
+                  <li><a href="../documents/f063_131.html">顕微FT-IRイメージング法によるラミネートフィルムの組成分析</a></li>
+                  <li><a href="../documents/s396_131.html">レーザラマンによるラミネートフィルムの分析</a></li>
+                  <li><a href="../service/materials/foreign_substance.html">異物分析（試験法詳細）</a></li>
+                  <li><a href="../service/life_science/safety_test.html">安全性評価（試験法詳細）</a></li>
+                  </ul>
+                  
+                  <h2 id="life" class="h2-service">家庭用品</h2>
+                  <ul>
+                  <li><a href="../documents/x9301_132.html">単結晶Ｘ線構造解析</a></li>
+                  <li><a href="../documents/c007_132.html">分光光度計による拡散透過、拡散反射率の測定（日焼け止めクリームの透過率）</a></li>
+                  <li><a href="../documents/o502_132.html">クリーム状試料の透過率測定</a></li>
+                  <li><a href="../documents/f076_132.html">HPLCによる樹脂中の残存イソシアネートの分析</a></li>
+                  <li><a href="../documents/f082_131.html">GC、GC/MSによるウレタン中の残存イソシアネート（HDI）の分析</a></li>
+                  <li><a href="../documents/f052_132.html">パッケージ内の残存溶剤成分分析、ホルムアルデヒド</a></li>
+                  <li><a href="../documents/o350_132.html">ヒドラGC,GC/MSによるウレタン中の残存イソシアネート（HDI）の分析ジンの定量</a></li>
+                  <li><a href="../documents/f063_132.html">顕微FT-IRイメージング法によるラミネートフィルムの組成分析</a></li>
+                  <li><a href="../documents/s396_132.html">レーザラマンによるラミネートフィルムの分析</a></li>
+                  <li><a href="../documents/s261_132.html">生体材料表面分析</a></li>
+                  <li><a href="../service/materials/foreign_substance.html">異物分析（試験法詳細）</a></li>
+                  <li><a href="../service/life_science/safety_test.html">安全性評価（試験法詳細）</a></li>
+                  <li><a href="../documents/m248_132.html">SEM-EDSによる歯磨き粉の分析</a></li>
+                  </ul>
+                  
+                  <h2 id="food" class="h2-service">食品</h2>
+                  <h3 class="h3-service-list">食品・健康食品</h3>
+                  <ul>
+                  <li><a href="../documents/o500_133.html">NMRによるラフィノース（三糖）の構造解析</a></li>
+                  <li><a href="../documents/o538_133.html">NMR多変量解析による食用油の組成解析</a></li>
+                  <li><a href="../documents/o539_133.html">NMR多変量解析による食用油の熱劣化解析</a></li>
+                   <li><a href="../documents/o484_133.html">LC/MSによるオリゴ糖の定性・定量分析</a></li>
+                   <li><a href="../documents/o490_133.html">酸分解を用いたオリゴ糖の構成単糖分析</a></li>
+                   <li><a href="../documents/o480_133.html">LC/MSを用いたグリセライドの分析</a><a href="../documents/o480_133.html"></a></li>
+                   <li><a href="../documents/o545_133.html">LC/MSによる胆汁酸の分析</a></li>
+                   <li><a href="../documents/o518_133.html">お茶飲料中カテキン類の高分解能LC/MS分析</a></li>
+                   <li><a href="../documents/o491_133.html">LC/MS多変量解析による製品特性の解析（1）</a></li>
+                   <li><a href="../documents/o520_133.html">LC/MS多変量解析による製品特性の解析（2）</a></li>
+                   <li><a href="../documents/o489_133.html">MS/MS分析によるペプチドのアミノ酸配列解析</a></li>
+                   <li><a href="../documents/o485_133.html">誘導体化を用いたアミノ酸の高感度一斉分析</a></li>
+                   <li><a href="../documents/o515_133.html">誘導体化を用いたアミノ酸中のヒスタミンの高感度分析</a></li>
+                   <li><a href="../documents/o494_133.html">誘導体化法によるD,L-アミノ酸の光学分割</a></li>
+                  <li><a href="../documents/o351_133.html">単糖～オリゴ糖の定性・定量分析（1）</a></li>
+                  <li><a href="../documents/o390_133.html">単糖～オリゴ糖の定性・定量分析（2）</a></li>
+                  <li><a href="../documents/o395_133.html">オリゴ糖（単糖～七糖）のHPLC分析</a></li>
+                  <li><a href="../documents/o456_133.html">ヒアルロン酸のHPLCによる定量分析</a></li>
+                  <li><a href="../documents/p286_133.html">近赤外測定による酒類中のエタノール定量分析</a></li>
+                  <li><a href="../documents/o9903_133.html">市販オリーブオイル中の中性脂質分析</a></li>
+                  <li><a href="../documents/i218_133.html">サプリメント中の微量金属元素分析</a></li>
+                  <li><a href="../documents/i231_133.html">茶葉中の無機元素分析</a></li>
+                  <li><a href="../documents/i284_133.html">技能試験「玄米中の無機元素分析（3）」</a></li>
+                  <li><a href="../documents/i308_133.html">認証標準物質NMIJ CRMの分析 ｢メカジキ魚肉粉末中の元素分析｣</a></li>
+                  <li><a href="../documents/x9301_133.html">単結晶Ｘ線構造解析</a></li>
+                  <li><a href="../documents/o467_133.html">揮発（香気）成分のSPMEおよびMC濃縮による定性分析</a></li>
+                  <li><a href="../documents/o363_133.html">コーヒーの香気成分分析</a></li>
+                  <li><a href="../documents/i224_133.html">ICP-MSによる食品容器・包装材料中の有害金属分析</a></li>
+                  <li><a href="../documents/i218_133.html">ICP-AES、ICP-MS、ICによる微量元素（金属・非金属）分析</a></li>
+                  <li><a href="../documents/i221_133.html">食品中の微量金属の定量</a></li>
+                  <li><a href="../documents/o387_133.html">固相抽出-熱抽出GC/MSによる特定農薬成分の高感度分析</a></li>
+                  <li><a href="../documents/f092_133.html">グリオキサールの高感度分析</a></li>
+                  <li><a href="../documents/o487_133.html">ASAP-MSによるレモン表面の農薬分析</a></li>
+                  <li><a href="../documents/p255_133.html">粘弾性による乳製品（バター・マーガリン）の塗りやすさ評価</a></li>
+                  <li><a href="../documents/o547_133.html">MALDI-MSによる微生物同定（Biotyper）の紹介</a></li>
+                  <li><a href="../service/materials/foreign_substance.html">異物分析（試験法詳細）</a></li>
+                  <li><a href="../documents/m247_133.html">SEM-EDSによる天然塩の分析</a></li>
+                  </ul>
+                  
+                  <h3 class="h3-service-list">機能性食品、特定保健用食品</h3>
+                  <ul>
+                  <li><a href="../documents/o275_133.html">LC/MS/MS SRMによる動物検体中の微量成分の定量</a></li>
+                  <li><a href="../service/life_science/safety_test.html">安全性評価（試験法詳細）</a></li>
+                  </ul>
+                  
+                  <h2 id="life-safety-test" class="h2-service">安全性評価（安全性試験）</h2>
+                  <ul>
+                  <li><a href="../documents/se085_134.html">DNP科学分析センターの安全性評価試験</a></li>
+                    </ul>
+                  <h3 class="h3-service-list">変異原性試験（遺伝毒性試験） </h3>
+                  <ul>
+                  <li><a href="../documents/se096_134.html">化審法に定める有害性情報の報告について</a></li>
+                  <li><a href="../documents/se012_134.html">変異原性試験の種類と複数試験の必要性</a></li>
+                  <li><a href="../documents/se098_134.html">遺伝毒性試験に関する各種規制</a></li>
+                  <li><a href="../documents/se128_134.html">医療機器の遺伝毒性試験における試験試料の調製</a></li>
+                  <li><a href="../documents/se145_134.html">遺伝毒性試験における代謝活性化について</a></li>
+                  </ul>
+                  <h3 class="h3-service-list">復帰突然変異試験（エームス(Ames)試験）</h3>
+                  <ul>
+                  <li><a href="../documents/se001_134.html">エームス試験 ～微生物を用いる変異原性試験／細菌を用いる復帰突然変異試験～</a></li>
+                  <li><a href="../documents/se158_134.html">Ames試験の目的別メニュー</a></li>
+                  <li><a href="../documents/se155_134.html">THF溶媒使用時のAmes試験について</a></li>
+                  <li><a href="../documents/se136_134.html">エームス試験（Ames 試験）のご紹介</a></li>
+                  <li><a href="../documents/se095_134.html">少量試料での簡易エームス試験</a></li>
+                  <li><a href="../documents/se086_134.html">Ames試験におけるアミノ酸の影響</a></li>
+                  <li><a href="../documents/se091_134.html">非GLPのAmes試験について</a></li>
+                  <li><a href="../documents/se010_134.html">Ames試験における試験ガイドラインの主な相違点</a></li>
+                  <li><a href="../documents/se140_134.html">エームス試験に使用する菌株について</a></li>
+                  <li><a href="../documents/se133_134.html">簡易試験における菌株の選択について</a></li>
+                  <li><a href="../documents/se092_134.html">Ames試験における確認試験の実施について</a></li>
+                  <li><a href="../documents/se071_134.html">トナー及びインクのAmes試験 part1～エコアーク認定およびグリーン購入法について～</a></li>
+                  <li><a href="../documents/se080_134.html">トナー及びインクのAmes試験 part2～グリーン購入法について～</a></li>
+                  <li><a href="../documents/se080-2_134.html">トナー及びインクのAmes試験 part3～エコマーク認定取得の注意点～</a></li>
+                  <li><a href="../documents/se081_134.html">エームス試験方法の紹介</a></li>
+                  <li><a href="../documents/se152_134.html">高分子化合物を被験物質とするAmes 試験</a></li>
+                  <li><a href="../documents/se003_134.html">安衛法対応エームス（Ames）試験に供する被験物質の純度</a></li>
+                
+                <!-- 0215
+                  <li><a href="../documents/se010_134.html">エームス（Ames）試験における安衛法GLPとOECD-GLPの試験ガイドラインの主な相違点</a></li>
+                -->
+                  <li><a href="../documents/se011_134.html">エームス（Ames）試験における比活性について</a></li>
+                  <li><a href="../documents/se132_134.html">エームス試験における前処理法の紹介</a></li>
+                  <li><a href="../documents/se035_134.html">エームス（Ames）試験に供する被験物質の滅菌について</a></li>
+                  <li><a href="../documents/se038_134.html">Ames試験に適用可能な溶媒について</a></li>
+                  <li><a href="../documents/se055_134.html">エームス（Ames）試験による抗変異原性物質の評価</a></li>
+                  <li><a href="../documents/se126_134.html">生育阻害について</a></li>
+                  <li><a href="../documents/se127_134.html">変異原性の判定について</a></li>
+                  <li><a href="../documents/se058_134.html">上水試験法による水中微量成分の変異原性試験</a></li>
+                  </ul>
+                  <h3 class="h3-service-list"><em>in vitro</em>染色体異常試験</h3>
+                  <ul>
+                  <li><a href="../documents/se002_134.html">ほ乳類培養細胞を用いる染色体異常試験</a></li>
+                  <li><a href="../documents/se137_134.html">染色体異常試験の試験条件について</a></li>
+                  <li><a href="../documents/se029_134.html">染色体異常試験　－染色体の異常像に関する資料－</a></li>
+                  </ul>
+                  <h3 class="h3-service-list">マウスリンフォーマTK試験</h3>
+                  <ul>
+                  <li><a href="../documents/se046_134.html">マウスリンフォーマTK試験</a></li>
+                  <li><a href="../documents/se036_134.html">マウスリンフォーマTK試験のフローチャートと用語説明</a></li>
+                  <li><a href="../documents/se032_134.html">マウスリンフォーマTK試験の変異体コロニー像</a></li>
+                  </ul>
+                  <h3 class="h3-service-list"><em>in vitro</em>小核試験</h3>
+                  <ul>
+                  <li><a href="../documents/se149_134.html">TK6細胞を用いる<em>in vitro</em>小核試験の紹介</a></li>
+                  <li><a href="../documents/se051_134.html"><em>in vitro</em>小核試験</a></li>
+                  <li><a href="../documents/se144_134.html"><em>in vitro</em>小核試験の試験条件について</a></li>
+                  </ul>
+                  <h3 class="h3-service-list"><em>umu</em>試験</h3>
+                  <ul>
+                  <li><a href="../documents/se043_134.html"><em>umu</em>試験の受託再開について</a></li>
+                  <li><a href="../documents/se131_134.html"><em>umu</em>試験における最高用量の設定について</a></li>
+                  </ul>
+                  <h3 class="h3-service-list">被験物質分析試験</h3>
+                  <ul>
+                  <li><a href="../documents/se041_134.html">遺伝毒性試験における被験物質調製物の濃度測定</a></li>
+                  </ul>
+                  <h3 class="h3-service-list">細胞毒性試験</h3>
+                  <ul>
+                  <li><a href="../documents/se115_134.html">ヒト由来細胞株の<em>in vitro</em>細胞毒性試験</a></li>
+                  <li><a href="../documents/se113_134.html">細胞毒性試験の最近の動向</a></li>
+                  <li><a href="../documents/se142_134.html">細胞毒性試験（コロニー形成阻害試験）について</a></li>
+                  <li><a href="../documents/se138_134.html">USPに基づく細胞毒性試験（Elution Test）について</a></li>
+                  <li><a href="../documents/se156_134.html">MTT法による細胞毒性試験について</a></li>
+                  <li><a href="../documents/se157_134.html">XTT法による細胞毒性試験について</a></li>
+                
+                  </ul>
+                  <h3 class="h3-service-list">高分子フロースキーム試験（化審法対応）</h3>
+                  <ul>
+                  <li><a href="../documents/b122_134.html">低懸念ポリマー事前確認申出制度について</a></li>
+                  <li><a href="../documents/b123_134.html">高分子フロースキーム</a></li>
+                  <li><a href="../documents/b124_134.html">高分子フロースキームによる新規高分子届出（判定通知受取までの流れ）</a></li>
+                　<!-- <li>高分子材料の分解性評価試験　－JIS K6950準拠法－</li>-->
+                  </ul>
+                  <h3 class="h3-service-list">微生物学的試験</h3>
+                  <ul>
+                  <li><a href="../documents/se049_134.html">従属栄養細菌の測定</a></li>
+                  <li><a href="../documents/se017_134.html">蛍光顕微鏡による全菌数測定</a></li>
+                  <li><a href="../documents/se067_134.html">蛍光顕微鏡による生細菌数測定</a></li>
+                  <li><a href="../documents/se018_134.html">一般細菌と従属栄養細菌と全菌数</a></li>
+                  <li><a href="../documents/se031_134.html">産業用水の微生物測定　－真菌の測定について－</a></li>
+                  <li><a href="../documents/se040_134.html">産業用水の微生物測定　－従属栄養細菌の測定について</a></li>
+                  <li><a href="../documents/se148_134.html">保有している菌種及び菌株の紹介</a></li>
+                  <li><a href="../documents/se093_134.html">微量液体希釈法による嫌気性菌のMIC測定</a></li>
+                  <li><a href="../documents/se013_134.html">抗菌性試験方法</a></li>
+                  <li><a href="../documents/se047_134.html">MIC（最小発育阻止濃度）測定（平板希釈法）</a></li>
+                  <li><a href="../documents/se048_134.html">天然成分の抗菌性試験</a></li>
+                  <li><a href="../documents/se078_134.html">工業製品の異物・変色へのATP活性測定の利用</a></li>
+                
+                  </ul>
+                 
+                <!--accordion-area end-->
+              </div>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>

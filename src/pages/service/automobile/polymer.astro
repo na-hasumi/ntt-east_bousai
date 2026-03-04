@@ -1,0 +1,196 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+ import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+import MvCategory from '@components/MvCategory.astro';
+import Contents from '@components/Contents.astro';
+
+const meta = {
+	title: '自動車用高分子材料',
+	description: '',
+}
+
+const contentsList = [
+    { num: 1, txt: 'ポリオレフィン系材料', href: '#polyolefin' },
+    { num: 2, txt: 'ポリアミド系材料', href: '#polyamide' },
+    { num: 3, txt: 'ポリイミド系材料', href: '#polyimide' },
+    { num: 4, txt: '複合材料、多層構造材料', href: '#complex' },
+    { num: 5, txt: '添加剤分析', href: '#additive' },
+];
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析対象" subTitle="Analytic subjects" src="mv/mv-service.webp" />
+    <TitleH1 title="自動車用高分子材料" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析対象" parent2="自動車" parent3="自動車用高分子材料"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <MvCategory 
+                    imageSrc={IMG_PATH + "/service/automobile_polymer_01.webp"}
+                    alt="自動車用高分子材料"
+                    lead="人間の手によって様々な特性を与えられた素材、高分子材料。<br>高分子材料はバンパーやインパネはもちろんのこと、電池などのデバイスにも無くてはならない素材です。<br>弊社の高分子材料分析の豊富な経験と技術は、皆様のお役に立てると思っています。"
+                />
+                <Contents list={contentsList} />
+                <h2 id="polyolefin" class="h2-service">ポリオレフィン系材料</h2>
+                <p>自動車に使用している高分子材料のうち、ポリオレフィン系材料、特にポリプロピレン樹脂は約50％を占めていると言われています。この材料に関する分析技術（一次構造・高次構造解析、形態観察、物性測定）は豊富な経験を持っており、問題やトラブルの解決を強力にサポートします。</p>
+                <h3 class="h3-service-list">分析技術紹介</h3>
+                <table class="tbl-service-doc">
+                    <tbody><tr>
+                      <th class="th-service-doc-site" scope="col">分析項目</th>
+                      <th class="th-service-doc-analyzer" scope="col">使用機器・手法</th>
+                      <th class="th-service-doc-doc-title" scope="col">分析事例</th>
+                    </tr>
+                    <tr>
+                      <td rowspan="13" class="th-service-doc-section">材料を調べる</td>
+                      <td rowspan="3">NMR</td>
+                      <td><a href="../../documents/p219_115.html">PPの立体規則性評価</a><strong class="strong-red">*1</strong></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/p220_115.html">TPOのコモノマー種類、含量（シーケンス解析）</a><strong class="strong-red">*2</strong></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/p229_115.html">微量酸モノマーの定量</a><strong class="strong-red">*4</strong></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/f1501_520.html">FT-IR</a></td>
+                      <td><a href="../../documents/p310_115.html">FT-IRによる劣化ポリエチレンの結晶化度の測定</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">XRD</td>
+                      <td>結晶化度の測定</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/x183_115.html">Ｘ線回折による配向度測定</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s540_115.html">小角X線散乱による樹脂フィルムの配向性評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/x121_115.html">極表面の規則構造評価</a></td>
+                    </tr>
+                    <tr>
+                      <td>高温GPC</td>
+                      <td>分子量分布測定<strong class="strong-red">*3</strong></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">組成分析</td>
+                      <td>高分子添加剤の分析</td>
+                    </tr>
+                    <tr>
+                      <td>複合材料の総合解析</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/p303_115.html">自動車用ポリプロピレン複合材料の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/p308_115.html">ポリプロピレン複合材料の分別－NMR・GPC分析</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="5" class="th-service-doc-section">材料をみる</td>
+                      <td rowspan="2"><a href="../../documents/m1602_550.html">TEM</a></td>
+                      <td><a href="../../documents/p160_115.html">複合材料の総合解析モルフォロジー観察</a></td>
+                    </tr>
+                    <tr>
+                      <td>複合材料中ゴム成分の分散状態観察</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2"><a href="../../documents/an1368_550.html">SPM</a></td>
+                      <td><a href="../../documents/s541_115.html">走査型プローブ顕微鏡（SPM）によるゴムの劣化分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s543_115.html">走査型プローブ顕微鏡（SPM）による粘弾性測定</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s0501_520.html">SEM</a></td>
+                      <td><a href="../../documents/p207_115.html">複合材料中充填材の配向度の可視化</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="5" class="th-service-doc-section">性質を測る</td>
+                      <td rowspan="3">粘弾性</td>
+                      <td><a href="../../documents/p169_115.html">弾性、粘性の温度依存性（1）</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/p215_115.html">弾性、粘性の温度依存性（2）</a></td>
+                    </tr>
+                    <tr>
+                      <td>タイムスケール評価</td>
+                    </tr>
+                    <tr>
+                      <td>熱分析</td>
+                      <td>結晶化度、ガラス転移点</td>
+                    </tr>
+                    <tr>
+                      <td>機械物性</td>
+                      <td><a href="../../documents/f042_115.html">引っ張り強度、耐衝撃性など</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3 class="h3-service-list">分析技術紹介</h3>
+                <dl class="dl-service-std">
+                  <dt><strong class="strong-red">*1</strong> ポリプロピレン（PP）の立体規則性の評価</dt>
+                  <dd>PPの立体規則性の指標であるペンタッド分率が僅か数％変化するだけで、強度や弾性率は大きく変化します。弊社ではペンタッド分率を0.5％以内の定量精度で測定することができます。</dd>
+                  <dt><strong class="strong-red">*2</strong> ポリオレフィンのモノマー組成、シーケンス評価</dt>
+                  <dd>バンパー材などに用いられるPP系複合材では、PPの立体規則性に加えゴム成分が重要です。ゴム成分は分岐をもったポリマーです。分岐の長さ、量、並び方がゴムの性質を変え、複合材の性質を大きく変化させます。弊社ではNMRを用いたシーケンス解析によりゴム成分の分岐の種類、量、その並びを明らかにします。</dd>
+                  <dt><strong class="strong-red">*3</strong> 分子量分布測定</dt>
+                  <dd>割れなどの不具合で、まず疑われるのは強度低下です。そしてその原因の多くは分子量の低下によるものです。</dd>
+                  <dt><strong class="strong-red">*4</strong> 接着性、塗装性の改善を目的とした微量酸モノマーの分析</dt>
+                  <dd>PPは極性基をもたず、塗装性、接着性があまり良くありません。そのため酸モノマーをPPと共重合させた改質剤が改質のために使われます。弊社ではNMRを駆使しその構造、量を明らかにし、より効果的な使用法の指針を提供致します。</dd>
+                </dl>
+
+                <h2 id="polyamide" class="h2-service">ポリアミド系材料</h2>
+                <p>耐熱性や剛性が必要な場面で用いられるポリアミド系樹脂です。その構造から劣化解析まで、豊富な経験からお役にたつ情報をご提示いたします。</p>
+                <h3 class="h3-service-list">分析技術紹介</h3>
+                <ul class="ul-std">
+                  <li>末端基の定量（滴定、NMR）</li>
+                  <li>分子量分布測定（HFIP溶媒）</li>
+                  <li>モノマー種の定性定量</li>
+                </ul>
+
+                <h2 id="polyimide" class="h2-service">ポリイミド系材料</h2>
+                <p>不溶、不融の樹脂として分析が難しいポリイミド系材料です。弊社は様々の方法で課題解決のサポートをいたします。
+                </p>
+                <h3 class="h3-service-list">分析技術紹介</h3>
+                <ul class="ul-std">
+                  <li>構成モノマーの定性定量</li>
+                  <li>イミド化率</li>
+                  <li>残存溶媒の定量</li>
+                </ul>
+
+                <h2 id="complex" class="h2-service">複合材料、多層構造材料</h2>
+                <p>車体の軽量化のため、樹脂材料への代替は進んでいます。繊維強化材料、表面コートによる耐久性の向上など、高分子は様々な工夫でより強く、より丈夫に変化しています。弊社はミクロな視点からからマクロな観察まで、その開発を支援いたします。
+                </p>
+                <h3 class="h3-service-list">分析技術紹介</h3>
+                <ul class="ul-std">
+                  <li>繊維と高分子の界面の詳細分析</li>
+                  <li>高分子中のナノフィラーの電子顕微鏡観察</li>
+                  <li>斜め切削+TOF-SIMSによるコート層の分析</li>
+                </ul>
+
+                <h2 id="additive" class="h2-service">添加剤分析</h2>
+                <p>弊社は数百種類以上の添加剤分析の経験をもっており、迅速に問題の解決を行うことが可能です。<br>添加剤の関連するトラブル、着色、曇り、劣化など、その原因を追究し解決のための情報をご提供致します。
+                </p>
+                <h3 class="h3-service-list">分析技術紹介</h3>
+                <ul class="ul-std">
+                  <li>成型品中の添加剤の一斉分析</li>
+                  <li>高分子量HALSの分析</li>
+                  <li>TOF-SIMSによる添加剤分布状況変化の可視化</li>
+                </ul>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>
+
+<script>
+	import '@scripts/rowspanBottomLine.js';
+</script>

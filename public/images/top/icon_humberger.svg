@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 13">
+  <g id="_デザイン" data-name="デザイン">
+    <g>
+      <rect x="4" width="13" height="1" fill="#2e3174"/>
+      <rect x="4" y="4" width="13" height="1" fill="#2e3174"/>
+      <rect x="4" y="8" width="13" height="1" fill="#2e3174"/>
+      <rect x="4" y="12" width="13" height="1" fill="#2e3174"/>
+      <rect width="1" height="1" transform="translate(1 1) rotate(180)" fill="#2e3174"/>
+      <rect y="4" width="1" height="1" transform="translate(1 9) rotate(180)" fill="#2e3174"/>
+      <rect y="8" width="1" height="1" transform="translate(1 17) rotate(180)" fill="#2e3174"/>
+      <rect y="12" width="1" height="1" transform="translate(1 25) rotate(180)" fill="#2e3174"/>
+    </g>
+  </g>
+</svg>

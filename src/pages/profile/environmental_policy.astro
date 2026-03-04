@@ -1,0 +1,47 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '環境方針',
+	description: '環境方針',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="会社案内" subTitle="Corporate information" src="mv/mv-profile.webp"/>
+    <TitleH1 title="環境方針" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="会社案内" parent2="環境方針"/>
+            <div id="content">
+              <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+              <p class="mgn-btm20">
+                当社は、受託分析事業を通じて、社会の発展と環境保全が両立した持続可能な社会の構築へ貢献します。
+              </p>
+              <ol class="mgn-btm30 ol-std">
+                <li>環境に関連する法令、社内ルール、契約、社会規範を遵守します。</li>
+                <li>省資源・省エネルギー、廃棄物の削減、リサイクルなどに努め、環境に与える影響を継続的に改善する事業活動を推進します。</li>
+                <li>環境マネジメントシステムを運用し、環境目標や活動の定期的な見直しを行い、継続的改善に努めます。</li>
+              </ol>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+
+p {
+  margin-right: 0!important;
+}
+
+.ol-std li {
+  margin-bottom: 20px;
+}
+</style>

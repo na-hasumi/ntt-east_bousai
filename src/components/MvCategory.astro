@@ -1,0 +1,49 @@
+---
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+
+interface Props {
+	imageSrc?: string; // 画像のパス
+	alt?: string; // 画像のalt
+	lead?: string; // 説明文
+	addClass?: string; // 追加クラス
+}
+
+const { imageSrc = '', alt = '', lead = '', addClass = '' } = Astro.props;
+---
+<div class={`mvCategory ${addClass}`}>
+    <figure class="mvCategory-image">
+        <img src={imageSrc} alt={alt} width="300" height="225">
+    </figure>
+    <p class="mvCategory-lead" set:html={lead}></p>
+</div>
+
+<style lang="scss">
+    .mvCategory {
+        display: flex;
+        align-items: center;
+        column-gap: 32px;
+
+        &-image {
+            flex-shrink: 0;
+        }
+
+        &-lead {
+            line-height: 2.1;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            min-width: 0;
+            flex: 1;
+        }
+    }
+
+    @media print {
+        .mvCategory {
+            &-lead {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    }
+</style>

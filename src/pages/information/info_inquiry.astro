@@ -1,0 +1,47 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: 'お問い合わせページ不具合のお詫び',
+	description: 'お問い合わせページ不具合のお詫び',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="インフォメーション" subTitle="Information" src="mv/mv-topics.webp" />
+    <TitleH1 title="お問い合わせページ不具合のお詫び" />
+    <div class="main">
+        <Inner>
+            <div id="main-column1">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <p class="txt-right">平成26年5月28日</p>
+                <p><br>
+                    <br>
+                    平素より弊社ホームページをご覧頂き、 誠にありがとうございます。 <br>
+                    <br>
+                    ウェブサーバ保守作業に伴い、<br>
+                    5月19日（月）～28日（水）11：00の間、お問い合わせページからの投稿受付ができませんでした。<br>
+                    皆様には大変ご迷惑おかけしました事を深くお詫び申し上げます。<br>    
+                    現在、お問い合わせページ不具合は復旧しております。<br>
+                    今後このようなことが起こらないよう、確認体制を 一層強化してまいります。 </p>
+                <hr class="hr-mgn-btm10">
+                <hr class="hr-mgn-btm10">
+                <p>本件に関するお問い合わせ先</p>
+                <p class="mgn-lt100"> 株式会社UBE科学分析センター<br>
+                〒755-8633　
+                    山口県宇部市大字小串1978-5<br>
+                TEL：0836-31-6568<br>
+                </p>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>

@@ -1,0 +1,102 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+import LinkBox from '@components/LinkBox.astro';
+
+const meta = {
+	title: 'エレクトロニクス',
+	description: '',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析対象" subTitle="Analytic subjects" src="mv/mv-service.webp"/>
+    <TitleH1 title="エレクトロニクス" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析対象" parent2="エレクトロニクス"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <div class="category">
+                  <figure class="category-image">
+                    <img src={IMG_PATH + "/service/electronics_01.webp"} alt="図：エレクトロニクス" width="380" height="285">
+                  </figure>
+                  <p class="category-lead">
+                    微細化・3D化が進む半導体／電子デバイスでは、原因を「早く・正確に」掴むことが開発スピードと歩留まりを左右します。<br>
+                    DNP科学分析センターは、ナノ〜ミクロの構造解析・表面／界面解析から、プロセス材料（例：めっき液・レジスト・研磨液・洗浄薬液など）や基板の不純物・汚染の評価まで、前処理を含めて一貫対応。改善ポイントを“データで見える化”し、量産立上げ・不良解析・再発防止まで伴走します。
+                  </p>
+                </div>  
+                <div class="link">
+                  <LinkBox 
+                    imageSrc={IMG_PATH + "service/category-top_electronics_semiconductor.webp"}
+                    title="半導体"
+                    links={[
+                      { text: 'ウエハ', href: 'electronics/semiconductor.html#wafer' },
+                      { text: '半導体デバイス', href: 'electronics/semiconductor.html#device' },
+                      { text: 'LED、LD素子', href: 'electronics/semiconductor.html#led' },
+                      { text: 'ナノ材料', href: 'electronics/semiconductor.html#nano' }
+                    ]}
+                  />
+                  <LinkBox 
+                    imageSrc={IMG_PATH + "service/category-top_electronics_display.webp"}
+                    title="ディスプレイ"
+                    links={[
+                      { text: 'LCD', href: 'electronics/display.html#lcd' },
+                      { text: '有機EL', href: 'electronics/display.html#organic-el' }
+                    ]}
+                  />
+                  <LinkBox 
+                    imageSrc={IMG_PATH + "service/category-top_record.webp"}
+                    title="記録媒体"
+                    links={[
+                      { text: '磁気記録媒体（HD）', href: 'electronics/record.html#hdd' },
+                      { text: 'DVD、CDなど', href: 'electronics/record.html#dvd' }
+                    ]}
+                  />
+                  <LinkBox 
+                    imageSrc={IMG_PATH + "service/category-top_solar_cell.webp"}
+                    title="電池"
+                    links={[
+                      { text: 'リチウムイオン二次電池', href: 'electronics/lithium-ion.html' },
+                      { text: '燃料電池', href: 'electronics/fuel_cell.html' },
+                      { text: '太陽電池', href: 'electronics/solar_cell.html' }
+                    ]}
+                  />
+                  <LinkBox 
+                    imageSrc={IMG_PATH + "service/category-top_electronics_clean_room.webp"}
+                    title="クリーンルーム環境"
+                    links={[
+                      { text: '大気分析', href: 'electronics/clean_room.html#air' },
+                      { text: 'コンタミネーション分析', href: 'electronics/clean_room.html#contami' }
+                    ]}
+                  />
+                </div>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+    .category {
+    display: flex;
+    align-items: center;
+    column-gap: 55px;
+
+        &-image {
+            flex-shrink: 0;
+        }
+    }
+  
+    .link {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 50px;
+    }
+</style>

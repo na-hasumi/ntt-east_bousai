@@ -1,0 +1,180 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from "/src/consts";
+import Layout from "@layouts/Layout.astro";
+import Inner from "@components/Inner.astro";
+import SidebarArea from "@components/SidebarArea.astro";
+import MvLower from "@components/MvLower.astro";
+import TitleH1 from "@components/TitleH1.astro";
+
+const meta = {
+  title: "形態観察",
+  description: "形態観察",
+};
+---
+
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+  <MvLower title="分析事例" subTitle="Analytic case" src="mv/mv-analysis.webp"/>
+  <TitleH1 title="形態観察" />
+  <div class="main">
+    <Inner>
+      <SidebarArea parent="分析事例" parent2="形態観察" />
+      <div id="content">
+        <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33" /></a></div>
+        <p>新しく開発される材料は、その特性と機能が発現する根拠を、ミクロの目で明らかにしなければなりません。そこに、材料の微小領域を対象とした局所分析の意義があります。有機・無機材料の局所分析は、電子線やイオンを使用する方法によって結晶構造や元素分析、さらに結合状態をナノメーターのレベルで解析しています。この情報と材料の特性・機能の関係を調べることから、新素材の可能性を明らかにし、その開発を大きく前進させます。</p>
+        <div class="accordion-none">
+          <h2><a href="form_observation/tomography.html">トモグラフィー（三次元構造解析）</a></h2>
+          <div class="category-top clearfix mgn-lt50 width700">
+            <img src={IMG_PATH + "/analysis/tomography_top_01_01.webp"} alt="加熱発生ガスの分析装置">
+            <p>トモグラフィ―という手法を用いれば、分析対象を連続的に回転または切削し、多数の二次元像をコンピュータで処理することで、三次元構造を可視化することが可能です。さらに、セグメンテーションという画像処理も組み合わせれば、三次元構造の数値化も可能であり、分析対象の深い理解に貢献できます（<a href="form_observation/tomography.html">詳細</a>）。</p>
+          </div>
+          
+          <h2><a href="../documents/an1368_550.html">走査型プローブ顕微鏡法</a>（SPM）</h2>
+          <ul>
+          <li><a href="../documents/s474_141.html">ピークフォースタッピングモードによる表面形状測定</a> （材料/高分子材料） </li>
+          <li><a href="../documents/s308_121.html">走査型プローブ顕微鏡－ベアリング解析による表面形状評価－</a>　（エレクトロニクス/半導体）</li>
+          <li><a href="../documents/s309_121.html">走査型プローブ顕微鏡－パワースペクトル密度による表面形状評価－</a>　（エレクトロニクス/半導体）</li>
+          <li><a href="../documents/s275_144.html">走査型プローブ顕微鏡 －電気力顕微鏡－</a>　（材料/ナノ材料）</li>
+          <li><a href="../documents/s426_144.html">走査型プローブ顕微鏡（SPM）による分析の概要</a>　（材料/ナノ材料）</li>
+          <li><a href="../documents/s457_141.html">走査型プローブ顕微鏡（SPM）による樹脂試料の機械特性測定</a>　（材料/高分子材料） </li>
+          <li><a href="../documents/s476_141.html">走査型プローブ顕微鏡（SPM）によるポリマーの機械特性測定例</a>　（材料/高分子材料） </li>
+          <li><a href="../documents/s499_900.html">吸着力による親水性評価</a></li>
+          <li><a href="../documents/s492_900.html">ケルビンプローブフォース顕微鏡による表面電位測定</a></li>
+          <li><a href="../documents/s521_900.html">拡がり抵抗顕微鏡による抵抗分布測定</a></li>
+          <li><a href="../documents/s481_141.html">大腸菌の液中弾性率測定</a>　（材料/高分子材料） </li>
+          <li><a href="../documents/s491_900.html">AFMにおける解析パラメータ</a></li>
+          <li><a href="../documents/s337_144.html">AFMを用いた単層カーボンナノチューブの長さ解析</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          <li><a href="../documents/s343_144.html">単層カーボンナノチューブの分散状態観察</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          <li><a href="../documents/s344_144.html">界面活性剤による単層カーボンナノチューブの孤立分散</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          <li><a href="../documents/s345_144.html">単層カーボンナノチューブの長さ分布に及ぼす界面活性剤濃度の効果</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          <li><a href="../documents/s350_144.html">ポリマー材料中に分散したカーボンナノチューブの電気力顕微鏡観察</a>　（材料/ナノ材料）</li>
+          </ul>
+          
+          <h2><a href="../documents/m1602_550.html">透過電子顕微鏡法</a>（TEM）、<a href="../documents/m1602_550.html">走査型透過電子顕微鏡法</a>（STEM）</h2>
+          <ul>
+          <li><a href="../documents/m223_141.html">セルロースナノファイバー(CNF)のSEM およびSTEM 観察</a>　（材料/金属・無機材料） </li>
+          <li><a href="../documents/s483_143.html">電子エネルギー損失分光（EELS）</a>　（材料/金属・無機材料） </li>
+          <li><a href="../documents/s494_143.html">Electron Energy Loss Spectroscopy（EELS）スペクトル解析</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/l004_124.html">EELSスペクトルによるMn酸化状態の解析</a>　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li><a href="../documents/m220_141.html">炭素繊維強化プラスチックのEELSラインプロファイル測定</a>　（エレクトロニクス/リチウムイオン二次電池） </li>
+          <li><a href="../documents/l029_124.html">Co酸化物中LiのEELSマッピング検討</a>　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li><a href="../documents/p160_115.html">複合材料の総合解析モルフォロジー観察</a>　（自動車/高分子材料）</li>
+          <li><a href="../documents/s453_112.html">コロイド粒子のTEM観察</a>　（自動車/燃料電池・エレクトロニクス/燃料電池）</li>
+          <li><a href="../documents/m209_145.html">シリコンドリフト検出器による高感度EDSスペクトルマッピング測定</a>　（材料/触媒・粉体）</li>
+          <li><a href="../documents/m252_143.html">STEM-EDSによるプラスチックレンズ表面コート層の分析</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/m255_121.html">FIB-TEM法を用いたコーティング膜（表面処理膜）の分析</a>　（エレクトロニクス/半導体）</li>
+          <li><a href="../documents/m262_122.html">FIB-STEM法を用いた有機ELディスプレイの分析</a>　（エレクトロニクス/ディスプレイ）</li>
+          <li><a href="../documents/m261_143.html">FIB法を用いたAl薄膜の断面、平面TEM分析</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/m206_145.html">カーボン材料のTEM観察</a>　（材料/触媒・粉体）</li>
+          <li><a href="../documents/m207_145.html">カーボンブラックの低加速電圧による暗視野STEM観察</a>　（材料/触媒・粉体）</li>
+          <li><a href="../documents/m211_145.html">カーボンブラックの電子線損傷の低減</a>　（材料/触媒・粉体）</li>
+          <li><a href="../documents/m219_145.html">Cs 補正STEM による単原子観察</a>　（材料/触媒・粉体）</li>
+          <li><a href="../documents/s505_145.html">粒子表面に存在するポリマー層のTEM観察</a>　（材料/触媒・粉体）</li>
+          <li><a href="../documents/s490_112.html">Pt/C触媒の耐久性評価</a>　（自動車/燃料電池・エレクトロニクス/燃料電池・材料/触媒・粉体）</li>
+          <li><a href="../documents/s459_112.html">EELSによるPtシェル厚みの測定</a>　（自動車/燃料電池・エレクトロニクス/燃料電池・材料/触媒） </li>
+          <li><a href="../documents/s458_112.html">暗視野STEM像によるPt粒子の露出結晶面の解析</a>　（自動車/燃料電池・エレクトロニクス/燃料電池・材料/触媒） </li>
+          <li><a href="../documents/s402_113.html">Cs補正STEM</a>　（自動車/パワー半導体）</li>
+          <li><a href="../documents/s438_113.html">Cs補正STEMによる各種材料観察</a>　（自動車/パワー半導体・エレクトロニクス/半導体）</li>
+          <li><a href="../documents/s382_114.html">ヘテロ接合界面に生成した微小ドメインの解析</a>　（自動車/LED素子・エレクトロニクス/半導体）</li>
+          <li><a href="../documents/s470_114.html">半導体ヘテロ接合界面のTEMひずみ解析</a>　（自動車/LED素子・エレクトロニクス/半導体） </li>
+          <li><a href="../documents/s397_121.html">TEMによるGaN中転移構造の詳細観察</a>　（自動車/LED素子・エレクトロニクス/半導体）</li>
+          <li><a href="../documents/m203_143.html">GaN反転ドメイン境界の構造解析</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/s313_900.html">収束電子線回折像シミュレーションプログラム</a></li>
+          <li><a href="../documents/s281_121.html">EELSマッピング</a>　（自動車/LED素子・エレクトロニクス/半導体）</li>
+          <li><a href="../documents/s380_122.html">結晶性粒界構造の解析</a>　（エレクトロニクス/ディスプレイ）</li>
+          <li><a href="../documents/s381_122.html">アモルファス粒界構造の解析</a>　（エレクトロニクス/ディスプレイ）</li>
+          <li><a href="../documents/s250_123.html">STEM-EDSによるマッピング測定</a>　（エレクトロニクス/記録材料）</li>
+          <li><a href="../documents/s498_145.html">コロイド粒子のEDSマッピング</a>　（材料/触媒・粉体）</li>
+          <li><a href="../documents/s504_145.html">PtRu合金触媒のSTEM-EDS分析</a>　（材料/触媒・粉体）</li>
+          <li><a href="../documents/s314_123.html">DVD-Rの断面観察（1）</a>　（エレクトロニクス/記録材料）</li>
+          <li><a href="../documents/s461_141.html">断面TEMによる研磨面の評価</a>　（材料/高分子材料、金属・無機材料） </li>
+          <li><a href="../documents/m202_143.html">サファイア基板上低温バッファ層のモザイク構造解析</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/s410_123.html">画像解析による粒界層の解析</a>　（エレクトロニクス/記録材料）</li>
+          <li><a href="../documents/s335_123.html">粒子径解析ソフトの応用</a>　（エレクトロニクス/記録材料）</li>
+          <li><a href="../documents/m238_123.html">垂直磁気記録媒体の断面および平面構造解析</a>　（エレクトロニクス/記録材料）</li>
+          <li><a href="../documents/pr0923a_123.html">HDD媒体の粒界解析</a>　（エレクトロニクス/記録材料）</li>
+          <li><a href="../documents/l002_124.html">カーボン材料の劣化状態の観察</a>　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li><a href="../documents/p160_141.html">TEMによるブレンドゴムのCBの分析</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p189_141.html">カラートナーの断面TEM観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p235_141.html">ポリ塩化ビニル製品の表面劣化形態TEM観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/m242_141.html">無染色によるポリマーアロイの相分離構造観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/m231_143.html">電子回折（ED）パターンにおける結晶性</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/s482_143.html">電子回折法による土壌鉱物の同定</a>　（材料/金属・無機材料） </li>
+          <li><a href="../documents/m229_143.html">電子回折および高速フーリエ変換（FFT）パターンについて</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/m251_143.html">電子回折パターンを用いた結晶性材料の定性分析</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/m201_900.html">電子線動径分布解析法によるAuナノ粒子の構造解析</a></li>
+          <li><a href="../documents/s340_144.html">TEMによる単層カーボンナノチューブの直径分布測定</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          <li><a href="../documents/s346_144.html">カーボンナノチューブ複合材料のTEM観察</a>　（材料/ナノ材料）</li>
+          <li><a href="../documents/s364_144.html">単層カーボンナノチューブ(SWCNT)の高コントラスト測定</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          <li><a href="../documents/x144_144.html">多層カーボンナノチューブの直径と積層間隔について</a>　（エレクトロニクス/半導体・材料/無機材料、ナノ材料）</li>
+          <li><a href="../documents/m222_141.html">電子回折法を用いた炭素繊維の積層構造の評価</a>（材料/高分子材料）</li>
+          <li><a href="../documents/m254_121.html">FIB-TEM法を用いたSiウエハ上の微小異物の分析</a>（エレクトロニクス/半導体）</li>
+          <li><a href="../documents/s486_143.html">SEM-EBSD法を用いた指定結晶粒界部のFIB-TEM分析</a>（エレクトロニクス/記録材料、材料/金属・無機材料）</li>
+          <li><a href="../documents/m258_121.html">FIB-TEM法を用いたパターン配線上の微小異常部の分析</a>（エレクトロニクス/半導体）</li>
+          </ul>
+          <h2><a href="../documents/s0501_550.html">走査電子顕微鏡法（1）</a>、<a href="../documents/s0502_550.html">走査電子顕微鏡法（2）</a>（SEM）</h2>
+          <ul>
+          <li><a href="../documents/p207_115.html">複合材料中充填材の配向度の可視化（成形品の流動解析）</a>　（自動車/高分子材料）</li>
+          <li><a href="../documents/s334_121.html">発光ダイオードの断面観察</a>　（自動車/LED素子・エレクトロニクス/半導体）</li>
+          <li>Li二次電池正極材料の断面観察　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li>Li電池用セパレーターの多孔質構造の観察　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li>Liイオン電池正極の表面SEM観察　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li>Liイオン電池正極の断面SEM観察　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li>Liイオン電池正極の表面EDS分析－その1　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li>Liイオン電池正極の表面EDS分析－その2　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li>Liイオン電池正極の表面EDS分析－その3　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li><a href="../documents/p306_900.html">大きな試料のSEM-EDS分析</a></li>
+          <li><a href="../documents/p165_141.html">SEMによる 高分子の球晶構造のSEM観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/s493_141.html">SEMによる各種試料の観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/m221_141.html">セルロースのSEM観察</a>　（材料/高分子材料） </li>
+          <li><a href="../documents/s513_900.html">イオン液体を浸漬させたムラサキツユクサ葉裏のSEM-EDS分析</a></li>
+          <li><a href="../documents/s508_141.html">イオン液体を用いたカラーコンタクトレンズ断面のSEM観察</a>　（材料/高分子材料） </li>
+          <li><a href="../documents/s472_145.html">SEMによる低加速電圧でのEDSマップ</a>　（材料/触媒・粉体）</li>
+          <li><a href="../documents/m260_145.html">高感度EDSによる微小粒子の高解像度SEM-EDS元素マッピング</a>　（材料/触媒・粉体）</li>
+          <li><a href="../documents/s510_900.html">SEMによるEDS元素マッピング分析時間の検討</a></li>
+          <li><a href="../documents/s479_143.html">EDS法による不特定微量元素の検出</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/s514_900.html">高感度EDSによる微量元素の検出</a></li>
+          <li><a href="../documents/s515_900.html">EDSマックスピクセルスペクトラム法による微量元素の検出</a></li>
+          <li><a href="../documents/p307_900.html">EDSの精度について</a></li>
+          <li><a href="../documents/s480_143.html">EDS法、WDS法による重複ピークの分析</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/p185_141.html">SEMによる破面観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/s463_141.html">炭素繊維強化プラスチックの破断面観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/m256_143.html">FIB法を用いた鉄腐食部の断面SEM-EDS分析</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/m257_121.html">FIB-SEM法を用いたSiウエハ上異物の分析</a>　（エレクトロニクス/半導体）</li>
+          <li><a href="../documents/p234_144.html">低真空SEMによる樹脂中のカーボンナノチューブの観察</a>　（材料/ナノ材料）</li>
+          <li><a href="../documents/s349_144.html">複合材中のカーボンナノチューブ分散状態SEM観察</a>　（材料/ナノ材料）</li>
+          <li><a href="../documents/s351_144.html">複合材中カーボンナノチューブ分散状態の立体的観察（ステレオ観察）</a>　（材料/ナノ材料）</li>
+          <li><a href="../documents/s362_144.html">多層カーボンナノチューブの長さと直径のSEM測定</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          <li><a href="../documents/x139_144.html">SEM-XRDによる多層カーボンナノチューブの直径評価</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          <li><a href="../documents/s383_147.html">反射電子像観察による異物探索</a>　（材料/異物分析）</li>
+          <li><a href="../documents/s511_147.html">SEMによる三次元的な構造のEDS元素マッピングの比較</a>　（材料/異物分析）</li>
+          <li><a href="../documents/m237_143.html">EBSDによる溶接部の評価</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/s462_143.html">EBSDによる線材曲げ部の評価</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/s485_143.html">EBSDによる線材曲げ部の方位差マップ</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/s473_143.html">EBSDによる線材破断部付近の調査</a>　（材料/金属・無機材料） </li>
+          <li><a href="../documents/s471_143.html">EBSDによる亜鉛メッキ鋼板の結晶方位解析</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/m217_143.html">SEM-EBSDによる炭酸カルシウムの結晶方位解</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/m205_143.html">SEM-EBSD、EDS同時測定による同一結晶系材料の相分離</a>　（材料/金属・無機材料）</li>  
+          <li><a href="../documents/m208_143.html">SEM-EBSD、EDS同一視野測定によるTi合金のミクロ組織評価</a>　（材料/金属・無機材料）</li>  
+          <li><a href="../documents/m204_900.html">FIBマイクロサンプリング法を用いた集積回路配線部のSEM-EDS-EBSD分析</a></li>
+          <li><a href="../documents/s486_143.html">SEM-EBSD法を用いた指定結晶粒界部のFIB-TEM分析</a>　（エレクトロニクス/記録材料、材料/金属・無機材料）</li>
+          </ul>
+          
+          <h2>集束イオンビーム－走査型イオン顕微鏡法（FIB-SIM）</h2>
+          <ul>
+          <li><a href="../documents/s434_113.html">SIM像を用いたLSIの不良箇所の特定</a>　（自動車/パワー半導体・エレクトロニクス/半導体）</li>
+          <li><a href="../documents/s252_121.html">SIM像によるチャネリングコントラスト</a>　（自動車/パワー半導体・エレクトロニクス/半導体）</li>
+          </ul>
+          
+        <!--accordion-none end-->
+        </div>
+      </div>
+    </Inner>
+  </div>
+</Layout>
+
+<style lang="scss">
+  @use "@styles/lower.scss";
+</style>

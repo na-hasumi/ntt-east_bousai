@@ -1,0 +1,121 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from "/src/consts";
+import Layout from "@layouts/Layout.astro";
+import Inner from "@components/Inner.astro";
+import SidebarArea from "@components/SidebarArea.astro";
+import MvLower from "@components/MvLower.astro";
+import TitleH1 from "@components/TitleH1.astro";
+
+const meta = {
+  title: "物性試験",
+  description: "物性試験",
+};
+---
+
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+  <MvLower title="分析事例" subTitle="Analytic case" src="mv/mv-analysis.webp"/>
+  <TitleH1 title="物性試験" />
+  <div class="main">
+    <Inner>
+      <SidebarArea parent="分析事例" parent2="物性試験" />
+      <div id="content">
+        <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33" /></a></div>
+        <p>工業材料の基本的性質や粉体特性、触媒評価など、様々な物性測定にお応えします。</p>
+        <div class="analysis-category">
+  
+          <h2 class="h2-service">機械的特性</h2>
+          <h3 class="h3-service-list">射出成形、<a href="../documents/h0102_570.html">万能試験機</a>、<a href="../documents/h0402_570.html">シャルピー衝撃試験</a></h3>
+          <ul>
+          <li><a href="../documents/f042_141.html">ポリマー材料の物性評価（1）</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/f042_141.html">引っ張り強度、耐衝撃性など</a>　（材料/高分子材料）</li>
+          </ul>  
+        
+          <h3 class="h3-service-list"><a href="../documents/c1701_570.html">ナノインデンテーション</a></h3>
+          <ul>
+          <li><a href="../documents/p311_900.html">ナノインデンテーション試験による微小領域の機械特性評価</a></li>
+          <li><a href="../documents/p312_900.html">微小領域の複合弾性率および硬さ評価 （ナノインデンテーション）</a></li>
+          <li><a href="../documents/p313_900.html">微小領域の弾性変形仕事率評価 （ナノインデンテーション）</a></li>
+          <li><a href="../documents/p314_900.html">微小領域のクリープおよび応力緩和評価 （ナノインデンテーション）</a></li>
+          <li><a href="../documents/p315_900.html">微小領域の動的粘弾性評価 （ナノインデンテーション）</a></li>
+          <li><a href="../documents/p335_141.html">ナノインデンターによる動的粘弾性の温度依存性測定</a></li>
+          <li><a href="../documents/p316_900.html">低弾性率粘着性エラストマーの機械特性評価（ナノインデンテーション）</a></li>
+          <li><a href="../documents/p322_141.html">JKR理論を用いた低弾性率粘着層の弾性率と界面エネルギー評価</a></li>
+          <li><a href="../documents/p317_900.html">低弾性率粘着性エラストマーの粘弾性評価（ナノインデンテーション）</a></li>
+          <li><a href="../documents/p341_141.html">異方性材料の測定方向の違いによる弾性率評価</a></li>
+          <li><a href="../documents/p318_900.html">プッシュアウト試験による繊維強化樹脂の界面強度評価</a></li>
+          <li><a href="../documents/p339_141.html">プッシュアウト試験による炭素繊維／ポリアミド樹脂の界面強度評価</a></li>
+          </ul>  
+        
+          <h3 class="h3-service-list"><a href="../documents/c1301_570.html">複合材界面特性評価</a></h3>
+          <ul>
+          <li><a href="../documents/p295_141.html">マイクロドロップレット法による繊維と樹脂の界面せん断強度測定</a>　（材料/高分子材料）  </li>
+          <li><a href="../documents/p338_141.html">CFRPの接合界面の評価</a>　（材料/高分子材料） </li>
+          </ul>  
+        
+          <h2  class="h2-service">熱的特性</h2>
+          <h3 class="h3-service-list">メルトインデクサー、<a href="../documents/h0101_570.html">HDT試験</a>、<a href="../documents/h9002_570.html">熱重量測定</a>、<a href="../documents/b1401_570.html">熱機械分析</a></h3>
+          <ul>
+          <li><a href="../documents/f090_900.html">ダイナミックＴＧ法によるシュウ酸Ｃａの分析</a></li>
+          <li><a href="../documents/p293_141.html">リアルビューDSC</a>　（材料/高分子材料） </li>
+          <li><a href="../documents/b110_141.html">調湿TMAを用いたコピー紙の湿度膨張測定</a> （材料/高分子材料）  </li>
+          <li><a href="../documents/b113_900.html">TMAを用いた氷の融点および線膨張係数の測定</a></li>
+          </ul>  
+          
+          <h2 class="h2-service">光学特性</h2>
+          <h3 class="h3-service-list">アッベ屈折計</h3>
+        
+          <h2 class="h2-service">粘弾性、比表面・細孔分布測定　他</h2>
+          <h3 class="h3-service-list">動的粘弾性(RSA) 、溶融粘弾性（ARES） </h3>
+          <ul>
+          <li><a href="../documents/p215_115.html">熱可塑性エラストマーの動的粘弾性測定（低温領域から高温領域まで）</a>　（自動車/高分子材料）</li>
+          <li><a href="../documents/p215_115.html">弾性、粘性の温度依存性（2）</a>　（自動車/高分子材料）</li>
+          <li><a href="../documents/p255_133.html">粘弾性による乳製品（バター・マーガリン）の塗りやすさ評価</a>　（ライフサイエンス/食品）</li>
+          <li><a href="../documents/p321_141.html">ポリイミドフィルムの固体動的粘弾性測定</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p319_141.html">CFRPの固体動的粘弾性測定</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p320_141.html">ナイロン6シートの固体動的粘弾性測定</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p336_141.html">PPの最長緩和時間測定による成形性評価（1）</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p337_141.html">PPの最長緩和時間測定による成形性評価（2）</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/b119_141.html">水中におけるPETフィルムの動的粘弾性測定</a> 　（材料/高分子材料）</li>
+          <li><a href="../documents/p301_141.html">ポリマー水溶液の粘弾性測定</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/b111_141.html">ポリアミドの粘度数</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/b112_141.html">極限粘度</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p329_141.html">溶融ポリマーのマスターカーブ作成と流動の活性化エネルギーの算出</a>　（材料/高分子材料） </li>
+          </ul>
+          
+          <h3 class="h3-service-list"><a href="../documents/b1601_570.html">比表面積・細孔分布測定（1）</a>、<a href="../documents/i0601_570.html">比表面積・細孔分布測定（2）</a></h3>
+          <ul>
+          <li>セパレーターの空隙率・細孔径分布測定　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li><a href="../documents/i137_145.html">クリプトン吸着法による低比表面積測定</a>　（材料/触媒）</li>
+          <li><a href="../documents/b108_145.html">多孔質体の細孔径分布評価</a>　（材料/触媒）</li>
+          <li><a href="../documents/b101_145.html">水銀圧入法による細孔形状の評価</a>　（材料/触媒）</li>
+          <li><a href="../documents/b103_145.html">アルゴンガス吸着によるゼオライトの細孔径分布測定</a>　（材料/触媒）</li>
+          <li><a href="../documents/b116_145.html">活性炭のCO<sub>2</sub>吸着によるミクロ孔解析</a>　（材料/触媒）</li>
+          <li><a href="../documents/i138_145.html">アルミナビーズの水蒸気吸着等温線測定</a>　（材料/触媒）</li>
+          </ul>
+          <h3 class="h3-service-list"><a href="../documents/b0801_570.html">触媒評価</a></h3>
+          <ul>
+          <li><a href="../documents/b120_145.html">固体触媒の酸点評価（NH<sub>3</sub>-TPD）</a> 　（材料/触媒）</li>
+          <li><a href="../documents/b121_145.html">Ni触媒の昇温還元反応における反応ガスの挙動</a> 　（材料/触媒）</li>
+          <li><a href="../documents/b123_145.html">昇温脱離法（TPD法）による炭素材料表面の官能基評価</a> 　（材料/触媒）</li>
+          </ul>
+          
+          <h3 class="h3-service-list">その他の特性試験</h3>
+          <ul>
+          <li><a href="../documents/f038_141.html">接触角の測定</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/i341_143.html">滴定による酸解離定数(pKa)の測定</a>　（材料/金属・無機材料）</li>
+          <li><a href="../documents/p305_141.html">フィルムの有機溶媒ガス透過性試験</a>　（材料/高分子材料）</li>
+          </ul>
+          
+        <!--accordion-none end-->
+        </div>
+      </div>
+    </Inner>
+  </div>
+</Layout>
+
+<style lang="scss">
+  @use "@styles/lower.scss";
+</style>

@@ -1,0 +1,217 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '分析事例',
+	description: '分析事例',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析事例" subTitle="Analytic case" src="mv/mv-analysis.webp"/>
+    <TitleH1 title="分析事例トップ" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析事例"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <p>よくご依頼していただく種々の分析事例を紹介します。分析事例は、分析対象別、分析機能別に分類されています。</p>
+                <h2 class="h2-service">分析対象別</h2>
+                <div class="category-top">
+                    <div class="category-top-box">
+                      <a href="automobile.html">
+                        <figure class="category-top-image">
+                          <img src={IMG_PATH + "/service/automobile_01_lg.webp"} alt="自動車" width="390" height="243">
+                        </figure>
+                        <div class="category-top-text">
+                          <p class="category-top-title">自動車</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="category-top-box">
+                      <a href="electronics.html">
+                        <figure class="category-top-image">
+                            <img src={IMG_PATH + "/service/electronics_01_lg.webp"} alt="エレクトロニクス" width="390" height="243">
+                        </figure>
+                        <div class="category-top-text">
+                          <p class="category-top-title">エレクトロニクス</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="category-top-box">
+                      <a href="life_science.html">
+                        <figure class="category-top-image">
+                            <img src={IMG_PATH + "/service/life_science_01_lg.webp"} alt="ライフサイエンス" width="390" height="243">
+                        </figure>
+                        <div class="category-top-text">
+                          <p class="category-top-title">ライフサイエンス</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="category-top-box">
+                      <a href="materials.html">
+                        <figure class="category-top-image">
+                            <img src={IMG_PATH + "/service/materials_01_lg.webp"} alt="材料" width="390" height="243">
+                        </figure>
+                        <div class="category-top-text">
+                          <p class="category-top-title">材料</p>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+
+                <h2 class="h2-service">分析機能（装置）別</h2>
+                <div class="category-top">
+                    <div class="category-top-box">
+                      <a href="organic.html">
+                        <figure class="category-top-image">
+                            <img src={IMG_PATH + "/analyzer/organic_01_lg.webp"} alt="有機分析" width="390" height="243">
+                        </figure>
+                        <div class="category-top-text">
+                          <p class="category-top-title">有機分析</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="category-top-box">
+                      <a href="polymer.html">
+                        <figure class="category-top-image">
+                            <img src={IMG_PATH + "/analyzer/polymer_01_lg.webp"} alt="高分子分析" width="390" height="243">
+                        </figure>
+                        <div class="category-top-text">
+                          <p class="category-top-title">高分子分析</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="category-top-box">
+                      <a href="inorganic.html">
+                        <figure class="category-top-image">
+                            <img src={IMG_PATH + "/analyzer/inorganic_01_lg.webp"} alt="無機分析" width="390" height="243">
+                        </figure>
+                        <div class="category-top-text">
+                          <p class="category-top-title">無機分析</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="category-top-box">
+                      <a href="surface.html">
+                        <figure class="category-top-image">
+                            <img src={IMG_PATH + "/analyzer/surface_01_lg.webp"} alt="表面分析" width="390" height="243">
+                        </figure>
+                        <div class="category-top-text">
+                          <p class="category-top-title">表面分析</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="category-top-box">
+                      <a href="form_observation.html">
+                        <figure class="category-top-image">
+                            <img src={IMG_PATH + "/analyzer/form_observation_01_lg.webp"} alt="形態観察" width="390" height="243">
+                        </figure>
+                        <div class="category-top-text">
+                          <p class="category-top-title">形態観察</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="category-top-box">
+                      <a href="evaluation.html">
+                        <figure class="category-top-image">
+                            <img src={IMG_PATH + "/analyzer/evaluation_01_lg.webp"} alt="物性試験" width="390" height="243">
+                        </figure>
+                        <div class="category-top-text">
+                          <p class="category-top-title">物性試験</p>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+
+    h2 {
+        margin: 40px 5px 20px 0;
+        padding: 2px 0 2px 5px;
+        border-left: #00C4BA 3px solid;
+        color: #000000;
+        font-weight: 500;
+        line-height: 1.5;
+
+        &:not(:first-of-type) {
+            margin-top: 100px;
+        }
+    }
+
+    
+    .category-top {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 38px 40px;
+    margin-top: 35px;
+
+    &-box {
+      background-color: g.color('bg');
+      border-radius: 6px;
+
+      @media print {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-image {
+      text-align: center;
+
+      img {
+            border-radius: 6px;
+        }
+    }
+
+    &-text {
+      padding: 26px;
+    }
+
+    &-title {
+      font-size: 2rem;
+      font-weight: 400;
+      position: relative;
+      padding-right: 25px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 15px;
+        right: 0;
+        margin: auto;
+        width: 1em;
+        height: 1em;
+        font-size: 10px;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-width: 2px;
+        border-color: g.color('key');
+        rotate: 135deg;
+      }
+    }
+
+    &-lead {
+      font-size: 1.6rem;
+      line-height: 1.875;
+      padding-top: 15px;
+    }
+  }
+</style>

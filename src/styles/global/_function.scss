@@ -1,0 +1,60 @@
+@use "sass:math";
+@use "sass:map";
+@use "sass:string";
+@use "config";
+
+// pxをvwに自動変換
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力 
+@function get_vw($size, $viewport:375){ 
+    $rate: math.div(100, $viewport); 
+    @return $rate * $size * 1vw; 
+}
+
+// 多次元連想配列の値の取得
+// ex)
+// $configure: (
+//     z-index: (
+//         modal: 2000,
+//     ),
+// );
+// @debug map_deep_get($configure, 'z-index', 'modal'); //2000
+@function map_deep_get($map, $keys...) {
+    @each $key in $keys {
+        @if not map.has-key($map, $key) {
+            @return null;
+        }
+        $map: map.get($map, $key);
+    }
+
+    @return $map;
+}
+
+// 色の出力
+// ex) color: g.color('base'); 
+@function color($key...) {
+	@return map_deep_get(config.$color, $key...);
+}
+
+// フォントの出力
+// ex) font: g.font('base'); 
+@function font( $key ) {
+	@return map_deep_get(config.$font, $key...);
+}
+
+// 数値のみを返す
+@function strip_unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+      @return math.div($number, ($number * 0 + 1));
+    }
+    @return $number;
+}
+
+// contentでバックスラッシュを出力
+@function unicode($str) {
+    @return unquote("\"") + unquote(string.insert($str, "\\", 1)) + unquote("\"");
+}
+
+// innerの片方の余白を取得
+@function get_inner_side($inner-size: config.$inner_max) {
+    @return calc((100% - #{$inner-size}) / 2);
+}

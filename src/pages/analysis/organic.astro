@@ -1,0 +1,1178 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from "/src/consts";
+import Layout from "@layouts/Layout.astro";
+import Inner from "@components/Inner.astro";
+import SidebarArea from "@components/SidebarArea.astro";
+import MvLower from "@components/MvLower.astro";
+import TitleH1 from "@components/TitleH1.astro";
+import Contents from "@components/Contents.astro";
+
+const meta = {
+  title: "有機分析",
+  description: "有機分析",
+};
+
+const contentsList = [
+  { num: 1, txt: "有機組成分析", href: "#organic-composition" },
+  { num: 2, txt: "分離・定量分析", href: "#separation" },
+  { num: 3, txt: "構造解析", href: "#structure" },
+  { num: 4, txt: "発生ガスの分析", href: "#gas" },
+];
+---
+
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+  <MvLower
+    title="分析事例"
+    subTitle="Analytic case"
+    src="mv/mv-analysis.webp"
+  />
+  <TitleH1 title="有機分析" />
+  <div class="main">
+    <Inner>
+      <SidebarArea parent="分析事例" parent2="有機分析" />
+      <div id="content">
+        <div class="print-btn">
+          <a href="#" onclick="window.print();return false;"
+            ><img
+              src={IMG_PATH + "common/btn_print.svg"}
+              alt="このページを印刷する"
+              width="189"
+              height="33"
+            /></a
+          >
+        </div>
+        <p>
+          さまざまな有機化合物に対して、各種クロマトグラフを用いた分離分析、定量分析と、赤外線分光分析・核磁気共鳴分析・質量分析・元素分析などによる構造解析を組み合わせ、構造決定、純度の分析、不純物の同定などを行ないます。
+        </p>
+        <Contents list={contentsList} />
+        <div class="analysis-category">
+          <h2 id="organic-composition" class="h2-service">有機組成分析</h2>
+          <ul>
+            <li>
+              <a href="../documents/o393_142.html">インクの組成分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o427_142.html">ポリエステル塗料の分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/p302_142.html">UV硬化塗料の組成分析</a
+              >　（材料/有機材料、高分子材料）
+            </li>
+            <li>
+              <a href="../documents/o403_142.html">無電解めっき液の組成分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o518_142.html"
+                >お茶飲料中カテキン類の高分解能LC/MS分析</a
+              >　 （ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/p221_141.html"
+                >加水分解法によるポリマーの構造解析</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/o412_141.html"
+                >ポリアミド系エンプラ材料の組成分析</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/p296_141.html"
+                >ポリカーボネート（PC）の全分析</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/p303_141.html"
+                >自動車用ポリプロピレン複合材料の分析</a
+              >　（自動車/高分子材料・材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/p308_141.html"
+                >ポリプロピレン複合材料の分別－NMR・GPC分析</a
+              >　（自動車/高分子材料・材料/高分子材料）
+            </li>
+          </ul>
+          <h2 id="separation" class="h2-service">分離・定量分析</h2>
+          <h3 class="h3-service-list">
+            <a href="../documents/o1204_510.html"
+              >ガスクロマトグラフ分析法（GC）</a>
+          </h3>
+          <ul>
+            <li>
+              <a href="../documents/c003_141.html"
+                >酸分解法を用いたポリエステル中ジカルボン酸の分析</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/f089_142.html"
+                >エチレンジアミン四酢酸金属錯体の高感度分析</a
+              >　（材料/有機材料）
+            </li>
+          </ul>
+          <h3 class="h3-service-list">
+            <a href="../documents/o1205_510.html"
+              >高速液体クロマトグラフ分析法（HPLC）</a>
+          </h3>
+          <ul>
+            <li>
+              <a href="../documents/o338_121.html"
+                >カーボンナノチューブに含まれる「多環芳香族炭化水素」の分析</a
+              >　（エレクトロニクス/半導体・材料/ナノ材料）
+            </li>
+            <li>
+              <a href="../documents/o478_142.html">尿素関連物質のHPLC定量分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/f076_142.html"
+                >HPLCによる樹脂中の残存イソシアネートの分析</a
+              >　（ライフサイエンス/医薬、化粧品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/f093_142.html"
+                >HPLCによる脂肪族系イソシアネートの分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o558_142.html"
+                >イソシアネート化合物の構造解析：官能基数の分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/f052_131.html">ホルムアルデヒドの定量</a
+              >　（ライフサイエンス/医薬、化粧品）
+            </li>
+            <li>
+              <a href="../documents/o485_142.html"
+                >誘導体化を用いたアミノ酸の高感度一斉分析</a
+              > （ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o515_142.html"
+                >誘導体化を用いたアミノ酸中のヒスタミンの高感度分析</a
+              > （ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o494_142.html"
+                >誘導体化法によるD,L-アミノ酸の光学分割</a
+              > （ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o395_133.html"
+                >オリゴ糖（単糖～七糖）のHPLC分析（RI検出）</a
+              >　（ライフサイエンス/食品）
+            </li>
+            <li>
+              <a href="../documents/o456_133.html"
+                >ヒアルロン酸のHPLCによる定量分析）</a
+              >　（ライフサイエンス/食品）
+            </li>
+            <li>
+              <a href="../documents/o261_133.html">アスコルビン酸の分析</a
+              >　（ライフサイエンス/食品）
+            </li>
+            <li>
+              <a href="../documents/o9903_133.html"
+                >市販オリーブオイル中の中性脂質分析</a
+              >　（ライフサイエンス/食品）
+            </li>
+            <li>
+              <a href="../documents/o390_133.html"
+                >単糖～オリゴ糖の定性・定量分析（2）</a
+              >　（ライフサイエンス/食品）
+            </li>
+            <li>
+              <a href="../documents/o396_142.html">BHT着色物の構造解析</a
+              >　（材料/有機材料、高分子材料）
+            </li>
+          </ul>
+          <h2 id="structure" class="h2-service">構造解析</h2>
+          <h3 class="h3-service-list">核磁気共鳴分析法（溶液NMR）</h3>
+          <ul>
+            <li>
+              <a href="../documents/o475_142.html">NMRの化学シフト値について</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o469_142.html">NMRの積分比について</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o473_142.html">1H-NMRのスピン結合について</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o493_142.html"
+                >NMRにおけるH-H COSYスペクトル</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o384_142.html">13C-NMRスペクトル（DEPT法）</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o496_142.html">NMRにおけるHMQCスペクトル</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o533_142.html"
+                >HSQCスペクトル（高分解能2次元NMR測定法）</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o534_142.html"
+                >Edited-HSQCスペクトル（DTPT機能を追加したHSQCスペクトル）</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o497_142.html">NMRにおけるHMBCスペクトル</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o519_142.html"
+                >NMRにおける1D-TOCSYスペクトル</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o498_142.html"
+                >13C-NMRスペクトル（1Hノンデカップル）</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/l062_111.html"
+                ><sup>19</sup>F-NMRによるリチウムイオン電池の電解液中のF<sup
+                  >－</sup
+                >の定量分析</a
+              ><br />
+              （自動車/リチウムイオン二次電池・エレクトロニクス/リチウムイオン二次電池）
+            </li>
+            <li>
+              <a href="../documents/o471_142.html">多核NMR分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o470_142.html"
+                >多核NMRによるLiB電解質（LiPF6ならびに分解物）の分析</a
+              >
+              <br />
+              　（自動車/リチウムイオン二次電池・エレクトロニクス/リチウムイオン二次電池・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o513_142.html"
+                >19F-NMR測定（ホモデカップリング）によるF含有化合物の構造解析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o542_142.html"
+                >15N-NMRによる含窒素有機化合物の構造解析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o555_142.html"
+                >15N-NMRによる含窒素有機化合物の構造解析（２）</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o492_142.html"
+                >P-NMR測定による有機リン化合物の構造解析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o459_111.html"
+                >11B-NMR測定（19Fデカップリング）</a
+              >（自動車/リチウムイオン二次電池・エレクトロニクス/リチウムイオン二次電池）
+            </li>
+            <li>
+              <a href="../documents/p219_115.html"
+                >PP、PMMAなどの立体規則性評価</a
+              >　（自動車/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/p220_115.html">共重合体の連鎖分布</a
+              >　（自動車/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/p229_115.html">微量酸モノマーの定量</a
+              >　（自動車/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/p229_115.html"
+                >1H-NMRによる無水マレイン酸変性ポリオレフィンの変性構造詳細解析</a
+              >　（自動車/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/o235_142.html">有機EL材料の構造解析</a
+              >　（エレクトロニクス/ディスプレイ・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o472_142.html">NMRによるNiめっき液の分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o437_142.html"
+                >NMRによる光学活性化合物の識別</a
+              > （材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o512_142.html"
+                >13C－NMRによる光学活性化合物の識別</a
+              > （材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o462_142.html"
+                >CryoProbeによる医薬品中の微量成分の分析</a
+              > （ライフサイエンス/医薬品・医療用具、材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o464_142.html"
+                >CryoProbeによる微量成分の13C-NMR測定</a
+              > （材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o463_142.html"
+                >CryoProbeによるメントールのINADEQUATE測定</a
+              > （材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o499_142.html"
+                >NMRにおける1D－INADEQUATE測定</a
+              > （材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o461_142.html"
+                >CryoProbeによる微量成分の2D-NMR測定</a
+              > （材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o436_142.html"
+                >CFH三重共鳴プローブを用いたフッ素系化合物の13C-NMR測定</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o357_142.html">NMRによる定量分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/z001_142.html">N定量NMRの標準物質</a> 　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/z003_142.html">定量NMRの定量値の再現性</a> 　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o530_142.html"
+                >NMRを用いた医薬品分析（純度試験、確認試験）</a
+              >　（ライフサイエンス/医薬品・医療用具、材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o522_142.html"
+                >1H-NMRによる有機顔料（黄色：キノフタロン系）の定量分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o396_142.html">BHT着色物の構造解析</a
+              >　（材料/有機材料、高分子材料）
+            </li>
+            <li>
+              <a href="../documents/o507_142.html">重溶媒中の不純物分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/p230_141.html"
+                >ゴム系ポリマーのミクロ構造、立体規則性解析</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/p265_141.html"
+                >ポリエステルの13C-NMRによる構造決定</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/pr1001_141.html"
+                >NMRによるポリオレフィンの一次構造解析</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/o500_142.html"
+                >NMRによるラフィノース（三糖）の構造解析</a
+              >　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o538_142.html"
+                >NMR多変量解析による食用油の組成解析</a
+              >　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o539_142.html"
+                >NMR多変量解析による食用油の熱劣化解析</a
+              >　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/c001_111.html">NMR法による拡散係数の評価</a
+              >　（自動車/リチウムイオン二次電池・エレクトロニクス/リチウムイオン二次電池）
+            </li>
+          </ul>
+          <h3 class="h3-service-list">核磁気共鳴分析法（固体NMR）</h3>
+          <ul>
+            <li>
+              <a href="../documents/o488_145.html">シリカの固体Si-NMR測定法</a
+              >　（材料/触媒）
+            </li>
+            <li>
+              <a href="../documents/o224_145.html"
+                >固体NMR によるゼオライト骨格のSi/Al 比の算出</a
+              >　（材料/触媒）
+            </li>
+            <li>
+              <a href="../documents/o225_145.html"
+                >固体NMR によるアルミナ中のAlの配位数の識別と定量</a
+              >　（材料/触媒）
+            </li>
+          </ul>
+          <h3 class="h3-service-list">
+            <a href="../documents/f1501_510.html">赤外分光分析法</a>（FT-IR）、<a
+              href="../documents/f1502_510.html">顕微赤外分光分析法</a
+            >（顕微FT-IR）
+          </h3>
+
+          <ul>
+            <li>
+              <a href="../documents/f058_122.html"
+                >IRイメージング法による微小異物の分析（1）</a
+              >　（エレクトロニクス/ディスプレイ）
+            </li>
+            <li>
+              <a href="../documents/f080_142.html"
+                >IRイメージング法による微小異物の分析（3）</a
+              >　（材料/有機材料、高分子材料、異物分析・エレクトロニクス/ディスプレイ）
+            </li>
+            <li>
+              <a href="../documents/o551_142.html"
+                >顕微透過反射法によるIR イメージング測定</a
+              > 　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o291_122.html"
+                >顕微IRマッピング法による材料表面の分析</a
+              >　（エレクトロニクス/ディスプレイ）
+            </li>
+            <li>
+              <a href="../documents/lithium-ion_service_electronics.html#l020"
+                >FT-IRによるセパレーターの分析</a
+              >　（エレクトロニクス/リチウムイオン二次電池）
+            </li>
+            <li>
+              <a href="../documents/f063_131.html"
+                >顕微IRイメージング法によるラミネートフィルムの組成分析</a
+              >　（ライフサイエンス/医薬、化粧品・材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/f094_142.html"
+                >熱走査FT-IR（ATR）法によるウレタン樹脂分解過程の分析</a
+              >　（材料/有機材料、高分子材料）
+            </li>
+            <li>
+              <a href="../documents/p309_900.html"
+                >IRスペクトルの2次微分解析によるポリ塩化ビニルの熱劣化挙動</a
+              >　（材料/有機材料、高分子材料）
+            </li>
+            <li>
+              <a href="../documents/o359_141.html">ポリマーの種類の判定</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/p206_147.html">フィルムのFE分析</a
+              >　（材料/異物分析）
+            </li>
+            <li>
+              <a href="../documents/o242_147.html">黒色異物の分析</a
+              >　（材料/異物分析）
+            </li>
+            <li>
+              <a href="../documents/o302_147.html"
+                >熱分解GC/MSによる糖類系異物の分析</a
+              >　（材料/異物分析）
+            </li>
+          </ul>
+          <h3 class="h3-service-list">質量分析法(MS)</h3>
+          <ul>
+            <li>
+              <a href="../documents/o559_142.html"
+                >質量分析における種々のイオン化に適した分析例</a
+              >　（材料／有機材料）
+            </li>
+            <li>
+              <a href="../documents/o030_131.html"
+                >高分解能MS測定による抗生物質の分子式決定</a
+              >　（ライフサイエンス/医薬）
+            </li>
+            <li>
+              <a href="../documents/o031_131.html"
+                >MS/MS測定による抗生物質の構造決定</a
+              >　（ライフサイエンス/医薬）
+            </li>
+            <li>
+              <a href="../documents/o259_142.html"
+                >NMR、ESI/MSによる界面活性剤の構造解析</a
+              >　（材料/有機材料）
+            </li>
+
+            <li>
+              <a href="../documents/o476_142.html"
+                >NCI-MSによるトリフルラリンの分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o477_142.html">MSとMS/MSの違いについて</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o506_142.html"
+                >質量分析によるブロムフェナクの構造解析</a
+              >　（ライフサイエンス/医薬・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o489_133.html"
+                >MS/MS分析によるペプチドのアミノ酸配列解析</a
+              >　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o465_142.html"
+                >ASAP（大気圧固体試料プローブ）による質量分析</a
+              > （材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o495_142.html"
+                >ASAP-MSによる有機半導体材料（MePTCDI）の分析</a
+              > （材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o449_122.html"
+                >ASAP（質量分析用大気圧固体試料プローブ）による有機EL材料の分析</a
+              >　（エレクトロニクス/ディスプレイ・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o466_142.html"
+                >ASAP（大気圧固体試料プローブ）による顔料（Pigment Red
+                177）の質量分析</a
+              > （材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o509_142.html"
+                >ASAP（大気圧固体試料プローブ）による顔料の質量分析（2）</a
+              > （材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o486_142.html"
+                >プラスチック成型品中の色素の分析</a
+              >　（材料/有機材料、高分子材料）
+            </li>
+            <li>
+              <a href="../documents/f081_142.html"
+                >ASAP(大気圧固体試料プローブ)による臭素系難燃剤の分析</a
+              >　（材料/有機材料、高分子材料）
+            </li>
+            <li>
+              <a href="../documents/o487_142.html"
+                >ASAP-MSによるレモン表面の農薬分析</a
+              >　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/c005_142.html"
+                >FD-MSによる多分散系有機化合物の平均分子量の算出</a
+              >　（材料/有機材料）
+            </li>
+          </ul>
+          <h3 class="h3-service-list">
+            <a href="../documents/o1501_510.html"
+              >ガスクロマトグラフ質量分析法（1）</a
+            >、<a href="../documents/o1502_510.html"
+              >ガスクロマトグラフ質量分析法（2）</a
+            >（GC/MS）
+          </h3>
+          <ul>
+            <li>
+              リチウムイオン電池の電解液溶媒の組成分析　（エレクトロニクス/リチウムイオン二次電池）
+            </li>
+            <li>
+              リチウムイオン電池バインダーの分析　（エレクトロニクス/リチウムイオン二次電池）
+            </li>
+            <li>
+              <a href="../documents/o350_131.html">ヒドラジンの定量</a
+              >　（ライフサイエンス/医薬、化粧品）
+            </li>
+            <li>
+              <a href="../documents/o389_131.html"
+                >ポリオレフィン中の添加剤の分析</a
+              >　（ライフサイエンス/医薬・材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/f092_133.html">グリオキサールの高感度分析</a
+              >　（ライフサイエンス/食品・健康食品、材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o351_133.html"
+                >単糖～オリゴ糖の定性・定量分析（1）</a
+              >　（ライフサイエンス/食品）
+            </li>
+            <li>
+              <a href="../documents/o467_142.html"
+                >揮発（香気）成分のSPMEおよびMC濃縮による定性分析</a
+              >　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o363_133.html"
+                >SPME法によるコーヒー香気成分の分析</a
+              >　（ライフサイエンス/食品）
+            </li>
+            <li>
+              <a href="../documents/o387_133.html"
+                >固相抽出-熱抽出GC/MSによる特定農薬成分の高感度分析</a
+              >　（ライフサイエンス/食品）
+            </li>
+            <li>
+              <a href="../documents/f075_142.html"
+                >GC/MSによるエチレンジアミン四酢酸の高感度分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/f089_142.html"
+                >エチレンジアミン四酢酸金属錯体の高感度分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/p266_141.html"
+                >ポリエステルの加メタノール分解による構造決定</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/f082_142.html"
+                >GC、GC/MSによるウレタン中の残存イソシアネート（HDI）の分析</a
+              >　（ライフサイエンス/医薬・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/p299_141.html"
+                >GC/MS［EI］とGC/MS［FI］を併用したアクリルモノマーの分析</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/o389_141.html">ポリオレフィンの添加剤分析</a
+              >　（材料/高分子材料）
+            </li>
+          </ul>
+          <h3 class="h3-service-list">
+            <a href="../documents/an1316_510.html"
+              >熱分解ガスクロマトグラフ質量分析計</a
+            >（Py-GC/MS）
+          </h3>
+          <ul>
+            <li>
+              <a href="../documents/o282_122.html"
+                >有機EL化合物（錯体系）の構造解析</a
+              >　（エレクトロニクス/ディスプレイ）
+            </li>
+            <!--  0222
+          <li><a href="../documents/o282_122.html">熱分解GC/MSによる有機EL化合物錯体系の構造解析</a>　（エレクトロニクス/ディスプレイ・材料/有機材料）</li>
+        -->
+            <li>
+              <a href="../documents/o301_142.html"
+                >熱分解GC/MSによる顔料の構造解析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o417_142.html"
+                >固相抽出-熱抽出GC/MSによる微量化合物の高感度分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o419_142.html"
+                >固相抽出-熱抽出GC/MSによるカレーパウダーの香気成分の高感度分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/p264_141.html"
+                >Py-GC/MSによる黒色物中のバインダー樹脂の定性</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/p267_141.html"
+                >液晶ポリエステルの熱分解同時誘導体化法による構造決定</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/o242_147.html">黒色異物の分析</a
+              >　（材料/異物分析）
+            </li>
+            <li>
+              <a href="../documents/o305_147.html"
+                >熱分解GC/MSを用いた微小黒色ゴムの分析</a
+              >　（材料/異物分析）
+            </li>
+            <!-- 0214
+          <li><a href="../documents/h0902_146.html">熱分解GC/MS、熱抽出GC/MS、TCT-GC/MS</a>　（材料/加熱発生ガス分析）</li>
+        -->
+          </ul>
+          <h3 class="h3-service-list">
+            <a href="../documents/c0601_510.html">液体クロマトグラフ質量分析法</a
+            >（LC/MS）
+          </h3>
+          <ul>
+            <li>
+              <a href="../documents/o442_111.html">LC/MSによるイオン液体の分析</a
+              >　（自動車/リチウムイオン二次電池・エレクトロニクス/リチウムイオン二次電池）
+            </li>
+            <li>
+              <a href="../documents/o460_142.html"
+                >LC/MSによるポリプロピレングリコールの定性分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o484_142.html"
+                >LC/MSによるオリゴ糖の定性・定量分析</a
+              >　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o490_142.html"
+                >酸分解を用いたオリゴ糖の構成単糖分析</a
+              >　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o480_133.html"
+                >LC/MSを用いたグリセライドの分析</a
+              >　（ライフサイエンス/食品・材料/有機材料） <a
+                href="../documents/o480_133.html"></a>
+            </li>
+            <li>
+              <a href="../documents/o494_142.html"
+                >誘導体化法によるD,L-アミノ酸の光学分割</a
+              > 　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o545_142.html">LC/MSによる胆汁酸の分析</a
+              >　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o518_142.html"
+                >お茶飲料中カテキン類の高分解能LC/MS分析</a
+              >　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o491_142.html"
+                >LC/MS多変量解析による製品特性の解析（1）</a
+              >　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o520_142.html"
+                >LC/MS多変量解析による製品特性の解析（2）</a
+              >　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o537_142.html"
+                >LC/MS多変量解析による製品特性の解析（3）</a
+              >　（自動車/リチウムイオン二次電池・エレクトロニクス/リチウムイオン二次電池・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o482_142.html"
+                >LC/MSを用いた微量脂肪酸アミドの定量分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o277_131.html"
+                >LC-MS/MS SRMによる微量成分の定量</a
+              >　（ライフサイエンス/医薬）
+            </li>
+            <li>
+              <a href="../documents/p258_141.html"
+                >LC/TOF MSによる高分子添加剤（フェノール骨格含有）の分析</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/o489_142.html"
+                >MS/MS分析によるペプチドのアミノ酸配列解析</a
+              >　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o536_142.html"
+                >LC-MS/MSによる医薬品の分析（1）</a
+              >　（ライフサイエンス/医薬・材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o510_142.html"
+                >質量分析手法MS<sup>E</sup>の利点</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o501_142.html"
+                >MS<sup>E</sup>を用いたスルホン酸化合物の分析</a
+              >　（ライフサイエンス/食品・材料/有機材料）
+            </li>
+          </ul>
+
+          <h3 class="h3-service-list">
+            <a href="../documents/o1601_510.html"
+              >マトリックス支援レーザー脱離イオン化質量分析法</a
+            >（MALDI-TOF/MS）
+          </h3>
+          <ul>
+            <li>
+              <a href="../documents/o543_142.html">MALDI-MSによる多糖類の分析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o529_142.html"
+                >MALDI-TOF/TOF-MSによるペプチドのアミノ酸配列解析</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o541_142.html"
+                >カラーフィルターにおける有機顔料のMSイメージング</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o544_900.html"
+                >MALDI-MSによるシリコーンオイルの定性とMSイメージング</a
+              >　（材料/有機材料）
+            </li>
+            <li>
+              <a href="../documents/o532_900.html"
+                >MALDI Imagingによるマウス脳の脂質マッピング</a>
+            </li>
+          </ul>
+
+          <h3 class="h3-service-list">
+            <a href="../documents/s0701_510.html"
+              >飛行時間型二次イオン質量分析法</a
+            >（TOF-SIMS）
+          </h3>
+          <ul>
+            <li>
+              <a href="../documents/s206_121.html"
+                >TOF-SIMSによる超格子の分析（1）
+              </a>　（エレクトロニクス/半導体）
+            </li>
+            <li>
+              <a href="../documents/s218_114.html"
+                >TOF-SIMSによる超格子の分析（2）
+              </a>　（自動車/LED素子・エレクトロニクス/半導体）
+            </li>
+            <li>
+              <a href="../documents/s208_121.html"
+                >TOF-SIMSによるウエハ表面の分析</a
+              >　（エレクトロニクス/半導体）
+            </li>
+            <li>
+              <a href="../documents/s262_121.html"
+                >TOF-SIMSによる有機材料の表面汚染評価</a
+              >　（材料/異物分析）
+            </li>
+            <li>
+              <a href="../documents/s216_122.html"
+                >TOF-SIMSによるカラーフィルタ表面の分析</a
+              >　（エレクトロニクス/ディスプレイ）
+            </li>
+            <li>
+              <a href="../documents/s240_122.html"
+                >TOF-SIMSによるEL材料の分析（1）</a
+              >　（エレクトロニクス/ディスプレイ）
+            </li>
+            <li>
+              <a href="../documents/s370_122.html"
+                >クラスター型一次イオンを用いた有機顔料の分析</a
+              >　（エレクトロニクス/ディスプレイ）
+            </li>
+            <li>
+              <a href="../documents/s400_122.html"
+                >傾斜切削法を用いた有機感光体（OPC）のTOF-SIMS分析（1）</a
+              >　（エレクトロニクス/ディスプレイ）
+            </li>
+            <li>
+              <a href="../documents/s401_122.html"
+                >傾斜切削法を用いた有機感光体（OPC）のTOF-SIMS分析（2）</a
+              >　（エレクトロニクス/ディスプレイ）
+            </li>
+            <li>
+              TOF-SIMSによるLiイオン電池正極表面の分析　（エレクトロニクス/リチウムイオン二次電池）
+            </li>
+            <li>
+              <a href="../documents/s261_132.html">生体材料表面分析</a
+              >　（ライフサイエンス/化粧品・材料/異物分析）
+            </li>
+          </ul>
+          <h3 class="h3-service-list">
+            <a href="../documents/x0510_510.html">Ｘ線回折法</a>および<a
+              href="../documents/c0802_510.html">小角Ｘ線散乱法</a
+            >（XRD、SAXS）
+          </h3>
+          <ul>
+            <li>
+              <a href="../documents/x114_121.html"
+                >多層薄膜の深さ制御In-Plane回折測定</a
+              >　（自動車/パワー半導体・エレクトロニクス/半導体）
+            </li>
+            <li>
+              <a href="../documents/x183_115.html">Ｘ線回折による配向度測定</a
+              >　（自動車/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/s540_115.html"
+                >小角X線散乱による樹脂フィルムの配向性評価</a
+              >　（自動車/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/x121_115.html"
+                >ポリマーシートの深さ制御 IN-Plane回折測定</a
+              >　（自動車/高分子材料・材料/無機材料、高分子材料）
+            </li>
+            <li>
+              <a href="../documents/x110_121.html"
+                >面内回折法による表面構造解析（1）</a
+              >　（自動車/パワー半導体・エレクトロニクス/半導体）
+            </li>
+            <li>
+              <a href="../documents/x117_121.html"
+                >面内回折法による表面構造解析（2）</a
+              >　（自動車/パワー半導体・エレクトロニクス/半導体・材料/無機材料）
+            </li>
+            <li>
+              <a href="../documents/x113_121.html"
+                >反射法による完全極点図形測定</a
+              >　（エレクトロニクス/半導体）
+            </li>
+            <li>
+              <a href="../documents/x115_121.html"
+                >多孔質low-k膜ポアサイズ分布解析</a
+              >　（自動車/パワー半導体・エレクトロニクス/半導体）
+            </li>
+            <li>
+              <a href="../documents/x141_122.html"
+                >高分子表面の分子鎖配向性評価（1）</a
+              >　（エレクトロニクス/ディスプレイ・材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/x142_122.html"
+                >高分子表面の分子鎖配向性評価（2）</a
+              >　（エレクトロニクス/ディスプレイ）
+            </li>
+            <li>
+              <a href="../documents/x151_122.html"
+                >高分子表面の分子鎖配向性評価（3）</a
+              >　（エレクトロニクス/ディスプレイ・材料/高分子材料）
+            </li>
+            <li>
+              Liイオン電池（正極材）のＸ線回折による構造解析　（エレクトロニクス/リチウムイオン二次電池）
+            </li>
+            <li>
+              <a href="../documents/p247_141.html"
+                >ナフィオンの小角Ｘ線散乱測定</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/x118_143.html"
+                >Ｘ線反射率による多層膜の膜厚、密度、表面（界面）粗さ評価</a
+              >　（材料/無機材料）
+            </li>
+            <li>
+              <a href="../documents/x119_143.html"
+                >外部および内部標準による精密格子定数解析</a
+              >　（材料/無機材料）
+            </li>
+            <li>
+              <a href="../documents/x145_143.html"
+                >高温Ｘ線回折測定による熱膨張係数の決定</a
+              >　（材料/無機材料）
+            </li>
+            <li>
+              <a href="../documents/x149_145.html"
+                >学振法に準拠する炭素材料粉末の評価</a
+              >　（材料/触媒）
+            </li>
+          </ul>
+          <h3 class="h3-service-list">単結晶Ｘ線構造解析法</h3>
+          <ul>
+            <li>
+              <a href="../documents/x9301_132.html">単結晶Ｘ線構造解析</a
+              >　（ライフサイエンス/医薬、化粧品）
+            </li>
+          </ul>
+          <h3 class="h3-service-list">紫外・可視・近赤外分光分析法（UV/VIS/NIR）</h3>
+          <ul>
+            <li>
+              <a href="../documents/c007_132.html"
+                >分光光度計による拡散透過、拡散反射率の測定（日焼け止めクリームの透過率）</a
+              >　（ライフサイエンス/医薬）
+            </li>
+            <li>
+              <a href="../documents/o502_132.html">クリーム状試料の透過率測定</a
+              >　（ライフサイエンス/医薬）
+            </li>
+            <li>
+              <a href="../documents/c011_510.html"
+                >スマートフォン用のぞき見防止フィルムの透過率測定</a>
+            </li>
+            <li>
+              <a href="../documents/c012_510.html"
+                >分光光度計絶対反射率測定ユニットによる正反射(鏡面反射)測定</a>
+            </li>
+            <li>
+              <a href="../documents/c013_510.html"
+                >紫外(UV)、可視(Vis)、近赤外(NIR)分光光度計積分球付属装置によるプラスチックの透過率測定</a>
+            </li>
+            <li>
+              <a href="../documents/c014_510.html"
+                >紫外(UV)、可視(Vis)、近赤外(NIR)分光光度計積分球付属装置によるプラスチックのヘーズ率測定</a>
+            </li>
+            <li>
+              <a href="../documents/c015_510.html"
+                >分光光度計による単層膜の膜厚測定</a>
+            </li>
+            <li>
+              <a href="../documents/c019_510.html"
+                >分光光度計による遮蔽率の測定</a>
+            </li>
+            <li>
+              <a href="../documents/c020_510.html">分光光度計用溶液セルの紹介</a>
+            </li>
+            <li>
+              <a href="../documents/c021_510.html"
+                >紫外・可視・近赤外分光光度計による微小領域の反射率測定</a>
+            </li>
+            <li>
+              <a href="../documents/c022_510.html"
+                >分光光度計による粉体試料の拡散透過率測定</a>
+            </li>
+            <li>
+              <a href="../documents/c023_510.html"
+                >紫外・可視・近赤外分光光度計による反射率測定</a>
+            </li>
+          </ul>
+          <h3 class="h3-service-list">
+            <a href="../documents/an1305_530.html">蛍光Ｘ線分光分析法（XRF）</a>
+          </h3>
+          <ul>
+            <li>
+              Liイオン電池（正極材）の蛍光Ｘ線による組成分析　（エレクトロニクス/リチウムイオン二次電池）
+            </li>
+          </ul>
+          <h3 class="h3-service-list">
+            <a href="../documents/s0801_510.html">レーザラマン分光分析法</a
+            >（RAMAN）
+          </h3>
+          <ul>
+            <li>
+              <a href="../documents/s501_900.html"
+                >壊したくない、開けたくない、速く知りたいなら 顕微ラマン</a>
+            </li>
+            <li>
+              <a href="../documents/s503_141.html"
+                >顕微ラマン分光分析によるポリマーの定性</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/s502_141.html"
+                >顕微ラマン分光分析によるタンパクとナイロンの識別</a
+              >　（材料/高分子材料）
+            </li>
+            <li>
+              <a href="../documents/s396_131.html"
+                >レーザラマンによるラミネートフィルムの分析</a
+              >　（ライフサイエンス/医薬）
+            </li>
+            <li>
+              <a href="../documents/s342_144.html"
+                >ラマン分光法による単層カーボンナノチューブの欠陥評価</a
+              >　（エレクトロニクス/半導体・材料/ナノ材料）
+            </li>
+            <li>
+              <a href="../documents/s355_144.html"
+                >単層カーボンナノチューブのラマンスペクトルに及ぼす励起レーザ光強度の影響</a
+              >　（エレクトロニクス/半導体・材料/ナノ材料）
+            </li>
+            <li>
+              <a href="../documents/s352_144.html"
+                >単層カーボンナノチューブの分析「XPS、ラマン分光法」</a
+              >　（エレクトロニクス/半導体・材料/ナノ材料）
+            </li>
+          </ul>
+          <h2 id="gas" class="h2-service">発生ガスの分析</h2>
+          <ul>
+            <li>
+              <a href="../service/materials/gas.html"
+                >加熱発生ガス（分析法詳細）</a>
+            </li>
+            <li>
+              <a href="../documents/o549_146.html">ガス採取法(Tenax捕集、5L)</a>
+            </li>
+            <li>
+              <a href="../documents/o554_146.html"
+                >昇温脱離ガス分析における試料の移送時の汚染について</a>
+            </li>
+          </ul>
+          <h3 class="h3-service-list">
+            <a href="../documents/an1320_510.html">加熱発生ガス－質量分析法</a
+            >（EGA-MS）
+          </h3>
+          <ul>
+            <li>
+              <a href="../documents/f018_146.html"
+                >EGA-MS測定によるガスの発生状況</a
+              >　（材料/加熱発生ガス分析）
+            </li>
+            <li>
+              <a href="../documents/f049_146.html"
+                >EGA-MS法による無機物の加熱発生ガス分析</a
+              >　（材料/加熱発生ガス分析）
+            </li>
+          </ul>
+          <h3 class="h3-service-list">着熱脱着ガスクロマトグラフ質量分析法（TCT-GC/MS）</h3>
+          <ul>
+            <li>
+              <a href="../documents/o201_121.html">微量有機物の分析</a
+              >　（エレクトロニクス/半導体）
+            </li>
+            <li>
+              <a href="../documents/o200_146.html"
+                >実験室大気中の微量有機物分析</a
+              >　（エレクトロニクス/クリーンルーム環境・材料/加熱発生ガス分析）
+            </li>
+            <li>
+              <a href="../documents/o202_146.html"
+                >TCT-GC/MSによる揮散ガス中の極微量有機物の分析</a
+              >　（材料/加熱発生ガス分析）
+            </li>
+          </ul>
+          <h3 class="h3-service-list">
+            <a href="../documents/o1801_510.html"
+              >加熱脱離発生ガス分析法（シリコンウエハアナライザ法）</a
+            >（TDS-GC/MS）
+          </h3>
+          <h3 class="h3-service-list">
+            <a href="../documents/an1319_510.html"
+              >昇温脱離ガス質量分析法（TDS-MS）</a>
+          </h3>
+          <ul>
+            <li>
+              <a href="../documents/f091_146.html"
+                >TDS-MSによるLiB正極活物質温度特性の分析</a
+              >　（自動車/リチウムイオン二次電池・エレクトロニクス/リチウムイオン二次電池・材料/加熱発生ガス）
+            </li>
+            <li>
+              <a href="../documents/f095_146.html"
+                >LiB正極のTDS-MSによる温度特性の分析（1）</a
+              >　（自動車/リチウムイオン二次電池・エレクトロニクス/リチウムイオン二次電池・材料/加熱発生ガス）
+            </li>
+          </ul>
+          <!--analysis-category end-->
+        </div>
+      </div>
+    </Inner>
+  </div>
+</Layout>
+
+<style lang="scss">
+  @use "@styles/lower.scss";
+</style>

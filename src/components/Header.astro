@@ -1,0 +1,402 @@
+---
+/********************************************************************
+* ヘッダー
+**********************************************************************/
+import { BASE_DIR, NAV_LIST, IMG_PATH, LOGO_01_LINK, LOGO_02_LINK } from '../consts';
+
+interface Props {
+	white?: boolean; //trueにすると白ベースのカラー
+	pageId?: string; //ページID
+}
+
+const { white = false, pageId = '' } = Astro.props;
+
+// IDを生成するヘルパー関数
+const getIdFromLink = (link: string) => {
+    return link.replace(BASE_DIR, '').replace(/\/$/, '').replace(/\//g, '-');
+};
+---
+<!-- ly_header -->
+<header class="ly_header js_header">
+	<div class="ly_inner">
+		<div class="ly_header_box">
+			<p class="el_logo">
+				<a href={LOGO_01_LINK}><img src={IMG_PATH + "common/logo_01.svg"} alt="NTT東日本" width="128" height="28"></a>
+				<a href={LOGO_02_LINK}><img src={IMG_PATH + "common/logo_02.svg"} alt="防災研" width="95" height="28"></a>
+			</p>
+			<a class="el_menubar js_menubar hp_lg_none">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		</div>
+		<!-- /.el_menubar -->
+		<nav class="bl_gnav js_gnav">
+            <div class="bl_gnav_box">
+				<ul class="bl_gnav_list">
+					{NAV_LIST.map((nav) => {
+						return (
+							<li class="bl_gnav_item">
+								{!nav.children || nav.children.length === 0 ? (
+									<a href={nav.link}>{nav.name} <img class="hp_lg_none" src={IMG_PATH + "common/arrow.svg"} alt="arrow" width="12" height="7"></a>
+								) : (
+									<>
+										<span class="el_gnav_nolink_text hp_lg_none">{nav.name}</span>
+										<a class="js_dropdown_trigger hp_lg_show" tabindex="0">{nav.name} <img class="hp_lg_max_none" src={IMG_PATH + "common/arrow.svg"} alt="arrow" width="12" height="7"></a>
+										<div class="bl_dropdown">
+											<ul class="bl_dropdown_list">
+												{nav.children.map((child) => (
+													<li class="bl_dropdown_item">
+														<a href={child.link}>{child.name} <img class="hp_lg_none" src={IMG_PATH + "common/arrow.svg"} alt="arrow" width="12" height="7"></a>
+													</li>
+												))}
+											</ul>
+										</div>
+									</>
+								)}
+							</li>
+						);
+					})}
+				</ul>
+			</div>
+		</nav>
+		<!-- /.bl_gnav -->
+	</div>
+</header>
+<!-- /.ly_header -->
+
+<p class="el_logo is_print">
+	<a href={LOGO_01_LINK}><img src={IMG_PATH + "common/logo_01.svg"} alt="NTT東日本" width="131" height="34"></a>
+	<a href={LOGO_02_LINK}><img src={IMG_PATH + "common/logo_02.svg"} alt="防災研" width="107" height="34"></a>
+</p>
+
+<style lang="scss">
+.ly_header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: auto;
+	min-width: 100%;
+	width: 100%;
+	z-index: map.get(g.$z-index, 'header');
+	transition: all 0.3s;
+    background-color: g.color('white');
+	
+	@include g.mq('lg') {
+		border-bottom: 1px solid rgba(#333333, 0.5);
+	}
+
+	@media print {
+		display: none;
+	}
+	
+	&.is_bg {
+		background-color: g.color('white');
+		box-shadow:1px 1px 7px rgba(#13336d, 0.1);
+	}
+
+	.ly_inner {
+		height: map.get(g.$header_h, 'sm');
+
+		@include g.mq('lg') {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			height: map.get(g.$header_h, 'lg');
+			max-width: 1220px;
+			width: 100%;
+			margin-inline: auto;
+			padding-inline: 0;
+		}
+	}
+
+	&_box {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 26px;
+		width: 100vw;
+		height: 100%;
+		margin-inline: auto;
+		padding-inline: calc(50% - #{g.$inner_min} / 2);
+		background-color: g.color('white');
+		border-bottom: 1px solid rgba(#333333, 0.5);
+		z-index: 10;
+		
+		@include g.mq('lg') {
+			width: fit-content;
+			padding-inline: 0;
+			border-bottom: none;
+			margin-inline: 0 auto;
+		}
+	}
+
+	.el_logo {
+		flex-shrink: 0;
+        margin-right: auto;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		
+		@include g.mq('lg') {
+			margin-left: 70px;
+			gap: 23px;
+		}
+
+		a {
+			display: block;
+			line-height: 0;
+
+			img{
+				@include g.mq('lg_max') {
+					width: 100px;
+					height: auto;
+				}
+			}
+
+			+ a{
+				img{
+					@include g.mq('lg_max') {
+						width: 72px;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+.el_menubar {
+	width: 30px;
+	height: 20px;
+	position: relative;
+	cursor: pointer;
+	z-index: 9999;
+	
+	span {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: g.color('key');
+		transition: all 0.3s;
+		
+		&:nth-child(1) { top: 0; }
+		&:nth-child(2) { top: 50%; transform: translateY(-50%); }
+		&:nth-child(3) { bottom: 0; }
+	}
+
+	&.is_active {
+		span {
+			background-color: g.color('key');
+			&:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(35deg); }
+			&:nth-child(2) { opacity: 0; }
+			&:nth-child(3) { top: 50%; transform: translateY(-50%) rotate(-35deg); }
+		}
+	}
+}
+
+.bl_gnav {
+    z-index: map.get(g.$z-index, 'gnav');
+	margin-right: 50px;
+
+	@include g.mq('lg_max') {
+		position: fixed;
+		top: map.get(g.$header_h, 'sm');
+		right: 0;
+		width: 95%;
+		background-color: g.color('white');
+		border-radius: 0 0 0 30px;
+		box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
+		padding-top: 0;
+		margin-right: 0;
+		overflow-y: auto;
+		visibility: hidden;
+		transform: translateY(-100%);
+		transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.4s;
+		z-index: -1;
+
+		&.is_show {
+			visibility: visible;
+			transform: translateY(0);
+		}
+	}
+
+	@include g.mq('lg') {
+		position: static;
+		padding: 0;
+		background-color: transparent;
+	}
+
+	&_box{
+		@include g.mq('lg_max') {
+			padding: 20px 20px;
+		}
+	}
+	
+	&_list {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+
+		@include g.mq('lg') {
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 0 50px;
+		}
+	}
+
+	&_item {
+		line-height: 1.4;
+		position: relative;
+
+		a{
+			&:hover{
+				color: g.color('key');
+				opacity: 1;
+			}
+
+			img{
+				@include g.mq('lg_max') {
+					position: relative;
+					top: 2px;
+					width: 12px;
+					height: 7px;
+					transform: rotate(-90deg);
+					transition: transform 0.3s;
+				}
+			}
+		}
+
+		> a, > .el_gnav_nolink_text {
+            display: flex;
+            align-items: center;
+			font-size: 1.6rem;
+            gap: 5px;
+			color: g.color('base');
+			text-decoration: none;
+
+            @include g.mq('lg_max') {
+                padding: 20px 10px;
+            }
+
+			@include g.mq('lg') {
+				font-size: 1.4rem;
+				padding: 10px 0;
+			}
+		}
+
+		.el_gnav_nolink_text{
+			@include g.mq('lg_max') {
+                padding: 30px 10px 5px 10px;
+				font-size: 1.2rem;
+			}
+		}
+
+		.js_dropdown_trigger {
+			cursor: default;
+		}
+
+		@include g.mq('lg') {
+			&:hover {
+				.bl_dropdown {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.bl_dropdown {
+	@include g.mq('lg_max') {
+		// SPでは常に表示（アコーディオンではなく通常リストとして表示）
+		display: block;
+		padding-bottom: 20px;
+	}
+
+	@include g.mq('lg') {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-39%) translateY(13px);
+		min-width: 215px;
+		background-color: g.color( 'white');
+		box-shadow: 4px 8px 5px rgba(0,0,0,0.1);
+		border-radius: 0 0 0 15px;
+		padding: 10px 0;
+		visibility: hidden;
+		opacity: 0;
+		transition: all 0.3s ease;
+		z-index: 100;
+	}
+
+	&_list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&_item {
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			color: g.color('base');
+			text-decoration: none;
+			transition: all 0.2s;
+
+			@include g.mq('lg_max') {
+				gap: 5px;
+				justify-content: flex-start;
+				padding: 15px 10px 15px 10px;
+				font-size: 1.6rem;
+			}
+
+			@include g.mq('lg') {
+				padding: 6px 15px 6px 20px;
+				font-size: 1.2rem;
+				
+				&:hover {
+					color: g.color('key');
+				}
+			}
+		}
+	}
+}
+
+.el_logo.is_print {
+	display: none;
+
+	@media print {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+
+		a {
+			display: block;
+			line-height: 0;
+		}
+	}
+}
+
+// ユーティリティクラス
+.hp_lg_none {
+	@include g.mq('lg') {
+		display: none !important;
+	}
+}
+
+.hp_lg_show {
+	@include g.mq('lg_max') {
+		display: none !important;
+	}
+}
+</style>
+
+<script>
+	import toggleGnav from '../scripts/toggleGnav.js';
+
+	toggleGnav();
+</script>

@@ -1,0 +1,192 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '分析機能（装置）',
+	description: '分析機能（装置）',
+	keywords: '',
+}
+---
+<Layout pageId="documents" title={meta.title} keywords={meta.keywords} description={meta.description}>
+    <MvLower title="分析機能（装置）" subTitle="Analyzer" src="mv/mv-analyzer.webp"/>
+    <TitleH1 title="分析機能（装置）トップ" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析機能（装置）"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <p>DNP科学分析センターは、幅広い分析機能（装置）を所有しています。ここでは、主要な分析機能（装置）を紹介します。</p>
+                <div class="category-top">
+                    <div class="category-top-box">
+                        <a href="organic.html">
+                            <figure class="category-top-image">
+                                <img src={IMG_PATH + "/analyzer/organic_01_lg.webp"} alt="有機分析" width="390" height="243">
+                            </figure>
+                            <div class="category-top-text">
+                                <p class="category-top-title">有機分析</p>
+                                <p class="category-top-lead">
+                                    さまざまな有機化合物に対して、各種クロマトグラフを用いた分離分析、定量分析と、赤外線分光分析・核磁気共鳴分析・質量分析・元素分析などによる構造解析を組み合わせ、構造決定、純度の分析、不純物の同定などを行ないます。
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-top-box">
+                        <a href="polymer.html">
+                            <figure class="category-top-image">
+                                <img src={IMG_PATH + "/analyzer/polymer_01_lg.webp"} alt="高分子分析" width="390" height="243">
+                            </figure>
+                            <div class="category-top-text">
+                                <p class="category-top-title">高分子分析</p>
+                                <p class="category-top-lead">
+                                    高分子材料の開発には、ポリマー（高分子）と添加剤の組成・構造解析およびポリマーの分子特性評価が必要です。種々の前処理とクロマトグラフィーを駆使して成分を分離し、多様な分析法によって組成を同定する一方、平均分子量、分子量分布、立体規則性、末端基、結合様式などの分子特性を明らかにします。
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-top-box">
+                        <a href="inorganic.html">
+                            <figure class="category-top-image">
+                                <img src={IMG_PATH + "/analyzer/inorganic_01_lg.webp"} alt="無機分析" width="390" height="243">
+                            </figure>
+                            <div class="category-top-text">
+                                <p class="category-top-title">無機分析</p>
+                                <p class="category-top-lead">
+                                    組成分析と構造解析は、無機材料の元素分析と、化合物組成の解析、結晶構造・組織の解析、熱的性質の解析などをおこなっています。<br>
+                                    超微量分析は、最新鋭の分析機器と緻密な分析化学手法を用いて、純度評価や超微量不純物の分析を行います。クリーンルームの環境評分析もお引き受けしています。
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-top-box">
+                        <a href="surface.html">
+                            <figure class="category-top-image">
+                                <img src={IMG_PATH + "/analyzer/surface_01_lg.webp"} alt="表面分析" width="390" height="243">
+                            </figure>
+                            <div class="category-top-text">
+                                <p class="category-top-title">表面分析</p>
+                                <p class="category-top-lead">
+                                    機能性材料やナノテク材料など先端材料では、表面酸化、腐食、汚染、偏析、膜構造、組成変化、形状変化など、材料の表面に関するさまざまな問題に対し、最新鋭の分析機器（ESCA、オージェ、SIMS、EPMA、SPMなど）を駆使して、材料の表面や界面の情報をとらえ、問題の解決にあたっています。
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-top-box">
+                        <a href="form_observation.html">
+                            <figure class="category-top-image">
+                                <img src={IMG_PATH + "/analyzer/form_observation_01_lg.webp"} alt="形態観察" width="390" height="243">
+                            </figure>
+                            <div class="category-top-text">
+                                <p class="category-top-title">形態観察</p>
+                                <p class="category-top-lead">
+                                    有機・無機材料の局所分析は、電子線やイオンを使用する方法によって結晶構造や元素分析、さらに結合状態をナノメーターのレベルで解析しています。この情報と材料の特性・機能の関係を調べることから、新素材の可能性を明らかにし、その開発を大きく前進させます。
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-top-box">
+                        <a href="safety_test.html">
+                            <figure class="category-top-image">
+                                <img src={IMG_PATH + "/analyzer/safety_test_01_lg.webp"} alt="安全性試験" width="390" height="243">
+                            </figure>
+                            <div class="category-top-text">
+                                <p class="category-top-title">安全性試験</p>
+                                <p class="category-top-lead">
+                                    微生物や動物細胞を用いた化学物質の安全性試験として、エームス（Ames）試験、染色体異常試験、マウスリンフォーマTK試験等のin vitro遺伝毒性試験を薬事法、化審法、安衛法の各GLP対応にて実施、さらに被験物質分析試験、細胞毒性試験、高分子フロースキーム試験（申請代行可）等を実施しております。
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="category-top-box">
+                        <a href="evaluation.html">
+                            <figure class="category-top-image">
+                                <img src={IMG_PATH + "/analyzer/evaluation_01_lg.webp"} alt="物性試験" width="390" height="243">
+                            </figure>
+                            <div class="category-top-text">
+                                <p class="category-top-title">物性試験</p>
+                                <p class="category-top-lead">
+                                    工業材料の基本的性質や粉体特性、触媒評価など、様々な物性測定にお応えします。
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+    .category-top {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 38px 40px;
+    margin-top: 35px;
+
+    &-box {
+      background-color: g.color('bg');
+      border-radius: 6px;
+
+      @media print {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-image {
+        text-align: center;
+        
+        img {
+            border-radius: 6px;
+        }
+    }
+
+    &-text {
+      padding-inline: 34px;
+      padding: 26px 34px ;
+    }
+
+    &-title {
+      font-size: 2.7rem;
+      font-weight: 400;
+      border-bottom: 1px solid rgba($color: g.color('key'), $alpha: 0.1);
+      padding-bottom: 20px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 20px;
+        right: 15px;
+        margin: auto;
+        width: 1em;
+        height: 1em;
+        font-size: 10px;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-width: 2px;
+        border-color: g.color('key');
+        rotate: 135deg;
+      }
+    }
+
+    &-lead {
+      font-size: 1.6rem;
+      line-height: 1.875;
+      padding-top: 15px;
+    }
+  }
+</style>

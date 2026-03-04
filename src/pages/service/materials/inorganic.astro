@@ -1,0 +1,387 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+ import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+import MvCategory from '@components/MvCategory.astro';
+import Contents from '@components/Contents.astro';
+
+const meta = {
+	title: '金属・無機材料',
+	description: '',
+}
+
+const contentsList = [
+    { num: 1, txt: '構造解析', href: '#structure' },
+    { num: 2, txt: '無機組成分析', href: '#composition' },
+];
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析対象" subTitle="Analytic subjects" src="mv/mv-service.webp" />
+    <TitleH1 title="金属・無機材料" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析対象" parent2="材料" parent3="金属・無機材料"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <MvCategory 
+                    imageSrc={IMG_PATH + "/service/inorganic_01.webp"}
+                    alt="誘導結合プラズマ質量分析装置"
+                    lead="金属・無機材料の開発現場では、組成ばらつきの把握、微量不純物の管理、結晶構造や界面の劣化要因解明など、工程と品質を左右する課題が増えています。<br>当社は高度な前処理技術と豊富な分析手法を組み合わせ、材料をマクロからナノレベルまで総合解析。工程トラブルの原因特定から新材料開発の設計指針抽出まで、現場の課題解決に直結するキャラクタリゼーションを提供します。"
+                />
+                <Contents list={contentsList} />
+                <h2 id="structure" class="h2-service">構造解析</h2>
+                <p>ミリからナノまで、材料の形状・結晶構造・界面状態を多角的に可視化し、内部構造を精密に解析します。</p>
+                <h3 class="h3-service-list">分析項目</h3>
+                <table class="tbl-service-doc">
+                    <tbody><tr>
+                      <th class="th-service-doc-section" scope="col">分析項目</th>
+                      <th class="th-service-doc-analyzer" scope="col">使用機器・手法</th>
+                      <th class="th-service-doc-doc-title" scope="col">分析事例</th>
+                    </tr>
+                    <tr>
+                      <td rowspan="8">（結晶）構造解析</td>
+                      <td rowspan="41"><a href="../../documents/an1305_530.html">XRF</a>、<a href="../../documents/x0510_530.html">XRD</a>、<a href="../../documents/s0801_520.html">Raman</a>、<a href="../../documents/m1602_550.html">TEM</a>、<a href="../../documents/f1501_520.html">FT-IR</a>、固体NMR、<a href="../../documents/s0701_510.html">TOF-SIMS</a></td>
+                      <td><a href="../../documents/s527_143.html">走査型プローブ顕微鏡（SPM）による複合材料の弾性率分布評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/x144_143.html">多層カーボンナノチューブの直径と積層間隔について</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s506_143.html">顕微ラマン分光分析による結晶形の評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s482_143.html">電子回折法による土壌鉱物の同定</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m229_143.html">電子回折および高速フーリエ変換（FFT）パターンについて</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m251_143.html">電子回折パターンを用いた結晶性材料の定性分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m202_143.html">サファイア基板上低温バッファ層のモザイク構造解析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m203_143.html">GaN反転ドメイン境界の構造解析</a></td>
+                    </tr>
+                    <tr>
+                      <td>精密格子定数の決定</td>
+                      <td><a href="../../documents/x119_143.html">外部および内部標準による精密格子定数解析</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="13">結晶性、配向性、結晶子径の測定</td>
+                      <td><a href="../../documents/s417_143.html">偏光ラマン分光法によるPbTiO3結晶膜の配向性評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s422_143.html">偏光ラマン分光法によるPbTiO3結晶膜の配向状態マッピング</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/x149_143.html">学振法に準拠する炭素材料粉末の評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m237_143.html">EBSDによる溶接部の評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s462_143.html">EBSDによる線材曲げ部の評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s485_143.html">EBSDによる線材曲げ部の方位差マップ</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s473_143.html">EBSDによる線材破断部付近の調査</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s471_143.html">EBSDによる亜鉛メッキ鋼板の結晶方位解析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m217_143.html">SEM-EBSDによる炭酸カルシウムの結晶方位解析</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="../../documents/m218_143.html">SEM-EBSDによる結晶粒内の残留ひずみ推定</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m205_143.html">SEM-EBSD、EDS同時測定による同一結晶系材料の相分離</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m208_143.html">SEM-EBSD、EDS同一視野測定によるTi合金のミクロ組織評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s486_143.html">SEM-EBSD法を用いた指定結晶粒界部のFIB-TEM分析</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="5">多層薄膜構造評価</td>
+                      <td><a href="../../documents/c008_143.html">分光光度計による固体材料表面の正反射率測定</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/x118_143.html">Ｘ線反射率による多層膜の膜厚、密度、表面（界面）粗さ評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m252_143.html">STEM-EDSによるプラスチックレンズ表面コート層の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m255_121.html">FIB-TEM法を用いたコーティング膜（表面処理膜）の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m261_143.html">FIB法を用いたAl薄膜の断面、平面TEM分析</a></td>
+                    </tr>
+                    <tr>
+                      <td>リートベルト法による結晶構造解析</td>
+                      <td>リチウムイオン二次電池の正極活物質のリートベルト解析</td>
+                    </tr>
+                    <tr>
+                      <td>面内回折法による表面構造解析</td>
+                      <td><a href="../../documents/x117_143.html">面内回折法による表面構造解析（2）</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="10">化学状態分析</td>
+                      <td><a href="../../documents/s424_143.html">ラマン分光法による溶液中のヨウ素の定量的評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s466_143.html">カーボン材料のラマンスペクトルの励起波長依存性</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s516_143.html">顕微ラマン分光分析によるアルミの白化原因究明</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s423_143.html">TOF-SIMSによる無機ケイ素化合物の化学状態分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s520_143.html">光電子分光用の前処理装置～より付着物の少ない前処理へ～</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="../../documents/s526_143.html">X線光電子装置用前処理装置 (VersaPrep)</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s464_143.html">Ar-GCIBを利用した無機材料の化学状態の評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m1702_550.html">電子エネルギー損失分光（EELS）</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s494_143.html">Electron Energy Loss Spectroscopy（EELS）スペクトル解析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s465_143.html">化学結合状態の温度変化の測定</a></td>
+                    </tr>
+                    <tr>
+                      <td>セラミックスの界面構造の分析</td>
+                      <td><a href="../../documents/s249_143.html">HAADF-STEMによる結晶粒界の観察</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">Si半導体の平面・断面分析</td>
+                      <td><a href="../../documents/s461_143.html">断面TEMによる研磨面の評価</a></td>
+                    </tr>
+                    <tr> </tr>
+                    <tr>
+                      <td rowspan="6">トモグラフィー（三次元構造解析）</td>
+                      <td rowspan="6"><a href="../../documents/m1701_550.html">TEM/STEMトモグラフィ</a>、FIB-SEM</td>
+                      <td><a href="../../documents/m241_143.html">コンクリート中空隙の三次元マルチスケール解析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s445_143.html">FIB-SEM法による樹脂中フィラーの三次元構造解析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m244_143.html">三次元粒子形状評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m226_143.html">STEMトモグラフィによる多孔質アルミナの細孔解析（1）</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m227_143.html">STEMトモグラフィによる多孔質アルミナの細孔解析（2）</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/m243_143.html">STEMトモグラフィによる多孔質アルミナの細孔解析（3）</a></td>
+                    </tr>
+                    <tr>
+                      <td>欠陥解析</td>
+                      <td>FIB-SEM</td>
+                      <td><a href="../../documents/m256_143.html">FIB法を用いた鉄腐食部の断面SEM-EDS分析</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h2 id="composition" class="h2-service">無機組成分析</h2>
+                <p>主成分から超微量まで、さまざまな材料中の組成を精確に分析します。</p>
+                <h3 class="h3-service-list">分析項目</h3>
+                <table class="tbl-service-doc">
+                    <tbody><tr>
+                      <th class="th-service-doc-section" scope="col">分析項目</th>
+                      <th class="th-service-doc-analyzer" scope="col">使用機器・手法</th>
+                      <th class="th-service-doc-doc-title" scope="col">分析事例</th>
+                    </tr>
+                    <tr>
+                      <td rowspan="7">主成分分析</td>
+                      <td rowspan="7">化学分析</td>
+                      <td>二酸化ケイ素凝集重量法による炭化ケイ素中のSiの定量</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>EDTA滴定法による酸化マグネシウム中のMgの定量</td>
+                    </tr>
+                      <tr>
+                        <td><a href="../../documents/i320_143.html">滴定法・重量分析法による高精確分析</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="../../documents/i334_143.html">硝酸カリウムの純度分析</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="../../documents/i330_143.html">凝集・重量法によるホウケイ酸ガラス中の高精確Si分析</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="../../documents/i290_143.html">価数別分析の紹介「灰分中の5価Vの分析」</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="../../documents/i296_143.html">Mnの平均価数分析</a></td>
+                      </tr>
+                    <tr>
+                      <td rowspan="39">微量不純物分析</td>
+                      <td rowspan="39">IC(1)、<a href="../../documents/i0801_530.html">IC(2)</a>、<a href="../../documents/an1602_530.html">ICP-MS</a>、<a href="../../documents/an1303_530.html">ICP-AES</a>、<a href="../../documents/i1201_530.html">HR-ICP-MS</a></td>
+                      <td>
+                        <a href="../../documents/i366_143.html">
+                          Si/SiO<sub>2</sub> 混合物中の金属Si とSiO<sub>2</sub> の分別定量法
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i342_143.html">試料の溶液化（湿式分解）</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i343_143.html">試料の溶液化（加圧酸分解）</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i344_143.html">試料の溶液化（マイクロウェーブ分解）</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i350_143.html">試料の溶液化（溶融分解）</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i339_143.html">ICP-AESの定量感度</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i340_143.html">ICP-MSの定量感度</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i389_143.html">高純度硫酸中の微量元素の定量分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i390_143.html">ICP-MS/MS技術を用いた硫酸溶液中のTi, Znの定量分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i353_143.html">ICP-MSによる高純度アンモニア水中の極微量元素の定量分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i356_143.html">ICP-MSによる高純度アンモニア水中の極微量元素の定量分析2</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i386_143.html">イオンクロマトグラフによる高純度アンモニア水中の微量イオン成分の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i266_143.html">HR-ICP-MSによる希土類元素の高感度分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i283_143.html">HR-ICP-MS法（有機溶媒直接導入測定）による有機溶媒中のシリコンの定量分析</a></td>
+                    </tr>
+                    <tr>
+                      <td>ICP-MSによるシリコンウエハー表面の金属不純物の定量</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i379_143.html">ICP-MS/MSによる超純水中の硫黄の高感度分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i326_143.html">固相抽出/ICP-MSによるK2CO3中のCoの定量分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i385_143.html">IC/ICP-MSによるAsの価数別分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i378_143.html">IC/ICP-MSによるSeの価数別分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i383_143.html">イオンクロマトグラフ-質量分析計（IC-MS）によるセレン酸の分別定量</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i380_143.html">トリプル四重極型ICP-MSを用いたマスシフト法</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i387_143.html">ICP-MSによる希土類元素中の微量元素の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i145_143.html">セラミックス中の微量特定有害金属の分析（1）</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i149_143.html">セラミックス中の微量特定有害金属の分析（2）</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i264_143.html">イオンクロマトグラフ－質量分析法による不純物の同定</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i388_143.html">イオンクロマトグラフ法（IC）によるホウ酸イオン（BO<sub>3</sub><sup>3-</sup>）の定量分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i336_143.html">イオンクロマトグラフ－質量分析計による六価クロムの定量分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i279_143.html">イオンクロマトグラフによるアセトニトリル中の陰イオンの定量分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i381_143.html">イオンクロマトグラフ（IC）・イオンクロマトグラフ-質量分析計（IC-MS）による無機陽イオンの定量下限と定量性</a></td>
+                    </tr>
+                    <tr>
+                      <td>金属製品中の特定有害金属の分析</td>
+                    </tr>
+                    <tr>
+                      <td>クリーンルーム中の金属元素および陰イオンの分析</td>
+                    </tr>
+                    <tr>
+                      <td>ポリマー中の微量金属の分析</td>
+                    </tr>
+                    <tr>
+                      <td>有機溶媒中や水中の微量陰イオンの分析</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i333_143.html">ICP-AES による半定量分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="rohs.html">RoHS関連分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i286_143.html">認証標準物質NMIJ CRMの分析「炭化けい素中の微量元素分析」</a></td>
+                    </tr><tr><td><a href="../../documents/i324_143.html">認証標準物質NMIJ CRMの分析「河川水中の微量元素分析」</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i242_143.html">技能試験「水中の重金属分析（日環53-10WM）」</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i271_143.html">技能試験「水中の陰イオン分析」</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+
+.tbl-service-doc {
+    tbody tr:first-child th:nth-child(1) {
+        min-width: 270px!important;
+    }
+
+    tbody tr:first-child th:nth-child(2) {
+        min-width: 130px!important;
+    }
+}
+</style>
+
+<script>
+	import '@scripts/rowspanBottomLine.js';
+</script>

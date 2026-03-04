@@ -1,0 +1,349 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '新規導入装置',
+	description: '新規導入装置',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析機能（装置）" subTitle="Analyzer" src="mv/mv-analyzer.webp"/>
+    <TitleH1 title="新規導入装置" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析機能（装置）" parent2=""/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <table class="tbl-analyzer">
+                  <tbody><tr>
+                    <th width="57">導入年度</th>
+                    <th width="250">装置名</th>
+                    <th width="104">略号</th>
+                    <th width="75">メーカー</th>
+                    <th width="210">型番</th>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2022年</td>
+                    <td class="td-analyzer-indent">
+                      <a href="../documents/o2201_510.html">液体クロマトグラフトリプル四重極型質量分析計（質量分析部：Xevo TQ-XS型）</a>
+                    </td>
+                    <td>LC‐MS/MS</td>
+                    <td>Waters</td>
+                    <td>Xevo TQ-XS</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2021年</td>
+                    <td>
+                      <a href="../documents/o2101_510.html">有機元素分析計</a>
+                    </td>
+                    <td>CHNOS</td>
+                    <td>エレメンター・ジャパン</td>
+                    <td>vario EL cube</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2020年</td>
+                    <td><a href="../documents/c2101_520.html">核磁気共鳴装置（溶液NMR）400MHz</a></td>
+                    <td>NMR</td>
+                    <td>日本電子</td>
+                    <td>JNM-ECZ400S</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2019年</td>
+                    <td><a href="../documents/s1901_540.html">走査型プローブ顕微鏡法<br>（Dimension XR）</a></td>
+                    <td>SPM</td>
+                    <td>ブルカージャパン</td>
+                    <td>Dimension XR</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2019年</td>
+                    <td><a href="../documents/i377_530.html">イオンクロマトグラフ-質量分析計（IC-MS）（陽イオン分析システム）</a></td>
+                    <td>陽IC-MS</td>
+                    <td>サーモフィッシャーサイエンティフィック</td>
+                    <td>ICS-6000型 + ISQ EC型</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2018年</td>
+                    <td><a href="../documents/o1804_510.html">液体クロマトグラフハイブリッド型質量分析計(質量分析部：Orbitrap 型)</a></td>
+                    <td>LC-MS</td>
+                    <td>サーモフィッシャーサイエンティフィック</td>
+                    <td>Q-Exactive Focus</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2018年</td>
+                    <td><a href="../documents/i1801_530.html">マルチ型ICP発光分光分析装置(ICP-AES)</a></td>
+                    <td>ICP-AES</td>
+                    <td>アジレント・テクノロジー</td>
+                    <td>Agilent 5110 VDV</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2018年</td>
+                    <td><a href="../documents/o1803_510.html">核磁気共鳴装置（Cryo Probe 付属）</a></td>
+                    <td>NMR</td>
+                    <td>ブルカージャパン</td>
+                    <td>
+                      AVANCE NEO 600（本体）,<br>
+                      5mm DCH 600MHz Z-Gradient（Cryo Probe）
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2017年</td>
+                    <td><a href="../documents/c1702_520.html">高温ゲル浸透クロマトグラフ</a></td>
+                    <td>高温GPC</td>
+                    <td>Agilent</td>
+                    <td>PL-GPC22</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2017年</td>
+                    <td><a href="../documents/q1701_560.html">粉体封じ込め（コンテインメント）秤量システム</a></td>
+                    <td>&nbsp;</td>
+                    <td>a1-Safetech</td>
+                    <td>ST1-900CV3/S-110</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2017年</td>
+                    <td><a href="../documents/m1701_550.html">TEM/STEMトモグラフィ</a> </td>
+                    <td>&nbsp;</td>
+                    <td>システムインフロンティア</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2016年</td>
+                    <td><a href="../documents/s526_540.html">X線光電子装置用前処理装置 (VersaPrep)</a></td>
+                    <td>XPS/ESCA</td>
+                    <td>ULVAC-PHI 社製</td>
+                    <td>Versaprep</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2016年</td>
+                    <td><a href="../documents/o1602_510.html">コロナ荷電化粒子検出器</a></td>
+                    <td>Corona CAD</td>
+                    <td>サーモフィッシャーサイエンティフィック</td>
+                    <td>Corona™Veo™</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2016年</td>
+                    <td><a href="../documents/c1701_570.html">ナノインデンター</a></td>
+                    <td>&nbsp;</td>
+                    <td>HYSITRON</td>
+                    <td>TI Premier Multi Scale</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2016年</td>
+                    <td><a href="../documents/m1602_550.html">球面収差補正STEM</a></td>
+                    <td>STEM</td>
+                    <td>日本電子</td>
+                    <td>JEM-ARM200F</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2016年</td>
+                    <td><a href="../documents/o1601_510.html">マトリックス支援レーザー脱離イオン化-タンデム飛行時間型質量分析計</a></td>
+                    <td>MALDI-TOF/TOF-MS</td>
+                    <td>ブルカー･ダルトニクス</td>
+                    <td>rapifleX TOF/TOF</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2016年</td>
+                    <td><a href="../documents/i329_530.html">マイクロ波試料前処理装置</a></td>
+                    <td>&nbsp;</td>
+                    <td>アントンパール</td>
+                    <td>Multiwave PRO</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2016年</td>
+                    <td><a href="../documents/b1601_570.html">比表面積・細孔径分析装置</a></td>
+                    <td>&nbsp;</td>
+                    <td>Quantachrome</td>
+                    <td>QUADRASORB evo<sup>TM</sup></td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2015年</td>
+                    <td><a href="../documents/an1602_530.html">誘導結合プラズマ質量分析装置</a></td>
+                    <td>ICP-MS</td>
+                    <td>Agilent technologies</td>
+                    <td>8800</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2015年</td>
+                    <td><a href="../documents/an1601_530.html">イオンクロマトグラフ－質量分析計</a></td>
+                    <td>IC-MS</td>
+                    <td>サーモフィッシャーサイエンティフィック</td>
+                    <td>ICS-2100 + MSQ PLUS</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2015年</td>
+                    <td><a href="../documents/m1502_550.html">トリプルビーム（FIB-SEM-Ar）複合装置の大気遮断対応</a></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>VTD2500</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2015年</td>
+                    <td><a href="../documents/o1501_510.html">ガスクロマトグラフ四重極飛行時間型質量分析計</a></td>
+                    <td>GC-Q-TOF/MS</td>
+                    <td>Agilent technologies</td>
+                    <td>7200B</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2015年</td>
+                    <td><a href="../documents/o1502_510.html">ガスクロマトグラフ質量分析計</a></td>
+                    <td>GC/MS</td>
+                    <td>Agilent technologies</td>
+                    <td>5977</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2015年</td>
+                    <td><a href="../documents/f1503_510.html">昇温脱離ガス質量分析計</a></td>
+                    <td>TDS-MS</td>
+                    <td>電子科学</td>
+                    <td>TDS1200Ⅱ</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2014年</td>
+                    <td><a href="../documents/an1370_510.html">フーリエ変換赤外分光法<br>
+                    シールド加熱ダイヤモンド ATR</a></td>
+                    <td>&nbsp;</td>
+                    <td>Specac</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2014年</td>
+                    <td><a href="../documents/i310_530.html">マルチ型ICP発光分光分析装置</a></td>
+                    <td>ICP-AES</td>
+                    <td>島津製作所製</td>
+                    <td>ICPE-9820</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2014年</td>
+                    <td><a href="../documents/i311_530.html">加圧型マイクロ波分解装置</a></td>
+                    <td>UltraWAVE</td>
+                    <td>マイルストーン　ゼネラル</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2014年</td>
+                    <td>固体の電子構造計算プログラム：EELS理論計算</td>
+                    <td>WIEN2k</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2014年</td>
+                    <td><a href="../documents/m1402_550.html">TEMひずみ解析ソフト</a></td>
+                    <td>PPA</td>
+                    <td>HREM　Research</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2014年</td>
+                    <td><a href="../documents/an1369_530.html">無機元素分析法（C、S）</a></td>
+                    <td>EA</td>
+                    <td>LECO</td>
+                    <td>CS844</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2014年</td>
+                    <td><a href="../documents/c1401_570.html">固体粘弾性測定装置</a></td>
+                    <td>&nbsp;</td>
+                    <td>TA Instruments</td>
+                    <td>RSA-G2</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2014年</td>
+                    <td><a href="../documents/b1401_570.html">熱機械分析装置</a></td>
+                    <td>（調湿）TMA</td>
+                    <td>ネッチ・ジャパン</td>
+                    <td>TMA-4000SE+HC9700</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2013年</td>
+                    <td><a href="../documents/s1403_540.html">電子線マイクロアナライザー</a></td>
+                    <td>FE-EPMA</td>
+                    <td>日本電子製</td>
+                    <td>RJXA-8530F</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2013年</td>
+                    <td><a href="../documents/an1368_540.html">走査型プローブ顕微鏡</a></td>
+                    <td>SPM</td>
+                    <td>ブルカー</td>
+                    <td>MultiMode8 (NanoScope V)</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2013年</td>
+                    <td><a href="../documents/c1304_530.html">透過型電子顕微鏡</a></td>
+                    <td>TEM</td>
+                    <td>日立ハイテクノロジーズ</td>
+                    <td>HT7700</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2013年</td>
+                    <td><a href="../documents/m1304_530.html">透過電子後方散乱回折</a></td>
+                    <td>t-EBSD</td>
+                    <td>TSL</td>
+                    <td>OIM</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2013年</td>
+                    <td><a href="../documents/s1405_540.html">大気非曝露冷却クロスセクションポリッシャ</a></td>
+                    <td>CP</td>
+                    <td>日本電子</td>
+                    <td>IB-09020CP</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2013年</td>
+                    <td><a href="../documents/m1302_530.html">走査型電子顕微鏡</a></td>
+                    <td>SEM</td>
+                    <td>日本電子</td>
+                    <td>JSM-7800F</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2013年</td>
+                    <td><a href="../documents/m1303_530.html">電子後方散乱回折</a></td>
+                    <td>EBSD</td>
+                    <td>TSL</td>
+                    <td>OIM</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2013年</td>
+                    <td><a href="../documents/c1303_530.html">高感度示差走査熱量計（熱流束型）</a></td>
+                    <td>DSC</td>
+                    <td>日立ハイテクサイエンス</td>
+                    <td>X-DSC7000</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2013年</td>
+                    <td>Nano IR/TA:AFM-IR Spectroscopy</td>
+                    <td>Nano IR/TA</td>
+                    <td>Anasys Instrument</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="txt-center">2013年</td>
+                    <td>光安定性試験装置</td>
+                    <td>&nbsp;</td>
+                    <td>ナガノサイエンス</td>
+                    <td>LTL-200A5-14WCD</td>
+                  </tr>
+                  </tbody>
+                </table>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+
+.tbl-analyzer {
+  tr:first-of-type th:first-of-type {
+    min-width: 100px;
+  }
+}
+</style>

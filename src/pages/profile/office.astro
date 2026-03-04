@@ -1,0 +1,303 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '事業所案内',
+	description: '事業所案内',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="会社案内" subTitle="Corporate information" src="mv/mv-profile.webp"/>
+    <TitleH1 title="事業所案内" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="会社案内" parent2="事業所案内"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <h2 id="tokyo" class="h2-std">本社</h2>
+                <table class="tbl-office">
+                  <tbody>
+                    <tr>
+                      <td>〒105-0004<br>
+                        東京都港区新橋2丁目20番15号 新橋駅前ビル1号館501号室</td>
+                      <td class="td-tel">TEL：03-6280-6981<br>
+                      FAX：03-6280-6985</td>
+                    </tr>
+                    <tr>
+                      <td>[ アクセス ]<br>
+                          JR「新橋駅」汐留口改札口から直結<br>
+                          ゆりかもめ「新橋駅」から徒歩1分<br>
+                          東京メトロ「新橋駅」から徒歩1分<br>
+                          都営浅草線「新橋駅」から徒歩1分
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="map-content">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.437562294312!2d139.75696277610024!3d35.66622649239287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b35aadcb505%3A0x9caf6e025c23532c!2zVUJF56eR5a2m5YiG5p6Q44K744Oz44K_44O8!5e0!3m2!1sja!2sjp!4v1768295418427!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <h2 class="h2-std">総務部</h2>
+                <table class="tbl-office">
+                  <tbody>
+                    <tr>
+                      <td>〒755-8633<br>
+                          山口県宇部市大字小串1978-5</td>
+                      <td class="td-tel">TEL：0836-31-6568<br>
+                          FAX：0836-31-6601</td>
+                  </tr>
+                  <tr>
+                    <td>
+                        [ アクセス ]<br>
+                        JR「新山口駅」より特急バスにて約40分「宇部新川駅」下車徒歩約15分<br>
+                        JR「新山口駅」よりJR宇部線にて約50分「宇部新川駅」下車徒歩約15分<br>
+                        山口宇部空港より車で約10分<br>
+                        山陽自動車道「宇部インター」より車で約20分
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="map-content">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.328281042271!2d131.2314896761742!3d33.958400822678826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3543812c2748569f%3A0x1352b64a5cffea01!2z44CSNzU1LTAwNjcg5bGx5Y-j55yM5a6H6YOo5biC5bCP5Liy77yR77yZ77yX77yY4oiS77yV!5e0!3m2!1sja!2sjp!4v1768296314227!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <h2 class="h2-std">品質保証部</h2>
+                <table class="tbl-office">
+                  <tbody><tr>
+                    <td>〒755-8633<br>
+                        山口県宇部市大字小串1978-5</td>
+                    <td class="td-tel">TEL：0836-31-6568<br>
+                        FAX：0836-31-6601</td>
+                  </tr>
+                  <tr>
+                    <td>
+                        [ アクセス ]<br>
+                        JR「新山口駅」より特急バスにて約40分「宇部新川駅」下車徒歩約15分<br>
+                        JR「新山口駅」よりJR宇部線にて約50分「宇部新川駅」下車徒歩約15分<br>
+                        山口宇部空港より車で約10分<br>
+                        山陽自動車道「宇部インター」より車で約20分
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="map-content">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1654.6641833988608!2d131.2327771388422!3d33.958398618040015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3543812c2748569f%3A0x1352b64a5cffea01!2z44CSNzU1LTAwNjcg5bGx5Y-j55yM5a6H6YOo5biC5bCP5Liy77yR77yZ77yX77yY4oiS77yV!5e0!3m2!1sja!2sjp!4v1768296571602!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <h2 class="h2-std">営業部門</h2>
+                <table class="tbl-office" id="tokyo">
+                  <tbody><tr>
+                    <th colspan="2">東京営業所</th>
+                  </tr>
+                  <tr>
+                    <td>〒105-0004<br>
+                        東京都港区新橋2丁目20番15号 新橋駅前ビル1号館501号室<br></td>
+                    <td class="td-tel-tokyo">TEL：03-6280-6981<br>
+                      FAX：03-6280-6985</td>
+                  </tr>
+                  <tr>
+                    <td>
+                        [ アクセス ]<br>
+                        JR「新橋駅」汐留口改札口から直結<br>
+                        ゆりかもめ「新橋駅」から徒歩1分<br>
+                        東京メトロ「新橋駅」から徒歩1分<br>
+                        都営浅草線「新橋駅」から徒歩1分
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="map-content">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.4697982698744!2d139.75593162623073!3d35.665432530840945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b35aadcb505%3A0x9caf6e025c23532c!2zVUJF56eR5a2m5YiG5p6Q44K744Oz44K_44O8!5e0!3m2!1sja!2sjp!4v1768296783462!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <table class="tbl-office tbl-office-group" id="osaka">
+                  <tbody><tr>
+                    <th>大阪営業所</th>
+                    <th class="th-map">&nbsp;</th>
+                  </tr>
+                  <tr>
+                    <td>〒530-0001<br>
+                      大阪市北区梅田1丁目1番3-600号　大阪駅前第3ビル6F 19-1号</td>
+                    <td class="td-tel">TEL：06-6346-2853<br>
+                      FAX：06-6346-1763</td>
+                  </tr>
+                  <tr>
+                    <td>
+                        [ アクセス ]<br>
+                        JR各線「大阪駅」より徒歩約8分<br>
+                        JR東西線「北新地駅」より徒歩約2分<br>
+                        大阪メトロ御堂筋線「梅田駅」より徒歩約5分
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="map-content">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.0630919070264!2d135.49863146962082!3d34.69881410090477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6ec5525c671%3A0x3a4b2fe440b416ed!2z44CSNTMwLTAwMDEg5aSn6Ziq5bqc5aSn6Ziq5biC5YyX5Yy65qKF55Sw77yR5LiB55uu77yR4oiS77yTIOWkp-mYqumnheWJjeesrDPjg5Pjg6sgNmYsMTk!5e0!3m2!1sja!2sjp!4v1768297652420!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+
+                <table class="tbl-office tbl-office-group" id="nagoya">
+                  <tbody><tr>
+                    <th>名古屋営業所</th>
+                    <th class="th-map">&nbsp;</th>
+                  </tr>
+                  <tr>
+                    <td>〒460-0003<br>
+                      愛知県名古屋市中区錦1丁目18番24号　いちご伏見ビル4F C号室</td>
+                    <td class="td-tel">TEL：052-228-1986<br>
+                      FAX：052-228-1987</td>
+                  </tr>
+                  <tr>
+                    <td>
+                        [ アクセス ]<br>
+                        地下鉄東山・鶴舞線「伏見駅」下車、徒歩4分
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="map-content">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.5268255754095!2d136.8915346762138!3d35.168419757972984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376d7e19f4c45%3A0xd996c3879f43237b!2z44CSNDYwLTAwMDMg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Lit5Yy66Yym77yR5LiB55uu77yR77yY4oiS77yS77yUIOOBhOOBoeOBlOS8j-imi-ODk-ODqyA0Zixj!5e0!3m2!1sja!2sjp!4v1768356531223!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+
+                <table class="tbl-office tbl-office-group" id="ube">
+                  <tbody><tr>
+                    <th>宇部営業所</th>
+                    <th class="th-map">&nbsp;</th>
+                  </tr>
+                  <tr>
+                    <td>〒755-8633<br>
+                      山口県宇部市大字小串1978-5<br></td>
+                    <td class="td-tel">TEL：0836-31-6568<br>
+                      FAX：0836-31-6601</td>
+                  </tr>
+                  <tr>
+                    <td>
+                        [ アクセス ]<br>
+                        JR「新山口駅」より特急バスにて約40分「宇部新川駅」下車徒歩約15分<br>
+                        JR「新山口駅」よりJR宇部線にて約50分「宇部新川駅」下車徒歩約15分<br>
+                        山口宇部空港より車で約10分<br>
+                        山陽自動車道「宇部インター」より車で約20分
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="map-content">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.328281042271!2d131.2314896761742!3d33.958400822678826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3543812c2748569f%3A0x1352b64a5cffea01!2z44CSNzU1LTAwNjcg5bGx5Y-j55yM5a6H6YOo5biC5bCP5Liy77yR77yZ77yX77yY4oiS77yV!5e0!3m2!1sja!2sjp!4v1768356617705!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                
+                <table class="tbl-office tbl-office-group" id="chiba">
+                  <tbody><tr>
+                    <th>千葉営業所</th>
+                    <th class="th-map">&nbsp;</th>
+                  </tr>
+                  <tr>
+                    <td>〒290-0045<br>
+                      千葉県市原市五井南海岸8番1号<br></td>
+                    <td class="td-tel">TEL：0436-79-9529<br>
+                      FAX：0436-24-3288</td>
+                  </tr>
+                  <tr>
+                    <td>
+                        [ アクセス ]<br>
+                        JR内房線「五井駅」より車で約15分<br>
+                        館山道「市原インター」より車で約15分
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="map-content">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.109454877733!2d140.04883107622592!3d35.526292738468875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60229db70f1429e9%3A0xe46bbfafbec0a403!2z44CSMjkwLTAwNDUg5Y2D6JGJ55yM5biC5Y6f5biC5LqU5LqV5Y2X5rW35bK477yY4oiS77yR!5e0!3m2!1sja!2sjp!4v1768356684657!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <h2 class="h2-std">分析部門</h2>
+                <table class="tbl-office">
+                  <tbody><tr>
+                    <th>【宇部地区】<br>
+                    <span class="font-normal">有機分析研究室<br>
+                      無機組成分析研究室<br>
+                      <!-- 表面・無機構造解析研究室<br /> -->
+                      構造解析研究室<br>
+                      物性評価研究室<br>
+                      安全性評価研究室</span></th>
+                    <th class="th-map">&nbsp;</th>
+                  </tr>
+                  <tr>
+                    <td>〒755-8633<br>
+                      山口県宇部市大字小串1978-5<br></td>
+                    <td class="td-tel">TEL：0836-31-6568<br>
+                      FAX：0836-31-6601</td>
+                  </tr>
+                  <tr>
+                    <td>
+                        [ アクセス ]
+                        JR「新山口駅」より特急バスにて約40分「宇部新川駅」下車徒歩約15分
+                        JR「新山口駅」よりJR宇部線にて約50分「宇部新川駅」下車徒歩約15分
+                        山口宇部空港より車で約10分
+                        山陽自動車道「宇部インター」より車で約20分
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="map-content">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.328281042271!2d131.2314896761742!3d33.958400822678826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3543812c2748569f%3A0x1352b64a5cffea01!2z44CSNzU1LTAwNjcg5bGx5Y-j55yM5a6H6YOo5biC5bCP5Liy77yR77yZ77yX77yY4oiS77yV!5e0!3m2!1sja!2sjp!4v1768356760502!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+
+                <table class="tbl-office tbl-office-group">
+                  <tbody><tr>
+                    <th>【千葉地区】<br>
+                    <span class="font-normal">高分子分析研究室</span></th>
+                    <th class="th-map">&nbsp;</th>
+                  </tr>
+                  <tr>
+                    <td>〒290-0045<br>
+                      千葉県市原市五井南海岸8番1号<br></td>
+                    <td class="td-tel">TEL：0436-79-9530<br>
+                      FAX：0436-24-3288</td>
+                  </tr>
+                  <tr>
+                    <td>
+                        [ アクセス ]<br>
+                        JR内房線「五井駅」より車で約15分<br>
+                        館山道「市原インター」より車で約15分
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="map-content">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2730.4750629709856!2d140.0507174470522!3d35.5265172030603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60229db70f1429e9%3A0xe46bbfafbec0a403!2z44CSMjkwLTAwNDUg5Y2D6JGJ55yM5biC5Y6f5biC5LqU5LqV5Y2X5rW35bK477yY4oiS77yR!5e0!3m2!1sja!2sjp!4v1768356885870!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+
+table.tbl-office{
+  margin-bottom: 20px;
+}
+
+table.tbl-office-group{
+  margin-top: 40px;
+}
+
+.map-content{
+  iframe{
+    width: 95%;
+    height: 340px;
+    margin-left: 30px;
+    margin-right: 15px;
+  }
+}
+</style>

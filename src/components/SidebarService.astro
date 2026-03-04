@@ -1,0 +1,49 @@
+---
+import { NAV_LIST } from '../consts';
+
+interface Props {
+	parent?: string; // 親カテゴリー
+	parent2?: string; // 子カテゴリー
+	parent3?: string; // 孫カテゴリー
+	addClass?: string; // 追加クラス
+}
+
+const { parent = '', parent2 = '', parent3 = '', addClass = '' } = Astro.props;
+
+// 分析対象のメニューを取得
+const Nav = NAV_LIST.find(nav => nav.name === '分析対象') as any;
+---
+<div class="sidebar_unit">
+	<h2 class={`sidebar_title ${parent === Nav?.name ? 'is_active' : ''}`}><a href={Nav?.link}>分析対象トップ</a></h2>
+	<ul class="sidebar_list">
+		{Nav?.children?.map((category: any) => {
+			// リンクからファイル名(slug)を抽出してdata-targetに使用
+			const targetSlug = category.link ? category.link.split('/').pop().replace(/\.html?$/, '') : '';
+			const isCategoryActive = parent2 === category.name;
+			
+			return (
+				<li class="sidebar_item">
+					<p class={`sidebar_item_name js_accordion_trigger ${isCategoryActive ? 'is_active' : ''}`} data-target={targetSlug}>{category.name}</p>
+					<ul class="sidebar_submenu js_accordion_body" style={isCategoryActive ? 'display: block;' : ''}>
+						<li class={`sidebar_submenu_item ${isCategoryActive && !parent3 ? 'is_active' : ''}`}>
+							<a href={category.link} class="sidebar_submenu_link">{category.name}トップ</a>
+						</li>
+						{category.children && category.children.map((item: any) => (
+							<li class={`sidebar_submenu_item ${isCategoryActive && parent3 === item.name ? 'is_active' : ''}`}>
+								<a href={item.link} class="sidebar_submenu_link">{item.name}</a>
+							</li>
+						))}
+					</ul>
+				</li>
+			);
+		})}
+	</ul>
+</div>
+<style lang="scss">
+@use "@styles/program/accordion";
+@use "@styles/sidebar";
+
+.sidebar_item_name{
+	color: g.color('base') !important;
+}
+</style>

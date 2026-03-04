@@ -1,0 +1,267 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '無機分析',
+	description: '無機分析',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析機能（装置）" subTitle="Analyzer" src="mv/mv-analyzer.webp"/>
+    <TitleH1 title="無機分析" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析機能（装置）" parent2="無機分析"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <p>組成分析と構造解析は、電子材料・半導体・金属・セラミックス・セメント・触媒など無機材料の元素分析と、化合物組成、結晶構造・組織、熱的性質の解析など、広範囲におこなっています。とりわけ、無機化合物に対する深い知識と高度な前処理技術をベースに、材料をマクロレベルから分子レベルにいたるまで精密に解析し、新素材開発に役立ていることが、大きな特徴です。<br>超微量分析は、最新鋭の分析機器と緻密な分析化学手法を用いて、超微量元素・イオンの分析を行います。クリーンテクノロジーを活用した前処理をベースに、高感度・高精度の分析をすすめ、半導体製造用薬品・有機電子材料などにとって、不可欠な役割を担うとともにクリーンルームの環境評分析もお引き受けしています。</p>
+                <table class="tbl-analyzer">
+                    <tbody><tr>
+                      <th>装置名</th>
+                      <th>略号</th>
+                      <th>メーカー</th>
+                      <th>型番</th>
+                    </tr>
+                    <tr>
+                      <td colspan="4" class="td-bg-colored txt-em">組成分析と構造解析</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/an1305_530.html">蛍光Ｘ線分析装置</a></td>
+                      <td>XRF</td>
+                      <td>リガク</td>
+                      <td>ZSX Primus</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/x0510_530.html">試料水平型回転対陰極式多目的Ｘ線回折装置</a></td>
+                      <td>XRD</td>
+                      <td>リガク</td>
+                      <td>RINT-TTRIII</td>
+                      </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/c0802_530.html">小角Ｘ線散乱装置</a></td>
+                      <td>SAXS</td>
+                      <td>リガク</td>
+                      <td>NANO-Viewer</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/s1403_530.html">電子線マイクロアナライザー</a></td>
+                      <td>FE-EPMA</td>
+                      <td>日本電子</td>
+                      <td>JXA-8530F</td>
+                      </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/c1304_530.html">透過型電子顕微鏡</a></td>
+                      <td>TEM</td>
+                      <td>日立ハイテクノロジーズ</td>
+                      <td>HT7700</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/s0502_530.html">電界放射形走査電子顕微鏡</a></td>
+                      <td>FE-SEM</td>
+                      <td>日本電子</td>
+                      <td>JSM-7000F</td>
+                      </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/s0501_530.html">電界放射形走査電子顕微鏡</a></td>
+                      <td>FE-SEM<br></td>
+                      <td>日立製作所</td>
+                      <td>S-4800</td>
+                      </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/m1302_530.html">走査型電子顕微鏡</a></td>
+                      <td>SEM</td>
+                      <td>日本電子</td>
+                      <td>JSM-7800F</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/c1305_530.html">低真空走査電子顕微鏡</a></td>
+                      <td>SEM</td>
+                      <td>日本電子</td>
+                      <td>JSM-6460LA</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/m1303_530.html">電子後方散乱回折</a></td>
+                      <td>EBSD</td>
+                      <td>TSL</td>
+                      <td>OIM</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/m1304_530.html">透過電子後方散乱回折</a></td>
+                      <td>t-EBSD</td>
+                      <td>TSL</td>
+                      <td>OIM</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/c1303_530.html">高感度示差走査熱量計（熱流束型）</a></td>
+                      <td>DSC</td>
+                      <td>日立ハイテクサイエンス</td>
+                      <td>X-DSC7000</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent">示差走査熱量計</td>
+                      <td>DSC</td>
+                      <td>SIIナノテクノロジー</td>
+                      <td>DSC7020</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent">示差熱分析熱重量同時測定装置</td>
+                      <td>TG/DTA</td>
+                      <td>SIIナノテクノロジー</td>
+                      <td>TG/DTA7300</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent">示差熱分析熱重量同時測定装置</td>
+                      <td>TG/DTA</td>
+                      <td>SIIナノテクノロジー</td>
+                      <td>TG/DTA6300</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/an1369_530.html">無機元素分析法（C、S）</a></td>
+                      <td>EA</td>
+                      <td>LECO</td>
+                      <td>CS844</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/an1302_530.html">無機元素分析法（O、N、H）</a></td>
+                      <td>EA</td>
+                      <td>LECO</td>
+                      <td>TCH-600</td>
+                    </tr>
+                    <tr>
+                      <td colspan="4" class="td-bg-colored txt-em">超微量分析</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/i1201_530.html">高分解能型誘導結合プラズマ質量分析計</a></td>
+                      <td>HR-ICP-MS</td>
+                      <td>Thermo Fisher Scientific</td>
+                      <td>ELEMENT XR</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/an1602_530.html">誘導結合プラズマ質量分析装置</a></td>
+                      <td>ICP-MS</td>
+                      <td>Agilent technologies</td>
+                      <td>8800</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="td-analyzer-indent">誘導結合プラズマ質量分析装置</td>
+                      <td>ICP-MS</td>
+                      <td>PerkinElmer</td>
+                      <td>Agilent Technologies Agilent8900</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/s1101_540.html">多機能走査型X線光電子分光装置</a></td>
+                      <td>VersaProbe</td>
+                      <td>アルバック・ファイ社</td>
+                      <td>PHI5000 VersaProbeII</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/i1801_530.html">マルチ型ICP発光分光分析装置(ICP-AES)</a></td>
+                      <td>ICP-AES</td>
+                      <td>アジレント・テクノロジー</td>
+                      <td>Agilent 5110 VDV</td>
+                    </tr>
+                  
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/i310_530.html">マルチ型ICP発光分光分析装置</a></td>
+                      <td>ICP-AES</td>
+                      <td>島津製作所製</td>
+                      <td>ICPE-9820</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/an1303_530.html">誘導結合プラズマ発光分光分析装置</a></td>
+                      <td>ICP-AES</td>
+                      <td>SIIナノテクノロジー</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent">黒鉛炉原子吸光分析装置</td>
+                      <td>FLAA</td>
+                      <td>日立製作所</td>
+                      <td>Z-2700</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent">加熱気化全自動水銀測定装置</td>
+                      <td>&nbsp;</td>
+                      <td>日本インスツルメンツ</td>
+                      <td>MA-2000</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/an1601_530.html">イオンクロマトグラフ－質量分析計</a></td>
+                      <td>IC-MS</td>
+                      <td>サーモフィッシャーサイエンティフィック</td>
+                      <td>ICS-2100 + MSQ PLUS</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/i377_530.html">イオンクロマトグラフ-質量分析計（IC-MS）（陽イオン分析システム）</a></td>
+                      <td>陽IC-MS</td>
+                      <td>サーモフィッシャーサイエンティフィック</td>
+                      <td>ICS-6000型 + ISQ EC型</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/i0801_530.html">イオンクロマトグラフ（陰イオン分析システム）</a></td>
+                      <td>IC</td>
+                      <td>Diionex</td>
+                      <td>ICS-2100<br>
+                      ICS-2000<br>
+                  ICS-1500<br>
+                  ICS-1000</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/o0601_530.html">キャピラリー電気泳動質量分析計</a></td>
+                      <td>CE/MS</td>
+                      <td>Agilent technologies</td>
+                      <td>CE：HP<sup>3D</sup>、MS：6140</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/i311_530.html">加圧型マイクロ波分解装置</a></td>
+                      <td>UltraWAVE</td>
+                      <td>マイルストーン　ゼネラル</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/i329_530.html">マイクロ波試料前処理装置</a></td>
+                      <td>&nbsp;</td>
+                      <td>アントンパール</td>
+                      <td>Multiwave PRO</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent">
+                        <a href="../documents/i396_530.html">加圧型マイクロ波分解装置<br>（Multiwave7000）</a>
+                      </td>
+                      <td>&nbsp;</td>
+                      <td>アントンパール</td>
+                      <td>Multiwave7000</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/f1503_530.html">昇温脱離ガス質量分析計</a></td>
+                      <td>TDS-MS</td>
+                      <td>電子科学</td>
+                      <td>TDS1200Ⅱ</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+
+.tbl-analyzer {
+  tr:first-of-type th:last-of-type {
+    min-width: 159px;
+  }
+}
+</style>
+

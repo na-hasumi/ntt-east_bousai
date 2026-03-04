@@ -1,0 +1,39 @@
+---
+/********************************************************************
+* 画像キャプション (親要素にposition: relative;を指定してください)
+**********************************************************************/
+interface Props {
+    addClass?: string;
+}
+
+const { addClass = '' } = Astro.props;
+---
+
+<span class:list={[ 'caption', addClass ]}><slot /></span>
+
+<style lang="scss">
+.caption {
+    position: absolute;
+    bottom: min(g.get_vw(2), 4px);
+    right: min(g.get_vw(5), 7px);
+    font-size: 1.2rem;
+    line-height: 2;
+    color: g.color('white');
+    text-align: right;
+    
+    &.is_b {
+        color: g.color('base');
+    }
+    
+    &.is_left {
+        right: auto;
+        left: 5px;
+        text-align: left;
+    }
+}
+</style>
+
+
+<script>
+
+</script>

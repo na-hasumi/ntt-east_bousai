@@ -1,0 +1,35 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '東北地方太平洋沖地震の影響に関するお知らせ',
+	description: '東北地方太平洋沖地震の影響に関するお知らせ',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="インフォメーション" subTitle="Information" src="mv/mv-topics.webp" />
+    <TitleH1 title="東北地方太平洋沖地震の影響に関するお知らせ" />
+    <div class="main">
+        <Inner>
+            <div id="main-column1">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <p class="mgn-btm20">この度の東北地方太平洋沖地震により被害を受けられた皆さまに心よりお見舞い申し上げます。</p>
+                <p>
+                    弊社では、本地震に対して大きな被害はありませんでしたので、業務への影響は小さいと考えられます。<br>
+                    しかしながら、計画停電の対象地域に含まれる一部の事業所においては、電話、FAXがつながりにくいなどのご不便をおかけする場合がございます。<br>
+                    何卒ご理解の程お願い申し上げます。
+                </p>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>

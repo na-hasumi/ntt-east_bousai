@@ -1,0 +1,284 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from "/src/consts";
+import Layout from "@layouts/Layout.astro";
+import Inner from "@components/Inner.astro";
+import SidebarArea from "@components/SidebarArea.astro";
+import MvLower from "@components/MvLower.astro";
+import TitleH1 from "@components/TitleH1.astro";
+import Contents from "@components/Contents.astro";
+
+const meta = {
+  title: "高分子分析",
+  description: "高分子分析",
+};
+
+const contentsList = [
+  { num: 1, txt: "組成分析と構造解析", href: "#composition" },
+  { num: 2, txt: "形態観察と物性評価", href: "#form-property" },
+];
+---
+
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+  <MvLower title="分析事例" subTitle="Analytic case" src="mv/mv-analysis.webp"/>
+  <TitleH1 title="高分子分析" />
+  <div class="main">
+    <Inner>
+      <SidebarArea parent="分析事例" parent2="高分子分析" />
+      <div id="content">
+        <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33" /></a></div>
+        <p>高分子材料の開発には、ポリマー（高分子）と添加剤の組成・構造解析およびポリマーの分子特性評価が必要です。種々の前処理とクロマトグラフィーを駆使して成分を分離し、多様な分析法によって組成を同定する一方、平均分子量、分子量分布、立体規則性、末端基、結合様式などの分子特性を明らかにします。</p>
+        <Contents list={contentsList} />
+        <div class="analysis-category">
+          <h2 id="composition" class="h2-service">組成分析と構造解析</h2>
+          <h3 class="h3-service-list"><a href="../documents/o1501_520.html">ガスクロマトグラフ質量分析法（1）</a>、<a href="../documents/o1502_520.html">ガスクロマトグラフ質量分析法（2）</a>（GC/MS）</h3>
+          <ul>
+          <li>リチウムイオン電池の電解液溶媒の組成分析　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li>リチウムイオン電池バインダーの分析　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li><a href="../documents/o350_131.html">ヒドラジンの定量</a>　（ライフサイエンス/医薬、化粧品）</li>
+          <li><a href="../documents/o389_131.html">ポリオレフィン中の添加剤の分析</a>　（ライフサイエンス/医薬・材料/高分子材料）</li>
+          <li><a href="../documents/c025_141.html">高分子添加剤のマイクロ抽出分析</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/o351_133.html">単糖～オリゴ糖の定性・定量分析（1）</a>　（ライフサイエンス/食品）</li>
+          <li><a href="../documents/o363_133.html">SPME法によるコーヒー香気成分の分析</a>　（ライフサイエンス/食品）</li>
+          <li><a href="../documents/o387_133.html">固相抽出-熱抽出GC/MSによる特定農薬成分の高感度分析</a>　（ライフサイエンス/食品）</li>
+          <li><a href="../documents/f075_142.html">GC/MSによるエチレンジアミン四酢酸の高感度分析</a>　（材料/有機材料）</li>
+          <li><a href="../documents/p266_141.html">ポリエステルの加メタノール分解による構造決定</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/o445_141.html">GC/MS（FI）法による混合物の分子イオン測定</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p299_141.html">GC/MS［EI］とGC/MS［FI］を併用したアクリルモノマーの分析</a>　（材料/高分子材料）</li>
+          </ul>
+          <h3 class="h3-service-list"><a href="../documents/an1316_520.html">熱分解ガスクロマトグラフ質量分析計</a>（Py-GC/MS） </h3>
+          <ul>
+          <li><a href="../documents/o282_122.html">有機EL化合物（錯体系）の構造解析</a>　（エレクトロニクス/ディスプレイ）</li>
+        <!-- 0222
+          <li><a href="../documents/o282_122.html">熱分解GC/MSによる有機EL化合物錯体系の構造解析</a>　（エレクトロニクス/ディスプレイ・材料/有機材料）</li>
+        -->
+          <li><a href="../documents/o301_142.html">熱分解GC/MSによる顔料の構造解析</a>　（材料/有機材料） </li>
+          <li><a href="../documents/p264_141.html">Py-GC/MSによる黒色物中のバインダー樹脂の定性</a>　（材料/高分子材料） </li>
+          <li><a href="../documents/o444_141.html">Py-GC/MSによる導電性ポリマー（ポリフェニレンスルファイド）の定性分析</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p267_141.html">液晶ポリエステルの熱分解同時誘導体化法による構造決定</a>　（材料/高分子材料） </li>
+          <li><a href="../documents/f096_141.html">反応管を用いた熱分解GC/MS法によるPBTの分析</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/o242_147.html">黒色異物の分析</a>　（材料/異物分析）</li>
+          <li><a href="../documents/o305_147.html">熱分解GC/MSを用いた微小黒色ゴムの分析</a>　（材料/異物分析）</li>
+        <!-- 0214
+          <li><a href="../documents/h0902_146.html">熱分解GC/MS、熱抽出GC/MS、TCT-GC/MS</a>　（材料/加熱発生ガス分析）</li>
+        -->
+          </ul>
+          <h3 class="h3-service-list"><a href="../documents/an1320_520.html">加熱発生ガス－質量分析法</a>（EGA-MS）</h3>
+          <ul>
+          <li><a href="../documents/f018_146.html">EGA-MS測定によるガスの発生状況</a>　（材料/加熱発生ガス分析）</li>
+          <li><a href="../documents/f049_146.html">EGA-MS法による無機物の加熱発生ガス分析</a>　（材料/加熱発生ガス分析）</li>
+          <li><a href="../documents/p294_141.html">EGA-MS法による樹脂中の添加剤分析</a>　（材料/高分子材料） </li>
+          </ul>
+          <h3 class="h3-service-list">熱重量ガスクロマトグラフ質量分析法（TG-GC/MS）</h3>
+          <h3 class="h3-service-list"><a href="../documents/c0601_520.html">液体クロマトグラフ質量分析法</a>（LC/MS）</h3>
+          <ul>
+          <li><a href="../documents/c002_141.html">PET（ポリエステル）樹脂中のオリゴマーの分析</a>　（材料/高分子材料） </li>
+          <li><a href="../documents/p258_141.html">LC/TOF MSによる高分子添加剤（フェノール骨格含有）の分析</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/o486_141.html">プラスチック成型品中の色素の分析</a>　（材料/有機材料、高分子材料）  </li>
+          <li><a href="../documents/f081_141.html">ASAP(大気圧固体試料プローブ)による臭素系難燃剤の分析</a>　（材料/有機材料、高分子材料） </li>
+          </ul>
+        
+          <h3 class="h3-service-list"><a href="../documents/o1601_520.html">マトリックス支援レーザー脱離イオン化質量分析法</a>（MALDI-TOF/MS）</h3>
+          <ul>
+          <li><a href="../documents/o531_141.html">MALDI-MSによる合成高分子の分析</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/o544_141.html">MALDI-MSによるシリコーンオイルの定性とMSイメージング</a>　（材料/高分子材料）</li>
+          </ul>
+        
+          <h3 class="h3-service-list">核磁気共鳴分析法（溶液NMR）</h3>
+          <ul>
+          <li><a href="../documents/p219_115.html">PP、PMMAなどの立体規則性評価</a>　（自動車/高分子材料）</li>
+          <li><a href="../documents/p220_115.html">共重合体の連鎖分布</a>　（自動車/高分子材料）</li>
+          <li><a href="../documents/p229_115.html">微量酸モノマーの定量</a>　（自動車/高分子材料）</li>
+          <li><a href="../documents/p229_115.html">1H-NMRによる無水マレイン酸変性ポリオレフィンの変性構造詳細解析</a>　（自動車/高分子材料）</li>
+          <li><a href="../documents/o235_142.html">有機EL材料の構造解析</a>　（エレクトロニクス/ディスプレイ・材料/有機材料）</li>
+          <li><a href="../documents/o357_142.html">NMRによる定量分析</a>　（材料/有機材料）</li>
+          <li><a href="../documents/o396_142.html">BHT着色物の構造解析</a>　（材料/有機材料、高分子材料）</li>
+          <li><a href="../documents/p230_141.html">ゴム系ポリマーのミクロ構造、立体規則性解析</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/c016_141.html">誘導体化および13C-NMRによるポリブタジエンの長鎖分岐解析</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p265_141.html">ポリエステルの13C-NMRによる構造決定</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/pr1001_141.html">NMRによるポリオレフィンの一次構造解析</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/c004_141.html">ポリエチレン劣化構造の1H-NMR解析</a>　（材料/高分子材料）<img src={IMG_PATH + "service/up.gif"} alt="更新"></li>
+          <li><a href="../documents/p308_141.html">ポリプロピレン複合材料の分別－NMR・GPC分析</a>　（自動車/高分子材料・材料/高分子材料）</li>
+          <li><a href="../documents/p303_141.html">自動車用ポリプロピレン複合材料の分析</a>　（自動車/高分子材料・材料/高分子材料）</li>
+          <li><a href="../documents/p302_141.html">UV硬化塗料の組成分析</a>　（材料/有機材料、高分子材料）</li>
+          <li><a href="../documents/c017_141.html">メラミン樹脂の詳細構造解析</a>　（材料/高分子材料）</li>
+          </ul>
+          <h3 class="h3-service-list"><a href="../documents/f1501_520.html">赤外分光分析法</a>（FT-IR）、<a href="../documents/f1502_520.html">顕微赤外分光分析法</a>（顕微FT-IR）</h3>
+          <ul>
+          <li><a href="../documents/p333_141.html">FT-IR によるエポキシ樹脂の硬化率測定</a></li>
+          <li><a href="../documents/f058_122.html">IRイメージング法による微小異物の分析（1）</a>　（エレクトロニクス/ディスプレイ）</li>
+          <li><a href="../documents/o291_122.html">顕微IRマッピング法による材料表面の分析</a>　（エレクトロニクス/ディスプレイ）</li>
+          <li><a href="../documents/lithium-ion_service_electronics.html#l020">FT-IRによるセパレーターの分析</a>　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li><a href="../documents/f063_131.html">顕微IRイメージング法によるラミネートフィルムの組成分析</a>　（ライフサイエンス/医薬、化粧品・材料/高分子材料）</li>
+          <li><a href="../documents/f094_141.html">熱走査FT-IR（ATR）法によるウレタン樹脂分解過程の分析</a>　（材料/有機材料、高分子材料）</li>
+          <li>
+            <a href="../documents/o556_141.html">加熱IR測定によるポリプロピレンの状態評価</a>　（材料/有機材料、高分子材料）
+          </li>
+          <li>
+            <a href="../documents/o557_141.html">N<sub>2</sub>雰囲気でのポリプロピレンの加熱IR測定</a>　（材料/有機材料、高分子材料）
+          </li>
+          <li><a href="../documents/p309_900.html">IRスペクトルの2次微分解析によるポリ塩化ビニルの熱劣化挙動</a>　（材料/有機材料、高分子材料） </li>
+          <li><a href="../documents/o359_141.html">ポリマーの種類の判定</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/o546_141.html">IR測定法（ATR法）</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/o550_141.html">IR測定法（顕微透過反射法）</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p298_141.html">高感度反射測定による金属表面上薄膜層の分析</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p206_147.html">フィルムのFE分析</a>　（材料/異物分析） </li>
+          <li><span class="td-service-doc-sub-top"><a href="../documents/p300_141.html">炭素繊維に塗布されるサイジング剤分析</a>　（材料/高分子材料）  </span></li>
+          <li><a href="../documents/o242_147.html">黒色異物の分析</a>　（材料/異物分析）</li>
+          <li><a href="../documents/o302_147.html">熱分解GC/MSによる糖類系異物の分析</a>　（材料/異物分析）</li>
+          </ul>
+          <h3 class="h3-service-list"><a href="../documents/an1305_530.html">蛍光Ｘ線分光分析法（XRF）</a></h3>
+          <ul>
+          <li>Liイオン電池（正極材）の蛍光Ｘ線による組成分析　（エレクトロニクス/リチウムイオン二次電池）</li>
+          </ul>
+          <h3 class="h3-service-list">単結晶Ｘ線構造解析法</h3>
+          <ul>
+          <li>単結晶Ｘ線構造解析　（ライフサイエンス/医薬、化粧品）</li>
+          </ul>
+          <h3 class="h3-service-list"><a href="../documents/s0801_520.html">レーザラマン分光分析法</a>（RAMAN）</h3>
+          <ul>
+          <li><a href="../documents/s501_900.html">壊したくない、開けたくない、速く知りたいなら 顕微ラマン</a></li>
+          <li><a href="../documents/s503_141.html">顕微ラマン分光分析によるポリマーの定性</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/s502_141.html">顕微ラマン分光分析によるタンパクとナイロンの識別</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/s396_131.html">レーザラマンによるラミネートフィルムの分析</a>　（ライフサイエンス/医薬）</li>
+          <li><a href="../documents/s342_144.html">ラマン分光法による単層カーボンナノチューブの欠陥評価</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          <li><a href="../documents/s355_144.html">単層カーボンナノチューブのラマンスペクトルに及ぼす励起レーザ光強度の影響</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          <li><a href="../documents/s352_144.html">単層カーボンナノチューブの分析「XPS、ラマン分光法」</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          </ul>
+          <h3 class="h3-service-list">ゲル浸透クロマトグラフ分析法（GPC）</h3>
+          <ul>
+            <li><a href="../documents/c009_141.html">ゲル浸透クロマトグラフィー（GPC）</a>　（材料/高分子材料）</li>
+            <li><a href="../documents/c010_141.html">光散乱検出器による絶対分子量及び分子サイズの算出</a>　（材料/高分子材料）</li>
+            <li><a href="../documents/p291_141.html">光散乱検出器（LS）による絶対分子量分布の測定原理</a>　（材料/高分子材料）<img src={IMG_PATH + "service/up.gif"} alt="更新"></li>
+            <li><a href="../documents/p292_141.html">GPC-LALLSによる分子量分布測定</a>　（材料/高分子材料） </li>
+            <li><a href="../documents/p290_141.html">GPCによる絶対分子量測定（粘度法）</a>　（材料/高分子材料） </li>
+            <li><a href="../documents/c018_141.html">ゲル浸透クロマトグラフィー（GPC）における相対分子量と絶対分子量（粘度法）の比較</a>　（材料/高分子材料） </li>
+            <li><a href="../documents/c1702_520.html">高温ゲル浸透クロマトグラフ</a>　（材料/高分子材料）</li>
+            <li><a href="../documents/p308_141.html">ポリプロピレン複合材料の分別－NMR・GPC分析</a>　（自動車/高分子材料・材料/高分子材料）</li>
+          </ul>
+          <h3 class="h3-service-list">溶液粘度測定</h3>
+          <ul>
+            <li><a href="../documents/b111_141.html">ポリアミドの粘度数</a>　（材料/高分子材料）</li>
+            <li><a href="../documents/b112_141.html">極限粘度</a>　（材料/高分子材料）</li>
+          </ul>
+          <h2 id="form-property" class="h2-service">形態観察と物性評価</h2>
+          <ul>
+          <li><a href="../documents/p330_142.html">ポリマーアロイの相分離構造観察 SEM，TEM，SPM の選択</a>（材料/高分子材料）</li>
+          </ul>
+          <h3 class="h3-service-list">核磁気共鳴分析法（固体NMR）</h3>
+          <ul>
+          <li><a href="../documents/o224_145.html">固体NMR によるゼオライト骨格のSi/Al 比の算出</a>　（材料/触媒）</li>
+          <li><a href="../documents/o225_145.html">固体NMR によるアルミナナカのAlの配位数の識別と定量</a>　（材料/触媒）</li>
+          </ul>
+          <h3 class="h3-service-list">動的粘弾性法（RSA）、溶融粘弾性法（ARES）</h3>
+          <ul>
+          <li><a href="../documents/p215_115.html">弾性、粘性の温度依存性（2）</a>　（自動車/高分子材料）</li>
+          <li><a href="../documents/p321_141.html">ポリイミドフィルムの固体動的粘弾性測定</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p319_141.html">CFRPの固体動的粘弾性測定</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p320_141.html">ナイロン6シートの固体動的粘弾性測定</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p301_141.html">ポリマー水溶液の粘弾性測定</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p345_141.html">ARES-G2（動的粘弾性測定装置）を用いた伸長粘度測定</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p329_141.html">溶融ポリマーのマスターカーブ作成と流動の活性化エネルギーの算出</a>　（材料/高分子材料） </li>
+          </ul>
+          <h3 class="h3-service-list"><a href="../documents/m1602_550.html">透過電子顕微鏡法</a>（TEM）</h3>
+          <ul>
+          <li><a href="../documents/l004_124.html">EELSスペクトルによるMn酸化状態の解析</a>　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li><a href="../documents/m220_141.html">炭素繊維強化プラスチックのEELSラインプロファイル測定</a>　（エレクトロニクス/リチウムイオン二次電池） </li>
+          <li><a href="../documents/l029_124.html">Co酸化物中LiのEELSマッピング検討</a>　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li><a href="../documents/p160_115.html">複合材料の総合解析モルフォロジー観察</a>　（自動車/高分子材料）</li>
+          <li><a href="../documents/s402_113.html">Cs補正STEM</a>　（自動車/パワー半導体）</li>
+          <li><a href="../documents/s382_114.html">ヘテロ接合界面に生成した微小ドメインの解析</a>　（自動車/LED素子・エレクトロニクス/半導体）</li>
+          <li><a href="../documents/s397_121.html">TEMによるGaN中転移構造の詳細観察</a>　（自動車/LED素子・エレクトロニクス/半導体）</li>
+          <li><a href="../documents/s281_121.html">EELSマッピング</a>　（自動車/LED素子・エレクトロニクス/半導体）</li>
+          <li><a href="../documents/s397_121.html">GaN中の転位解析</a>　（自動車/LED素子・エレクトロニクス/半導体）</li>
+          <li><a href="../documents/s380_122.html">結晶性粒界構造の解析</a>　（エレクトロニクス/ディスプレイ）</li>
+          <li><a href="../documents/s381_122.html">アモルファス粒界構造の解析</a>　（エレクトロニクス/ディスプレイ）</li>
+          <li><a href="../documents/s250_123.html">STEM-EDSによるマッピング測定</a>　（エレクトロニクス/記録材料）</li>
+          <li><a href="../documents/s314_123.html">DVD-Rの断面観察（1）</a>　（エレクトロニクス/記録材料）</li>
+          <li><a href="../documents/s461_141.html">断面TEMによる研磨面の評価</a>　（材料/高分子材料）  </li>
+          <li><a href="../documents/s335_123.html">粒子径解析ソフトの応用</a>　（エレクトロニクス/記録材料）</li>
+          <li><a href="../documents/pr0923a_123.html">HDD媒体の粒界解析</a>　（エレクトロニクス/記録材料）</li>
+          <li>カーボン材料の劣化状態の観察　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li><a href="../documents/p340_141.html">ポリアミドを含む多成分系樹脂のTEM観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p160_141.html">TEMによるブレンドゴムのCBの分析</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/s533_141.html">包装容器基材の形態、結晶性および機械特性評価</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p189_141.html">カラートナーの断面TEM観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p235_141.html">ポリ塩化ビニル製品の表面劣化形態TEM観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p241_141.html">スチレン系ブロック共重合体のTEM観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p243_141.html">ゴム中のフィラーの3D-TEM観察と元素マッピング</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/s340_144.html">TEMによる単層カーボンナノチューブの直径分布測定</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          <li><a href="../documents/s346_144.html">カーボンナノチューブ複合材料のTEM観察</a>　（材料/ナノ材料）</li>
+          <li><a href="../documents/s364_144.html">単層カーボンナノチューブ(SWCNT)の高コントラスト測定</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          <li><a href="../documents/x144_144.html">多層カーボンナノチューブの直径と積層間隔について</a>　（エレクトロニクス/半導体・材料/無機材料、ナノ材料）</li>
+          </ul>
+          <h3 class="h3-service-list"><a href="../documents/s0501_520.html">走査電子顕微鏡法（1）</a>、<a href="../documents/s0502_520.html">走査電子顕微鏡法（2）</a>（SEM）</h3>
+          <ul>
+          <li><a href="../documents/p207_115.html">複合材料中充填材の配向度の可視化（成形品の流動解析）</a>　（自動車/高分子材料）</li>
+          <li><a href="../documents/s334_121.html">発光ダイオードの断面観察</a>　（自動車/LED素子・エレクトロニクス/半導体）</li>
+          <li>Li二次電池正極材料の断面観察　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li>Li電池用セパレーターの多孔質構造の観察　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li>Liイオン電池正極の表面SEM観察　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li>Liイオン電池正極の断面SEM観察　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li>Liイオン電池正極の表面EDS分析－その1　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li>Liイオン電池正極の表面EDS分析－その2　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li>Liイオン電池正極の表面EDS分析－その3　（エレクトロニクス/リチウムイオン二次電池）</li>
+          <li><a href="../documents/p165_141.html">SEMによる 高分子の球晶構造のSEM観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/s493_141.html">SEMによる各種試料の観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/m221_141.html">セルロースのSEM観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p185_141.html">SEMによる破面観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/s463_141.html">炭素繊維強化プラスチックの破断面観察</a>　（材料/高分子材料）  </li>
+          <li><a href="../documents/p325_141.html">破面解析事例</a> 　（材料/高分子材料）  </li>
+          <li><a href="../documents/s508_141.html">イオン液体を用いたカラーコンタクトレンズ断面のSEM観察</a>　（材料/高分子材料） </li>
+          <li><a href="../documents/s362_144.html">多層カーボンナノチューブの長さと直径のSEM測定</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          <li><a href="../documents/x139_144.html">SEM-XRDによる多層カーボンナノチューブの直径評価</a>　（エレクトロニクス/半導体・材料/ナノ材料）</li>
+          <li><a href="../documents/s383_147.html">反射電子像観察による異物探索</a>　（材料/異物分析）</li>
+          <li>
+            <a href="../documents/s509_143.html">SEMによるEDS元素マッピングの比較</a>　（材料/金属・無機材料）
+          </li>
+          </ul>
+          <h3 class="h3-service-list"><a href="../documents/an1368_540.html">走査型プローブ顕微鏡法</a>（SPM）</h3>
+          <ul>
+          <li><a href="../documents/s474_141.html">ピークフォースタッピングモードによる表面形状測定</a> （材料/高分子材料）  </li>
+          <li><a href="../documents/s457_141.html">走査型プローブ顕微鏡（SPM）による樹脂試料の機械特性測定</a>　（材料/高分子材料） </li>
+          <li><a href="../documents/s476_141.html">走査型プローブ顕微鏡（SPM）によるポリマーの機械特性測定例</a>　（材料/高分子材料） </li>
+          <li><a href="../documents/s512_900.html">走査型プローブ顕微鏡（SPM）像中の画像抽出による解析</a></li>
+          <li><a href="../documents/s499_900.html">吸着力による親水性評価</a></li>
+          </ul>
+          <h3 class="h3-service-list">ナノインデンテーション法</h3>
+          <ul>
+          <li><a href="../documents/p331_141.html">微小領域の動的粘弾性測定 ミクロとマクロの比較</a> （材料/高分子材料）  </li>
+          <li><a href="../documents/p342_141.html">ナノインデンター及びSPMによる薄膜や微小領域の粘弾性評価</a> （材料/高分子材料）</li>
+          <li><a href="../documents/p341_141.html">異方性材料の測定方向の違いによる弾性率評価</a>（材料/高分子材料）</li>
+          <li><a href="../documents/p344_141.html">ナノインデンターによる薄膜や微小領域の応力-ひずみ曲線の評価</a>（材料/高分子材料）</li>
+          </ul>
+          <h3 class="h3-service-list">デジタルマイクロスコープ</h3>
+          <ul>
+          <li><a href="../documents/p268_141.html">デジタルマイクロスコープによる印刷物の超高精細観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/s524_141.html">冷却加熱ステージを用いた球晶成長のデジタル顕微鏡観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/s523_141.html">深度合成による突起物（とげ）のデジタル顕微鏡観察</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p269_141.html">デジタルマイクロスコープによる成形品の形状測定（3D）</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p280_141.html">デジタルマイクロスコープVHX-1000の微分干渉像</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p281_141.html">デジタルマイクロスコープVHX-1000の偏光照明像</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/p282_141.html">デジタルマイクロスコープVHX-1000の同軸落射照明像</a>　（材料/高分子材料）</li>
+          <li><a href="../documents/s525_141.html">デジタル顕微鏡を用いた温度変化を伴うアルミ箔穴の面積測定</a> （材料/高分子材料）</li>
+          </ul>
+          <h3 class="h3-service-list">光学顕微鏡法（OM）</h3>
+          <ul>
+          <li><a href="../documents/p216_141.html">樹脂流れの可視化（アロイ材料編）</a>　（材料/高分子材料）</li>
+          </ul>
+          <h3 class="h3-service-list"><a href="../documents/c1301_570.html">複合材界面特性評価</a></h3>
+          <ul>
+          <li><a href="../documents/p295_141.html">マイクロドロップレット法による繊維と樹脂の界面せん断強度測定</a>　（材料/高分子材料）</li>
+          <li><span class="td-service-doc-sub-top"><a href="../documents/p300_141.html">炭素繊維に塗布されるサイジング剤分析</a>　（材料/高分子材料） </span> </li>
+          </ul><!--accordion-area end-->
+        </div>
+      </div>
+    </Inner>
+  </div>
+</Layout>
+
+<style lang="scss">
+  @use "@styles/lower.scss";
+</style>

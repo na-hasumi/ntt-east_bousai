@@ -1,0 +1,194 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '形態観察',
+	description: '形態観察',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析機能（装置）" subTitle="Analyzer" src="mv/mv-analyzer.webp"/>
+    <TitleH1 title="形態観察" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析機能（装置）" parent2="形態観察"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <p>新しく開発される材料は、その特性と機能が発現する根拠を、ミクロの目で明らかにしなければなりません。そこに、材料の微小領域を対象とした局所分析の意義があります。有機・無機材料の局所分析は、電子線やイオンを使用する方法によって結晶構造や元素分析、さらに結合状態をナノメーターのレベルで解析しています。この情報と材料の特性・機能の関係を調べることから、新素材の可能性を明らかにし、その開発を大きく前進させます。</p>
+                <table class="tbl-analyzer">
+                    <tbody><tr>
+                      <th>装置名</th>
+                      <th>略号</th>
+                      <th>メーカー</th>
+                      <th>型番</th>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/an1368_550.html">走査型プローブ顕微鏡法</a></td>
+                      <td>SPM</td>
+                      <td>ブルカー製</td>
+                      <td>MultiMode8（NanoScope V）</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/s1901_550.html">走査型プローブ顕微鏡法<br>（Dimension XR）</a></td>
+                      <td>SPM</td>
+                      <td>ブルカージャパン</td>
+                      <td>Dimension XR</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/m1602_550.html">球面収差補正STEM</a></td>
+                      <td>STEM</td>
+                      <td>日本電子</td>
+                      <td>JEM-ARM200F</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/m1101_550.html">Cs（球面収差）補正STEM</a></td>
+                      <td>STEM</td>
+                      <td>日本電子</td>
+                      <td>JEM-2100F</td>
+                    </tr>
+                    <tr>
+                      <td>電界放射型透過電子顕微鏡（Cs補正付属）</td>
+                      <td>FE-TEM</td>
+                      <td>日本電子</td>
+                      <td>JEM-2100F</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/c1304_550.html">透過型電子顕微鏡</a></td>
+                      <td>TEM</td>
+                      <td>日立ハイテクノロジーズ</td>
+                      <td>HT7700</td>
+                    </tr>
+                    <tr>
+                      <td>プラズマFIB-SEM</td>
+                      <td>PFIB</td>
+                      <td>Thermo Fisher Scientific</td>
+                      <td>Helios 5 Hydra</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/m0901_550.html">トリプルビーム（FIB-SEM-Ar）複合装置</a></td>
+                      <td>&nbsp;</td>
+                      <td>SIIナノテクノロジー</td>
+                      <td>XVision200TB</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/m1502_550.html">トリプルビーム（FIB-SEM-Ar）複合装置の大気遮断対応</a></td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>VTD2500</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/s0502_550.html">電界放射形走査電子顕微鏡</a></td>
+                      <td>FE-SEM</td>
+                      <td>日本電子</td>
+                      <td>JSM-7000F</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/s0501_550.html">電界放射形走査電子顕微鏡</a></td>
+                      <td>FE-SEM</td>
+                      <td>日立製作所</td>
+                      <td>S-4800</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/m1302_550.html">走査型電子顕微鏡</a></td>
+                      <td>SEM</td>
+                      <td>日本電子</td>
+                      <td>JSM-7800F</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/c1305_550.html">低真空走査電子顕微鏡</a></td>
+                      <td>SEM</td>
+                      <td>日本電子</td>
+                      <td>JSM-6460LA</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/m1303_550.html">電子後方散乱回折</a></td>
+                      <td>EBSD</td>
+                      <td>TSL</td>
+                      <td>OIM</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/m1304_550.html">透過電子後方散乱回折</a></td>
+                      <td>t-EBSD</td>
+                      <td>TSL</td>
+                      <td>OIM</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/m1301_550.html">集束イオンビーム加工観察装置</a></td>
+                      <td>FIB</td>
+                      <td>日本電子</td>
+                      <td>JIB-4000</td>
+                    </tr>
+                    <tr>
+                      <td>集束イオンビーム加工装置</td>
+                      <td>FIB</td>
+                      <td>日立製作所</td>
+                      <td>FB-2000C</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/s0503_550.html">クロスセクションポリッシャ</a></td>
+                      <td>CP</td>
+                      <td>日本電子</td>
+                      <td>SM-09010<br>
+                        SM-09020</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/s1405_550.html">大気非曝露冷却クロスセクションポリッシャ</a></td>
+                      <td>CP</td>
+                      <td>日本電子</td>
+                      <td>IB-09020CP</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/c2001_550.html">回転式ミクロトーム</a></td>
+                      <td>&nbsp;</td>
+                      <td>ライカマイクロシステムズ</td>
+                      <td>HistoCore AUTOCUT R</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../documents/m1402_550.html">TEMひずみ解析ソフト</a></td>
+                      <td>PPA</td>
+                      <td>HREM　Research</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  
+                        <tr>
+                          <td><a href="../documents/m1701_550.html">TEM/STEMトモグラフィ</a></td>
+                          <td>&nbsp;</td>
+                          <td>システムインフロンティア</td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td><a href="../documents/m210_550.html">FIB、SEM、TEM大気遮断搬送機構</a></td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                      <td><a href="../documents/m1201_550.html">リモート立会いシステム</a></td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+
+.tbl-analyzer {
+
+  tr:first-of-type th:last-of-type {
+    min-width: 230px;
+  }
+}
+</style>

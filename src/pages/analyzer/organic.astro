@@ -1,0 +1,318 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '有機分析',
+	description: '有機分析',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析機能（装置）" subTitle="Analyzer" src="mv/mv-analyzer.webp"/>
+    <TitleH1 title="有機分析" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析機能（装置）" parent2="有機分析"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <p>さまざまな有機化合物に対して、各種クロマトグラフを用いた分離分析、定量分析と、赤外線分光分析・核磁気共鳴分析・質量分析・元素分析などによる構造解析を組み合わせ、構造決定、純度の分析、不純物の同定などを行ないます。</p>
+                <table class="tbl-analyzer">
+                    <tbody><tr>
+                      <th>装置名</th>
+                      <th>略号</th>
+                      <th>メーカー</th>
+                      <th>型番</th>
+                    </tr>
+                    <tr>
+                      <td colspan="4" class="td-bg-colored"><span class="txt-em">有機組成分析</span>　<!--<a href="../documents/o312_510.html">（１）</a>　<a href="../documents/o313_510.html">（２）</a>--></td>
+                    </tr>
+                    <tr>
+                      <td colspan="4" class="td-bg-colored txt-em">分離・定量分析</td>
+                      </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/o1204_510.html">ガスクロマトグラフ</a></td>
+                      <td>GC</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/o0901_510.html">原子発光検出器付ガスクロマトグラフ </a></td>
+                      <td>GC-AED</td>
+                      <td>join analytical systems<br>
+                        Agilent technologies</td>
+                      <td>2390AA<br>
+                        6890N</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/c1702_520.html">高温ゲル浸透クロマトグラフ</a></td>
+                      <td>高温GPC</td>
+                      <td>Agilent</td>
+                      <td>PL-GPC220</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent">ゲル浸透クロマトグラフ（TDS付き）</td>
+                      <td>GPC</td>
+                      <td>東ソー<br>
+                  Viscotek</td>
+                      <td>HLC8220<br>
+                      TDA302</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/o1205_510.html">高速液体クロマトグラフ</a></td>
+                      <td>HPLC</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/c2001_510.html">高速液体クロマトグラフ（HPLC）</a></td>
+                      <td>HPLC</td>
+                      <td>日本分光</td>
+                      <td>EXTREMA</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/o1602_510.html">コロナ荷電化粒子検出器</a></td>
+                      <td>Corona CAD</td>
+                      <td>Thermo Fisher Scientific</td>
+                      <td>Corona™Veo™</td>
+                    </tr>
+                    <tr>
+                      <td colspan="4" class="td-bg-colored txt-em">構造解析</td>
+                      </tr>
+                    <tr>
+                      <td colspan="4" class="td-txt-colored txt-em">核磁気共鳴装置</td>
+                      </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/o1803_510.html">核磁気共鳴装置（Cryo Probe付属）</a></td>
+                      <td>NMR</td>
+                      <td>ブルカー・ジャパン</td>
+                      <td>
+                        AVANCE NEO 600 （本体）、<br>
+                        5mm DCH 600MHz Z-Gradient（Cryo Probe）
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/c2101_520.html">核磁気共鳴装置（溶液NMR）400MHz</a></td>
+                      <td>NMR</td>
+                      <td>日本電子、<br>ブルカー・ジャパン</td>
+                      <td>JNM-ECZ400S、<br>AVANCEⅢ 400N</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/c1001_510.html">核磁気共鳴装置（溶液・固体NMR）400MHz</a></td>
+                      <td>NMR</td>
+                      <td>日本電子</td>
+                      <td>JNM-ECA400</td>
+                    </tr>
+                    <tr>
+                      <td colspan="4" class="td-txt-colored txt-em">フーリエ変換赤外分光光度計</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/f1501_510.html">フーリエ変換赤外分光光度計</a></td>
+                      <td>FT-IR<br></td>
+                      <td>Agilent Technologies<br></td>
+                      <td>Cary670</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/f1502_510.html">フーリエ変換顕微赤外分光光度計</a></td>
+                      <td>顕微FT-IR</td>
+                      <td>Agilent Technologies</td>
+                      <td>Cary620</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent">顕微フーリエ変換赤外分光光度計</td>
+                      <td>顕微FT-IR</td>
+                      <td>Thermo Fisher Scientific</td>
+                      <td>Avator370</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent">フーリエ変換赤外分光光度計</td>
+                      <td>FT-IR</td>
+                      <td>Agilent Technologies</td>
+                      <td> 3100</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/an1370_510.html">フーリエ変換赤外分光法<br>
+                      <span style="text-decoration:none">　</span>シールド加熱ダイヤモンド ATR</a></td>
+                      <td>&nbsp;</td>
+                      <td>Specac</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td colspan="4" class="td-txt-colored txt-em">質量分析計</td>
+                      </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/o1502_510.html">ガスクロマトグラフ質量分析計</a></td>
+                      <td>GC-MS</td>
+                      <td>Agilent technologies</td>
+                      <td>5977</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/c1801_570.html">ガスクロマトグラフ質量分析計</a></td>
+                      <td>GC-MS</td>
+                      <td>日本電子</td>
+                      <td>JMS-Q1500GC</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/o1501_510.html">ガスクロマトグラフ四重極飛行時間型質量分析計</a></td>
+                      <td>GC–Q–TOF/MS</td>
+                      <td>Agilent technologies</td>
+                      <td>7200B</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/c0902_510.html">ガスクロマトグラフ飛行時間型質量分析計</a></td>
+                      <td>GC-TOF/MS</td>
+                      <td>日本電子</td>
+                      <td>JMS-T100GCV</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/o2201_510.html">液体クロマトグラフトリプル四重極型質量分析計（質量分析部：Xevo TQ-XS型）</a></td>
+                      <td>LC‐MS/MS</td>
+                      <td>Waters</td>
+                      <td>Xevo TQ-XS</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/o1804_510.html">液体クロマトグラフハイブリッド型質量分析計（質量分析部：Orbitrap型）</a></td>
+                      <td>LC-MS</td>
+                      <td>Thermo Fisher Scientific</td>
+                      <td>Q-Exactive Focus</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/o1203_510.html">液体クロマトグラフハイブリッド型質量分析計</a></td>
+                      <td>LC-MS/MS</td>
+                      <td>Waters</td>
+                      <td>SYNAPT G2-S HDMS</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/c0601_510.html">液体クロマトグラフ飛行時間型質量分析計</a></td>
+                      <td>LC-TOF/MS</td>
+                      <td>Bruker Daltonics</td>
+                      <td>micro TOF focus</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/an1316_510.html">熱分解ガスクロマトグラフ質量分析計</a> </td>
+                      <td>GC-MS</td>
+                      <td>島津製作所<br>
+                  フロンティアラボ</td>
+                      <td>QP2010 Ultra<br>
+                  EGA/PY3030D</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent">熱分解ガスクロマトグラフ質量分析計</td>
+                      <td>GC-MS</td>
+                      <td>日本電子<br>
+                  フロンティアラボ</td>
+                      <td>JMS-Q1050GC<br>
+                        PY-4030D</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/o1601_510.html">マトリックス支援レーザー脱離イオン化-タンデム飛行時間型質量分析計</a></td>
+                      <td>MALDI-TOF/TOF-MS</td>
+                      <td>ブルカー･ダルトニクス</td>
+                      <td>rapifleX TOF/TOF</td>
+                    </tr>
+                    <tr>
+                      <td colspan="4" class="td-txt-colored txt-em">紫外可視近赤外分光光度計、Ｘ線装置、レーザラマン分光装置 他</td>
+                      </tr>
+                    <tr>
+                      <td class="td-analyzer-indent">紫外可視近赤外分光光度計</td>
+                      <td>UV-VIS</td>
+                      <td>島津製作所</td>
+                      <td>UV-2450</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/c1802_510.html">紫外可視近赤外分光光度計</a></td>
+                      <td>UV-VIS</td>
+                      <td>日本分光</td>
+                      <td>V-770</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/s0701_510.html">飛行時間型二次イオン質量分析計</a></td>
+                      <td>TOF-SIMS</td>
+                      <td>ULVAC-PHI</td>
+                      <td>TRIFT V</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/x0510_510.html">試料水平型回転対陰極式多目的Ｘ線回折装置</a></td>
+                      <td>XRD</td>
+                      <td>リガク</td>
+                      <td>RINT-TTRIII</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/c0802_510.html">小角Ｘ線散乱装置</a></td>
+                      <td>SAXS</td>
+                      <td>リガク</td>
+                      <td>NANO-Viewer</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/x9301_510.html">単結晶Ｘ線構造解析装置</a></td>
+                      <td>&nbsp;</td>
+                      <td>リガク</td>
+                      <td>RASA-7R</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/s0801_510.html">顕微レーザラマン分光装置</a></td>
+                      <td>RAMAN</td>
+                      <td>日本分光</td>
+                      <td>NRS-3300</td>
+                    </tr>
+                    <tr>
+                      <td colspan="4" class="td-bg-colored"><span class="txt-em">発生ガスの分析</span>　<a href="../service/materials/gas.html">→加熱発生ガス</a></td>
+                      </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/an1320_510.html">発生ガス質量分析計</a> <br></td>
+                      <td>EGA-MS</td>
+                      <td>島津製作所<br>
+                        フロンティアラボ</td>
+                      <td>QP2010 Ultra<br>      
+                        3030D<br></td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/o1802_510.html">熱脱着ガス-ガスクロマトグラフ質量分析計</a></td>
+                      <td>TCT-GC-MS</td>
+                      <td>Agilent Technologies<br>ジーエルサイエンス</td>
+                      <td>5977B<br>HP524</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/o1801_510.html">昇温脱離ガス-ガスクロマトグラフ質量分析計</a></td>
+                      <td>TDS-GC-MS</td>
+                      <td>Agilent Technologies<br>ジーエルサイエンス</td>
+                      <td>5975C<br>SWA-256、OZA-CRYO</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent"><a href="../documents/f1503_510.html">昇温脱離ガス質量分析計</a></td>
+                      <td>TDS-MS</td>
+                      <td>電子科学</td>
+                      <td>TDS1200Ⅱ</td>
+                    </tr>
+                    <tr>
+                      <td colspan="4" class="td-bg-colored txt-em">元素分析</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent">
+                        <a href="../documents/o2101_510.html">有機元素分析計</a>
+                      </td>
+                      <td>CHNOS</td>
+                      <td>エレメンター・ジャパン</td>
+                      <td>vario EL cube</td>
+                    </tr>
+                    <tr>
+                      <td class="td-analyzer-indent">有機元素分析計</td>
+                      <td>CHN</td>
+                      <td>ジェイ・サイエンス・ラボ</td>
+                      <td>マイクロコーダーJM10</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>

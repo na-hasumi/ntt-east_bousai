@@ -1,0 +1,33 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: 'GLP試験実施の流れについて',
+	description: 'GLP試験実施の流れについて',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="お問合せ・ご依頼" subTitle="Inquiry" src="mv/mv-inquiry.webp" />
+    <TitleH1 title="GLP試験実施の流れについて" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="お問合せ・ご依頼" parent2="ご依頼の流れ" />
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <p align="left">GLP適用試験におきましては試験実施前後も含めて試験委託者様と書類等のやり取りが必要となります。ここではその流れについて説明します。</p>
+                <p class="txt-center mgn-tp40"><img src={IMG_PATH + "inquiry/s097_01.jpg"} alt="図：GLP試験実施の流れ"></p>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>

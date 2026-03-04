@@ -1,0 +1,268 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+ import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+import MvCategory from '@components/MvCategory.astro';
+
+const meta = {
+	title: 'リチウムイオン二次電池',
+	description: '',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析対象" subTitle="Analytic subjects" src="mv/mv-service.webp" />
+    <TitleH1 title="リチウムイオン二次電池" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析対象" parent2="エレクトロニクス" parent3="リチウムイオン二次電池"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <MvCategory 
+                    imageSrc={IMG_PATH + "/service/lithium-ion_01.webp"}
+                    alt="リチウムイオン二次電池"
+                    lead="エレクトロニクス製品向けLIBでは、薄型化・高容量化に伴い、電極スラリー分散、界面反応、ガス発生や膨れなど、微細構造起因の不具合が開発・量産の障壁となります。DNP科学分析センターは、電極・セパレータ・集電体まで多層構造を精密に可視化し、劣化要因の特定や材料分布評価、異常兆候の早期検知を一貫して支援。製品の信頼性向上と安定した量産プロセス構築を強力に後押しします。"
+                />
+                <h2 id="item-analysis" class="h2-service">分析項目</h2>
+                <table class="tbl-service-doc">
+                    <tbody><tr>
+                      <th class="th-service-doc-site" scope="col">部位</th>
+                      <th scope="col">分析目的</th>
+                      <th scope="col">使用機器・手法</th>
+                      <th class="th-service-doc-doc-title300" scope="col">分析事例</th>
+                    </tr>
+                    <tr>
+                      <td rowspan="12">正極</td>
+                      <td>元素組成</td>
+                      <td><a href="../../documents/an1303_530.html">ICP-AES</a></td>
+                      <td><a href="../../documents/lithium-ion_service_electronics.html#l008">Liイオン電池正極活物質中の金属元素分析</a></td>
+                    </tr>
+                    <tr>
+                      <td>粒子の表面修飾構造</td>
+                      <td><a href="../../documents/m1602_550.html">TEM-EDS</a></td>
+                      <td><a href="../../documents/lithium-ion_service_electronics.html#l003">Li二次電池正極材料の断面観察 </a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">表面組成・化学状態</td>
+                      <td rowspan="2">XPS、<a href="../../documents/m1602_550.html">TEM</a></td>
+                      <td><a href="../../documents/lithium-ion_service_electronics.html#l017">XPSによるLiイオン電池正極表面の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/l004_124.html">EELSスペクトルによるMn酸化状態の解析</a></td>
+                    </tr>
+                    <tr>
+                      <td>元素組成</td>
+                      <td><a href="../../documents/an1305_530.html">XRF</a></td>
+                      <td><a href="../../documents/lithium-ion_service_electronics.html#l016">Liイオン電池（正極材）の蛍光Ｘ線による組成分析</a></td>
+                    </tr>
+                    <tr>
+                      <td>結晶構造</td>
+                      <td><a href="../../documents/x0510_530.html">XRD</a></td>
+                      <td><a href="../../documents/lithium-ion_service_electronics.html#l015">Liイオン電池（正極材）のＸ線回折による構造解析</a></td>
+                    </tr>
+                    <tr>
+                      <td>深さ方向の組成</td>
+                      <td>AES</td>
+                      <td><a href="../../documents/lithium-ion_service_electronics.html#l014">オージェによるLiイオン電池正極表面の評価</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">元素マッピング</td>
+                      <td rowspan="2"><a href="../../documents/s1403_530.html">EPMA</a>、<a href="../../documents/m1602_550.html">TEM</a></td>
+                      <td><a href="../../documents/lithium-ion_service_electronics.html#l011-l012">Liイオン電池正極の表面EDS分析－その1、その2</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/l029_124.html">Co酸化物中LiのEELSマッピング検討</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">熱特性</td>
+                      <td rowspan="2"><a href="../../documents/an1319_510.html">TDS-MS</a></td>
+                      <td><a href="../../documents/f091_124.html">TDS-MSによるLiB正極活物質温度特性の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/f095_124.html">LiB正極のTDS-MSによる温度特性の分析（1）</a></td>
+                    </tr>
+                    <tr>
+                      <td>汚染状態の調査</td>
+                      <td><a href="../../documents/s0701_510.html">TOF-SIMS</a></td>
+                      <td><a href="../../documents/lithium-ion_service_electronics.html#l018">TOF-SIMSによるLiイオン電池正極表面の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="17">負極</td>
+                      <td>元素組成</td>
+                      <td><a href="../../documents/an1305_530.html">XRF</a></td>
+                      <td>Liイオン電池負極活物質の組成分析</td>
+                    </tr>
+                    <tr>
+                      <td>元素組成</td>
+                      <td><a href="../../documents/an1303_530.html">ICP-AES</a></td>
+                      <td><a href="../../documents/lithium-ion_service_electronics.html#l007">Liイオン電池負極活物質中の金属元素分析析</a></td>
+                    </tr>
+                    <tr>
+                      <td>結晶構造</td>
+                      <td><a href="../../documents/x0510_530.html">XRD</a></td>
+                      <td>Liイオン電池負極のXRD分析</td>
+                    </tr>
+                    <tr>
+                      <td>結晶性の変化</td>
+                      <td><a href="../../documents/m1602_550.html">FIB-TEM</a></td>
+                      <td>Liイオン電池負極の構造変化</td>
+                    </tr>
+                    <tr>
+                      <td>組成情報</td>
+                      <td>FIB-STEM-EELS</td>
+                      <td>Liイオン電池負極の局所化学状態情報</td>
+                    </tr>
+                    <tr>
+                      <td>劣化状況</td>
+                      <td></td>
+                      <td><a href="../../documents/l002_124.html">カーボン材料の劣化状態の観察</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">深さ方向の組成</td>
+                      <td rowspan="2">AES、XPS</td>
+                      <td><a href="../../documents/s468_124.html">Ar-GCIBを用いたLiイオン電池負極表面のXPS深さ方向分析</a></td>
+                    </tr>
+                    <tr>
+                      <td>Liイオン電池負極のデプスプロファイル測定</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">元素マッピング</td>
+                      <td rowspan="2"><a href="../../documents/s1403_530.html">EPMA</a></td>
+                      <td><a href="../../documents/s421_124.html">雰囲気遮断ホルダーを用いたSEM観察</a></td>
+                    </tr>
+                    <tr>
+                      <td>Liイオン電池負極表面の元素マッピング</td>
+                    </tr>
+                    <tr>
+                      <td>汚染状態の調査</td>
+                      <td><a href="../../documents/s0701_510.html">TOF-SIMS</a></td>
+                      <td>Liイオン電池負極表面の汚染測定</td>
+                    </tr>
+                    <tr>
+                      <td>Liの状態</td>
+                      <td>NMR（Li核）</td>
+                      <td>NMRによるLiイオン電池負極のLiの状態分析</td>
+                    </tr>
+                    <tr>
+                      <td>細孔径分布</td>
+                      <td>ガス吸着法</td>
+                      <td>Liイオン電池負極の細孔径分布測定</td>
+                    </tr>
+                    <tr>
+                      <td>比表面積</td>
+                      <td>ガス吸着法</td>
+                      <td>Liイオン電池負極の比表面積測定</td>
+                    </tr>
+                    <tr>
+                      <td>粒度分布</td>
+                      <td>レーザー回折</td>
+                      <td>Liイオン電池負極の粒度分布測定</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">電極材料</td>
+                      <td rowspan="2">カーボンの状態分析</td>
+                      <td><a href="../../documents/s0801_510.html">ラマン分光法</a></td>
+                    </tr>  
+                    <tr>
+                      <td>ラマン分光法によるカーボンの状態分析</td>
+                    </tr>    
+                    <tr>
+                      <td rowspan="3">バインダー</td>
+                      <td rowspan="2">ポリマー種判定</td>
+                      <td rowspan="2"><a href="../../documents/f1501_510.html">FT-IR</a>、 <a href="../../documents/an1316_510.html">Py-GC/MS</a></td>
+                      <td>バインダーの組成・構造情報</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/lithium-ion_service_electronics.html#l022">Liイオン電池バインダーの分析</a></td>
+                    </tr>
+                    <tr>
+                      <td>定量</td>
+                      <td>TG/DTA</td>
+                      <td><a href="../../documents/lithium-ion_service_electronics.html#l022"></a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">セパレータ</td>
+                      <td>定性</td>
+                      <td><a href="../../documents/f1501_510.html">FT-IR</a></td>
+                      <td><a href="../../documents/lithium-ion_service_electronics.html#l020">FT-IRによるセパレーターの分析</a></td>
+                    </tr>
+                    <tr>
+                      <td>微細構造解析</td>
+                      <td><a href="../../documents/m1602_550.html">TEM</a></td>
+                      <td><a href="../../documents/lithium-ion_service_electronics.html#l005">Li電池用セパレーターの多孔質構造の観察</a></td>
+                    </tr>
+                    <tr>
+                      <td>異物情報</td>
+                      <td>FIB-SIM</td>
+                      <td>Li電池用セパレーターの異物分析</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="10">電解液</td>
+                      <td rowspan="1">溶媒組成</td>
+                      <td rowspan="1"><a href="../../documents/o1502_510.html">GC/MS</a>、<a href="../../documents/c0601_510.html">LC/MS</a>、NMR</td>
+                      <td><a href="../../documents/lithium-ion_service_electronics.html#l021">Liイオン電池の電解液溶媒の組成分析</a></td>
+                    </tr>
+                    <tr>
+                      <td>安全性の評価</td>
+                      <td>エームス試験</td>
+                      <td>Liイオン電池電解液の安全性評価</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="5">F、P、B、Liの状態</td>
+                      <td rowspan="5">NMR</td>
+                      <td><a href="../../documents/l062_124.html"><sup>19</sup>F-NMRによるリチウムイオン電池の電解液中のF<sup>－</sup>の定量分析</a></td>
+                    </tr>
+                    <tr>
+                    <td><a href="../../documents/o470_124.html">多核NMRによるLiB電解質（LiPF6ならびに分解物）の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/o459_124.html">11B-NMR測定（19Fデカップリング）</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/c001_124.html">NMR法による拡散係数の評価</a></td>
+                    </tr>
+                    <tr>
+                      <td>Liイオン電池電解液中の構成元素の化学状態</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">添加剤分析</td>
+                      <td rowspan="3">HPLC、<a href="../../documents/c0601_510.html">LC/MS</a></td>
+                      <td><a href="../../documents/o537_124.html">LC/MS多変量解析による製品特性の解析（3）</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/o442_124.html">LC/MSによるイオン液体の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td>Liイオン電池電解液中の添加剤分析</td>
+                    </tr>
+                    <tr>
+                      <td>電極各部</td>
+                      <td>表面形状・組成</td>
+                      <td><a href="../../documents/s0502_520.html">SEM</a>、 EDS</td>
+                      <td>Liイオン電池電極部の分析</td>
+                    </tr>
+                    <tr>
+                      <td>全般</td>
+                      <td>非大気下での分析</td>
+                      <td><a href="../../documents/l067_124.html">前処理、表面、構造、物性分析</a></td>
+                      <td>断面加工、XPS、SPM、TEMなど</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>
+
+<script>
+	import '@scripts/rowspanBottomLine.js';
+</script>

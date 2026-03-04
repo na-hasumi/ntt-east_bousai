@@ -1,0 +1,80 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+ import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+import MvCategory from '@components/MvCategory.astro';
+import Contents from '@components/Contents.astro';
+
+const meta = {
+	title: '安全性評価',
+	description: '',
+}
+
+const contentsList = [
+    { num: 1, txt: '安全性試験', href: '#lst01' },
+    { num: 2, txt: '化学物質管理', href: '#lst02' },
+    { num: 3, txt: '医薬品', href: '#lst03' },
+    { num: 4, txt: '医薬部外品', href: '#lst04' },
+    { num: 5, txt: '食品', href: '#lst05' },
+];
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析対象" subTitle="Analytic subjects" src="mv/mv-service.webp" />
+    <TitleH1 title="安全性評価" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析対象" parent2="ライフサイエンス" parent3="安全性評価"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <MvCategory 
+                    imageSrc={IMG_PATH + "/service/life_safety_test_01.webp"}
+                    alt="安全性評価"
+                    lead="化学物質や医薬品、医用材料、食品などの安全性試験として、微生物や動物細胞を用いた変異原性試験（エームス試験、染色体異常試験、マウスリンフォーマTK試験など）を受託しています。薬機法、化審法、安衛法の各GLPの適合確認を受けており、各GLP対応試験が可能です。 関連する試験として、抗菌性試験、細胞毒性試験などを実施しています。"
+                />
+                <Contents list={contentsList} />
+                <h2 id="lst01" class="h2-service"><a href="safety_test.html">安全性試験　（→詳細はこちらから）</a></h2>
+                <ul class="ul-arrow-small">
+                    <li><a href="safety_test.html#ames">微生物を用いる変異原性試験（Ames、エームス試験）（GLP対応）</a></li>
+                    <li><a href="safety_test.html#chromosome">ほ乳類培養細胞を用いる染色体異常試験（GLP対応）</a></li>
+                    <li><a href="safety_test.html#mouse">マウスリンフォーマTK試験（GLP対応）</a></li>
+                    <li><a href="safety_test.html#polymer">高分子フロースキーム試験</a></li>
+                    <li><a href="safety_test.html#in-vitro"><em>in vitro</em>小核試験</a></li>
+                    <li><a href="safety_test.html#in-vitro">TK6を用いた<em>in vitro</em>小核試験</a></li>
+                    <li><a href="safety_test.html#umu"><em>umu</em>試験</a></li>
+                    <li><a href="safety_test.html#cell-toxic">細胞毒性試験（抽出法、直接法）</a></li>
+                    <li><a href="safety_test.html#microbe">抗菌性試験（フィルム密着法等）</a></li>
+                </ul>
+                <p><a href="safety_test.html"><img src={IMG_PATH + "service/linkto_safety_test.webp"} class="mgn-lt10" alt="安全性試験の詳細へ"></a></p>
+                <h2 id="lst02" class="h2-service">化学物質管理</h2>
+                <p>新規化学物質を製造・輸入する場合には、化審法および労働安全衛生法（安衛法）の届出が必要です。弊社では、安衛法及び化審法の届出に必要なGLP対応変異原性試験を、GLP適合施設の認定を受け実施しています。<br>また、化審法の高分子化学物質に適用される高分子フロースキーム試験を実施しています。<br>新規化学物質の研究開発における安全性の予備検討のための簡易スクリーニング試験も、お客様のニーズに合わせて、対応しています。</p>
+                <ul class="ul-arrow-small">
+                    <li><a href="../../documents/se123_134.html">新規化学物質の安衛法申請手続き</a></li>
+                </ul>
+                <h3 class="h3-std">化審法および労働安全衛生法に関する情報入手先　<span class="font-smaller">（※リンクをクリックすると別ウィンドウが開きます）</span></h3>
+                <ul class="ul-arrow-small">
+                    <li><a href="https://www.meti.go.jp/policy/chemical_management/kasinhou/index.html" target="_blank">経済産業省：産業保安・安全グループ化学物質管理課化学物質安全室</a></li>
+                    <li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iyakuhin/kashinhou_00001.html" target="_blank">厚生労働省：医薬局医薬品審査管理課化学物質安全対策室</a></li>
+                    <li><a href="http://www.env.go.jp/chemi/kagaku/index.html" target="_blank">環境省：環境省大臣官房環境保健部化学物質安全課化学物質審査室</a></li>
+                    <li><a href="https://www.nite.go.jp/chem/kasinn/kasinn_index.html" target="_blank">独立行政法人製品評価技術基盤機構（NITE）：化学物質管理センター</a></li>
+                    <li><a href="http://www.mhlw.go.jp/bunya/roudoukijun/anzeneisei06/index.html" target="_blank">厚生労働省：労働基準局 安全衛生部 化学物質対策課 化学物質評価室</a></li>
+                </ul>
+                <h2 id="lst03" class="h2-service">医薬品</h2>
+                <p>薬機法GLPに対応して、変異原性試験を実施します。被験物質の安定性試験（HPLC、GC等の機器分析）を実施します。<br>また、医薬品の研究開発における安全性の予備検討のための簡易スクリーニング試験も、お客様のニーズに合わせて対応しています。</p>
+                <h2 id="lst04" class="h2-service">医薬部外品</h2>
+                <p>薬機法GLPに準じて、医薬部外品、家庭用品などの安全性試験を実施しています。</p>
+                <h2 id="lst05" class="h2-service">食品</h2>
+                <p>新規健康食品申請に必要な変異原性試験（Ames試験）を実施しています。</p>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>

@@ -1,0 +1,201 @@
+---
+/********************************************************************
+* フッター
+**********************************************************************/
+import { BASE_DIR, IMG_PATH, LOGO_01_LINK, LOGO_02_LINK } from '../consts';
+import Inner from './Inner.astro';
+import GoTop from './GoTop.astro';
+
+interface Props {
+	pageId?: string;
+}
+const { pageId = '' } = Astro.props as Props;
+
+// NOTE: pageId は将来の出し分け用に受け取っている（現状は未使用）
+void pageId;
+
+const footerMetaLinks = [
+	{ name: 'ニュースリリース', link: BASE_DIR + 'news/' },
+	{ name: 'サイトマップ', link: BASE_DIR + 'sitemap.html' },
+	{ name: 'サイトのご利用条件', link: BASE_DIR + 'terms.html' },
+	{ name: '商標・著作権', link: BASE_DIR + 'copyright.html' },
+	{ name: 'ウェブアクセシビリティポリシー', link: BASE_DIR + 'accessibility.html' },
+	{ name: 'ソーシャルメディアポリシー', link: BASE_DIR + 'social-media.html' },
+	{ name: 'プライバシーポリシー', link: BASE_DIR + 'privacy.html' },
+	{ name: '調達に係るお取引法人に関する情報の取り扱い', link: BASE_DIR + 'procurement.html' },
+];
+---
+
+<footer class="footer">
+	<div class="footer_inner">
+		<Inner addClass="">
+			<div class="footer_layout">
+				<div class="footer_top">
+					<nav class="footer_nav" aria-label="フッターリンク">
+						<ul class="footer_meta_list">
+							{footerMetaLinks.map((item) => (
+								<li class="footer_meta_item">
+									<a class="footer_meta_link" href={item.link}>{item.name}</a>
+								</li>
+							))}
+						</ul>
+					</nav>
+					<div class="footer_gotop">
+						<GoTop src={IMG_PATH + 'common/gotop.webp'} />
+					</div>
+				</div>
+
+				<div class="footer_bottom">
+					<div class="footer_brand_logo">
+						<a href={LOGO_01_LINK}><img src={IMG_PATH + 'common/logo_01.svg'} alt="NTT東日本" width="128" height="28" decoding="async" /></a>
+						<a href={LOGO_02_LINK}><img src={IMG_PATH + 'common/logo_02.svg'} alt="防災研" width="95" height="28" decoding="async" /></a>
+					</div>
+					<p class="footer_copy">©2026 NTT東日本株式会社</p>
+				</div>
+			</div>
+		</Inner>
+	</div>
+</footer>
+
+<style lang="scss">
+.footer {
+	background-color: g.color('white');
+	position: relative;
+	border-top: 1px solid rgba(#333333, 0.5);
+
+	@media print {
+		display: none;
+	}
+
+	&_inner {
+		padding: 30px 0 24px;
+
+		@include g.mq('lg') {
+			padding: 60px 0 50px;
+		}
+	}
+
+	&_layout {
+		width: 100%;
+	}
+
+	&_top {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 30px;
+
+		@include g.mq('lg') {
+			position: relative;
+			display: block;
+			margin-bottom: 50px;
+		}
+	}
+
+	&_nav {
+		@include g.mq('lg') {
+			max-width: 780px;
+			margin: 0 auto;
+			padding: 0;
+		}
+	}
+
+	&_meta_list {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+		font-size: 1.1rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		@include g.mq('lg') {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 16px 24px;
+			font-size: 1.2rem;
+		}
+	}
+
+	&_meta_item {
+		line-height: 1.6;
+	}
+
+	&_meta_link {
+		color: g.color('key');
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&_gotop {
+		flex: 0 0 auto;
+		margin-left: 20px;
+
+		@include g.mq('lg') {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			margin-left: 0;
+		}
+	}
+
+	&_bottom {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		
+		@include g.mq('lg') {
+			gap: 24px;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+		}
+	}
+
+	&_brand_logo {
+		display: flex;
+		align-items: center;
+		gap: 27px;
+
+		@include g.mq('lg') {
+			gap: 24px;
+		}
+
+		a {
+			display: inline-flex;
+
+			+ a{
+				img{
+					width: 109px;
+					height: auto;
+				}
+			}
+		}
+
+		img {
+			display: block;
+			width: 146px;
+			height: auto;
+		}
+	}
+
+	&_copy {
+		font-size: 1.1rem;
+		color: g.color('key');
+		line-height: 1.5;
+		margin: 0;
+
+		@include g.mq('lg') {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}
+</style>

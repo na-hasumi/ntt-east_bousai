@@ -1,0 +1,50 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '健康経営宣言',
+	description: '健康経営宣言',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="会社案内" subTitle="Corporate information" src="mv/mv-profile.webp"/>
+    <TitleH1 title="健康経営宣言" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="会社案内" parent2="健康経営宣言"/>
+            <div id="content">
+              <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+              
+              <p>当社は、従業員一人ひとりが心身ともに健康に生き生きと働くことが、活力ある企業活動の源泉であり、企業理念「分析技術を駆使してお客様の研究開発と問題解決に寄与し、もって、人類社会の発展に貢献します。」の実現に、何よりも重要であると考えます。</p>
+              <p class="mgn-btm20">「安全と健康が何より優先する」との考えの下、一人ひとりが健康でその力が発揮される環境の実現へ、「健康経営」に取り組みます。</p>
+              <div class="flt-right mgn-btm30">
+                （株）DNP科学分析センター<br>
+                代表取締役社長　二井裕之<br>
+              </div>
+
+              <h2 class="h2-std">重点テーマ</h2>
+              <p>当社は、以下の項目に対して、健康保険組合などの関連機関と連携しながら、PDCAサイクルを回して重点的に取り組みます。</p>
+              <ul class="mgn-btm30 ul-decimal">
+                <li>健康管理<br>健康診断の100％受診、再検査受診（目標100%）等に対するフォロー</li>
+                <li>疾病予防<br>健康づくり環境の整備、運動習慣定着への取組、メタボリック検診と指導、喫煙対策</li>
+                <li>メンタルヘルス<br>ストレスチェック100％受診、外部EAPの活用</li>
+                <li>安全衛生活動<br>安全衛生委員会、ISO45001、教育・啓蒙活動の実施</li>
+              </ul>
+
+              <h2 class="h2-std">認定</h2>
+              <p>当社は健康経営優良法人2024（中小規模法人部門）に認定されました。</p>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>

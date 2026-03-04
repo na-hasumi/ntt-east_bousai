@@ -1,0 +1,58 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '第21回高分子分析討論会で「ポスター賞」受賞',
+	description: '第21回高分子分析討論会で「ポスター賞」受賞',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="インフォメーション" subTitle="Information" src="mv/mv-topics.webp" />
+    <TitleH1 title="第21回高分子分析討論会で「ポスター賞」受賞" />
+    <div class="main">
+        <Inner>
+            <div id="main-column1">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <p class="txt-right">2016年11月1日</p>
+                <p>2016年10月21日、22日に開催された第21回高分子分析討論会で、当社社員が「ポスター賞」を受賞しました。</p>
+                
+                <table class=" tbl-news mgn-lt80">
+                <tbody><tr>
+                    <th>学会名</th>
+                    <td>第21回高分子分析討論会</td>
+                </tr>
+                <tr>
+                <th>受賞名</th>
+                <td>ポスター賞</td>
+                </tr>
+                <tr>
+                <th>受賞者</th>
+                <td>石井 悠也</td>
+                </tr>
+                <tr>
+                <th>受賞日</th>
+                <td>2016年10月21日</td>
+                </tr>
+                <tr>
+                <th>受賞題目</th>
+                <td>NMR法による水素化ポリブタジエンの長鎖分岐点構造の直接分析</td>
+                </tr>
+                <tr>
+                <th>主催</th>
+                <td>公益社団法人日本分析化学会 高分子分析研究懇談会</td>
+                </tr>
+                </tbody></table>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>

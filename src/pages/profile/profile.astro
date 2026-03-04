@@ -1,0 +1,149 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '会社概要・沿革',
+	description: '会社概要・沿革',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="会社案内" subTitle="Corporate information" src="mv/mv-profile.webp"/>
+    <TitleH1 title="会社概要・沿革" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="会社案内" parent2="会社概要・沿革"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <h2 class="h2-std">会社概要</h2>
+                <table class="tbl-profile">
+                  <tbody><tr>
+                    <td class="td-profile" colspan="2">2025年6月現在</td>
+                    </tr>
+                  <tr>
+                    <th class="ltspace-2">設立</th>
+                    <td>1987年4月1日</td>
+                  </tr>
+                  <tr>
+                  <th class="ltspace-2">商号</th>
+                    <td>株式会社DNP科学分析センター<br>
+                    DNP Scientific Analysis Center, Inc.</td>
+                  </tr>
+                  <tr>
+                    <th class="ltspace-2">本社</th>
+                    <td>〒105-0004　東京都港区新橋2丁目20番15号 新橋駅前ビル1号館501号室<br>
+                      TEL：03-6280-6981　FAX：03-6280-6985<br>
+                      <a href="/profile/office.html#tokyo">地図はこちら</a>
+                    </td>
+                  </tr>
+                  <tr>
+                  <th class="ltspace-05">資本金</th>
+                    <td>40百万円　 [ 授権資本金 160百万円 ]</td>
+                  </tr>
+                  <tr>
+                    <th class="ltspace-2">株主</th>
+                    <td>大日本印刷株式会社66.625％　UBE株式会社33.375％</td>
+                  </tr>
+                  <tr>
+                    <th>取引銀行</th>
+                    <td>三菱UFJ銀行　宇部支店</td>
+                  </tr>
+                  <tr>
+                    <th>従業員数</th>
+                    <td>113名</td>
+                  </tr>
+                  <tr>
+                  <th class="ltspace-2">役員</th>
+                    <td>
+                      <ul>
+                        <li>代表取締役会長（非常勤）：松元　豊</li>
+                        <li>代表取締役社長（常勤）：二井　裕之</li>
+                        <li>取締役（常勤）：西園　健史</li>
+                        <li>取締役（非常勤）：横地　英一郎</li>
+                        <li>取締役（非常勤）：吉田　洋一</li>
+                        <li>監査役（非常勤）：菅沼　耕二</li>
+                        <li>監査役（非常勤）：小宮　隆章</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <h2 class="h2-std">沿革</h2>
+                <table class="tbl-profile">
+                  <tbody><tr>
+                    <th>1987年</th>
+                    <td>宇部興産（現 ＵＢＥ株式会社）研究開発部門の宇部、千葉、枚方3研究所の分析・物性評価部門を統合し、「株式会社ユービーイー科学分析センター」を設立<br>
+                      　　営業部 ： 東京、大阪、宇部<br>
+                      　　分析部 ： 宇部、千葉、枚方
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>1994年</th>
+                    <td>千葉研究所内に営業部を開設</td>
+                  </tr>
+                  <tr>
+                    <th>1995年</th>
+                    <td>宇部地区にGLP施設を設置、分析部枚方を閉鎖</td>
+                  </tr>
+                  <tr>
+                    <th>1998年</th>
+                    <td>宇部地区に電子顕微鏡棟を新設</td>
+                  </tr>
+                  <tr>
+                    <th>1999年</th>
+                    <td>ISO14001の認証を取得</td>
+                  </tr>
+                  <tr>
+                    <th>2001年</th>
+                    <td>ISO9001の認証を取得</td>
+                  </tr>
+                  <tr>
+                    <th>2002年</th>
+                    <td>宇部地区にクリーンルーム設置</td>
+                  </tr>
+                  <tr>
+                    <th>2009年</th>
+                    <td>電子顕微鏡棟増設</td>
+                  </tr>
+                  <tr>
+                    <th>2011年</th>
+                    <td>「株式会社UBE科学分析センター」に社名を変更<br>
+                    名古屋営業所を開設</td>
+                  </tr>
+                  <tr>
+                    <th>2015年</th>
+                    <td>宇部地区に医薬常盤試験棟を新設</td>
+                  </tr>
+                  <tr>
+                    <th>2018年</th>
+                    <td>本社及び東京営業部を移転</td>
+                  </tr>
+                  <tr>
+                    <th>2022年</th>
+                    <td>大阪営業所を移転</td>
+                  </tr>
+                  <tr>
+                    <th>2024年</th>
+                    <td>大日本印刷株式会社とＵＢＥ株式会社の合弁会社化</td>
+                  </tr>
+                  <tr>
+                    <th>2025年</th>
+                    <td>「株式会社DNP科学分析センター」に社名を変更</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>

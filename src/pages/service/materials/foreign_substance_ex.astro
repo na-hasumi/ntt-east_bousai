@@ -1,0 +1,86 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+ import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+
+const meta = {
+	title: '異物分析：分析例',
+	description: '',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析対象" subTitle="Analytic subjects" src="mv/mv-service.webp" />
+    <TitleH1 title="異物分析" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析対象" parent2="材料" parent3="異物分析"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <h2 id="fs-ex-01" class="h2-service">分析例：ポリエチレンフィルム中の埋没物（簡易断面作製法）</h2>
+                <h3 class="h3-service-list">測定手順</h3>
+                <ol class="ol-std">
+                  <li>異常部の顕微鏡観察を行い、埋没物の状態を調べます。</li>
+                  <li>顕微鏡観察下、異常部の断面をミクロトームにより切り出します。</li>
+                  <li>顕微鏡観察下、手作業により埋没物を掘り出します。</li>
+                  <li>掘り出し物をダイヤモンドセルに移します。</li>
+                  <li>FT-IR測定（顕微－透過法）を実施します。
+                  </li>
+                </ol>
+                <h4 class="h4-service-list">埋没物の簡易断面作製過程</h4>
+                <p><img src={IMG_PATH + "/service/foreign_substance_07.webp"} alt="写真：埋没物の簡易断面作製過程"></p>
+                <h4 class="h4-service-list">埋没物のFT-IRスペクトル</h4>
+                <p><img src={IMG_PATH + "/service/foreign_substance_08.webp"} alt="図：埋没物のFT-IRスペクトル
+                  "></p>
+                <h3 class="h3-service-list">結果</h3>
+                <p>埋没物は「テフロン」と判明いたしました。</p>
+
+                <h2 id="fs-ex-02" class="h2-service">分析例：天然果汁製品中のもやもや状浮遊物</h2>
+                <h3 class="h3-service-list">測定手順</h3>
+                <img src={IMG_PATH + "/service/foreign_substance_09.webp"} class="flt-right" alt="図：天然果汁製品中のもやもや状浮遊物">
+                <ol class="ol-std">
+                  <li>白色もやもや状浮遊物のサンプリング</li>
+                  <li>水洗後、乾燥</li>
+                  <li>乾燥物の顕微鏡観察</li>
+                  <li>乾燥物のFT-IR測定（顕微－透過法）</li>
+                  <li>スペクトル解析</li>
+                </ol>
+                <h4 class="h4-service-list">もやもや状浮遊物のFT-IRスペクトル［顕微－透過法］</h4>
+                <p><img src={IMG_PATH + "/service/foreign_substance_10.webp"} alt="図：もやもや状浮遊物のFT-IRスペクトル［顕微－透過法］"></p>
+                <h3 class="h3-service-list">結果</h3>
+                <p>もやもや状浮遊物は「カビ」の可能性が高いと思われました。</p>
+                <h3 class="h3-service-list">実証</h3>
+                <img src={IMG_PATH + "/service/foreign_substance_11.webp"} class="flt-right" alt="図：食パンに発生したカビ">
+                <ol class="ol-std">
+                  <li>もやもや状浮遊物の培養</li>
+                  <li>培養物（カビ）の光学顕微鏡観察</li>
+                  <li>食パンカビのFT-IR測定（顕微－透過法）</li>
+                  <li>PE材中の添加剤（脂肪酸アミド）の調査</li>
+                </ol>
+                <p><img src={IMG_PATH + "/service/guidance_arrow.gif"} class="mgn-lt10" alt="矢印"></p>
+                <p>（1）カビの胞子の確認、（2）IRスペクトルの類似、（3）脂肪酸アミドと異なるIRスペクトルから「カビ」と判明しました。</p>
+                <table>
+                  <tbody><tr>
+                    <td><img src={IMG_PATH + "/service/foreign_substance_12.webp"} alt="写真：もやもや状浮遊物の培養物の顕微鏡写真"></td>
+                    <td><img src={IMG_PATH + "/service/foreign_substance_13.webp"} alt="図:食パンに発生したカビのFT-IRスペクトル［顕微－透過法］ "></td>
+                  </tr>
+                  <tr>
+                    <td>写真：もやもや状浮遊物の培養物の顕微鏡写真</td>
+                    <td>図:食パンに発生したカビのFT-IRスペクトル［顕微－透過法］
+                    </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>

@@ -1,0 +1,140 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+import Contents from '@components/Contents.astro';
+
+const meta = {
+	title: '自動車',
+	description: '自動車',
+}
+
+const contentsList = [
+    { num: 1, txt: 'リチウムイオン二次電池', href: '#lithium-ion' },
+    { num: 2, txt: '燃料電池', href: '#fuel-cell' },
+    { num: 3, txt: 'パワー半導体', href: '#semiconductor' },
+    { num: 4, txt: 'LED素子', href: '#led' },
+    { num: 5, txt: '高分子材料', href: '#polymer' },
+];
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析事例" subTitle="Analytic case" src="mv/mv-analysis.webp"/>
+    <TitleH1 title="自動車" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析事例" parent2="自動車"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                
+                <Contents list={contentsList} />
+
+                <div class="analysis-category">
+                  <h2 id="lithium-ion" class="h2-service">リチウムイオン二次電池</h2>
+                  <ul>
+                  <li><a href="../documents/lithium-ion_service_automobile.html#l008">Liイオン電池正極活物質中の金属元素分析</a></li>
+                  <li><a href="../documents/lithium-ion_service_automobile.html#l003">Li二次電池正極材料の断面観察</a></li>
+                  <li><a href="../documents/lithium-ion_service_automobile.html#l017">XPSによるLiイオン電池正極表面の分析</a></li>
+                  <li><a href="../documents/l004_111.html">EELSスペクトルによるMn酸化状態の解析</a></li>
+                  <li><a href="../documents/lithium-ion_service_automobile.html#l016">Liイオン電池（正極材）の蛍光Ｘ線による組成分析</a></li>
+                  <li><a href="../documents/lithium-ion_service_automobile.html#l015">Liイオン電池（正極材）のＸ線回折による構造解析</a></li>
+                  <li><a href="../documents/lithium-ion_service_automobile.html#l014">オージェによるLiイオン電池正極表面の評価</a></li>
+                  <li><a href="../documents/lithium-ion_service_automobile.html#l011-l012">Liイオン電池正極の表面EDS分析－その1、その2</a></li>
+                  <li><a href="../documents/l029_111.html">Co酸化物中LiのEELSマッピング検討</a></li>
+                  <li><a href="../documents/lithium-ion_service_automobile.html#l018">TOF-SIMSによるLiイオン電池正極表面の分析</a></li>
+                  <li><a href="../documents/f091_111.html">TDS-MSによるLiB正極活物質温度特性の分析</a></li>
+                  <li><a href="../documents/f095_111.html">LiB正極のTDS-MSによる温度特性の分析（1）</a></li>
+                  <li><a href="../documents/s468_124.html">Ar-GCIBを用いたLiイオン電池負極表面のXPS深さ方向分析</a></li>
+                  <li><a href="../documents/s535_124.html">走査型プローブ顕微鏡（SPM）を用いた導電パス解析</a></li>
+                  <li><a href="../documents/lithium-ion_service_automobile.html#l007">Liイオン電池負極活物質中の金属元素分析</a></li>
+                  <li><a href="../documents/l002_111.html">カーボン材料の劣化状態の観察</a></li>
+                  <li><a href="../documents/s421_111.html">雰囲気遮断ホルダーを用いたSEM観察</a></li>
+                  <li><a href="../documents/s534_111.html">高感度EDSによるLiB用負極内のバインダー・分散剤の分布評価</a></li>
+                  <li><a href="../documents/lithium-ion_service_automobile.html#l022">Liイオン電池バインダーの分析</a></li>
+                  <li><a href="../documents/lithium-ion_service_automobile.html#l020">FT-IRによるセパレーターの分析</a></li>
+                  <li><a href="../documents/lithium-ion_service_automobile.html#l005">Li電池用セパレーターの多孔質構造の観察</a></li>
+                  <li><a href="../documents/lithium-ion_service_automobile.html#l021">Liイオン電池の電解液溶媒の組成分析</a></li>
+                  <li><a href="../documents/l062_111.html"><sup>19</sup>F-NMRによるリチウムイオン電池の電解液中のF<sup>－</sup>の定量分析</a></li>
+                  <li><a href="../documents/o470_111.html">多核NMRによるLiB電解質（LiPF6ならびに分解物）の分析</a></li>
+                  <li><a href="../documents/o459_111.html">11B-NMR測定（19Fデカップリング）</a></li>
+                  <li><a href="../documents/c001_111.html">NMR法による拡散係数の評価</a></li>
+                  <li><a href="../documents/o537_111.html">LC/MS多変量解析による製品特性の解析（3）</a></li>
+                  <li><a href="../documents/o442_111.html">LC/MSによるイオン液体の分析</a></li>
+                  <li><a href="../documents/l067_111.html">嫌気性材料の大気非暴露分析項目のご紹介</a></li>
+                  </ul>
+                  
+                  <h2 id="fuel-cell" class="h2-service">燃料電池</h2>
+                  <ul>
+                  <li><a href="../documents/s453_112.html">コロイド粒子のTEM観察</a></li>
+                  <li><a href="../documents/s490_112.html">Pt/C触媒の耐久性評価</a></li>
+                  <li><a href="../documents/s459_112.html">EELSによるPtシェル厚みの測定</a></li>
+                  <li><a href="../documents/s458_112.html">暗視野STEM像によるPt粒子の露出結晶面の解析</a></li>
+                  <li><a href="../documents/m234_112.html">STEMトモグラフィによる貴金属担持カーボン触媒の3D解析（1）</a></li>
+                  <li><a href="../documents/m250_112.html">STEMトモグラフィによるカーボン担体の細孔径解析</a></li>
+                  <li><a href="../documents/m245_112.html">流体シミュレーションに基づく多孔質材料の細孔構造解析</a></li>
+                  <li><a href="../documents/m240_112.html">STEM-EDSトモグラフィによるアイオノマー観察</a></li>
+                  </ul>
+                  
+                  <h2 id="semiconductor" class="h2-service">パワー半導体</h2>
+                  <ul>
+                  <li><a href="../documents/s264_113.html">SPMによるSiウエハの表面粗さ測定</a></li>
+                  <li><a href="../documents/s420_113.html">EDS制限視野マッピング測定</a></li>
+                  <li><a href="../documents/x110_113.html">面内回折法による表面構造解析（1）</a></li>
+                  <li><a href="../documents/x117_113.html">面内回折法による表面構造解析（2）</a></li>
+                  <li><a href="../documents/x115_113.html">多孔質low-k膜ポアサイズ分布解析</a></li>
+                  <li><a href="../documents/s402_113.html">Cs（球面収差係数）補正STEM</a></li>
+                  <li><a href="../documents/s438_113.html">Cs補正STEMによる各種材料観察</a></li>
+                  <li><a href="../documents/s419_113.html">EELSスペクトルラインプロファイルによる酸化膜解析</a></li>
+                  <li><a href="../documents/s317_113.html">EELSによる状態分析</a></li>
+                  <li><a href="../documents/s320_113.html">オージェ及びレーザラマンによるセラミックスの構造評価</a></li>
+                  <li><a href="../documents/x114_113.html">多層薄膜の深さ制御In-Plane回折測定</a></li>
+                  <li><a href="../documents/s252_113.html">SIM像によるチャネリングコントラスト</a></li>
+                  <li><a href="../documents/s434_113.html">SIM像を用いたLSIの不良箇所の特定</a></li>
+                  </ul>
+                  
+                  <h2 id="led" class="h2-service">LED素子</h2>
+                  <ul>
+                  <li><a href="../documents/s334_114.html">発光ダイオードの断面観察</a></li>
+                  <li><a href="../documents/s397_114.html">TEMによるGaN中転移構造の詳細観察</a></li>
+                  <li><a href="../documents/s382_114.html">ヘテロ接合界面に生成した微小ドメインの解析</a></li>
+                  <li><a href="../documents/s470_114.html">半導体ヘテロ接合界面のTEMひずみ解析</a></li>
+                  <li><a href="../documents/s281_114.html">EELSマッピング</a></li>
+                  </ul>
+                  
+                  <h2 id="polymer" class="h2-service">高分子材料</h2>
+                  <h3 class="h3-service-list">ポリオレフィン系材料</h3>
+                  <ul>
+                  <li><a href="../documents/p219_115.html">PPの立体規則性評価</a></li>
+                  <li><a href="../documents/p303_115.html">自動車用ポリプロピレン複合材料の分析</a></li>
+                  <li><a href="../documents/p308_115.html">ポリプロピレン複合材料の分別－NMR・GPC分析</a></li>
+                  <li><a href="../documents/p220_115.html">TPOのコモノマー種類、含量（シーケンス解析）</a></li>
+                  <li><a href="../documents/p229_115.html">微量酸モノマーの定量</a></li>
+                  <li><a href="../documents/x183_115.html">Ｘ線回折による配向度測定</a></li>
+                  <li><a href="../documents/s540_115.html">小角X線散乱による樹脂フィルムの配向性評価</a></li>
+                  <li><a href="../documents/x121_115.html">極表面の規則構造評価</a></li>
+                  <li><a href="../documents/p205_115.html">分子サイズ測定・分岐度測定（粘度法）</a></li>
+                  <li><a href="../documents/p160_115.html">複合材料の総合解析モルフォロジー観察</a></li>
+                  <li><a href="../documents/s541_115.html">走査型プローブ顕微鏡（SPM）によるゴムの劣化分析</a></li>
+                  <li><a href="../documents/s543_115.html">走査型プローブ顕微鏡（SPM）による粘弾性測定</a></li>
+                  <li><a href="../documents/p207_115.html">複合材料中充填材の配向度の可視化</a></li>
+                  <li><a href="../documents/p169_115.html">弾性、粘性の温度依存性（1）</a></li>
+                  <li><a href="../documents/p215_115.html">弾性、粘性の温度依存性（2）</a></li>
+                  <li><a href="../documents/f042_115.html">引っ張り強度、耐衝撃性など</a></li>
+                  <!--<li><a href="../documents/p218_115.html">CFC（クロス分別クロマトグラフ）</a></li>-->
+                  <!--<li><a href="../documents/f042_115.html">ポリマー材料の物性評価（1）</a></li>-->
+                  </ul>
+                <!--analysis-category end-->
+              </div>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>

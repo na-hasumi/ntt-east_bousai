@@ -1,0 +1,256 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+ import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+import MvCategory from '@components/MvCategory.astro';
+import Contents from '@components/Contents.astro';
+
+const meta = {
+	title: 'RoHS関連分析',
+	description: '',
+}
+
+const contentsList = [
+    { num: 1, txt: 'EU指令と国内の動き', href: '#rohs-01' },
+    { num: 2, txt: '規制物質と最大許容濃度', href: '#rohs-02' },
+    { num: 3, txt: 'RoHS対象物質の分析（一般的に用いられる方法）', href: '#rohs-03' },
+    { num: 4, txt: 'RoHS対象物質の分析（弊社で採用している方法）', href: '#rohs-04' },
+    { num: 5, txt: 'ポリマー中のCd、Pb、Crの分析例', href: '#rohs-05' },
+    { num: 6, txt: '有害物質分析の実施状況', href: '#rohs-06' },
+    { num: 7, txt: '技術資料', href: '#rohs-07' },
+];
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析対象" subTitle="Analytic subjects" src="mv/mv-service.webp" />
+    <TitleH1 title="RoHS関連分析" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析対象" parent2="材料" parent3="金属・無機材料"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <MvCategory 
+                    imageSrc={IMG_PATH + "/service/rohs_01.webp"}
+                    alt="RoHS関連分析"
+                    lead=""
+                />
+                <Contents list={contentsList} />
+                <h2 id="rohs-01" class="h2-service">EU指令と国内の動き</h2>
+                <h3 class="h3-service-list">EU</h3>
+                <ul class="ul-std">
+                  <li><strong>WEEE</strong>（Waste Electrical and Electronic Equipment） ：廃電気電子機器指令 </li>
+                  <li><strong>RoHS</strong>（Restriction of the use of certain Hazardous Substances of electrical and electronic equipment)： 電気電子機器中の特定有害物質使用制限指令（2006年7月1日施行）</li>
+                  <li><strong>ELV</strong>（End of Life Vehicles）： 廃自動車指令</li>
+                  <li>包装廃棄物指令</li>
+                </ul>
+                <h3 class="h3-service-list">国内</h3>
+                <ul class="ul-std">
+                  <li>電気・電子機器メーカーなど各社がグリーン調達基準を設定</li>
+                  <li>製品の納入に際して、特定有害物質の分析や非含有証明が必要になっている</li>
+                </ul>
+                <h2 id="rohs-02" class="h2-service">規制物質と最大許容濃度</h2>
+                <table class="tbl-rohs">
+                  <tbody><tr>
+                    <th class="th-td-7em" scope="col">規制物質</th>
+                    <th class="th-td-7em" scope="col">RoHS</th>
+                    <th class="th-td-7em" scope="col">ELV</th>
+                    <th scope="col">包装廃棄物</th>
+                    </tr>
+                  <tr>
+                    <th scope="row">Cd</th>
+                    <td class="txt-center">0.01％</td>
+                    <td class="txt-center">0.01％</td>
+                    <td rowspan="4" class="v-align-middle"><img src={IMG_PATH + "/service/rohs_brace.gif"} alt="合計100ppm" width="120"></td>
+                    </tr>
+                  <tr>
+                    <th scope="row">Pb</th>
+                    <td class="txt-center">0.1％</td>
+                    <td class="txt-center">0.1％</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">Hg</th>
+                    <td class="txt-center">0.1％</td>
+                    <td class="txt-center">0.1％</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">Cr（VI）</th>
+                    <td class="txt-center">0.1％</td>
+                    <td class="txt-center">0.1％</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">PBB</th>
+                    <td class="txt-center">0.1％</td>
+                    <td class="txt-center">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    </tr>
+                  <tr>
+                    <th scope="row">PBDE</th>
+                    <td class="txt-center">0.1％</td>
+                    <td class="txt-center">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+                </table>
+
+                <h2 id="rohs-03" class="h2-service">RoHS対象物質の分析（一般的に用いられる方法）</h2>
+                <table class="tbl-rohs">
+                  <tbody><tr>
+                    <th class="th-td-7em" rowspan="2" scope="col">規制物質</th>
+                    <th colspan="2" scope="col">代表的な測定方法</th>
+                    </tr>
+                  <tr>
+                    <th scope="col">スクリーニング分析</th>
+                    <th scope="col">精密分析</th>
+                  </tr>
+                  <tr>
+                    <td>Cd<br>
+                      Pb<br>
+                      Hg</td>
+                    <td>蛍光Ｘ線分析法</td>
+                    <td>
+                    <ul>
+                    <li>ICP-AES</li>
+                    <li>ICP-MS</li>
+                    <li>原子吸光分析法</li>
+                    </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Cr(VI)</td>
+                    <td>蛍光Ｘ線分析法（全Cr）</td>
+                    <td>
+                      <ul>
+                      <li>ジフェニルカルバジド吸光光度法</li>
+                      <li>イオンクロマトグラフ法</li>
+                      </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h2 id="rohs-04" class="h2-service">RoHS対象物質の分析（弊社で採用している方法）</h2>
+                <table class="tbl-rohs">
+                  <tbody><tr>
+                    <th scope="col">規制物質</th>
+                    <th scope="col">前処理</th>
+                    <th scope="col">分析方法</th>
+                  </tr>
+                  <tr>
+                    <td>Cd、Pb、（総Cr）</td>
+                    <td>酸分解</td>
+                    <td>ICP-AESまたはICP-MS</td>
+                  </tr>
+                  <tr>
+                    <td>Hg</td>
+                    <td>酸分解/未処理</td>
+                    <td>還元気化法AAS/加熱気化法AAS</td>
+                  </tr>
+                  <tr>
+                    <td>Cr（VI）</td>
+                    <td>水抽出</td>
+                    <td>ジフェニルカルバジド吸光光度法<br>またはICP-ASE</td>
+                  </tr>
+                  <tr>
+                    <td>（総Br）</td>
+                    <td>燃焼管式空気法</td>
+                    <td>イオンクロマトグラフ法</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>・Hg分析の酸分解は還流冷却器付の分解容器で、またはマイクロウェーブ分解（密閉）で行う。<br>	  ・弊社ではPBB、PBDEについては総Brによる評価のみ行っている。
+              </p>
+
+              <h2 id="rohs-05" class="h2-service">ポリマー中のCd、Pb、Crの分析例</h2>
+              <ol class="ol-rohs-polymer">
+                <li>試料0.5gを秤量（石英ビーカー）<br>
+                  <img src={IMG_PATH + "/service/rohs_ol_parts_1.gif"} class="v-align-middle" alt="分析表">H<sub>2</sub>SO<sub>4</sub></li>
+                <li>加熱<br>
+                  <img src={IMG_PATH + "/service/rohs_ol_parts_1.gif"} class="v-align-middle" alt="分析表">HNO<sub>3</sub></li>
+                <li>完全溶解後、冷却、定容<br>
+                  <img src={IMG_PATH + "/service/rohs_ol_parts_2.gif"} class="v-align-middle" alt="分析表"></li>
+                <li>ICP-AES測定</li>
+              </ol>
+              <table class="tbl-rohs">
+                <caption>
+                <strong>各元素の回収率と定量下限</strong>
+                </caption>
+                <tbody><tr>
+                  <th class="th-td-7em" scope="col">元素</th>
+                  <th class="th-td-7em" scope="col">回収率<br>
+                    （％）</th>
+                  <th class="th-td-7em" scope="col">定量値<br>
+                    （µg/g）</th>
+                  <th class="th-td-7em" scope="col">定量下限<br>
+                    （µg/g）</th>
+                </tr>
+                <tr>
+                  <td class="txt-center">Cd</td>
+                  <td class="txt-center">105</td>
+                  <td class="txt-center">&lt;1</td>
+                  <td class="txt-center">1</td>
+                </tr>
+                <tr>
+                  <td class="txt-center">Pb</td>
+                  <td class="txt-center">101</td>
+                  <td class="txt-center">&lt;1</td>
+                  <td class="txt-center">1</td>
+                </tr>
+                <tr>
+                  <td class="txt-center">Cr</td>
+                  <td class="txt-center">102</td>
+                  <td class="txt-center">&lt;1</td>
+                  <td class="txt-center">1</td>
+                </tr>
+                </tbody>
+              </table>
+
+              <h2 id="rohs-06" class="h2-service">有害物質分析の実施状況</h2>
+              <h3 class="h3-service-list">1. WEEE・RoHS（Cd、Pb、Cr、Hg）分析試料の種類</h3>
+              <table class="tbl-rohs-bdr-none">
+                <tbody>
+                  <tr>
+                    <td>A．</td>
+                    <td>製品・半製品・部品（殆どが有機系部材）</td>
+                    <td>約50種</td>
+                    <td>85％</td>
+                  </tr>
+                  <tr>
+                    <td>B．</td>
+                    <td>有機系原材料</td>
+                    <td>約30種</td>
+                    <td>12％</td>
+                  </tr>
+                  <tr>
+                    <td>C．</td>
+                    <td>無機系原材料</td>
+                    <td>約20種</td>
+                    <td>&nbsp;3％</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3 class="h3-service-list">2. グリーン調達調査共通化ガイドライン</h3>
+              <p>リストAレベルB（As、Se）<br>粘着テープ、樹脂、ガラス、金属箔、無機薬品</p>
+              
+              <h2 id="rohs-07" class="h2-service">技術資料</h2>
+              <ul class="ul-arrow-small">
+                <li>軸測光ICP-AESによる有機材料中のCd、Pb、Crの高感度分析</li>
+                <li><a href="../../documents/i224_143.html">ICP-MSによる食品容器・包装材料中の有害金属分析</a></li>
+              </ul>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>
+
+<script>
+	import '@scripts/rowspanBottomLine.js';
+</script>

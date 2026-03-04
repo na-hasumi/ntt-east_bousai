@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*----------------------------------------
+ ���͎���ianalysis�j�pCSS
+----------------------------------------*/
+
+/*--------�A�R�[�f�B�I�����j���[------------------*/
+
+div.accordion-area dt {
+	margin:10px 10px 10px 30px;
+	padding:5px 5px 5px 15px;
+	background: none;
+	border:#78B4AB 1px solid;
+	font-size:110%;
+	font-weight:bold;
+	
+}
+div.accordion-area dd {
+	margin-left:40px;
+}
+div.accordion-area li{
+	margin:0 10px 10px 5px;
+	padding-left:20px;
+	background: none;
+	list-style-type:none;
+}
+
+li.li-accordion-index {
+	margin:30px 10px 10px 0 !important;
+	padding:2px 2px 2px 5px !important;
+	/*background:#F0F5F7 !important;*/
+	background:#E0F1ED !important;
+	border-left:#8BB6A4 4px solid;
+	color:#333;
+	font-size:105%;
+	font-weight:bold;
+}
+/*--------�A�R�[�f�B�I���p�~�p------------------*/
+
+div.analysis-category h2 {
+	margin:10px 10px 10px 30px;
+	padding:5px 5px 5px 15px;
+	background: none;
+	border:#78B4AB 1px solid;
+	font-size:110%;
+	font-weight:bold;
+}
+div.analysis-category h3 {
+	margin:30px 10px 10px 40px !important;
+	padding:2px 2px 2px 5px !important;
+	background:#E0F1ED !important;
+	border-left:#8BB6A4 4px solid;
+	color:#333;
+	font-size:110%;
+	font-weight:bold;
+}
+div.analysis-category ul {
+	margin-left:40px;
+}
+
+div.analysis-category li {
+	margin:0 10px 10px 5px;
+	padding-left:20px;
+	background: none;
+	list-style-type:none;
+}
+/*--------�A�R�[�f�B�I�����Ȃ��ꍇ�̃��X�g------------------*/
+
+div.accordion-none h2 {
+	margin:30px 10px 10px 40px !important;
+	padding:2px 2px 2px 5px !important;
+	background:#E0F1ED !important;
+	border-left:#8BB6A4 4px solid;
+	color:#333;
+	font-size:110%;
+	font-weight:bold;
+}
+
+div.accordion-none ul {
+	margin-left:40px;
+}
+
+div.accordion-none li {
+	margin:0 10px 10px 5px;
+	padding-left:20px;
+	background: none;
+	list-style-type:none;
+}
+
+
+
+/*--------�g�b�v�y�[�W�ȊO����------------------*/
+
+ul.ul-analysis-detail {
+	margin:10px 5px 10px 30px;
+}
+
+ul.ul-analysis-detail li {
+	margin-bottom:5px;
+	padding-left:15px;
+	background: none;
+}
+
+/*--------�e�[�u���p���C�A�E�g--------*/
+.category-top-linkarea {
+	display: flex;
+	flex-wrap: wrap;
+}
+.category-top-linkarea-column {
+	flex-direction: column;
+}
+.category-top-links {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: start;
+	align-items: flex-start;
+	column-gap: 6px;
+}
+.category-top-linkarea-column > .category-top-links {
+  width: auto;
+}
+.category-top-linkarea-column > .category-top-links > .dl-category-top-link {
+	flex: 1;
+}
+
+/*--------���o���p���C�A�E�g--------*/
+.h2-analysis {
+	margin:30px 5px 20px 15px !important;
+}

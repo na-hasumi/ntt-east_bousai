@@ -1,0 +1,138 @@
+/********************************************************************
+* サイドバー共通スタイル
+**********************************************************************/
+@use "/src/styles/global/index" as g;
+
+.sidebar{
+
+	&_title{
+		a{
+			position: relative;
+			display: block;
+			padding: 15px 20px;
+			background: g.color('bg');
+			border-bottom: 1px solid g.color('key_light');
+			font-size: 2.3rem;
+			font-weight: 400;
+			border-radius: 5px 5px 0 0;
+			cursor: pointer;
+			
+			&:before{
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 28px;
+				bottom: 0;
+				margin: auto;
+				@include g.arrow('right', 10px, 2px, g.color('key'));
+			}
+		}
+
+		&.is_active{
+			a{
+				background: g.color('key_light');
+				color: g.color('white');
+			}
+		}
+	}
+
+	&_analysisTitle{
+		position: relative;
+		padding: 15px 20px;
+
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			margin: auto;
+			width: 3px;
+			height: 60%;
+			background: g.color('key_light');
+		}
+	}
+
+	&_list{
+		background: g.color('bg');
+		border-radius: 0 0 5px 5px;
+	}
+
+	&_item{
+		position: relative;
+
+		&:not(:first-child){
+			&::before{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				width: calc(100% - 60px);
+				height: 1px;
+				background: g.color('border');
+			}
+		}
+	}
+
+	&_item_name{
+		position: relative;
+		padding: 20px 40px 20px 30px;
+		font-size: 2.0rem;
+		display: block;
+		cursor: pointer;
+
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 35px;
+			bottom: 0;
+			margin: auto;
+			@include g.arrow('right', 6px, 1px, g.color('key'));
+		}
+		
+		&.is_active{
+			color: g.color('key_light');
+		}
+	}
+
+	&_submenu{
+		position: relative;
+
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: calc(100% - 60px);
+			height: 1px;
+			background: g.color('border');
+		}
+	}
+
+	&_submenu_item{
+		a{
+			display: block;
+			padding: 5px 50px;
+			font-size: 1.6rem;
+		}
+
+		&:first-child{
+			padding-top: 15px;
+		}
+
+		&:last-child{
+			padding-bottom: 15px;
+		}
+
+		&.is_active{
+			a{
+				color: g.color('key_light');
+			}
+		}
+	}
+}

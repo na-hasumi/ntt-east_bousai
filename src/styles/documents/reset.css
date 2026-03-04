@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+	overflow-y:scroll;/*firefox�ŏc�X�N���[���o�[������ɕ\�������Ē��������̈ʒu�������̂�h��*/
+}
+body {
+	margin:0;
+	padding:0;
+	color: #000000;
+	/*font-family:Arial,'�q���M�m�p�S Pro W3','Hiragino Kaku Gothic Pro',osaka, '���C���I',Meiryo,'�l�r �o�S�V�b�N','MS PGothic',sans-serif;*/	
+	line-height:1.5;
+	letter-spacing:0;/*IE7�y�[�W�̊g��΍�*/
+}
+br {/*IE7�y�[�W�̊g��΍�*/
+	letter-spacing:0;
+}	
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{
+	margin:0;
+	padding:0;
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+th {
+	font-weight:normal;
+	text-align:left;
+}
+fieldset, img{
+	border:0;
+}
+address{
+	font-style:normal;
+}
+ul, li{
+	list-style:none;
+	border:none;
+}
+h1, h2, h3, h4, h5, h6{
+	font-size:100%;
+	font-weight:normal;
+}
+figure {
+	margin: 0;
+}

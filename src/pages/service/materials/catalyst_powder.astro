@@ -1,0 +1,288 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+ import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+import MvCategory from '@components/MvCategory.astro';
+import Contents from '@components/Contents.astro';
+
+const meta = {
+	title: '触媒・粉体',
+	description: '',
+}
+
+const contentsList = [
+    { num: 1, txt: '粉体物性測定', href: '#powder' },
+    { num: 2, txt: '触媒のキャラクタリゼーション', href: '#catalyst' },
+];
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析対象" subTitle="Analytic subjects" src="mv/mv-service.webp" />
+    <TitleH1 title="触媒・粉体" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析対象" parent2="材料" parent3="触媒・粉体"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <MvCategory 
+                    imageSrc={IMG_PATH + "/service/catalyst_powder_01.webp"}
+                    alt="比表面積・細孔径分布測定"
+                    lead="触媒は特定の化学反応の反応速度を速める物質で、自身は反応の前後で変化しないものをいいます。工業触媒では、固体触媒として、粉体で使用される場合が多く、高性能触媒の研究開発では比表面積やガス吸着能等、粉体物性や触媒物性の評価が必須です。<br>弊社は化学工業の様々なタイプの触媒について、触媒の作製法から分析、解析、評価まで広く技術の蓄積を行っておりますので、触媒の研究開発に大きく貢献しております。"
+                />
+                <Contents list={contentsList} />
+                <h2 id="powder" class="h2-service">粉体物性測定</h2>
+                <p>粉体試料では、有機系、金属・無機系に限らず、ミリサイズからナノサイズまで、多種多様な粉体の物性測定を行っています。<br>
+                    粒子径・粒度分布の測定は、ふるい分けのほか、レーザー回折・散乱法や動的光散乱法にも対応しています。比表面積・細孔分布の測定には、水銀圧入法やガス吸着法を用います。粉体試料の性状に合った分析法を選択し、各種基本物性や実用特性について信頼性の高い評価データを提供致します。
+                </p>
+                <h3 class="h3-service-list">分析項目</h3>
+                <table class="tbl-service-doc">
+                    <tbody><tr>
+                      <th class="th-service-doc-section" scope="col">分析項目</th>
+                      <th class="th-service-doc-analyzer" scope="col">使用機器・手法</th>
+                      <th class="th-service-doc-doc-title" scope="col">分析事例</th>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">粒度分布</td>
+                      <td rowspan="3"><a href="../../documents/b0901_570.html">レーザー回折・散乱法</a>、<a href="../../documents/b1001_570.html">動的光散乱法</a></td>
+                      <td>セラミックス、ポリマー粉末の粒度分布測定</td>
+                    </tr>
+                    <tr>
+                      <td>金属粒子の乾式粒度分布測定</td>
+                    </tr>
+                    <tr>
+                      <td>コロイダルシリカの粒子径測定</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">ゼータ電位</td>
+                      <td rowspan="2"><a href="../../documents/b1001_570.html">電気泳動法</a>、<a href="../../documents/b1002_570.html">流動電位法</a></td>
+                      <td>酸化チタン微粒子のゼータ電位と等電点の測定</td>
+                    </tr>
+                    <tr>
+                      <td>シリカ繊維のゼータ電位とpH依存性評価</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">表面積</td>
+                      <td rowspan="2"><a href="../../documents/i0601_570.html">BET法</a></td>
+                      <td>活性炭の比表面積測定</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i137_145.html">クリプトン吸着法による低比表面積測定</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">細孔径分布</td>
+                      <td rowspan="4"><a href="../../documents/i0301_570.html">水銀ポロシメーター</a>、<a href="../../documents/i0501_570.html">ガス吸着法</a></td>
+                      <td><a href="../../documents/b108_145.html">多孔質体の細孔径分布評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/b101_145.html">水銀圧入法による細孔形状の評価</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/b103_145.html">アルゴンガス吸着によるゼオライトの細孔径分布測定</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/b116_145.html">活性炭のCO2吸着によるミクロ孔解析</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">粉体密度、空隙率</td>
+                      <td rowspan="2"><a href="../../documents/i0603_570.html">ガス置換法</a>、<a href="../../documents/i0301_570.html">水銀圧入法</a></td>
+                      <td>中空粒子のかさ密度、真密度測定</td>
+                    </tr>
+                    <tr>
+                      <td>ハニカム触媒の空隙率測定</td>
+                    </tr>
+                    <tr>
+                      <td>粉体特性</td>
+                      <td>パウダーテスター</td>
+                      <td>セラミックス粉末のかさ密度、安息角</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">吸着脱離等温線</td>
+                      <td rowspan="2"><a href="../../documents/i0501_570.html">定容法ガス吸着</a></td>
+                      <td>酸化物粉末の炭酸ガス吸着量測定</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i138_145.html">アルミナビーズの水蒸気吸着等温線測定</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h2 id="catalyst" class="h2-service">触媒のキャラクタリゼーション</h2>
+                <p>触媒物性の測定では、XPSによる電子状態の分析や、吸着脱離法を用いた固体酸・塩基性、酸化還元特性、化学吸着量などの測定を行います。<br>
+                    触媒構造の分析では、XRD、TEMによる構造解析や粒子径の測定、パルス吸着法を用いて担持金属の分散度や表面積などの測定を行います。また、触媒の組成分析には、XRFやICP-MS、EPMAなどを用います。<br>
+                    触媒の性状をマクロレベルからミクロレベルまで明らかにし、総合的な触媒の評価を行い信頼性の高い評価データを提供致します。
+                </p>
+                <h3 class="h3-service-list">分析項目</h3>
+                <table class="tbl-service-doc">
+                    <tbody><tr>
+                      <th class="th-service-doc-section" scope="col">分析項目</th>
+                      <th class="th-service-doc-analyzer" scope="col">使用機器・手法</th>
+                      <th class="th-service-doc-doc-title" scope="col">分析事例</th>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">表面元素組成</td>
+                      <td rowspan="2">XPS、AES、<a href="../../documents/s0701_540.html">TOF-SIMS</a>、<a href="../../documents/s1403_530.html">EPMA</a>、<a href="../../documents/s0501_520.html">SEM</a>、<a href="../../documents/m1602_550.html">TEM</a></td>
+                      <td>自動車用排ガス触媒の表面組成分析</td>
+                    </tr>
+                    <tr>
+                        <td><a href="../../documents/m219_145.html">Cs 補正STEM による単原子観察</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">表面原子の電子状態</td>
+                      <td rowspan="2">XPS、<a href="../../documents/s0701_540.html">TOF-SIMS</a>、<a href="../../documents/s0801_510.html">RAMAN</a></td>
+                      <td><a href="../../documents/s173_145.html">ESCAによる触媒表面の分析</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="../../documents/s526_145.html">X線光電子装置用前処理装置 (VersaPrep)</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">金属の分散度、粒子</td>
+                      <td rowspan="2"><a href="../../documents/m1602_550.html">TEM</a>、<a href="../../documents/x0510_530.html">XRD</a>、<a href="../../documents/b0801_570.html">COパルス吸着法</a></td>
+                      <td>担持金属触媒のTEM観察</td>
+                    </tr>
+                    <tr> </tr>
+                    <tr>
+                      <td rowspan="19">形状と粒子径</td>
+                      <td rowspan="19"><a href="../../documents/s0501_520.html">SEM</a>、<a href="../../documents/an1368_540.html">SPM</a></td>
+                      <td>Pt/C触媒の形態観察</td>
+                    </tr>
+                    <tr>
+                      <td>SPMによるRu薄膜の表面粗さ測定</td>
+                    </tr>
+                      <tr>
+                        <td><a href="../../documents/s472_145.html">SEMによる低加速電圧でのEDSマップ</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="../../documents/m260_145.html">高感度EDSによる微小粒子の高解像度SEM-EDS元素マッピング</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="../../documents/s497_145.html">特性Ｘ線強度の加速電圧依存性</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="../../documents/s498_145.html">コロイド粒子のEDSマッピング</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="../../documents/m209_145.html">シリコンドリフト検出器による高感度EDSスペクトルマッピング測定</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="../../documents/s504_145.html">PtRu合金触媒のSTEM-EDS分析</a></td>
+                      </tr>
+                      <tr> </tr>
+                      <tr>
+                        <td><a href="../../documents/m216_145.html">Pt/C 触媒の3D-STEM 観察 -粒径解析-</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="../../documents/s531_145.html">小角Ｘ線散乱による細孔径分布解析</a></td>
+                      </tr>
+                      <tr>
+                      <td><a href="../../documents/m206_145.html">カーボン材料のTEM観察</a></td>
+                      </tr>
+                      <tr>
+                      <td><a href="../../documents/m207_145.html">カーボンブラックの低加速電圧による暗視野STEM観察</a></td>
+                      </tr>
+                      <tr>
+                      <td><a href="../../documents/m211_145.html">カーボンブラックの電子線損傷の低減</a></td>
+                      </tr>
+                      <tr> </tr>
+                      <tr>
+                        <td><a href="../../documents/s505_145.html">粒子表面に存在するポリマー層のTEM観察</a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="../../documents/s490_145.html">Pt/C触媒の耐久性評価</a></td>
+                      </tr>
+                      <tr>
+                      <td><a href="../../documents/s459_145.html">EELSによるPtシェル厚みの測定</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/s458_145.html">暗視野STEM像によるPt粒子の露出結晶面の解析</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">構造解析</td>
+                      <td rowspan="2"><a href="../../documents/x0510_530.html">XRD</a></td>
+                      <td>排ガス触媒の構造解析</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/x149_145.html">学振法に準拠する炭素材料粉末の評価</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">組成分析</td>
+                      <td rowspan="3"><a href="../../documents/an1305_530.html">XRF</a>、<a href="../../documents/an1303_530.html">ICP-AES</a>、<a href="../../documents/an1602_530.html">ICP-MS</a></td>
+                      <td><a href="../../documents/i159_145.html">アルミナ系触媒中のClの分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i136_145.html">自動車触媒中のS、Pの分析</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/i122_145.html">W、Cs担持アルミナ触媒の組成分析</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">固体酸塩基性</td>
+                      <td rowspan="3">アンモニアTPD、<a href="../../documents/i0501_570.html">CO2-TPD</a></td>
+                      <td><a href="../../documents/b120_145.html">固体触媒の酸点評価（NH<sub>3</sub>-TPD）</a></td>
+                    </tr>
+                    <tr>
+                      <td>Ru触媒のCO2-TPD測定</td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/b123_145.html">昇温脱離法（TPD法）による炭素材料表面の官能基評価</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">昇温反応法</td>
+                      <td rowspan="2">TPO、<a href="../../documents/i0501_570.html">TPR</a></td>
+                      <td>セリア系触媒のTPO測定</td>
+                    </tr>
+                    <tr>
+                        <td><a href="../../documents/b121_145.html">Ni触媒の昇温還元反応における反応ガスの挙動</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">熱分析</td>
+                      <td rowspan="2">TG/DTA、TG/MS</td>
+                      <td>シリカ系触媒のTG/DTA測定</td>
+                    </tr>
+                    <tr>
+                      <td>アルミナ系の相転移分析</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">分光分析ほか</td>
+                      <td rowspan="3"><a href="../../documents/f1501_510.html">FT-IR</a>、固体NMR、<a href="../../documents/o1502_510.html">GC/MS</a></td>
+                      <td><a href="../../documents/o488_145.html">シリカの固体Si-NMR測定法</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/o224_145.html">固体NMR によるゼオライト骨格のSi/Al 比の算出</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="../../documents/o225_145.html">固体NMR によるアルミナ中のAl の配位数の識別と定量</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+
+.tbl-service-doc {
+    tbody tr:first-child th:nth-child(1) {
+        min-width: 200px!important;
+    }
+
+    tbody tr:first-child th:nth-child(2) {
+        min-width: 130px!important;
+    }
+
+    tbody tr:first-child th:last-child {
+        min-width: 470px!important;
+    }
+}
+</style>
+
+<script>
+	import '@scripts/rowspanBottomLine.js';
+</script>

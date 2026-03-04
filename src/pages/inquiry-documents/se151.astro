@@ -1,0 +1,46 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '被験物質調査書記入時の注意点について',
+	description: '被験物質調査書記入時の注意点について',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="お問合せ・ご依頼" subTitle="Inquiry" src="mv/mv-inquiry.webp" />
+    <TitleH1 title="被験物質調査書記入時の注意点について" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="お問合せ・ご依頼" parent2="ご依頼の流れ" />
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <h2 id="request-paper" class="h2-guidance">① 被験物質の名称（IUPAC命名法による）</h2>
+                <p>“IUPAC命名法による”と指示があることから、英名（例：Benzene）で記入されることがありますが、安衛法、化審法届出のためにご依頼の場合には、和名（例：ベンゼン）でご記入ください。安衛法、化審法届出様式には和名で表記する必要があります。</p>
+                <p>なお、医薬GLPのみ、あるいはOECD-GLPのみの場合（安衛法GLP、化審法GLPに対応しない場合）は、英名での記入でもかまいません。</p>
+                <h2 id="request-paper" class="h2-guidance">② 試験に供する新規化学物質の純度（％）</h2>
+                <p>原則として90％以上の値をご記入ください。</p>
+                <p>被験物質の純度が90％に満たない場合は、例えば、被験物質を、化合物Aと化合物Bと化合物Cの混合物という形とし、その合計を90％以上として、その値を記入していただくことになります。</p>
+                <p>なお、被験物質が水、DMSO、アセトンその他Ames試験で使用できる溶媒の溶液である場合には、被験物質溶液調製時にその溶媒を使用することにより、90％に満たない純度でも試験を実施できます。</p>
+                <h2 id="request-paper" class="h2-guidance">③ 常温における性状</h2>
+                <p>最低限、“固体”あるいは“液体”はご記入ください。</p>
+                <p class="mgn-btm20">それ以外にも、できれば、色や、固体であればその形状をご記入ください。</p>
+                <h3 class="h3-guidance">記入例</h3>
+                <p>白色固体、赤色粉末、白色結晶、白から薄黄色の粉末、橙色粉体<br>無色透明液体、無色液体、黄色液体、淡黄色液体、黄色～橙色液体</p>
+                <h2 id="request-paper" class="h2-guidance">④ 加水分解性の有・無と水の溶媒中の安定性</h2>
+                <p class="mgn-btm20">安定性の欄に、加水分解性の有・無を記入する箇所がありますが、“加水分解性・有”の場合は、溶媒に対する溶解度等の、水の溶媒中の安定性は“不安定”となります。“加水分解性・有”の場合は、当欄は“不安定”とご記入ください。</p>
+                <p>初めて被験物質調査書を記入いただく場合などは、どのように記入すべきか分かりづらいことと存じます。上記以外にも、ご記入の際、ご不明の点がございましたら、お問い合わせください。</p>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>

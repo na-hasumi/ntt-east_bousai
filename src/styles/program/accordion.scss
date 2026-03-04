@@ -1,0 +1,21 @@
+/*------------------------------------------------------------------------
+	アコーディオン
+------------------------------------------------------------------------*/
+@use "sass:math";
+
+.js_accordion {
+	$this: &;
+
+    &_body {
+		visibility: hidden;
+        overflow: hidden;
+		opacity: 0;
+		height: 0;
+        transition: 0.4s;
+        
+        &.is_active {
+			visibility: visible;
+			opacity: 1;
+		}
+    }
+}

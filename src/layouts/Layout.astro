@@ -1,0 +1,259 @@
+---
+import { SITE_NAME, SITE_DESCRIPTION, SEPARATOR, BASE_HOST, BASE_DIR, IMG_PATH } from '/src/consts';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import "@styles/helper.scss";
+import "@styles/reset.scss";
+
+interface Props {
+	title?: string;
+	description?: string;
+	keywords?: string;
+	pageId?: string;
+	pageSubId?: string;
+}
+
+const { title: pageTitle, description = SITE_DESCRIPTION, keywords = '' } = Astro.props;
+const title = pageTitle ? `${pageTitle}${SEPARATOR}${SITE_NAME}` : SITE_NAME;
+let { pageId = '', pageSubId = '' } = Astro.props;
+
+// HTMLタグを削除する関数（メタタグ用）
+function stripHtmlTags(input: string): string {
+	return input.replace(/<[^>]+>/g, '');
+}
+
+// メタタグ用のタイトル（HTMLタグを削除）
+const titleForMeta = stripHtmlTags(title);
+
+// メタ関係
+const pageUrl = new URL(Astro.url.pathname, Astro.site).toString();
+
+/**
+ * bodyのidとclassを定義
+ */
+(() => {
+	//URLを配列に分割
+	const path = new URL(Astro.request.url).pathname.split('/');
+
+	// bodyのidを定義
+	pageId = (() => {
+		if (pageId) return pageId; //propsで渡されたpageIdがあればそれを優先
+		return path[2] ? path[2] : 'top'; //pathの2番目(空ならトップ)
+	})();
+	
+	// bodyのclassを定義
+	pageSubId = (() => {
+		if (pageSubId) return pageSubId; //propsで渡されたpageSubIdがあればそれを優先
+		return path[3] ? path[3] : ''; //pathの3番目
+	})();
+})();
+
+const headerWhite = true; //ヘッダーを白ベースのカラーにするかどうか
+---
+
+<!doctype html>
+<html lang="ja">
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WP7NQFDX');</script>
+	<!-- End Google Tag Manager -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="generator" content={Astro.generator} />
+	<meta name="description" content={description}>
+	<meta name="keywords" content={keywords}>
+	<meta name="thumbnail" content={BASE_HOST + IMG_PATH + "common/thumbnail.jpg"}>
+	<title>{titleForMeta}</title>
+	<!-- favicon -->
+	<link rel="shortcut icon" href={BASE_DIR + 'favicon.ico'}>
+	<!-- end favicon -->
+	<!-- OGP -->
+	<meta property="og:title" content={SITE_NAME}>
+	<meta property="og:description" content={description}>
+	<meta property="og:url" content={pageUrl}>
+	<meta property="og:image" content={IMG_PATH + "common/ogp.webp"}>
+	<meta property="og:image:alt" content={titleForMeta}>
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="ja_JP" />
+	<meta property="og:site_name" content={SITE_NAME}>
+	<meta name="twitter:card" content="summary_large_image">
+	<!-- end OGP -->
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+	<!-- end Google Fonts -->
+</head>
+<body id={ pageId ? pageId : 'top' } class={pageSubId}>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WP7NQFDX"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<Header white={headerWhite} pageId={pageId} />
+	<main>
+		<slot />
+	</main>
+
+	{pageId !== 'top' && (
+		<Footer pageId={pageId} />
+	)}
+</body>
+</html>
+
+<style lang="scss" is:global>
+html {
+    font-size: 10px;
+    overflow-y: scroll; /* スクロールバーを常に表示 */
+    scrollbar-gutter: stable; /* スクロールバー表示/非表示でレイアウトがズレないようにする */
+}
+
+body {
+    font-family: g.font('base');
+    font-size: min(g.get_vw(14), 1.6rem);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.75;
+    -webkit-text-size-adjust: 100%;
+    color: g.color('base');
+	overflow: hidden;
+
+    /* グロナビ出現時に固定 */
+    &.is_fixed {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+
+	main{
+		padding-top: map.get(g.$header_h, 'sm');
+		margin-bottom: 90px;
+
+		padding-top: map.get(g.$header_h, 'lg');
+		/* @include g.mq('lg') {
+		} */
+	}
+}
+
+@media print {
+	body {
+		width: 100% !important;
+		max-width: 100% !important;
+		min-width: 0 !important;
+		overflow: visible !important;
+		display: block !important;
+	}
+
+	[data-aos] {
+		visibility: visible!important;
+		opacity: 1!important;
+	}
+
+	.main .inner {
+		display: block !important;
+	}
+
+	.main .print-btn {
+		display: none;
+	}
+}
+
+
+a {
+    cursor: pointer;
+    transition: 0.2s;
+    user-select: none; /* クリックした時に選択状態にならないようにする */
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Safari、Chromeなど */
+    
+	&:hover {
+		opacity: 0.7;
+	}
+
+    &[href*="tel:"] {
+		pointer-events: none;
+		cursor: default;
+		text-decoration: none;
+		/* @include g.mq('md') {
+		} */
+    }
+}
+
+p {
+    text-align: justify;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+[data-aos] {
+    visibility: hidden;
+
+	&.aos-animate {
+        visibility: visible;
+    }
+}
+
+.main{
+	margin-top: 20px;
+
+	.inner{
+		display: flex;
+		gap: 53px;
+	}
+
+	.print-btn{
+		margin-left: auto;
+		width: fit-content;
+		margin-bottom: 30px;
+	}
+	
+	:has(#documents-number){
+		.print-btn{
+			margin-bottom: 0;
+		}
+	}
+
+}
+
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+
+small {
+    font-size: smaller;
+}
+</style>
+
+<script>
+import accordion from '@scripts/accordion';
+import adjustViewport from '@scripts/adjustViewport';
+import smoothScroll from '@scripts/smoothScroll';
+import initAOS from "@scripts/initAOS";
+import followBtn from '@scripts/followBtn';
+import initLenis from '@scripts/initLenis';
+import gsapPin from '@scripts/gsapPin';
+adjustViewport();
+smoothScroll();
+accordion();
+followBtn( {
+	enableShowOnStop: false,
+} );
+initLenis();
+gsapPin();
+setTimeout(() => {
+	initAOS();
+}, 0);
+</script>

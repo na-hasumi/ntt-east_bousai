@@ -1,0 +1,48 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+const meta = {
+	title: '名古屋営業所開設のお知らせ',
+	description: '名古屋営業所開設のお知らせ',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="インフォメーション" subTitle="Information" src="mv/mv-topics.webp" />
+    <TitleH1 title="名古屋営業所開設のお知らせ" />
+    <div class="main">
+        <Inner>
+            <div id="main-column1">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <p class="txt-right">平成23年8月18日</p>
+                <p>この度、弊社では、「名古屋営業所」を開設いたします。名古屋地区の皆様に「より早く」、「より便利に」サービスをお届けすることを目指しております。<br>
+                スタッフ一同ご連絡を心よりお待ちしております。</p>
+                <h3 class="h3-news">1.開設先</h3>
+                <p>〒461-0005<br>
+                    名古屋市東区東桜1-1-10　アーバンネット名古屋ビル20F<br>
+                TEL：052-961-1366<br>
+                FAX：052-961-1370</p>
+                <h3 class="h3-news">2.営業開始日</h3>
+                <p>8月18日（木）より営業を開始しました。</p>
+                <h3 class="h3-news">3.アクセス</h3>
+                <p>地図は <a href={BASE_DIR + "profile/office.html#nagoya"}>こちらから</a> ご確認ください。</p>
+                <ul class="ul-news">
+                <li>地下鉄桜通線・名城線「久屋大通駅」下車、徒歩2分</li>
+                <li class="li-news-sub">南改札口を出て左方向に進み、三菱東京UFJのATM手前を右折50mほどで左側「ブロッサ」入口から奥にあるエスカレーターで地上へ。<br>
+                    前方にあるビル（アーバンネット）へ1Fロビーからエレベータでお越し下さい。</li>
+                <li class="li-news-sub">三菱東京UFJのATM横の階段で「3A」「3B」出口から地上へ。</li>
+                <li>地下鉄東山線「栄駅」下車、徒歩5分</li>
+                </ul>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+@use "@styles/lower.scss";
+</style>

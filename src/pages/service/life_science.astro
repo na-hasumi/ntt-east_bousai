@@ -1,0 +1,86 @@
+---
+/********************************************************************
+ * 	TOP
+ **********************************************************************/
+import { BASE_DIR, IMG_PATH } from '/src/consts';
+import Layout from '@layouts/Layout.astro';
+import Inner from '@components/Inner.astro';
+import SidebarArea from '@components/SidebarArea.astro';
+import MvLower from '@components/MvLower.astro';
+import TitleH1 from '@components/TitleH1.astro';
+import LinkBox from '@components/LinkBox.astro';
+
+const meta = {
+	title: 'ライフサイエンス',
+	description: '',
+}
+---
+<Layout pageId="documents" title={meta.title} description={meta.description}>
+    <MvLower title="分析対象" subTitle="Analytic subjects" src="mv/mv-service.webp"/>
+    <TitleH1 title="ライフサイエンス" />
+    <div class="main">
+        <Inner>
+            <SidebarArea parent="分析対象" parent2="ライフサイエンス"/>
+            <div id="content">
+                <div class="print-btn"><a href="#" onclick="window.print();return false;"><img src={IMG_PATH + "common/btn_print.svg"} alt="このページを印刷する" width="189" height="33"></a></div>
+                <div class="category">
+                    <figure class="category-image">
+                        <img src={IMG_PATH + "/service/life_science_01.webp"} alt="図：ライフサイエンス" width="380" height="285">
+                    </figure>
+                    <p class="category-lead">
+                        医薬、食品、家庭用品など人々の生活に密接に関係のあるライフサイエンス分野において、弊社は、優れた分析技術と豊富な経験を有しています。皆様の課題解決を強力にサポートします。
+                    </p>
+                </div>
+                <div class="link">
+                  <LinkBox 
+                    imageSrc={IMG_PATH + "service/category-top_life_science_medicine.webp"}
+                    title="医"
+                    links={[
+                      { text: '医薬品・医療用具', href: 'life_science/medicine.html' }
+                    ]}
+                  />
+                  <LinkBox 
+                  imageSrc={IMG_PATH + "service/category-top_life_science_life.webp"}
+                  title="生活"
+                  links={[
+                      { text: '化粧品・医薬部外品・家庭用品', href: 'life_science/life.html' }
+                    ]}
+                  />
+                  <LinkBox 
+                  imageSrc={IMG_PATH + "service/category-top_life_science_food.webp"}
+                  title="食"
+                    links={[
+                      { text: '食品・健康食品', href: 'life_science/food.html' }
+                    ]}
+                  />
+                  <LinkBox 
+                    imageSrc={IMG_PATH + "service/category-top_life_science_safety_test.webp"}
+                    title="安全性"
+                    links={[
+                      { text: '化学物質の安全性', href: 'life_science/life_safety_test.html' }
+                    ]}
+                  />
+                </div>
+            </div>
+        </Inner>
+    </div>
+</Layout>
+
+<style lang="scss">
+    .category {
+    display: flex;
+    align-items: center;
+    column-gap: 55px;
+
+        &-image {
+            flex-shrink: 0;
+        }
+    }
+  
+    .link {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 50px;
+    }
+</style>
