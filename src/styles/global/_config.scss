@@ -17,7 +17,7 @@ $breakpoints: (
 )!default;
 
 // インナー幅
-$inner_max: 1200px;
+$inner_max: 1000px;
 $inner_max_small: 960px;
 $inner_min: 90%;
 
@@ -34,6 +34,7 @@ $subnav_h: 50px;
 // 出力例) font('base');
 $font: (
     'base': ("Noto Sans JP", serif),
+    'en': ("Barlow", sans-serif),
 );
 
 // 色

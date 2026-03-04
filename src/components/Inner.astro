@@ -28,16 +28,16 @@ const { addClass = '' } = Astro.props;
     }
 
     &.is_pc {
-        /* @include g.mq('sm') {
+        @include g.mq('sm') {
             width: 100%;
-        } */
+        }
     }
 
     &.is_sp {
         width: 100%;
         max-width: 100%;
-        /* @include g.mq('md') {
-        } */
+        @include g.mq('md') {
+        }
     }
 }
 </style>
