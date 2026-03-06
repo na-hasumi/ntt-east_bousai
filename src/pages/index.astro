@@ -6,6 +6,7 @@
 import Layout from '@layouts/Layout.astro';
 import MvSlider from '@components/MvSlider.astro';
 import Inner from '@components/Inner.astro';
+import ArrowIcon from '@components/ArrowIcon.astro';
 const meta = {
 	title: '',
 }
@@ -127,8 +128,8 @@ const meta = {
 	<div class="joint">
 		<Inner addClass="joint_inner">
 			<div class="joint_titlebox">
-				<h2 class="joint_title">JOINT RESEARCH</h2>
-				<a href="#" class="joint_btn">共同研究 <img src={IMG_PATH + 'common/arrow.svg'} alt="共同研究"></a>
+				<h2 class="joint_title">JOINT <br class="hp_md_none">RESEARCH</h2>
+				<a href="#" class="joint_btn">共同研究 <ArrowIcon /></a>
 			</div>
 		</Inner>
 		<div class="joint_slider swiper js-joint-swiper">
@@ -139,6 +140,10 @@ const meta = {
 							<img src={IMG_PATH + 'top/joint_01_off.webp'} alt="避難状況の予測に関する研究 Yu Hiroi" class="joint_img_off" loading="lazy">
 							<img src={IMG_PATH + 'top/joint_01_on.webp'} alt="" class="joint_img_on" loading="lazy">
 						</div>
+						<div class="joint_img_text">
+							<p class="joint_img_text_title">避難状況の<br>予測に関する研究</p>
+							<p class="joint_img_text_name">Yu Hiroi</p>
+						</div>
 					</a>
 				</li>
 				<li class="joint_item swiper-slide">
@@ -146,6 +151,10 @@ const meta = {
 						<div class="joint_img">
 							<img src={IMG_PATH + 'top/joint_02_off.webp'} alt="災害対策業務のあり方に関する研究 Numada Muneyoshi" class="joint_img_off" loading="lazy">
 							<img src={IMG_PATH + 'top/joint_02_on.webp'} alt="" class="joint_img_on" loading="lazy">
+						</div>
+						<div class="joint_img_text">
+							<p class="joint_img_text_title">災害対策業務の<br>あり方に関する研究</p>
+							<p class="joint_img_text_name">Numada Muneyoshi</p>
 						</div>
 					</a>
 				</li>
@@ -155,11 +164,15 @@ const meta = {
 							<img src={IMG_PATH + 'top/joint_03_off.webp'} alt="地域福祉のあり方に関する研究 Sugano Taku" class="joint_img_off" loading="lazy">
 							<img src={IMG_PATH + 'top/joint_03_on.webp'} alt="" class="joint_img_on" loading="lazy">
 						</div>
+						<div class="joint_img_text">
+							<p class="joint_img_text_title">地域福祉の<br>あり方に関する研究</p>
+							<p class="joint_img_text_name">SuganoTaku</p>
+						</div>
 					</a>
 				</li>
 			</ul>
-			<div class="swiper-button-prev joint_prev"></div>
-			<div class="swiper-button-next joint_next"></div>
+			<div class="swiper-button-prev joint_prev"><img src={IMG_PATH + 'top/slider-arrow.svg'} alt="" width="40" height="40"></div>
+			<div class="swiper-button-next joint_next"><img src={IMG_PATH + 'top/slider-arrow.svg'} alt="" width="40" height="40"></div>
 		</div>
 	</div>
 
@@ -167,40 +180,27 @@ const meta = {
 		<Inner>
 			<div class="news_header">
 				<h2 class="news_title">NEWS RELEASE</h2>
-				<a href="#" class="news_more">一覧を見る <img src={IMG_PATH + 'common/arrow.svg'} alt="一覧を見る"></a>
+				<a href="#" class="news_more">一覧を見る <ArrowIcon /></a>
 			</div>
 			<ul class="news_list">
 				<li class="news_item">
 					<a href="#" class="news_link">
 						<span class="news_date">2026.4.1</span>
 						<p class="news_text">ダミーです。過去の事象からの研究結果を発表しました。</p>
-						<span class="news_arrow">
-							<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true">
-								<path d="M1 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-						</span>
+						<ArrowIcon />
 					</a>
+				</li>
+				<li class="news_item">
+					<span class="news_link">
+						<span class="news_date">2026.4.1</span>
+						<p class="news_text">ダミーです。過去の事象からの</p>
+					</span>
 				</li>
 				<li class="news_item">
 					<a href="#" class="news_link">
 						<span class="news_date">2026.4.1</span>
 						<p class="news_text">ダミーです。過去の事象からの研究結果を発表しました。</p>
-						<span class="news_arrow">
-							<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true">
-								<path d="M1 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-						</span>
-					</a>
-				</li>
-				<li class="news_item">
-					<a href="#" class="news_link">
-						<span class="news_date">2026.4.1</span>
-						<p class="news_text">ダミーです。過去の事象からの研究結果を発表しました。</p>
-						<span class="news_arrow">
-							<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true">
-								<path d="M1 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-						</span>
+						<ArrowIcon />
 					</a>
 				</li>
 			</ul>
@@ -259,7 +259,7 @@ import 'swiper/css/navigation';
 
 new Swiper('.js-joint-swiper', {
 	modules: [Navigation],
-	loop: true,
+	// loop: true,
 	navigation: {
 		nextEl: '.joint_next',
 		prevEl: '.joint_prev',
@@ -268,11 +268,11 @@ new Swiper('.js-joint-swiper', {
 		0: {
 			slidesPerView: 1.5,
 			centeredSlides: true,
-			spaceBetween: 20,
+			spaceBetween: 25,
 		},
 		768: {
 			slidesPerView: 3,
-			spaceBetween: 20,
+			spaceBetween: 5,
 			centeredSlides: false,
 			allowTouchMove: false,
 		}
@@ -397,10 +397,9 @@ new Swiper('.js-joint-swiper', {
 
 .phase-free {
 	padding: 87px 0;
-	background: g.color('bg');
 
 	@include g.mq('md') {
-		padding: 117px 0;
+		padding: 117px 0 141px;
 	}
 
 	&_header {
@@ -689,55 +688,70 @@ new Swiper('.js-joint-swiper', {
 }
 
 .joint {
-	padding: 60px 0;
+	padding: 60px 0 105px;
 	position: relative;
-	background: g.color('bg');
+	background: linear-gradient(to bottom, #E6E6E6 0%, #4B4B4B 100%);
 	overflow: hidden;
+	
+	@include g.mq('md') {
+		padding: 65px 0 90px;
+	}
 
 	&_titlebox {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 30px;
-
+		margin-bottom: 54px;
+		gap: 20px;
+		
 		@include g.mq('md') {
 			flex-direction: row;
-			justify-content: space-between;
 			align-items: flex-end;
-			margin-bottom: 40px;
+			margin-bottom: 35px;
 		}
 	}
 
 	&_title {
 		font-family: g.font('en');
-		font-size: 3.2rem;
-		line-height: 1.2;
-		background: linear-gradient(90deg, g.color('key'), g.color('key_light'));
+		font-size: 4.8rem;
+		line-height: 1.3;
+		background: linear-gradient(90deg, #0A50AA, #1E8CE1, #00B9D7, #00A596);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		margin-bottom: 15px;
-
+		font-weight: 500;
+		opacity: 0.6;
+		text-align: center;
+		
 		@include g.mq('md') {
-			font-size: 5.6rem;
-			margin-bottom: 0;
+			line-height: 1;
+			font-size: 7.8rem;
 		}
 	}
 
 	&_btn {
-		display: inline-flex;
+		margin-bottom: 5px;
+		display: flex;
 		align-items: center;
-		gap: 8px;
+		gap: 6px;
 		color: g.color('key');
-		font-weight: 700;
 		text-decoration: none;
 		font-size: 1.4rem;
 
-		img {
-			width: 1em;
-		}
-
 		@include g.mq('md') {
 			font-size: 1.6rem;
+		}
+
+		:global(svg){
+			margin-top: 1px;
+			width: 8px;
+			height: 5px;
+			rotate: -90deg;
+			
+			@include g.mq('md') {
+				margin-top: 3px;
+				width: 12px;
+				height: 7px;
+			}
 		}
 	}
 
@@ -757,6 +771,7 @@ new Swiper('.js-joint-swiper', {
 	}
 
 	&_link {
+		position: relative;
 		display: block;
 		text-decoration: none;
 
@@ -784,6 +799,10 @@ new Swiper('.js-joint-swiper', {
 				}
 			}
 		}
+
+		a{
+			opacity: 1;
+		}
 	}
 
 	&_img {
@@ -810,84 +829,140 @@ new Swiper('.js-joint-swiper', {
 		}
 	}
 
+	&_img_text{
+		position: absolute;
+		inset: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: g.color('white');
+		line-height: 1.5;
+		z-index: 1;
+
+		&_title{
+			margin-bottom: 7px;
+			width: 100%;
+			font-size: 2.0rem;
+			font-weight: 700;
+			text-align: center;
+			
+			@include g.mq('md') {
+				margin-bottom: 15px;
+				font-size: 2.4rem;
+			}
+		}
+
+		&_name{
+			font-family: g.font('en');
+			font-size: 1.6rem;
+			font-weight: 500;
+			text-align: center;
+			
+			@include g.mq('md') {
+				font-size: 1.8rem;
+			}
+		}
+	}
+
 	&_prev,
 	&_next {
-		width: 44px;
-		height: 44px;
-		background: rgba(255, 255, 255, 0.8);
-		border-radius: 50%;
-		border: 1px solid g.color('border');
+		width: 40px;
+		height: 40px;
+		background: none;
+		border-radius: 0;
+		border: none;
+		margin-top: 0;
+		left: auto !important;
+		right: 9% !important;
+
 		&::after {
-			font-size: 1.4rem;
-			color: g.color('base');
+			display: none;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
 		}
 
 		@include g.mq('md') {
 			display: none;
 		}
 	}
+
+	&_prev {
+		right: auto !important;
+		left: 9% !important;
+		
+		img {
+			rotate: 180deg;
+		}
+	}
 }
 
 .news {
-	padding: 60px 0;
-	background: g.color('white');
+	padding: 54px 0 75px;
+	background: g.color('bg');
 
 	@include g.mq('md') {
-		padding: 100px 0;
+		padding: 50px 0 65px;
 	}
 
 	&_header {
 		display: flex;
 		flex-direction: column;
-		gap: 12px;
-		padding-bottom: 20px;
-		border-bottom: 2px solid g.color('base');
+		padding-bottom: 10px;
+		border-bottom: 1px solid g.color('base');
 		margin-bottom: 0;
-
+		
 		@include g.mq('md') {
 			flex-direction: row;
-			align-items: center;
+			align-items: flex-end;
 			justify-content: space-between;
-			padding-bottom: 25px;
+			gap: 12px;
+			padding-bottom: 40px;
 		}
 	}
 
 	&_title {
 		font-family: g.font('en');
-		font-size: 2.4rem;
-		font-weight: 700;
+		font-size: 2.0rem;
+		font-weight: 500;
+		color: #4B4B4B;
 		line-height: 1;
-		letter-spacing: 0.05em;
-		background: linear-gradient(90deg, g.color('key'), g.color('key_light'));
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-
+		
 		@include g.mq('md') {
-			font-size: 3.6rem;
+			font-size: 2.4rem;
 		}
 	}
 
 	&_more {
+		margin-bottom: 3px;
 		display: inline-flex;
 		align-items: center;
-		gap: 8px;
+		gap: 4px;
 		color: g.color('key');
-		font-weight: 700;
 		font-size: 1.2rem;
 		text-decoration: none;
 		align-self: flex-end;
 
-		img {
-			width: 1em;
+		:global(svg){
+			margin-top: 1px;
+			width: 8px;
+			height: 5px;
+			rotate: -90deg;
+
+			@include g.mq('md') {
+				margin-top: 3px;
+				width: 12px;
+				height: 7px;
+			}
 		}
 
 		@include g.mq('md') {
-			font-size: 1.4rem;
-			align-self: auto;
-
-			&:hover {
-				opacity: 0.7;
-			}
+			font-size: 1.6rem;
 		}
 	}
 
@@ -898,38 +973,56 @@ new Swiper('.js-joint-swiper', {
 	}
 
 	&_item {
-		border-bottom: 1px solid g.color('border');
+		border-bottom: 1px solid g.color('base');
 	}
 
 	&_link {
+		position: relative;
 		display: flex;
-		align-items: center;
-		gap: 15px;
-		padding: 18px 0;
+		flex-direction: column;
+		gap: 5px;
+		padding: 18px 65px 18px 0;
 		text-decoration: none;
-		color: g.color('base');
 		transition: opacity 0.3s ease;
-
+		
 		@include g.mq('md') {
+			flex-direction: row;
+			align-items: center;
 			gap: 30px;
-			padding: 22px 0;
+			padding: 25px 0;
 
 			&:hover {
 				opacity: 0.7;
+			}
+		}
+
+		:global(svg){
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+			width: 20px;
+			height: 11px;
+			rotate: -90deg;
+			color: g.color('key');
+			
+			@include g.mq('md') {
+				position: static;
 			}
 		}
 	}
 
 	&_date {
 		font-family: g.font('en');
-		font-size: 1.2rem;
+		font-size: 1.6rem;
 		font-weight: 500;
-		color: g.color('key_light');
+		color: g.color('key');
 		white-space: nowrap;
 		flex-shrink: 0;
 
 		@include g.mq('md') {
-			font-size: 1.4rem;
+			font-size: 1.8rem;
 			min-width: 90px;
 		}
 	}
@@ -939,28 +1032,22 @@ new Swiper('.js-joint-swiper', {
 		font-size: 1.3rem;
 		line-height: 1.6;
 		margin: 0;
+		font-weight: 500;
 
 		@include g.mq('md') {
-			font-size: 1.4rem;
+			font-size: 1.8rem;
 		}
-	}
-
-	&_arrow {
-		flex-shrink: 0;
-		color: g.color('key');
-		display: flex;
-		align-items: center;
 	}
 }
 
 .contact {
 	padding: 80px 0;
-	background: linear-gradient(to right, #0A50AA, #1E8CE1, #00B9D7, #00A596);
+	background: linear-gradient(to bottom right, #0A50AA, #1E8CE1, #00B9D7, #00A596);
 	text-align: center;
 	color: g.color('white');
 
 	@include g.mq('md') {
-		padding: 120px 0;
+		padding: 80px 0 120px;
 	}
 
 	&_inner {
@@ -971,11 +1058,10 @@ new Swiper('.js-joint-swiper', {
 
 	&_title {
 		font-family: g.font('en');
-		font-size: 5.6rem;
+		font-size: 4.5rem;
 		font-weight: 500;
-		line-height: 1;
+		line-height: 1.25;
 		letter-spacing: 0.05em;
-		margin-bottom: 10px;
 		color: rgba(255, 255, 255, 0.4);
 
 		@include g.mq('md') {
@@ -985,26 +1071,29 @@ new Swiper('.js-joint-swiper', {
 	}
 
 	&_subtitle {
-		font-size: 1.6rem;
+		font-size: 2.0rem;
 		font-weight: 700;
 		letter-spacing: 0.1em;
 		margin-bottom: 30px;
+		text-align: center;
 
 		@include g.mq('md') {
-			font-size: 2.2rem;
-			margin-bottom: 40px;
+			font-size: 2.4rem;
+			margin-bottom: 20px;
 		}
 	}
 
 	&_desc {
-		font-size: 1.3rem;
+		font-size: 1.4rem;
 		line-height: 2;
-		margin-bottom: 50px;
-		font-weight: 500;
-
+		margin-bottom: 60px;
+		text-align: center;
+		max-width: 280px;
+		margin-inline: auto;
+		
 		@include g.mq('md') {
-			font-size: 1.4rem;
-			margin-bottom: 70px;
+			max-width: none;
+			font-size: 1.6rem;
 		}
 
 		&_br {
@@ -1022,7 +1111,7 @@ new Swiper('.js-joint-swiper', {
 		padding: 0;
 		display: flex;
 		flex-direction: column;
-		gap: 30px;
+		gap: 45px;
 		width: 100%;
 		max-width: 320px;
 
@@ -1030,16 +1119,18 @@ new Swiper('.js-joint-swiper', {
 			max-width: none;
 			flex-direction: row;
 			justify-content: center;
-			gap: 40px;
+			gap: 92px;
 		}
 	}
 
 	&_item {
+		max-width: 190px;
 		width: 100%;
+		margin-inline: auto;
 
 		@include g.mq('md') {
 			flex: 1;
-			max-width: 280px;
+			max-width: 188px;
 		}
 	}
 
@@ -1049,15 +1140,15 @@ new Swiper('.js-joint-swiper', {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding: 40px 20px;
+		padding: 40px 0;
 		text-decoration: none;
 		color: g.color('white');
-		min-height: 160px;
+		min-height: 190px;
 		transition: background-color 0.3s ease;
 
 		@include g.mq('md') {
-			padding: 50px 20px;
-			min-height: 200px;
+			padding: 50px 0;
+			min-height: 188px;
 
 			&:hover {
 				background-color: rgba(255, 255, 255, 0.1);
@@ -1080,35 +1171,36 @@ new Swiper('.js-joint-swiper', {
 		&_tl {
 			top: 0;
 			left: 0;
-			border-width: 1px 0 0 1px;
+			border-width: 2px 0 0 2px;
 		}
 
 		&_tr {
 			top: 0;
 			right: 0;
-			border-width: 1px 1px 0 0;
+			border-width: 2px 2px 0 0;
 		}
 
 		&_bl {
 			bottom: 0;
 			left: 0;
-			border-width: 0 0 1px 1px;
+			border-width: 0 0 2px 2px;
 		}
 
 		&_br {
 			bottom: 0;
 			right: 0;
-			border-width: 0 1px 1px 0;
+			border-width: 0 2px 2px 0;
 		}
 
 		&_text {
-			font-size: 1.4rem;
-			font-weight: 700;
-			line-height: 1.8;
+			font-size: 1.6rem;
+			font-weight: 500;
+			line-height: 1.5;
 			margin: 0;
+			text-align: center;
 
 			@include g.mq('md') {
-				font-size: 1.6rem;
+				font-size: 1.8rem;
 			}
 		}
 	}
