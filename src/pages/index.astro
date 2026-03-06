@@ -4,786 +4,1113 @@
  **********************************************************************/
  import { BASE_DIR, IMG_PATH } from '../consts';
 import Layout from '@layouts/Layout.astro';
+import MvSlider from '@components/MvSlider.astro';
 import Inner from '@components/Inner.astro';
 const meta = {
 	title: '',
-	description: '',
-	keywords: '',
 }
 
 ---
 
-<Layout pageId="frontpage" title={meta.title} keywords={meta.keywords} description={meta.description}>
-	<Inner addClass="mv_inner">
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-		<p>ダミーテキスト<br>ダミーテキスト</p>
-	</Inner>
+<Layout pageId="frontpage" title={meta.title}>
+	<MvSlider />
+
+	<div class="about">
+		<video class="about_video about_video_pc" src={IMG_PATH + 'common/about_pc.mp4'} autoplay loop muted playsinline></video>
+		<video class="about_video about_video_sp" src={IMG_PATH + 'common/about_sp.mp4'} autoplay loop muted playsinline></video>
+		<Inner addClass="about_inner">
+			<div class="about_content">
+				<h2 class="about_title">ABOUT US</h2>
+				<p class="about_subtitle">私たちについて</p>
+				<p class="about_text">伝える・備える・行動する・つなぐの<br class="hp_md_none">循環で<br class="hp_sm_none">災害と共存し、<br class="hp_md_none">成長し続けられる<br class="hp_sm_none">「フェーズフリー」<br class="hp_md_none">な地域社会の実現。</p>
+				<a href="#" class="about_btn">
+					READ MORE <img src={IMG_PATH + 'common/arrow.svg'} alt="READ MORE" width="8" height="5" loading="lazy">
+				</a>
+			</div>
+		</Inner>
+	</div>
+
+	<div class="phase-free">
+		<Inner>
+			<div class="phase-free_header">
+				<h2 class="phase-free_title">フェーズフリー 4つの行動</h2>
+			</div>
+			
+			<div class="phase-free_actions">
+				<a href="#" class="phase-free_action phase-free_action--communicate">
+					<div class="phase-free_action_inner">
+						<span class="phase-free_action_main">伝える</span>
+						<span class="phase-free_action_sub">イベント・<br>学会発表</span>
+					</div>
+				</a>
+				<a href="#" class="phase-free_action phase-free_action--prepare">
+					<div class="phase-free_action_inner">
+						<span class="phase-free_action_main">備える</span>
+						<span class="phase-free_action_sub">準備・対策</span>
+					</div>
+				</a>
+				<a href="#" class="phase-free_action phase-free_action--act">
+					<div class="phase-free_action_inner">
+						<span class="phase-free_action_main">行動する</span>
+						<span class="phase-free_action_sub">避難</span>
+					</div>
+				</a>
+				<a href="#" class="phase-free_action phase-free_action--connect">
+					<div class="phase-free_action_inner">
+						<span class="phase-free_action_main">つなぐ</span>
+						<span class="phase-free_action_sub">再生・復興・<br>コミュニティ</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="phase-free_articles">
+				<article class="phase-free_article">
+					<a href="#" class="phase-free_article_link">
+						<figure class="phase-free_article_fig">
+							<img src={IMG_PATH + 'top/dummy.webp'} alt="" loading="lazy">
+						</figure>
+						<div class="phase-free_article_content">
+							<div class="phase-free_article_meta">
+								<span class="phase-free_article_cat" data-type="communicate">伝える</span>
+								<span class="phase-free_article_tag">イベント・学会発表</span>
+							</div>
+							<p class="phase-free_article_text">要検討内容です。この文章が45文字です。</p>
+						</div>
+					</a>
+				</article>
+				<article class="phase-free_article">
+					<a href="#" class="phase-free_article_link">
+						<figure class="phase-free_article_fig">
+							<img src={IMG_PATH + 'top/dummy.webp'} alt="" loading="lazy">
+						</figure>
+						<div class="phase-free_article_content">
+							<div class="phase-free_article_meta">
+								<span class="phase-free_article_cat" data-type="prepare">備える</span>
+								<span class="phase-free_article_tag">準備・対策</span>
+							</div>
+							<p class="phase-free_article_text">45文字が最大文字数（仮）。3行に入り切る文字数。要検討内容です。この文章が45文字です。</p>
+						</div>
+					</a>
+				</article>
+				<article class="phase-free_article">
+					<a href="#" class="phase-free_article_link">
+						<figure class="phase-free_article_fig">
+							<img src={IMG_PATH + 'top/dummy.webp'} alt="" loading="lazy">
+						</figure>
+						<div class="phase-free_article_content">
+							<div class="phase-free_article_meta">
+								<span class="phase-free_article_cat" data-type="prepare">備える</span>
+								<span class="phase-free_article_tag">イベント・学会発表</span>
+							</div>
+							<p class="phase-free_article_text">45文字が最大文字数（仮）。3行に入り切る文字数。要検討内容です。この文章が45文字です。</p>
+						</div>
+					</a>
+				</article>
+				<article class="phase-free_article">
+					<a href="#" class="phase-free_article_link">
+						<figure class="phase-free_article_fig">
+							<img src={IMG_PATH + 'top/dummy.webp'} alt="" loading="lazy">
+						</figure>
+						<div class="phase-free_article_content">
+							<div class="phase-free_article_meta">
+								<span class="phase-free_article_cat" data-type="prepare">備える</span>
+								<span class="phase-free_article_tag">イベント・学会発表</span>
+							</div>
+							<p class="phase-free_article_text">45文字が最大文字数（仮）。3行に入り切る文字数。要検討内容です。この文章が45文字です。</p>
+						</div>
+					</a>
+				</article>
+			</div>
+		</Inner>
+	</div>
+
+	<div class="joint">
+		<Inner addClass="joint_inner">
+			<div class="joint_titlebox">
+				<h2 class="joint_title">JOINT RESEARCH</h2>
+				<a href="#" class="joint_btn">共同研究 <img src={IMG_PATH + 'common/arrow.svg'} alt="共同研究"></a>
+			</div>
+		</Inner>
+		<div class="joint_slider swiper js-joint-swiper">
+			<ul class="joint_list swiper-wrapper">
+				<li class="joint_item swiper-slide">
+					<a href="#" class="joint_link">
+						<div class="joint_img">
+							<img src={IMG_PATH + 'top/joint_01_off.webp'} alt="避難状況の予測に関する研究 Yu Hiroi" class="joint_img_off" loading="lazy">
+							<img src={IMG_PATH + 'top/joint_01_on.webp'} alt="" class="joint_img_on" loading="lazy">
+						</div>
+					</a>
+				</li>
+				<li class="joint_item swiper-slide">
+					<a href="#" class="joint_link">
+						<div class="joint_img">
+							<img src={IMG_PATH + 'top/joint_02_off.webp'} alt="災害対策業務のあり方に関する研究 Numada Muneyoshi" class="joint_img_off" loading="lazy">
+							<img src={IMG_PATH + 'top/joint_02_on.webp'} alt="" class="joint_img_on" loading="lazy">
+						</div>
+					</a>
+				</li>
+				<li class="joint_item swiper-slide">
+					<a href="#" class="joint_link">
+						<div class="joint_img">
+							<img src={IMG_PATH + 'top/joint_03_off.webp'} alt="地域福祉のあり方に関する研究 Sugano Taku" class="joint_img_off" loading="lazy">
+							<img src={IMG_PATH + 'top/joint_03_on.webp'} alt="" class="joint_img_on" loading="lazy">
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="swiper-button-prev joint_prev"></div>
+			<div class="swiper-button-next joint_next"></div>
+		</div>
+	</div>
+
+	<div class="news">
+		<Inner>
+			<div class="news_header">
+				<h2 class="news_title">NEWS RELEASE</h2>
+				<a href="#" class="news_more">一覧を見る <img src={IMG_PATH + 'common/arrow.svg'} alt="一覧を見る"></a>
+			</div>
+			<ul class="news_list">
+				<li class="news_item">
+					<a href="#" class="news_link">
+						<span class="news_date">2026.4.1</span>
+						<p class="news_text">ダミーです。過去の事象からの研究結果を発表しました。</p>
+						<span class="news_arrow">
+							<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true">
+								<path d="M1 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</span>
+					</a>
+				</li>
+				<li class="news_item">
+					<a href="#" class="news_link">
+						<span class="news_date">2026.4.1</span>
+						<p class="news_text">ダミーです。過去の事象からの研究結果を発表しました。</p>
+						<span class="news_arrow">
+							<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true">
+								<path d="M1 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</span>
+					</a>
+				</li>
+				<li class="news_item">
+					<a href="#" class="news_link">
+						<span class="news_date">2026.4.1</span>
+						<p class="news_text">ダミーです。過去の事象からの研究結果を発表しました。</p>
+						<span class="news_arrow">
+							<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true">
+								<path d="M1 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</span>
+					</a>
+				</li>
+			</ul>
+		</Inner>
+	</div>
+
+	<div class="contact">
+		<Inner addClass="contact_inner">
+			<h2 class="contact_title">CONTACT</h2>
+			<p class="contact_subtitle">私たちとできること</p>
+			<p class="contact_desc">
+				防災研は次なる地域防災の構築へ。<br class="contact_desc_br">
+				より多くのステークホルダーの皆さまと知見を共有し、<br class="contact_desc_br">
+				広めていきたいと考えています。<br class="contact_desc_br">
+				防災研の取り組みに関するご意見、ご質問、ご要望等については、<br class="contact_desc_br">
+				ご遠慮なく、ぜひ一度お問い合わせください。
+			</p>
+			<ul class="contact_list">
+				<li class="contact_item">
+					<a href="#" class="contact_box">
+						<span class="contact_box_tl"></span>
+						<span class="contact_box_tr"></span>
+						<span class="contact_box_bl"></span>
+						<span class="contact_box_br"></span>
+						<p class="contact_box_text">地域・自治体<br>の皆さまへ</p>
+					</a>
+				</li>
+				<li class="contact_item">
+					<a href="#" class="contact_box">
+						<span class="contact_box_tl"></span>
+						<span class="contact_box_tr"></span>
+						<span class="contact_box_bl"></span>
+						<span class="contact_box_br"></span>
+						<p class="contact_box_text">企業・大学・研究機関<br>の皆さまへ</p>
+					</a>
+				</li>
+				<li class="contact_item">
+					<a href="#" class="contact_box">
+						<span class="contact_box_tl"></span>
+						<span class="contact_box_tr"></span>
+						<span class="contact_box_bl"></span>
+						<span class="contact_box_br"></span>
+						<p class="contact_box_text">メディア<br>の皆さまへ</p>
+					</a>
+				</li>
+			</ul>
+		</Inner>
+	</div>
 </Layout>
 
-<style lang="scss">
-.mv{
-	position: relative;
-	
-	&_bg{
-		overflow: hidden;
+<script>
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
-		img{
-			width: 100%;
-			height: 766px;
-			object-fit: cover;
-			transform: scale(1.1);
-			transform-origin: center;
-			will-change: transform;
-			animation: mvZoomOut 7s ease-out forwards;
+new Swiper('.js-joint-swiper', {
+	modules: [Navigation],
+	loop: true,
+	navigation: {
+		nextEl: '.joint_next',
+		prevEl: '.joint_prev',
+	},
+	breakpoints: {
+		0: {
+			slidesPerView: 1.5,
+			centeredSlides: true,
+			spaceBetween: 20,
+		},
+		768: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+			centeredSlides: false,
+			allowTouchMove: false,
 		}
 	}
-	:global(.mv_inner){
+});
+</script>
+
+<style lang="scss">
+
+.about {
+	position: relative;
+	padding: 110px 0;
+	text-align: center;
+	color: g.color('white');
+	overflow: hidden;
+
+	@include g.mq('md') {
+		padding: 100px 0;
+	}
+
+	&_video {
 		position: absolute;
-		inset: auto 0 120px 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+
+		&_pc {
+			display: none;
+			@include g.mq('md') {
+				display: block;
+			}
+		}
+
+		&_sp {
+			display: block;
+			@include g.mq('md') {
+				display: none;
+			}
+		}
+	}
+
+	&_inner {
+		position: relative;
+		z-index: 1;
+	}
+
+	&_content {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-	}
-	&_subtitle{
-		font-size: 1.8rem;
-		color: g.color('key_light');
-		margin-bottom: 10px;
-	}
-	&_title{
-		font-size: 5.3rem;
-		font-weight: 900;
-		line-height: 1.509;
-		color: g.color('white');
-	}
-}
-
-@keyframes mvZoomOut {
-	from {
-		transform: scale(1.1);
-	}
-	to {
-		transform: scale(1);
-	}
-}
-
-@media (prefers-reduced-motion: reduce) {
-	.mv_bg img {
-		animation: none;
-		transform: none;
-	}
-}
-
-.search {
-	position: relative;
-	margin-top: -47px;
-	
-	&_bar {
-		display: grid;
-		grid-template-columns: auto 1px 1fr;
 		align-items: center;
-		gap: 22px;
-		padding: 20px 40px;
-		border-radius: 6px;
-		background: g.color('white');
 	}
 
-	&_label {
-		display: inline-flex;
-		align-items: center;
-		padding-right: 75px;
-		gap: 15px;
-		color: g.color('key');
+	&_title {
+		font-family: g.font('en');
+		font-size: 4.5rem;
+		line-height: 1.25;
+		margin-bottom: 5px;
+		letter-spacing: 0.05em;
+		font-weight: 500;
+		opacity: 0.5;
+
+		@include g.mq('md') {
+			font-size: 10rem;
+			margin-bottom: 10px;
+		}
+	}
+
+	&_subtitle {
 		font-size: 2.0rem;
 		font-weight: 700;
-		letter-spacing: 0.01em;
-		justify-content: center;
-	}
+		margin-bottom: 30px;
+		letter-spacing: 0.05em;
 
-	&_icon {
-		display: grid;
-		place-items: center;
-		width: 24px;
-		height: 27px;
+		@include g.mq('md') {
+			font-size: 2.4rem;
+			margin-bottom: 20px;
+		}
 	}
 
 	&_text {
-		line-height: 1;
-	}
-
-	&_divider {
-		height: 57px;
-		background: rgba($color: g.color('key_light'), $alpha: 0.12);
-
-		/* @include g.mq('lg_max') {
-			display: none;
-		} */
-	}
-
-	&_links {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 18px;
-
-		/* @include g.mq('lg_max') {
-			grid-template-columns: 1fr;
-			gap: 10px;
-		} */
-	}
-
-	&_link {
-		position: relative;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		gap: 10px;
-		height: 47px;
-		padding-inline: 18px;
-		border-radius: 999px;
-		background: g.color('key_light');
-		color: g.color('white');
-		text-decoration: none;
 		font-size: 1.6rem;
-		letter-spacing: 0.02em;
-		white-space: nowrap;
-	}
+		line-height: 2;
+		margin-bottom: 30px;
+		letter-spacing: 0.05em;
+		text-align: center;
 
-	&_caret {
-		display: block;
-		position: absolute;
-		inset: 0 20px  0 auto;
-		margin: auto;
-		@include g.arrow('bottom', 7px, 1px, g.color('white'));
-	}
-}
-
-.section{
-	&_head {
-		display: flex;
-		flex-direction: column;
-		gap: 18px;
-		margin-bottom: 28px;
-
-		flex-direction: row;
-		align-items: flex-end;
-		justify-content: space-between;
-		gap: 24px;
-		/* @include g.mq('lg') {
-		} */
-	}
-
-	&_head--onImage {
-		// 背景画像上の見出しは左寄せの余白感を少し強める
-		margin-bottom: 28px;
-	}
-
-	&_title {
-		display: flex;
-		align-items: baseline;
-		gap: 14px;
-		flex-wrap: wrap;
-		line-height: 1.1;
-	}
-
-	&_title_en {
-		font-size: 4.8rem;
-		font-weight: 100;
-		letter-spacing: 0.01em;
-		color: g.color('key');
-
-		.is_bold {
-			font-size: 5.0rem;
-			font-weight: 800;
+		@include g.mq('md') {
+			font-size: 1.6rem;
+			line-height: 1.75;
+			margin-bottom: 60px;
 		}
 	}
 
-	&_title_ja {
-		font-size: 1.6rem;
-		letter-spacing: 0.02em;
+	&_btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		color: g.color('white');
+		font-family: g.font('en');
+		font-size: 1.4rem;
+		font-weight: 700;
+		text-decoration: none;
+		letter-spacing: 0.05em;
+		transition: opacity 0.3s ease;
+
+		@include g.mq('md') {
+			font-size: 1.6rem;
+		}
+
+		img{
+			position: relative;
+			top: 1px;
+			rotate: -90deg;
+			filter: brightness(0) invert(1);
+		}
+	}
+}
+
+.phase-free {
+	padding: 87px 0;
+	background: g.color('bg');
+
+	@include g.mq('md') {
+		padding: 117px 0;
+	}
+
+	&_header {
+		text-align: center;
+		margin-bottom: 20px;
+
+		@include g.mq('md') {
+			margin-bottom: 40px;
+		}
+	}
+
+	&_title {
+		font-size: 2.0rem;
+		font-weight: 700;
+		color: #333;
+
+		@include g.mq('md') {
+			font-size: 2.4rem;
+		}
 	}
 
 	&_actions {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 12px;
-	}
-
-	&_btn {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		gap: 10px;
-		height: 44px;
-		padding-inline: 18px;
-		border-radius: 999px;
-		text-decoration: none;
-		font-size: 1.6rem;
-		white-space: nowrap;
-		min-width: 206px;
-
-		&:focus-visible {
-			outline: 2px solid g.color('key');
-			outline-offset: 3px;
-		}
-		
-		&--ghost {
-			background: rgba($color: g.color('white'), $alpha: 0.9);
-			border: 1px solid #e6e6e6;
-		}
-
-		&--primary {
-			background: g.color('key');
-			color: g.color('white');
-		}
-
-		&_caret {
-			flex: 0 0 auto;
-			display: block;
-			@include g.arrow('bottom', 9px, 2px, g.color('key'));
-		}
-	}
-}
-
-.service {
-	padding-block: 65px 45px;
-
-	&_list {
 		display: grid;
-		gap: 16px;
-		padding: 0;
-		margin: 0;
-
-		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-columns: repeat(2, 1fr);
 		gap: 20px;
-		/* @include g.mq('md') {
-		} */
-
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-		/* @include g.mq('lg') {
-		} */
-	}
-
-	&_list_item {
-		list-style: none;
-		display: flex; // 子要素(.service_panel)を高さ100%で伸ばすため
-	}
-	
-	&_panel {
-		background: g.color('bg');
-		border-radius: 8px;
-		overflow: hidden;
-		min-width: 0;
-		width: 100%;
-		height: 100%; // 「一番高いパネル」に他も揃える
-		display: flex;
-		flex-direction: column;
-	}
-
-	&_panel_head {
-		display: grid;
-		justify-items: center;
-		gap: 17px;
-		padding: 30px 18px 18px;
-	}
-
-	&_panel_icon {
-		display: grid;
-		place-items: center;
-		width: 72px;
-		height: 72px;
-
-		img {
-			max-width: 100%;
-			height: auto;
-		}
-	}
-
-	&_panel_title {
-		font-size: 2.0rem;
-		font-weight: bold;
-		letter-spacing: 0.02em;
-		line-height: 1.2;
-		text-align: center;
-	}
-
-	&_panel_list {
-		list-style: none;
-		padding: 0 12px 20px;
-		margin: 0;
-		flex: 1; // パネル内の残り高さを占有して高さ揃えを安定させる
-	}
-
-	&_panel_link {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 10px;
-		padding: 8px 10px;
-		font-size: 1.4rem;
-		line-height: 1.5;
-		color: g.color('base');
-		text-decoration: none;
-		border-bottom: 1px solid rgba($color: g.color('key'), $alpha: 0.12);
-	}
-
-	&_panel_arrow {
-		flex: 0 0 auto;
-		display: block;
-		@include g.arrow('right', 7px, 1px, g.color('key'));
-	}
-}
-
-.analyzer{
-	position: relative;
-	padding-block: 105px 70px;
-	background: url('/images/top/analyzer_bg.webp') no-repeat center center / cover;
-
-	:global(.inner) {
-		position: relative;
-		z-index: 2;
-	}
-
-	&_list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: grid;
-		gap: 14px;
-
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 16px 22px;
-		/* @include g.mq('lg') {
-		} */
-	}
-
-	&_card {
-		display: grid;
-		grid-template-columns: 70px 1fr;
-		gap: 16px;
-		align-items: center;
-		padding: 5px 24px 5px 16px;
-		// height: 93px;
-		min-height: 93px;
-		height: 100%;
-		background: rgba($color: g.color('white'), $alpha: 0.9);
-		border-radius: 6px;
-		border: 1px solid rgba($color: g.color('key'), $alpha: 0.1);
-		text-decoration: none;
-		color: g.color('base');
-	}
-
-	&_card_thumb {
-		border-radius: 4px;
-		overflow: hidden; 
-	}
-
-	&_card_body {
-		min-width: 0;
-		display: grid;
-		grid-template-columns: 120px 1fr;
-		align-items: center;
-	}
-
-	&_card_title {
-		font-size: 2.0rem;
-		font-weight: 600;
-		color: g.color('key');
-		margin: 0;
-	}
-
-	&_card_lead {
-		font-size: 1.5rem;
-		line-height: 1.7;
-		margin: 0;
-		letter-spacing: normal;
-	}
-}
-
-.analysis {
-	padding-block: 70px 60px;
-
-	&_btn {
-		// アイコン入りのため微調整
-		padding-inline: 16px 18px;
-	}
-
-	&_btn_icon {
-		display: block;
-		width: 17px;
-		height: 13px;
-	}
-
-	&_body {
-		position: relative;
-		display: grid;
-		grid-template-columns: 350px 1fr;
-		gap: 130px;
-
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: calc(350px + 65px);
-			width: 1px;
-			background: #eaeaf1;
-		}
-	}
-
-	&_cat {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: grid;
-		gap: 18px;
-	}
-
-	&_cat_link {
-		display: grid;
-		grid-template-columns: 70px 1fr auto;
-		align-items: center;
-		gap: 16px;
-		padding: 12px 18px 12px 28px;
-		border-radius: 10px;
-		background: g.color('bg');
-		text-decoration: none;
-		color: g.color('base');
-	}
-
-	&_cat_icon {
-		display: grid;
-		place-items: center;
-		width: 70px;
-		height: 70px;
-
-		img {
-			max-width: 100%;
-			height: auto;
-		}
-	}
-
-	&_cat_label {
-		font-size: 2rem;
-		font-weight: bold;
-		letter-spacing: 0.02em;
-		min-width: 0;
-	}
-
-	&_cat_arrow {
-		flex: 0 0 auto;
-		display: block;
-		@include g.arrow('right', 7px, 1px, g.color('key'));
-	}
-
-	&_cases {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: grid;
-		gap: 18px;
-
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 18px 22px;
-		/* @include g.mq('md') {
-		} */
-	}
-
-	&_case {
-		display: grid;
-		grid-template-columns: 70px 1fr auto;
-		align-items: center;
-		gap: 16px;
-		padding: 12px 18px;
-		border-radius: 10px;
-		background: g.color('bg');
-		text-decoration: none;
-		color: g.color('key');
-	}
-
-	&_case_thumb {
-		width: 70px;
-		height: 70px;
-		border-radius: 10px;
-		overflow: hidden;
-		background: rgba($color: g.color('white'), $alpha: 0.9);
-		border: 1px solid rgba($color: g.color('key'), $alpha: 0.08);
-
-		img {
+		margin-bottom: 57px;
+		width: 89%;
+		margin-inline: auto;
+		
+		@include g.mq('md') {
 			width: 100%;
-			height: 100%;
-			object-fit: cover;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 4px;
+			margin-bottom: 65px;
 		}
 	}
 
-	&_case_label {
-		font-size: 1.8rem;
-		font-weight: bold;
-		letter-spacing: 0.02em;
-		min-width: 0;
-	}
-
-	&_case_arrow {
-		flex: 0 0 auto;
-		display: block;
-		@include g.arrow('right', 7px, 1px, g.color('key'));
-	}
-}
-
-.pickup {
-	padding-block: 54px 70px;
-	background: url('/images/top/pickup_bg.webp') no-repeat center center / cover;
-
-	&_head {
-		display: grid;
-		justify-items: center;
-		gap: 8px;
-		margin-bottom: 51px;
-		text-align: center;
-	}
-
-	&_title {
-		margin: 0;
-		font-size: 5rem;
-		font-weight: bold;
-		letter-spacing: 0;
-		line-height: 1;
-		color: g.color('key');
-	}
-
-	&_subtitle {
-		margin: 0;
-		font-size: 1.6rem;
-		color: #333;
-	}
-
-	&_list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		margin-top: 15px;
-		display: grid;
-		grid-template-rows: auto 1fr auto;
-		column-gap: 22px;
-		row-gap: 0;
-
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-		gap: 22px;
-		--pickup-gap: 22px;
-		/* @include g.mq('lg') {
-		} */
-	}
-
-	/* アイテムが3件のときでも「4列時の1/4幅」を維持して中央寄せする */
-	&_list:has(> .pickup_item:nth-child(3):last-child) {
-		grid-template-columns: repeat(3, calc((100% - (var(--pickup-gap) * 3)) / 4));
+	&_action {
+		display: flex;
 		justify-content: center;
-	}
-
-	&_item {
-		display: contents;
-		min-width: 0;
-	}
-
-	&_card {
-		position: relative;
-		display: grid;
-		grid-template-rows: auto auto 1fr auto;
-		gap: 18px;
-		grid-row: 1 / -1;
-		grid-template-rows: subgrid;
-		min-width: 0;
-		height: 100%;
-		padding: 54px 22px 22px;
-		border-radius: 6px;
-		background: g.color('white');
-		text-decoration: none;
-		color: g.color('base');
-	}
-
-	&_card_badge {
-		position: absolute;
-		top: -40px;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 78px;
-		height: 77px;
-		border-radius: 999px;
-		overflow: hidden;
-		background: g.color('white');
-
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-	}
-
-	&_card_title {
-		margin: 0;
-		font-size: 1.8rem;
-		font-weight: 700;
-		color: g.color('key');
-		line-height: 27px;
-		letter-spacing: 0.02em;
-		text-align: center;
-		white-space: pre-line; // \n で改行
-	}
-
-	&_card_lead {
-		margin: 0;
-		font-size: 1.4rem;
-		line-height: 1.6;
-		letter-spacing: 0;
-		color: #000;
-	}
-
-	&_card_more {
-		display: flex;
 		align-items: center;
-		gap: 12px;
-		font-size: 1.4rem;
-		color: g.color('key');
-		font-weight: 300;
-	}
+		text-decoration: none;
+		color: g.color('white');
+		padding: 5px 5px 10px;
+		min-height: 78px;
+		transition: opacity 0.3s ease;
 
-	&_card_icon {
-		display: grid;
-		place-items: center;
-		width: 42px;
-		height: 42px;
-		border-radius: 50%;
-		background: g.color('key');
+		@include g.mq('md') {
+			min-height: 90px;
+			padding: 10px 5px 20px;
 
-		&::before {
-			content: '';
-			display: block;
-			@include g.arrow('right', 7px, 1px, g.color('white'));
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+
+		&--communicate {
+			background-color: #1a56a4;
+		}
+
+		&--prepare {
+			background-color: #278ceb;
+		}
+
+		&--act {
+			background-color: #00bed7;
+		}
+
+		&--connect {
+			background-color: #00ac96;
+		}
+
+		&_inner {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
 			position: relative;
-			right: 1px;
+			padding: 0 5px;
+			width: 100%;
+			height: 100%;
+
+			@include g.mq('md') {
+				padding: 0 10px;
+			}
+		}
+
+		&_main {
+			font-size: 2.0rem;
+			font-weight: 700;
+			margin-bottom: 2px;
+			letter-spacing: 0.1em;
+
+			@include g.mq('md') {
+				font-size: 2.6rem;
+				margin-bottom: 5px;
+			}
+		}
+
+		&_sub {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-width: 90px;
+			min-height: 32px;
+			font-size: 1.2rem;
+			line-height: 1.4;
+			position: relative;
+			padding: 0 10px;
+
+			@include g.mq('md') {
+				font-size: 1.4rem;
+				padding: 0 12px;
+			}
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 1px;
+				height: 80%;
+				background-color: rgba(255, 255, 255, 0.5);
+
+				@include g.mq('md') {
+					height: 100%;
+				}
+			}
+
+			&::before {
+				left: 0;
+			}
+
+			&::after {
+				right: 0;
+			}
+		}
+	}
+
+	&_articles {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 60px;
+
+		@include g.mq('md') {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 64px 50px;
+		}
+	}
+
+	&_article {
+		&_link {
+			display: flex;
+			flex-direction: column;
+			text-decoration: none;
+			color: g.color('base');
+			transition: opacity 0.3s ease;
+			height: 100%;
+
+			@include g.mq('md') {
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+
+		&_fig {
+			position: relative;
+			margin: 0 0 15px 0;
+			overflow: hidden;
+			background-color: #7e7e7e;
+			height: 234px;
+			
+			@include g.mq('md') {
+				margin: 0 0 20px 0;
+				height: 210px;
+			}
+
+			img {
+				height: 100%;
+				width: auto;
+				object-fit: cover;
+				display: block;
+				transition: transform 0.3s ease;
+				margin-inline: auto;
+			}
+		}
+
+		@include g.mq('md') {
+			&:hover &_fig img {
+				transform: scale(1.1);
+			}
+		}
+
+		&_content {
+			flex-grow: 1;
+			padding-bottom: 30px;
+			border-bottom: 1px solid #333333;
+			
+			@include g.mq('md') {
+				padding-bottom: 40px;
+			}
+		}
+
+		&_meta {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin-bottom: 15px;
+			font-size: 1.2rem;
+			
+			@include g.mq('md') {
+				margin-bottom: 20px;
+				font-size: 1.4rem;
+			}
+		}
+
+		&_cat {
+			position: relative;
+			padding-left: 40px;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 30px;
+				height: 10px;
+			}
+
+			&[data-type="communicate"] {
+				&::before {
+					background-color: #1a56a4;
+				}
+			}
+
+			&[data-type="prepare"] {
+				&::before {
+					background-color: #278ceb;
+				}
+			}
+
+			&[data-type="act"] {
+				&::before {
+					background-color: #00bed7;
+				}
+			}
+
+			&[data-type="connect"] {
+				&::before {
+					background-color: #00ac96;
+				}
+			}
+		}
+
+		&_tag {
+			position: relative;
+			padding-left: 10px;
+
+			&::before {
+				content: '|';
+				position: absolute;
+				left: 0;
+				color: #ccc;
+			}
+		}
+
+		&_text {
+			font-size: 1.6rem;
+			line-height: 1.6;
+			font-weight: 500;
+			color: #333;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+
+			@include g.mq('md') {
+				font-size: 1.8rem;
+			}
 		}
 	}
 }
 
-.topics {
-	padding-block: 76px 0;
+.joint {
+	padding: 60px 0;
+	position: relative;
+	background: g.color('bg');
+	overflow: hidden;
 
-	&_layout {
-		display: grid;
-		gap: 24px;
-
-		grid-template-columns: 360px 1fr;
-		align-items: stretch;
-		gap: 40px;
-		/* @include g.mq('lg') {
-		} */
-	}
-
-	&_left {
+	&_titlebox {
 		display: flex;
 		flex-direction: column;
-		gap: 18px;
-	}
+		align-items: center;
+		margin-bottom: 30px;
 
-	&_titleBox {
-		display: grid;
-		gap: 8px;
+		@include g.mq('md') {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-end;
+			margin-bottom: 40px;
+		}
 	}
 
 	&_title {
-		margin: 0;
-		font-size: 5rem;
-		font-weight: bold;
-		letter-spacing: 0;
-		line-height: 1.0;
-		color: g.color('key');
-	}
+		font-family: g.font('en');
+		font-size: 3.2rem;
+		line-height: 1.2;
+		background: linear-gradient(90deg, g.color('key'), g.color('key_light'));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		margin-bottom: 15px;
 
-	&_subtitle {
-		margin: 0;
-		font-size: 1.6rem;
-		color: #333;
+		@include g.mq('md') {
+			font-size: 5.6rem;
+			margin-bottom: 0;
+		}
 	}
 
 	&_btn {
-		margin-top: 10px;
 		display: inline-flex;
-		justify-content: center;
 		align-items: center;
-		gap: 12px;
-		min-width: 206px;
-		height: 44px;
-		padding-inline: 16px 18px;
-		border-radius: 22px;
-		border: 1px solid #e6e6e6;
-		background: g.color('white');
-		color: #000;
-		width: fit-content;
+		gap: 8px;
+		color: g.color('key');
+		font-weight: 700;
+		text-decoration: none;
+		font-size: 1.4rem;
 
-		margin-top: auto; // 左カラム下部に配置
-		/* @include g.mq('lg') {
-		} */
+		img {
+			width: 1em;
+		}
+
+		@include g.mq('md') {
+			font-size: 1.6rem;
+		}
 	}
 
-	&_btn_icon {
-		display: block;
-		width: 17px;
-		height: 13px;
+	&_slider {
+		width: 100%;
+
+		@include g.mq('md') {
+			max-width: g.$inner_max;
+			margin: 0 auto;
+		}
 	}
 
 	&_list {
-		list-style: none;
+		margin: 0;
 		padding: 0;
-		margin: 0;
-		display: grid;
-		gap: 14px;
-	}
-
-	&_item {
-		display: grid;
-		grid-template-columns: 90px 70px 1fr;
-		align-items: center;
-		gap: 16px;
-		min-width: 0;
-	}
-
-	&_date {
-		margin: 0;
-		font-size: 1.2rem;
-		color: #808080;
-		letter-spacing: 0;
-	}
-
-	&_tag {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		height: 23px;
-		border-radius: 12px;
-		border: 1px solid #e3e3e3;
-		font-size: 1.2rem;
-		color: #808080;
-		letter-spacing: 0;
+		list-style: none;
 	}
 
 	&_link {
-		min-width: 0;
-		font-size: 1.3rem;
-		color: g.color('key');
+		display: block;
 		text-decoration: none;
-		text-overflow: ellipsis;
-		width: fit-content;
+
+		@include g.mq('md') {
+			&:hover {
+				.joint_img_on {
+					opacity: 1;
+				}
+				.joint_img_off {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	&_item {
+		// swiper-slide
+		&.swiper-slide-active {
+			@include g.mq('sm') {
+				.joint_img_on {
+					opacity: 1;
+				}
+				.joint_img_off {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	&_img {
+		position: relative;
+
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
+			transition: opacity 0.3s ease;
+		}
+
+		&_on {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			z-index: 1;
+		}
+
+		&_off {
+			position: relative;
+			z-index: 0;
+		}
+	}
+
+	&_prev,
+	&_next {
+		width: 44px;
+		height: 44px;
+		background: rgba(255, 255, 255, 0.8);
+		border-radius: 50%;
+		border: 1px solid g.color('border');
+		&::after {
+			font-size: 1.4rem;
+			color: g.color('base');
+		}
+
+		@include g.mq('md') {
+			display: none;
+		}
+	}
+}
+
+.news {
+	padding: 60px 0;
+	background: g.color('white');
+
+	@include g.mq('md') {
+		padding: 100px 0;
+	}
+
+	&_header {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		padding-bottom: 20px;
+		border-bottom: 2px solid g.color('base');
+		margin-bottom: 0;
+
+		@include g.mq('md') {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			padding-bottom: 25px;
+		}
+	}
+
+	&_title {
+		font-family: g.font('en');
+		font-size: 2.4rem;
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: 0.05em;
+		background: linear-gradient(90deg, g.color('key'), g.color('key_light'));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		@include g.mq('md') {
+			font-size: 3.6rem;
+		}
+	}
+
+	&_more {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		color: g.color('key');
+		font-weight: 700;
+		font-size: 1.2rem;
+		text-decoration: none;
+		align-self: flex-end;
+
+		img {
+			width: 1em;
+		}
+
+		@include g.mq('md') {
+			font-size: 1.4rem;
+			align-self: auto;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&_list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	&_item {
+		border-bottom: 1px solid g.color('border');
+	}
+
+	&_link {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		padding: 18px 0;
+		text-decoration: none;
+		color: g.color('base');
+		transition: opacity 0.3s ease;
+
+		@include g.mq('md') {
+			gap: 30px;
+			padding: 22px 0;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&_date {
+		font-family: g.font('en');
+		font-size: 1.2rem;
+		font-weight: 500;
+		color: g.color('key_light');
+		white-space: nowrap;
+		flex-shrink: 0;
+
+		@include g.mq('md') {
+			font-size: 1.4rem;
+			min-width: 90px;
+		}
+	}
+
+	&_text {
+		flex: 1;
+		font-size: 1.3rem;
+		line-height: 1.6;
+		margin: 0;
+
+		@include g.mq('md') {
+			font-size: 1.4rem;
+		}
+	}
+
+	&_arrow {
+		flex-shrink: 0;
+		color: g.color('key');
+		display: flex;
+		align-items: center;
+	}
+}
+
+.contact {
+	padding: 80px 0;
+	background: linear-gradient(to right, #0A50AA, #1E8CE1, #00B9D7, #00A596);
+	text-align: center;
+	color: g.color('white');
+
+	@include g.mq('md') {
+		padding: 120px 0;
+	}
+
+	&_inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&_title {
+		font-family: g.font('en');
+		font-size: 5.6rem;
+		font-weight: 500;
+		line-height: 1;
+		letter-spacing: 0.05em;
+		margin-bottom: 10px;
+		color: rgba(255, 255, 255, 0.4);
+
+		@include g.mq('md') {
+			font-size: 10rem;
+			margin-bottom: 15px;
+		}
+	}
+
+	&_subtitle {
+		font-size: 1.6rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		margin-bottom: 30px;
+
+		@include g.mq('md') {
+			font-size: 2.2rem;
+			margin-bottom: 40px;
+		}
+	}
+
+	&_desc {
+		font-size: 1.3rem;
+		line-height: 2;
+		margin-bottom: 50px;
+		font-weight: 500;
+
+		@include g.mq('md') {
+			font-size: 1.4rem;
+			margin-bottom: 70px;
+		}
+
+		&_br {
+			display: none;
+
+			@include g.mq('md') {
+				display: inline;
+			}
+		}
+	}
+
+	&_list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		width: 100%;
+		max-width: 320px;
+
+		@include g.mq('md') {
+			max-width: none;
+			flex-direction: row;
+			justify-content: center;
+			gap: 40px;
+		}
+	}
+
+	&_item {
+		width: 100%;
+
+		@include g.mq('md') {
+			flex: 1;
+			max-width: 280px;
+		}
+	}
+
+	&_box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 40px 20px;
+		text-decoration: none;
+		color: g.color('white');
+		min-height: 160px;
+		transition: background-color 0.3s ease;
+
+		@include g.mq('md') {
+			padding: 50px 20px;
+			min-height: 200px;
+
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.1);
+			}
+		}
+
+		&_tl, &_tr, &_bl, &_br {
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			border-color: rgba(255, 255, 255, 0.8);
+			border-style: solid;
+
+			@include g.mq('md') {
+				width: 50px;
+				height: 50px;
+			}
+		}
+
+		&_tl {
+			top: 0;
+			left: 0;
+			border-width: 1px 0 0 1px;
+		}
+
+		&_tr {
+			top: 0;
+			right: 0;
+			border-width: 1px 1px 0 0;
+		}
+
+		&_bl {
+			bottom: 0;
+			left: 0;
+			border-width: 0 0 1px 1px;
+		}
+
+		&_br {
+			bottom: 0;
+			right: 0;
+			border-width: 0 1px 1px 0;
+		}
+
+		&_text {
+			font-size: 1.4rem;
+			font-weight: 700;
+			line-height: 1.8;
+			margin: 0;
+
+			@include g.mq('md') {
+				font-size: 1.6rem;
+			}
+		}
 	}
 }
 </style>

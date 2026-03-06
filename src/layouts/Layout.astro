@@ -132,9 +132,9 @@ body {
 		padding-top: map.get(g.$header_h, 'sm');
 		margin-bottom: 90px;
 
-		padding-top: map.get(g.$header_h, 'lg');
-		/* @include g.mq('lg') {
-		} */
+		@include g.mq('lg') {
+			padding-top: map.get(g.$header_h, 'lg');
+		}
 	}
 }
 

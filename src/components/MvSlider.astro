@@ -1,0 +1,573 @@
+---
+/********************************************************************
+* メインビジュアル スライダー
+* 参考: https://www.toyo.ac.jp/link-toyo/ の home__mv セクション
+* SP: 横方向スライダー（画像＋テキストオーバーレイ）
+* PC: 2列の縦方向スライダー（左右でスライド順序を反転）
+**********************************************************************/
+import { IMG_PATH } from '../consts';
+import 'swiper/css';
+
+interface SlideData {
+	href: string;
+	img: string;
+	number: string;
+	title: string;
+	post: string;
+}
+
+const slides: SlideData[] = [
+	{
+		href: '#',
+		img: 'https://placehold.jp/d6d6d6/ffffff/795x530.png?text=795x530%0Aslider1',
+		number: '01',
+		title: '45文字が最大文字数（仮）。3行に入り切る文字数。要検討内容です。この文章が45文字です。',
+		post: 'ミネルバ大学との防災',
+	},
+	{
+		href: '#',
+		img: 'https://placehold.jp/d6d6d6/ffffff/795x530.png?text=795x530%0Aslider2',
+		number: '02',
+		title: '45文字が最大文字数（仮）。3行に入り切る文字数。要検討内容です。この文章が45文字です。',
+		post: 'ミネルバ大学との防災・復興プログラム@岩手県・釜石',
+	},
+	{
+		href: '#',
+		img: 'https://placehold.jp/d6d6d6/ffffff/795x530.png?text=795x530%0Aslider3',
+		number: '03',
+		title: '45文字が最大文字数（仮）。',
+		post: 'ミネルバ大学との防災・復興プログラム@岩手県・釜石',
+	},
+	{
+		href: '#',
+		img: 'https://placehold.jp/d6d6d6/ffffff/795x530.png?text=795x530%0Aslider4',
+		number: '04',
+		title: '45文字が最大文字数（仮）。3行に入り切る文字数。要検討内容です。この文章が45文字です。',
+		post: 'ミネルバ大学との防災・復興プログラム@岩手県・釜石',
+	},
+	{
+		href: '#',
+		img: 'https://placehold.jp/d6d6d6/ffffff/795x530.png?text=795x530%0Aslider5',
+		number: '05',
+		title: '45文字が最大文字数（仮）。3行に入り切る文字数。要検討内容です。この文章が45文字です。',
+		post: 'ミネルバ大学との防災・復興プログラム@岩手県・釜石',
+	},
+	{
+		href: '#',
+		img: 'https://placehold.jp/d6d6d6/ffffff/795x530.png?text=795x530%0Aslider6',
+		number: '06',
+		title: '45文字が最大文字数（仮）。3行に入り切る文字数。要検討内容です。この文章が45文字です。',
+		post: 'ミネルバ大学との防災・復興プログラム@岩手県・釜石',
+	},
+];
+
+const slidesRight = [...slides].reverse();
+---
+
+<div class="home-mv">
+	<!-- SP版: 横方向スライダー -->
+	<div class="mv mv--sp">
+		<div class="home-mv__copy">
+			<h2 class="home-mv__copy-title">地域を、強く。</h2>
+			<p class="home-mv__copy-text">
+				この文章はダミーです。これからの地域防災を<br />
+				支えるビジョンリーダーである<br />
+				防災研究所のブランドサイトの入口です。
+			</p>
+		</div>
+		<div class="swiper js-mv-swiper-sp">
+			<div class="swiper-wrapper">
+				{slides.map((slide) => (
+					<div class="swiper-slide">
+						<a class="mv-slide__link" href={slide.href}>
+							<figure class="mv-slide__fig">
+								<img src={slide.img} alt="" loading="lazy" />
+							</figure>
+							<div class="mv-slide__text">
+								<div class="mv-slide__number">{slide.number}</div>
+								<div class="mv-slide__title">{slide.title}</div>
+								{slide.post && <div class="mv-slide__post">{slide.post}</div>}
+								<p class="mv-slide__more">READ MORE <img src={IMG_PATH + 'common/arrow.svg'} alt="" width="8" height="5" loading="lazy"></p>
+							</div>
+						</a>
+					</div>
+				))}
+			</div>
+		</div>
+	</div>
+
+	<!-- PC版: 3層レイヤースライダー（画像スライダー -> キャッチコピー -> テキストスライダー） -->
+	<div class="mv mv--pc">
+		<!-- 1層目: 画像スライダー -->
+		<div class="mv-img-layer">
+			<div class="mv-col">
+				<div class="swiper js-mv-swiper-left-img">
+					<div class="swiper-wrapper">
+						{slides.map((slide) => (
+							<div class="swiper-slide">
+								<figure class="mv-slide__fig">
+									<img src={slide.img} alt="" loading="lazy" />
+								</figure>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+			<div class="mv-col">
+				<div class="swiper js-mv-swiper-right-img">
+					<div class="swiper-wrapper">
+						{slidesRight.map((slide) => (
+							<div class="swiper-slide">
+								<figure class="mv-slide__fig">
+									<img src={slide.img} alt="" loading="lazy" />
+								</figure>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 2層目: キャッチコピー -->
+		<div class="home-mv__copy">
+			<h2 class="home-mv__copy-title">地域を、強く。</h2>
+			<p class="home-mv__copy-text">
+				この文章はダミーです。これからの地域防災を<br />
+				支えるビジョンリーダーである<br />
+				防災研究所のブランドサイトの入口です。
+			</p>
+		</div>
+
+		<!-- 3層目: テキストスライダー (ホバー時のみ表示) -->
+		<div class="mv-text-layer">
+			<div class="mv-col">
+				<div class="swiper js-mv-swiper-left-text">
+					<div class="swiper-wrapper">
+						{slides.map((slide) => (
+							<div class="swiper-slide">
+								<a class="mv-slide__link" href={slide.href}>
+									<div class="mv-slide__text">
+										<div class="mv-slide__number">{slide.number}</div>
+										<div class="mv-slide__title">{slide.title}</div>
+										{slide.post && <div class="mv-slide__post">{slide.post}</div>}
+										<p class="mv-slide__more">READ MORE <img src={IMG_PATH + 'common/arrow.svg'} alt="" width="8" height="5" loading="lazy"></p>
+									</div>
+								</a>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+			<div class="mv-col">
+				<div class="swiper js-mv-swiper-right-text">
+					<div class="swiper-wrapper">
+						{slidesRight.map((slide) => (
+							<div class="swiper-slide">
+								<a class="mv-slide__link" href={slide.href}>
+									<div class="mv-slide__text">
+										<div class="mv-slide__number">{slide.number}</div>
+										<div class="mv-slide__title">{slide.title}</div>
+										{slide.post && <div class="mv-slide__post">{slide.post}</div>}
+										<p class="mv-slide__more">READ MORE <img src={IMG_PATH + 'common/arrow.svg'} alt="" width="8" height="5" loading="lazy"></p>
+									</div>
+								</a>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+import Swiper from 'swiper';
+import { Autoplay, Controller } from 'swiper/modules';
+
+new Swiper('.js-mv-swiper-sp', {
+	modules: [Autoplay],
+	loop: true,
+	autoplay: {
+		delay: 4000,
+		disableOnInteraction: false,
+	},
+	speed: 800,
+});
+
+// PC 左: 画像スライダー
+const swiperLeftImg = new Swiper('.js-mv-swiper-left-img', {
+	modules: [Autoplay, Controller],
+	direction: 'vertical',
+	loop: true,
+	autoplay: {
+		delay: 4000,
+		disableOnInteraction: false,
+	},
+	speed: 800,
+	slidesPerView: 1,
+	allowTouchMove: false, // 画像側はタッチ無効
+});
+
+// PC 左: テキストスライダー
+const swiperLeftText = new Swiper('.js-mv-swiper-left-text', {
+	modules: [Controller],
+	direction: 'vertical',
+	loop: true,
+	speed: 800,
+	slidesPerView: 1,
+});
+
+// 相互にコントロール
+swiperLeftImg.controller.control = swiperLeftText;
+swiperLeftText.controller.control = swiperLeftImg;
+
+// PC 右: 画像スライダー
+const swiperRightImg = new Swiper('.js-mv-swiper-right-img', {
+	modules: [Autoplay, Controller],
+	direction: 'vertical',
+	loop: true,
+	autoplay: {
+		delay: 4500,
+		disableOnInteraction: false,
+	},
+	speed: 800,
+	slidesPerView: 1,
+	allowTouchMove: false, // 画像側はタッチ無効
+});
+
+// PC 右: テキストスライダー
+const swiperRightText = new Swiper('.js-mv-swiper-right-text', {
+	modules: [Controller],
+	direction: 'vertical',
+	loop: true,
+	speed: 800,
+	slidesPerView: 1,
+});
+
+// 相互にコントロール
+swiperRightImg.controller.control = swiperRightText;
+swiperRightText.controller.control = swiperRightImg;
+</script>
+
+<style lang="scss">
+/* ============================================================
+   MV共通
+   ============================================================ */
+.home-mv {
+	position: relative;
+	overflow: hidden;
+}
+
+/* キャッチコピー（PC・SP共通） */
+.home-mv__copy {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 33.3vw;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5; // 1層目(画像)より上、3層目(テキスト)より下
+	text-align: center;
+	color: #fff;
+	pointer-events: none; // ホバーの邪魔にならないようにする
+	width: 100%;
+
+	@include g.mq('md') {
+		top: 50%;
+	}
+
+	&-title {
+		margin-bottom: 5;
+		margin-left: 8%;
+		font-size: 4.7rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-align: center;
+		white-space: nowrap;
+
+		@include g.mq('md') {
+			font-size: 8rem;
+			margin-bottom: 5px;
+		}
+	}
+
+	&-text {
+		font-size: 1.4rem;
+		line-height: 1.75;
+		font-weight: 500;
+		text-align: center;
+		
+		@include g.mq('md') {
+			font-size: 1.8rem;
+			line-height: 1.5;
+		}
+	}
+}
+
+/* ============================================================
+   SP版: 横方向スライダー
+   ============================================================ */
+.mv--sp {
+	display: block;
+
+	@include g.mq('md') {
+		display: none;
+	}
+
+	.swiper {
+		overflow: visible; // 数字のはみ出しなどを考慮
+	}
+
+	.mv-slide__link {
+		display: block;
+		text-decoration: none;
+		color: g.color('base');
+		background: #fff;
+	}
+
+	.mv-slide__fig {
+		aspect-ratio: 3 / 2;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&::after{
+			content: '';
+			position: absolute;
+			z-index: 1;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.4;
+			background-color: #0072BC;
+			mix-blend-mode: multiply;
+		}
+	}
+
+	.mv-slide__text {
+		position: relative;
+		padding: 40px 20px 150px;
+		background: #fff;
+		text-align: center;
+	}
+
+	.mv-slide__number {
+		position: absolute;
+		top: -5px;
+		left: 50%;
+		transform: translate(-50%, -50%); // 画像とテキストの境界に配置
+		font-family: g.font('en');
+		font-size: 7rem; // 画像に合わせてかなり大きく
+		font-weight: 500;
+		line-height: 1;
+		z-index: 2;
+	}
+
+	.mv-slide__title {
+		min-height: 96px;
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 1.6;
+		margin-bottom: 20px;
+		text-align: left; // 画像を見るとタイトルは左寄り
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.mv-slide__post {
+		min-height: 77px;
+		font-size: 1.6rem;
+		margin-bottom: 20px;
+		padding-top: 20px;
+		border-top: 1px solid g.color('base');
+		text-align: center;
+	}
+
+	.mv-slide__more {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4px;
+		font-family: g.font('en');
+		font-size: 1.2rem;
+		font-weight: 600;
+		letter-spacing: 0.1em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4px;
+
+		img {
+			rotate: -90deg;
+		}
+	}
+}
+
+/* ============================================================
+   PC版: 3層レイヤースライダー
+   ============================================================ */
+.mv--pc {
+	display: none;
+	position: relative;
+	height: 600px; // 画像の高さ
+	
+	@include g.mq('md') {
+		display: block;
+	}
+
+	.mv-img-layer {
+		position: relative;
+		display: flex;
+		height: 100%;
+		width: 100%;
+
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			inset: 0;
+			margin: auto;
+			background: linear-gradient(
+				to right,
+				rgba(0, 0, 0, 0) 15%,
+				rgba(0, 0, 0, 0.45 ) 50%,
+				rgba(0, 0, 0, 0) 85%
+			);
+		}
+	}
+
+	.mv-col {
+		width: 50%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.swiper {
+		height: 100%;
+	}
+
+	.swiper-slide {
+		height: 600px;
+	}
+
+	/* 1層目: 画像スライダー */
+	.mv-slide__fig {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	/* 3層目: テキストスライダー */
+	.mv-text-layer {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		z-index: 10; // キャッチコピー(z-index: 5)より上に配置
+		pointer-events: none; // 基本は触れないようにして、リンク要素だけ有効にする
+
+		.mv-col {
+			width: 50%;
+			height: 100%;
+		}
+
+		.swiper {
+			height: 100%;
+		}
+
+		.swiper-slide {
+			height: 100%;
+		}
+	}
+
+	.mv-slide__link {
+		display: block;
+		position: relative;
+		height: 100%;
+		text-decoration: none;
+		color: #fff;
+		pointer-events: auto; // リンク要素として機能させる
+
+		&:hover {
+			.mv-slide__text {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	.mv-slide__text {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 40px;
+		background: rgba(0, 0, 0, 0.75); // オンマウス時の黒い半透明背景
+		opacity: 0; // デフォルトは非表示
+		visibility: hidden;
+		transition: opacity 0.4s ease, visibility 0.4s ease;
+	}
+
+	.mv-slide__number {
+		font-family: g.font('en');
+		font-size: 7rem;
+		font-weight: 600;
+		line-height: 1;
+		margin-bottom: 24px;
+	}
+
+	.mv-slide__title {
+		font-size: 2.4rem;
+		font-weight: 700;
+		line-height: 1.6;
+		margin-bottom: 40px;
+		max-width: 440px;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.mv-slide__post {
+		font-size: 1.6rem;
+		margin-bottom: 24px;
+		padding-top: 10px;
+		border-top: 1px solid #FFF;
+		max-width: 440px;
+		width: 100%;
+	}
+
+	.mv-slide__more {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		font-family: g.font('en');
+		font-size: 1.4rem;
+		font-weight: 600;
+		letter-spacing: 0.1em;
+
+		img {
+			rotate: -90deg;
+			filter: brightness(0) invert(1); // 白く見せる
+		}
+
+
+	}
+}
+</style>
